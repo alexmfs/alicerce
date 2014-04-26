@@ -1,0 +1,93 @@
+@pagination-a-color: @color2;
+@pagination-a-hover: @color4;
+@pagination-a-background: @color1 ;
+@pagination-a-background-hover: @color4;
+
+@pagination-a-active: @color1;
+@pagination-a-active-background: @color2;
+@pagination-a-active-border: 1px solid @color2;
+
+@pagination-a-disable: @color6;
+@pagination-a-disable-background: @color1;
+
+@pagination-a-border: 1px solid @color7;
+
+
+.pagination{
+	display: table;
+	margin: 0 auto 10px;
+	li{
+		float: left;
+	}
+	a{
+		display: block;
+		padding: 5px;
+		border: @pagination-a-border;
+		background: @pagination-a-background;
+		color: @pagination-a-color;
+		&:hover{
+			background: @pagination-a-background-hover;
+		}
+	}
+	.prev{
+		a{
+			.border-radius(8px 0px 0px 8px);
+		}
+	}
+	.next{
+		a{
+			.border-radius(0px 8px 8px 0px);
+		}
+	}
+	.disabled{
+		a{
+			background: @pagination-a-disable-background;
+			color: @pagination-a-disable;
+		}
+		&:first-child{
+			a{
+				.border-radius(8px 0px 0px 8px);
+			}
+		}
+		&:last-child{
+			a{
+				.border-radius(0px 8px 8px 0px);
+			}
+		}
+	}
+	.active{
+		a{
+			background: @pagination-a-active-background;
+			color: @pagination-a-active;
+			border: @pagination-a-active-border;
+		}
+	}
+}
+
+
+.breadcrumb{
+	display: table;
+	margin: 0 auto 10px;
+	li{
+		float: left;
+		&:before{
+			content:"/";
+			display: block;
+			margin:0px 8px;
+			float: left;
+		}
+		&:first-child{
+			&:before{
+				content: none;
+			}
+		}
+	}
+	a{
+		display: block;
+		float: left;
+		color: @pagination-a-color;
+		&:hover{
+			background: @pagination-a-hover;
+		}
+	}
+}

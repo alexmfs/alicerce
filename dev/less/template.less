@@ -1,0 +1,134 @@
+/* =========================================================================
+   Layout
+========================================================================== */
+
+h1, h2{font-family: @bold; text-transform: uppercase; letter-spacing: 1px}
+h1{font-size: 30px;}
+h2{font-size: 20px;}
+
+body > section,
+body > article,
+main > * {
+	.wrap;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+body {
+	> header, > footer{
+		> div {
+			.wrap
+		}
+	}
+}
+
+
+.guia-fontes > div, .guia-fontes section{
+	.row;
+	margin-top:5px;
+	margin-bottom: 5px;
+}
+
+
+.coluna1{.column(1)}
+.coluna2{.column(2)}
+.coluna3{.column(3)}
+.coluna4{.column(4)}
+.coluna5{.column(5)}
+.coluna6{.column(6)}
+.coluna7{.column(7)}
+.coluna8{.column(8)}
+.coluna9{.column(9)}
+.coluna10{.column(10)}
+.coluna11{.column(11)}
+.coluna12{.column(12)}
+
+
+
+
+.guia-fontes section div{
+	height: 60px;
+
+	text-align: center;
+	font: 15px/60px arial;
+
+}
+
+.topo{
+	height: 200px;
+
+}
+.menu{
+	top: -10px;
+	margin-top: 55px;
+}
+main{
+	min-height: 800px;
+}
+footer.principal{
+	height: 50px;
+
+	text-align: center;
+	padding-top: 10px;
+}
+
+
+
+/*======================================
+=            Pagina buttons            =
+======================================*/
+
+
+
+
+.modal {
+
+	.border-radius(5px);
+	text-align: center;
+	position: fixed;
+	z-index:9;
+	display: none;
+	top:-50%;
+	left:50%;
+
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 20px;
+		height: 20px;
+		display: block;
+		line-height: 20px;
+		font-size: 30px;
+		cursor: pointer;
+	}
+}
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+
+
+.teste-linha{
+
+	> article{
+		.column(3);
+
+	}
+	> aside{
+		.column(9);
+
+		ul{
+			.row(9);
+			li{
+				.column(3,9);
+
+			}
+		}
+	}
+}

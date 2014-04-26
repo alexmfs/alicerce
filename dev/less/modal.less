@@ -1,0 +1,72 @@
+/*	--------------------------------------------------
+	Reveal Modals
+-------------------------------------------------- */
+.reveal-modal-bg {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 100;
+	display: none;
+	top: 0;
+	left: 0;
+}
+.centralizar-modal(@largura, @altura){
+	width: @largura;
+	height: @altura;
+	margin-left: -@largura/2;
+	margin-top: -@altura/2;
+}
+.reveal-modal {
+	background: @color1;
+	visibility: hidden;
+	.centralizar-modal(@modal-largura, @modal-altura);
+	z-index: 101;
+	position: fixed;
+	top: 50%!important;
+	left: 50%;
+	.border-box;
+	.border-radius(10px);
+	h4{
+		display: block;
+		height: 30px;
+		font:14px/30px @regular;
+		color: @color1;
+		text-transform: uppercase;
+		.border-radius(8px 8px 0 0);
+	}
+	// p{
+	// 	font: 14px @regular;
+	// 	margin: 28px 0px 18px;
+	// }
+	input{ margin: 0 5px;}
+	// .bt-sim{ .bt-verde; }
+	// .bt-nao{ .bt-cinza; }
+}
+.reveal-modal .close-reveal-modal {
+	font-size: 30px;
+	color: @color1;
+	position: absolute;
+	top: -25px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.modal-confirm{
+	.close-reveal-modal{color: @color1;}
+	h4{
+		background: @color1;
+		color: @color1;
+	}
+}
+
+.modal-warming{
+	.close-reveal-modal{color: @color1;}
+	h4{
+		background: @color1;
+		color: @color1;
+	}
+}
+
+/* ocultar links para chamadas "MODAL" */
+.trigger{display:none;}

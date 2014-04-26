@@ -1,0 +1,83 @@
+////////* Fonts *////////
+
+@regular: Arial;
+@light: NAME-FONT;
+@bold: NAME-FONT;
+@semibold: NAME-FONT;
+@extrabold: NAME-FONT;
+@italic: NAME-FONT;
+@italicsemibold: NAME-FONT;
+@italicbold: NAME-FONT;
+
+////////* Colors Palette *////////
+
+@color1: #fff; 		// branco
+@color2: #5e87b0; 	// azul base
+@color3: #063184; 	// azul destaque
+@color4: #f5f6f6; 	// cinza claro
+@color5: #6a6a6a; 	// cinza escuro
+@color6: #dddddd; 	// cinza medio
+@color7: #c1c1c1; 	// cinza medio
+@color8: #a8bc7b;	// verde
+@color9: #f0ad4e;	// laranja
+
+
+////////* Global *////////
+
+@body-background: @color4;
+@body-font: @regular;
+
+////////* Forms.less *////////
+
+@label-heigth: 28px;
+@label-color: @color5;
+@label-background: inherit;
+
+@input-height: 32px;
+@input-color: @color5;
+@input-background: @color1;
+
+@input-submit-color: @color1;
+
+@select-height: 32px;
+@select-color: @color5;
+@select-background: @color1;
+
+@legend-color: @color1;
+@legend-background: @color1;
+
+@textarea-color: @color5;
+@textarea-background: @color1;
+
+@border-color: @color1;
+
+////////* Border *////////
+@border-color: @color3;
+@border-radius: 5px;
+
+////////* Buttons.less *////////
+
+@button-text-transform: inherit; // [ uppercase / lowercase / inherit ]
+@button-border: none; // [ $px $style @color$ / none ]
+@button-color: @color1;
+
+// @buttons-box-shadow
+
+// Patterns
+.bt-azul{.bt-color(@color2);}
+
+// Custom
+// [tamanho] + [cor] + [full]
+// exemplo: .bt-salvar{.bt-pequeno; .bt-amarelo}
+
+// Buttons in use
+
+/* Nesse site, todos os botoes são iguais */
+[class^="bt-"]{
+	.bt-medio;
+	.bt-azul;
+}
+
+// Modal Centralizado
+@modal-largura: 960px;
+@modal-altura: 550px;
