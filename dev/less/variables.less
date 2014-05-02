@@ -10,7 +10,7 @@
 @italicbold: NAME-FONT;
 
 ////////* Colors Palette *////////
-
+@color0: #fff;		// branco
 @color1: #fff; 		// branco
 @color2: #5e87b0; 	// azul base
 @color3: #063184; 	// azul destaque
@@ -61,23 +61,38 @@
 @button-border: none; // [ $px $style @color$ / none ]
 @button-color: @color1;
 
-// @buttons-box-shadow
-
-// Patterns
-.bt-azul{.bt-color(@color2);}
-
-// Custom
-// [tamanho] + [cor] + [full]
-// exemplo: .bt-salvar{.bt-pequeno; .bt-amarelo}
-
-// Buttons in use
-
-/* Nesse site, todos os botoes são iguais */
-[class^="bt-"]{
-	.bt-medio;
-	.bt-azul;
-}
-
 // Modal Centralizado
 @modal-largura: 960px;
 @modal-altura: 550px;
+
+//
+// Molecules
+//
+
+////////* Pagination *////////
+
+@pagination-a-color: @color2;
+@pagination-a-hover: @color4;
+@pagination-a-background: @color1 ;
+@pagination-a-background-hover: @color4;
+
+@pagination-a-active: @color1;
+@pagination-a-active-background: @color2;
+@pagination-a-active-border: 1px solid @color2;
+
+@pagination-a-disable: @color6;
+@pagination-a-disable-background: @color1;
+
+@pagination-a-border: 1px solid @color7;
+
+
+////////* Breadcrumb *////////
+@breadcrumb-position: right; // [ left / none (center) / right ]
+
+@breadcrumb-a-color: @color2;
+@breadcrumb-a-hover: @color4;
+@breadcrumb-a-active-color: @color7;
+
+@breadcrumb-arrows-color: @color5;
+@breadcrumb-font: 14px @regular;
+@breadcrumb-text-transform: lowercase; // [ uppercase / lowercase / inherit ]

@@ -152,29 +152,6 @@ option{
 	    content: "\25CF";
 }
 
-// Nota:
-// input[type="submit"], input[type="reset"] foram apenas resetados.
-// Para um melhor personalização e padronização dos botões do site, usar as classes "bt-*", conforme arquivo buttons.less
-
-input[type="submit"]{
-	display: inline-block;
-	color:@input-submit-color;
-	.bt-pequeno;
-	cursor: pointer;
-	font: 14px @regular;
-	.gradiente-vertical-bottom;
-	&:hover{
-		.gradiente-vertical-top;
-	}
-}
-
-input[type="reset"]{
-	.border-radius(0px);
-	border:none;
-	background: none;
-	cursor: pointer;
-}
-
 /*==========  Personalizacao dos atributos dos formularios  ==========*/
 
 input:disabled{

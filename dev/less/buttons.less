@@ -1,52 +1,79 @@
-/*==============================
-=            Botoes            =
-==============================*/
+// Colors
+@color0: #fff;
+@color1: #ce0c0c;
+@color2: #38be0a;
 
-/*Botoes estilo padrao*/
-[class^="bt-"]{
+@bt-largura: 20px;
+@bt-altura: 5px;
+
+// Mixins
+.linear-gradient(@to, @gradient-color: rgba(0,0,0,.20)){
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjIiLz4KICAgIDxzdG9wIG9mZnNldD0iMSUiIHN0b3AtY29sb3I9IiMwMzAzMDMiIHN0b3Atb3BhY2l0eT0iMC4yIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background-image: -webkit-linear-gradient(to @to, transparent, @gradient-color);
+	background-image: -moz-linear-gradient(to @to, transparent, @gradient-color);
+	background-image: -o-linear-gradient(to @to, transparent, @gradient-color);
+	background-image: linear-gradient(to @to, transparent, @gradient-color); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#00ffffff',GradientType=0 ); /* IE6-8 */
+}
+
+/* Button - Pattern */
+// Padrão básico aplicado a todos os botões através do uso de &:extend
+.btn{
+	border: 1px solid;
+	border-radius: 0.5em;
+	padding: @bt-altura @bt-largura;
 	display: inline-block;
-	.border-radius(5px);
-	text-transform: @button-text-transform;
-	color: @button-color;
-	border: @button-border;
-	.bt-pequeno;
+	font: 12px Arial;
 	cursor: pointer;
-	font: 14px @regular;
 	text-decoration: none;
-	.gradiente-vertical-bottom;
+	margin:1px 1px;
+	color: #838383;
+	background-color: @color0;
+	.linear-gradient(@to: top);
+	// State rules
 	&:hover{
-		.gradiente-vertical-top;
+		.linear-gradient(@to: bottom);
+	}
+	// Teste para aplicação em :focus
+	&:focus, &:active{
+		outline: 0;
+		&:before{
+			content:"> ";
+		}
+	}
+	&.is-desactive{
+		background-image:none;
+		cursor: default; /* Fallback */
+		cursor: not-allowed;
+		&:focus, &:active{
+			outline: 0;
+			&:before{
+				content:"X ";
+			}
+		}
 	}
 }
-/*Botoes tamanhos*/
-@bt-largura: 10px;
-@bt-altura: 6px;
-.bt-pequeno{
-	padding: @bt-altura @bt-largura
-}
-.bt-medio{
-	padding: (@bt-altura * 3)(@bt-largura * 2)
-}
-.bt-grande{
-	padding: (@bt-altura * 2)(@bt-largura * 4)
-}
-/*Botoes de tamanhos diferentes dos padroes acima, devem obrigatoriamente seguir a largura da grid, inserir .bt-full*/
-.bt-full{
-	width: 100%;
-	text-align: center;
-}
-/*Botoes Cores*/
-.bt-color(@bt-color){
-	background-color: @bt-color;
-	border-color: darken(@bt-color, 20%);
-	/* Efeito botao 3d*/
-	// box-shadow: inset -2px -2px 0px -1px darken(@bt-color, 20%);
-	// &:active{
-	// 	box-shadow: inset 2px 2px 0px -1px darken(@bt-color, 20%);
-	// }
+
+// Button - Mixin Colors
+.btn-color(@x){
+	background-color: @x;
+	border-color: darken(@x, 10%);
+	color: @color0;
+	// State rule
+	&.is-desactive{
+		background-color: desaturate(lighten(@x, 10%),60%);
+		border-color: desaturate(darken(@x, 10%),60%);
+	}
 }
 
-// Botoes - Personalizacao
-// [tamanho] + [cor] + [full]
-// example button: .bt-salvar{.bt-pequeno; .bt-amarelo}
-// example button color: .bt-amarelo{.bt-color(@cor7);}
+/* Buttons - Custom Types */
+.btn-danger{
+	&:extend(.btn all);
+	.btn-color(@color1);
+}
+
+.btn-success{
+	&:extend(.btn all);
+	.btn-color(@color2);
+}

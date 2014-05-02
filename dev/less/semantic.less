@@ -56,6 +56,7 @@ img{
 .column(@x,@columns:@columns) {
 	// display: inline;
 	// float: left;
+	&:extend(.col);
 	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
 	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
 }

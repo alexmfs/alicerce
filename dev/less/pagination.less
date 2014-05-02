@@ -1,17 +1,7 @@
-@pagination-a-color: @color2;
-@pagination-a-hover: @color4;
-@pagination-a-background: @color1 ;
-@pagination-a-background-hover: @color4;
-
-@pagination-a-active: @color1;
-@pagination-a-active-background: @color2;
-@pagination-a-active-border: 1px solid @color2;
-
-@pagination-a-disable: @color6;
-@pagination-a-disable-background: @color1;
-
-@pagination-a-border: 1px solid @color7;
-
+// Pagination
+// Version: 1.0.1
+// Date: 07/04/2014
+// Last Update: 07/04/2014
 
 .pagination{
 	display: table;
@@ -60,34 +50,6 @@
 			background: @pagination-a-active-background;
 			color: @pagination-a-active;
 			border: @pagination-a-active-border;
-		}
-	}
-}
-
-
-.breadcrumb{
-	display: table;
-	margin: 0 auto 10px;
-	li{
-		float: left;
-		&:before{
-			content:"/";
-			display: block;
-			margin:0px 8px;
-			float: left;
-		}
-		&:first-child{
-			&:before{
-				content: none;
-			}
-		}
-	}
-	a{
-		display: block;
-		float: left;
-		color: @pagination-a-color;
-		&:hover{
-			background: @pagination-a-hover;
 		}
 	}
 }

@@ -22,18 +22,34 @@ module.exports = function(grunt) {
 			}
 		},
 		// Minify CSS
-		cssmin : {
-			css:{
-				src: 'dev/css/style.css',
-				dest: 'public/app/webroot/css/style.min.css',
+		cssmin: {
+		  combine: {
+		    files: {
+		      'public/app/webroot/css/style.min.css': ['dev/css/reset.css','dev/css/style.css']
+		    }
+		  }
+		},
+		// Concatenar e Minificar Javascript
+		uglify: {
+			options: {
+				mangle: false,
+				preserveComments: "some"
 			},
+			dist: {
+				files: {
+					'public/app/webroot/js/vendor/jquery.min.js': ['dev/js/vendor/jquery-*.js'],
+					'public/app/webroot/js/vendor/jquery-migrate.min.js': ['dev/js/vendor/jquery-migrate-*.js'],
+					'public/app/webroot/js/vendor/modernizr.min.js': ['dev/js/vendor/modernizr-*.js'],
+					'public/app/webroot/js/scripts.js': ['dev/js/*.js'],
+				}
+			}
 		},
 		// Atualizar
 		watch: {
 			styles: {
 				// Which files to watch (all .less files recursively in the less directory)
 				files: ['gruntfile.js','dev/less/*.less','dev/less/style.css'],
-				tasks: ['less','cmq','cssmin'],
+				tasks: ['less','cmq','cssmin','uglify'],
 				options: {
 					nospawn: true
 				}
@@ -49,5 +65,4 @@ module.exports = function(grunt) {
 	});
 	// registrando tarefa default
 	grunt.registerTask( 'default', ['watch'] );
-
 };

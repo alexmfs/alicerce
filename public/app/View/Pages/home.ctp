@@ -8,4 +8,11 @@
 		> reset.css
 		> fonts.css
 		> style.min.css
-	</pre
+	</pre>
+	<a href="">teste1</a>
+	<hr>
+	<a href=" teste">teste2</a>
+	<hr>
+	<a href="#" rel="nofollow">teste3</a>
+	<hr>
+	<img src="http://dummyimage.com/80x60/4d494d/686a82.gif" alt="">
