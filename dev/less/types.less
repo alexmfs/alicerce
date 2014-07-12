@@ -1,4 +1,5 @@
-// Mixin Font Face
+// Mixin Font Face ----------------------------------------- */
+
 
 	#font-face(@fontfamily, @variation, @weight, @style:normal) {
 		@base-url: "fonts/";
@@ -45,23 +46,24 @@
 
 	// Parametric mixins
 	#font-spotlight{font-family: "@{font-spotlight}", Fallback, sans-serif;}
+	
 
 // Mixins font  ------------------------------------------ //
 
 // Fonts Base
 .font-light()			{ #font-base; font-weight: 100; }
-.font-light-italic()	{ #font-base; font-weight: 100; }
+.font-light-italic()		{ #font-base; font-weight: 100; }
 .font-regular()			{ #font-base; font-weight: 200; }
 .font-italic()			{ #font-base; font-weight: 200; }
 .font-medium()			{ #font-base; font-weight: 300; }
-.font-medium-italic()	{ #font-base; font-weight: 300; }
+.font-medium-italic()		{ #font-base; font-weight: 300; }
 .font-bold()			{ #font-base; font-weight: 400; }
 .font-bold-italic()		{ #font-base; font-weight: 400; }
 
 
 // Fonts Spotlight
 .font-special()			{ #font-special; font-weight: 200;}
-.font-special-bold()	{ #font-special; font-weight: 400;}
+.font-special-bold()		{ #font-special; font-weight: 400;}
 
 
 .font-teste(@sizeValue, @line)	{
