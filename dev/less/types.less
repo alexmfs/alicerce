@@ -1,0 +1,118 @@
+// Mixin Font Face
+
+	#font-face(@fontfamily, @variation, @weight, @style:normal) {
+		@base-url: "fonts/";
+		font-family: @fontfamily;
+		src: url("@{base-url}@{fontfamily}-@{variation}-webfont.eot");
+		src: url("@{base-url}@{fontfamily}-@{variation}-webfont.eot?#iefix") format('embedded-opentype'),
+			 url("@{base-url}@{fontfamily}-@{variation}-webfont.woff") format('woff'),
+			 url("@{base-url}@{fontfamily}-@{variation}-webfont.ttf") format('truetype'),
+			 url("@{base-url}@{fontfamily}.svg#@{fontfamily}") format('svg');
+		font-weight: @weight;
+		font-style: @style;
+	}
+
+
+/* Basic font project -------------------------------------- */
+
+
+	/* Font Face */
+
+	@font-base: "Basic Font Name"; // Customize here
+
+	@font-face {#font-face("@{font-base}", light, 100, normal);}
+	@font-face {#font-face("@{font-base}", lightitalic, 100, italic);}
+	@font-face {#font-face("@{font-base}", regular, 200, normal);}
+	@font-face {#font-face("@{font-base}", italic, 200, italic);}
+	@font-face {#font-face("@{font-base}", medium, 300, normal);}
+	@font-face {#font-face("@{font-base}", mediumitalic, 300, italic);}
+	@font-face {#font-face("@{font-base}", bold, 400, normal);}
+	@font-face {#font-face("@{font-base}", bolditalic, 400, normal);}
+
+	// Parametric mixins
+	#font-base{font-family: "@{font-base}", Fallback, sans-serif;}
+
+
+/* Spotlight font project --------------------------------- */
+
+
+	/* Font Face */
+
+	@font-spotlight: "Super Font Name"; // Customize here
+
+	@font-face {#font-face("@{font-spotlight}", regular, 200, normal);}
+	@font-face {#font-face("@{font-spotlight}", bold, 200, normal);}
+
+	// Parametric mixins
+	#font-spotlight{font-family: "@{font-spotlight}", Fallback, sans-serif;}
+
+// Mixins font  ------------------------------------------ //
+
+// Fonts Base
+.font-light()			{ #font-base; font-weight: 100; }
+.font-light-italic()	{ #font-base; font-weight: 100; }
+.font-regular()			{ #font-base; font-weight: 200; }
+.font-italic()			{ #font-base; font-weight: 200; }
+.font-medium()			{ #font-base; font-weight: 300; }
+.font-medium-italic()	{ #font-base; font-weight: 300; }
+.font-bold()			{ #font-base; font-weight: 400; }
+.font-bold-italic()		{ #font-base; font-weight: 400; }
+
+
+// Fonts Spotlight
+.font-special()			{ #font-special; font-weight: 200;}
+.font-special-bold()	{ #font-special; font-weight: 400;}
+
+
+.font-teste(@sizeValue, @line)	{
+	@remSize: @sizeValue;
+	@remline: @line;
+	@pxSize: (@sizeValue * 10);
+	@pxline: (@line * 10);
+	#font-spotlight;
+	font-weight: 400;
+	font: ~"@{pxSize}px/@{pxline}px";
+	font: ~"@{remSize}rem/@{remline}rem";
+}
+
+.foo{
+	.font-teste(1.5, 2.0);
+}
+
+//               ----------------------------------------- //
+
+.font-size(@sizeValue) {
+	@remValue: @sizeValue;
+	@pxValue: (@sizeValue * 10);
+	font-size: ~"@{pxValue}px";
+	font-size: ~"@{remValue}rem";
+}
+.line-height(@sizeValue) {
+	@remValue: @sizeValue;
+	@pxValue: (@sizeValue * 10);
+	line-height: ~"@{pxValue}px";
+	line-height: ~"@{remValue}rem";
+}
+
+// Basic project  ---------------------------------------- //
+
+body{
+	#font-base;
+  	font-style: normal;
+  	font-weight: 200;
+  	font-size: 62,5%;
+}
+
+b, strong{
+	font-weight: 400;
+}
+
+i, em{
+  	font-style: italic;
+  	font-weight: 200;
+}
+
+p, span, li, .text-base{
+	.font-size(1.2);
+	.line-height(1.4);
+}
