@@ -62,7 +62,7 @@ body:after {
 	margin: 10px 20px;
 	font-size: 10px;
 	text-align: center;
-	border: 1px solid;
+	border: 1px solid #eee;
 	padding: 10px;
 }
 
@@ -90,7 +90,8 @@ body:after {
 }
 
 .helper-colors .hc-primary-dark1 span {
-	background-color: #eeeeee;
+	background-color: #c68a42;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
 }
 
 .helper-colors .hc-primary-dark2 span {
@@ -102,19 +103,23 @@ body:after {
 }
 
 .helper-colors .hc-secondary-light1 span {
-	background-color: #eeeeee;
+	background-color: #fbe9e6;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
 }
 
 .helper-colors .hc-secondary-light2 span {
-	background-color: #eeeeee;
+	background-color: #ffffff;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
 }
 
 .helper-colors .hc-secondary-dark1 span {
-	background-color: #eeeeee;
+	background-color: #b7251c;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
 }
 
 .helper-colors .hc-secondary-dark2 span {
-	background-color: #eeeeee;
+	background-color: #8b1518;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
 }
 
 /* Basic font project -------------------------------------- */

@@ -11,6 +11,8 @@
 @color-black: #000;
 @color-base: #000;
 
+@null: ~";box-shadow: 0px -9px 0px 11px @{color-white}, 0px 27px 0px 11px @{color-white}, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;";
+
 // Theme
 
 @color-primary: #d2ab69;
@@ -22,7 +24,7 @@
 	// Custom colors
 	@color-primary-light1: #ffe8be;
 	@color-primary-light2: #faf3e5;
-	@color-primary-dark1: #eee;
+	@color-primary-dark1: darken(spin(@color-primary, -5), 10%) ~"@{null}";
 	@color-primary-dark2: #261912;
 
 
@@ -33,10 +35,10 @@
 	@color-secondary-dark1: darken(spin(@color-secondary, -5), 10%);
 	@color-secondary-dark2: darken(spin(@color-secondary, -10), 20%);
 	// Custom colors
-	@color-secondary-light1: #eee;
-	@color-secondary-light2: #eee;
-	@color-secondary-dark1: #eee;
-	@color-secondary-dark2: #eee;
+	@color-secondary-light1: lighten(@color-secondary, 43%) ~"@{null}";
+	@color-secondary-light2: lighten(@color-secondary, 63%) ~"@{null}";
+	@color-secondary-dark1: darken(spin(@color-secondary, -5), 10%) ~"@{null}";
+	@color-secondary-dark2: darken(spin(@color-secondary, -10), 20%) ~"@{null}";
 
 
 
@@ -91,7 +93,7 @@
 		margin: 10px 20px;
 		font-size: 10px;
 		text-align: center;
-		border: 1px solid;
+		border: 1px solid #eee;
 		padding: 10px;
 		span{
 			display: block;
