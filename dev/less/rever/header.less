@@ -1,0 +1,131 @@
+.header{
+	&-container{
+		.carrinho{
+			.column(2);
+			.color-primary;
+			margin-top: 27px;
+			// &:before {
+
+			// }
+			&-title{
+				display: block;
+				.font-especial;
+				.font-size(2.2);
+				text-transform: uppercase;
+				text-align: right;
+			}
+			&-quantidade{
+				.font-regular;
+				.font-size(1.5);
+				position: relative;
+				top: -2px;
+				letter-spacing: 0.1rem;
+			}
+			&-valor{
+				display: block;
+				.font-bold;
+				.font-size(1.5);
+				.line-height(2.0);
+				text-align: right;
+			}
+		}
+	}
+	&-top{
+		.background-third;
+		height: 42px;
+		border-bottom: 2px solid @white;
+	}
+	&-bottom{
+		background: url(../img/pattern.jpg);
+		height: 130px;
+		.wrap{
+			position: relative;
+			z-index: 99999;
+			&:before {
+				content: "";
+				background: url(../img/shadow-carrinho.png) no-repeat;
+				display: block;
+				width: 330px;
+				height: 110px;
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				right: -60px;
+			}
+		}
+	}
+}
+.logo{
+	.column(2);
+	position: relative;
+	top: 20px;
+}
+
+.box-atendimento{
+		.column(10);
+		color: @white;
+		text-align: right;
+		padding: 8px 0px;
+		a{
+			color: inherit;
+			&:hover{
+			}
+		}
+		i{
+			.color-secondary;
+			.font-size(2.0);
+			margin: 0 5px;
+			position: relative;
+			top: 3px;
+		}
+	.login{
+		.font-regular;
+		.font-size(1.4);
+		position: relative;
+		top: 1px;
+		a{
+			text-decoration: underline;
+		}
+	}
+	.dados{
+		margin: 0 30px;
+		a{
+			.font-especial;
+			.font-size(1.6);
+			text-transform: uppercase;
+			position: relative;
+			top: 2px;
+		}
+	}
+	.atendimento{
+
+	}
+}
+
+.search-bar{
+	.column(7);
+	.push(1);
+	margin-top: 22px;
+	margin-bottom: 23px;
+	height: 40px;
+	border: 2px solid;
+	.border-color-third;
+	background: @white;
+}
+
+.atendimento-online {
+	.wrap;
+	position: fixed;
+	top: 0;
+	z-index: 999999;
+	a{
+		display: block;
+		width: 70px;
+		height: 292px;
+		background: @color-primary url(../img/atendimento-online.png) center top no-repeat;
+		position: absolute;
+		top: 0px;
+		right: -100px;
+	}
+
+}

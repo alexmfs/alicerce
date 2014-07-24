@@ -1,0 +1,139 @@
+/*==============================
+=			Footer			=
+==============================*/
+footer.principal{
+	margin-top: 60px;
+	clear: both;
+}
+/*Newsletter*/
+
+.newsletter{
+	height: 114px;
+	.background-primary;
+	.linear-gradient(bottom, rgba(212,49,0,1));
+	img{
+		.column(4);
+	}
+	form{
+		.column(8);
+		.border-box;
+		padding-top: 17px;
+		height: 82px;
+		position: relative;
+
+		input[type="text"]{
+			width: 290px;
+		}
+		
+		input[type="email"]{
+			width: 190px;
+		}
+	}
+	fieldset{
+		float:left;
+		+ fieldset {
+			float: right;
+		}
+	}
+	.helper {
+		display: block;
+		margin: 6px 10px;
+		.color-white;
+		a{
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+	.button {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.radio label{
+		.color-white;
+		&:before{
+			margin-top: -1px;
+		}
+	}
+}
+
+/*Info*/
+
+.info{
+	.wrap;
+	text-align: right;
+	height: 200px;
+	padding-top: 15px;
+	font-size: 12px;
+	.color-primary;
+	> p, address{
+		.column(10);
+		.push(2);
+	}
+	address {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	strong{
+		text-transform: uppercase;
+	}
+	a img {
+		width: initial;
+		position: relative;
+		margin-left: 5px;
+		// top: 28px;
+	}
+}
+/*Mapasite*/
+.mapa-site{
+	display: table;
+	width: 100%;
+	background: url(../img/pattern.jpg);
+	.font-size(1.3);
+	.color-primary;
+	padding: 30px 0px;
+	li{
+		margin-bottom: 6px;
+		a{
+			.font-regular;
+			.color-primary;
+			&:hover{
+				.color-primary-dark;
+			}
+		}
+	}
+	h1{
+		.font-bold;
+		text-transform: uppercase;
+	}
+	.redes{
+		.column(2);
+	}
+	.institucional{
+		.column(2);
+	}
+	.servicos{
+		.column(2);
+	}
+	.atendimento{
+		.column(2);
+	}
+	.pagamentos{
+		.column(4);
+		text-align: right;
+	}
+	.redes .fa{
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		.background-primary-dark1;
+		.color-white;
+		.font-size(1.6);
+		.line-height(2.5);
+	}
+	.pagamentos{
+		li{
+			display: block;
+		}
+	}
+}

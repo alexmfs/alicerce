@@ -1,0 +1,58 @@
+// Pagination
+// Version: 1.0.1
+// Date: 07/04/2014
+// Last Update: 07/04/2014
+
+.pagination{
+	// display: table;
+	// margin: 0 auto 10px;
+	&.center {
+		margin: 0 auto;
+		display: table;
+	}
+	a{
+		display: block;
+		padding: 5px;
+		float: left;
+		.font-regular;
+		.font-size(1.2);
+		.color-primary;
+		// .background-secondary;
+		// margin: 3px;
+		&:hover{
+			// .background-secondary-dark1;
+			.color-secondary;
+		}
+	}
+	.prev{
+		a{
+			.border-radius(8px 0px 0px 8px);
+		}
+	}
+	.next{
+		a{
+			.border-radius(0px 8px 8px 0px);
+		}
+	}
+	.disabled{
+		a{
+			// background: @pagination-a-disable-background;
+			// color: @pagination-a-disable;
+		}
+		&:first-child{
+			a{
+				.border-radius(8px 0px 0px 8px);
+			}
+		}
+		&:last-child{
+			a{
+				.border-radius(0px 8px 8px 0px);
+			}
+		}
+	}
+	.active{
+		a{
+			.color-secondary;
+		}
+	}
+}

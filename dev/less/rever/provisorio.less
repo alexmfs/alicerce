@@ -1,0 +1,52 @@
+// Busca /////////////////////////////////
+
+.search-result{
+	.row(9);
+	.space-bottom;
+	p{
+		.column(5,9);
+	}
+	.tips{
+		.column(4,9);
+		.font-size(1.1);
+		.font-regular;
+	}
+	span{
+		.font-size(1.4);
+		.font-bold;
+		.color-primary;
+	}
+	&.null{
+		.column(12);
+		.space-bottom;
+		.box-round(@color-primary);
+		padding: 20px 30px;
+		h2, h3{
+			.font-size(2.5);
+			.font-bold;
+			.color-primary;
+			margin-top: 5px;
+			margin-bottom: 10px;
+		}
+		span{
+			.font-size(1.4);
+			.font-bold;
+			.color-primary;
+		}
+		ul {
+			margin-left: 15px;
+		}
+		li {
+			list-style-type: disc;
+		}
+		> div{
+			.row(12);
+			div{
+				.column(7,12);
+			}
+			div + div{
+				.column(5,12);
+			}
+		}
+	}
+}

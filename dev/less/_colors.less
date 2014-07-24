@@ -1,0 +1,116 @@
+// Colors
+// Version: 1.0.1
+// Date: 22/07/2014
+// Last Update: 22/07/2014
+
+
+// Variables
+
+// Base
+@color-white: #fff;
+@color-black: #000;
+@color-base: #000;
+
+// Theme
+
+@color-primary: #d2ab69;
+	// Calculate colors
+	@color-primary-light1: lighten(@color-primary, 43%);
+	@color-primary-light2: lighten(@color-primary, 63%);
+	@color-primary-dark1: darken(spin(@color-primary, -5), 10%);
+	@color-primary-dark2: darken(spin(@color-primary, -10), 20%);
+	// Custom colors
+	@color-primary-light1: #ffe8be;
+	@color-primary-light2: #faf3e5;
+	@color-primary-dark1: #eee;
+	@color-primary-dark2: #261912;
+
+
+@color-secondary: #de4228;
+	// Calculate colors
+	@color-secondary-light1: lighten(@color-secondary, 43%);
+	@color-secondary-light2: lighten(@color-secondary, 63%);
+	@color-secondary-dark1: darken(spin(@color-secondary, -5), 10%);
+	@color-secondary-dark2: darken(spin(@color-secondary, -10), 20%);
+	// Custom colors
+	@color-secondary-light1: #eee;
+	@color-secondary-light2: #eee;
+	@color-secondary-dark1: #eee;
+	@color-secondary-dark2: #eee;
+
+
+
+// Colors
+.color-white()					{color: @white;}
+.color-base()					{color: @color-base;}
+
+.color-primary()				{color: @color-primary;}
+.color-primary-light1()			{color: @color-primary-light1;}
+.color-primary-light2()			{color: @color-primary-light2;}
+.color-primary-dark1()			{color: @color-primary-dark1;}
+.color-primary-dark2()			{color: @color-primary-dark2;}
+
+.color-secondary()				{color: @color-secondary;}
+.color-secondary-light1()		{color: @color-secondary-light1;}
+.color-secondary-light2()		{color: @color-secondary-light2;}
+.color-secondary-dark1()		{color: @color-secondary-dark1;}
+.color-secondary-dark2()		{color: @color-secondary-dark2;}
+
+// Background Colors
+.background-white()				{background-color: @white;}
+.background-base()				{background-color: @color-base;}
+
+.background-primary()			{background-color: @color-primary;}
+.background-primary-light1()	{background-color: @color-primary-light1;}
+.background-primary-light2()	{background-color: @color-primary-light2;}
+.background-primary-dark1()		{background-color: @color-primary-dark1;}
+.background-primary-dark2()		{background-color: @color-primary-dark2;}
+
+.background-secondary()			{background-color: @color-secondary;}
+.background-secondary-light1()	{background-color: @color-secondary-light1;}
+.background-secondary-light2()	{background-color: @color-secondary-light2;}
+.background-secondary-dark1()	{background-color: @color-secondary-dark1;}
+.background-secondary-dark2()	{background-color: @color-secondary-dark2;}
+
+// Border colors
+
+.border-color-primary()			{border-color: @color-primary;}
+.border-color-secondary()		{border-color: @color-secondary;}
+
+
+.helper-colors{
+	.wrap;
+	display: table;
+	> div{
+		clear: both;
+	}
+	div > span{
+		width: 150px;
+		height: 110px;
+		float: left;
+		margin: 10px 20px;
+		font-size: 10px;
+		text-align: center;
+		border: 1px solid;
+		padding: 10px;
+		span{
+			display: block;
+			width: 100%;
+			height: 50px;
+			margin: 10px auto;
+		}
+	}
+	.hc-base span{.background-base;}
+
+	.hc-primary span{.background-primary;}
+	.hc-primary-light1 span{.background-primary-light1;}
+	.hc-primary-light2 span{.background-primary-light2;}
+	.hc-primary-dark1 span{.background-primary-dark1;}
+	.hc-primary-dark2 span{.background-primary-dark2;}
+
+	.hc-secondary span{.background-secondary;}
+	.hc-secondary-light1 span{.background-secondary-light1;}
+	.hc-secondary-light2 span{.background-secondary-light2;}
+	.hc-secondary-dark1 span{.background-secondary-dark1;}
+	.hc-secondary-dark2 span{.background-secondary-dark2;}
+}

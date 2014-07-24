@@ -1,0 +1,54 @@
+// navtabs.less
+
+@tab-bg: @color4;
+@tab-color: @color2;
+@tab-text: uppercase;
+@tab-size: 5px 10px;
+
+@tab-selected-bg: @color5;
+@tab-selected-color: @color2;
+
+@content-bg: @color0;
+@content-border: #c4c0c0;
+@content-color: @color2;
+
+.tabs-justify(){
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: separate;
+	a{
+		display: table-cell;
+		float: none;
+		.font-size(1.2);
+		font-family: @verdana;
+	}
+}
+
+.tabs {
+	display: table;
+	position: relative;
+	top: 1px;
+	z-index: 1;
+	a{
+		padding: @tab-size;
+		background: lighten(@color3, 35%);
+		border-right: none;
+		display: block;
+		float: left;
+		color: @tab-color;
+		text-transform: @tab-text;
+		text-decoration: none;
+		font: 14px;
+		&.selected{
+			background: @tab-selected-bg;
+		}
+	}
+	.tabs-justify; // Active or Desactive Justify tabs
+}
+
+.content{
+	border: 1px solid @content-border;
+	background: @content-bg;
+	height: 258px;
+	color: @content-color;
+}

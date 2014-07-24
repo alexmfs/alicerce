@@ -1,0 +1,360 @@
+// Themes Color
+// Version: 1.0.1
+// Date: 13/05/2014
+// Last Update: 13/05/2014
+
+// @theme1: #1da7df;
+// @theme2: #fbc137;
+// @theme3: #e14d52;
+// @theme4: #24d178;
+// @theme5: #6f54b9;
+// @theme6: #166bcb;
+// @theme7: #8c8c8c;
+
+body[class^="pagina-x-tudo"] 				{.theme-celulas;}
+
+body[class^="pagina-celulas"],
+body[class^="pagina-institucionais"],
+body[class^="pagina-contato"] 				{.theme-celulas;}
+
+body[class^="pagina-areas-de-apoio"] 		{.theme-apoio;}
+body[class^="pagina-missoes"] 				{.theme-missoes;}
+body[class^="pagina-plataforma-social"] 	{.theme-social;}
+body[class^="pagina-conteudo-e-midia"] 		{.theme-conteudo;}
+body[class^="pagina-eventos"] 				{.theme-eventos;}
+
+// App Names
+.theme-celulas 		{.theme-color(@theme1)}
+.theme-apoio 		{.theme-color(@theme2)}
+.theme-missoes 		{.theme-color(@theme3)}
+.theme-social 		{.theme-color(@theme4)}
+.theme-conteudo 	{.theme-color(@theme5)}
+.theme-eventos 		{.theme-color(@theme6)}
+.theme-neutro 		{.theme-color(@theme7)}
+
+
+.color-custom(){
+	&.theme-celulas{ color: @theme1!important; }
+	&.theme-apoio{ color: @theme2!important; }
+	&.theme-missoes{ color: @theme3!important; }
+	&.theme-social{ color: @theme4!important; }
+	&.theme-conteudo{ color: @theme5!important; }
+	&.theme-eventos{ color: @theme6!important; }
+}
+
+.background-custom(){
+	&.theme-celulas{ background-color: @theme1!important; }
+	&.theme-apoio{ background-color: @theme2!important; }
+	&.theme-missoes{ background-color: @theme3!important; }
+	&.theme-social{ background-color: @theme4!important; }
+	&.theme-conteudo{ background-color: @theme5!important; }
+	&.theme-eventos{ background-color: @theme6!important; }
+}
+
+// Function
+.theme-color(@theme){
+	.color-theme(){
+		color: @theme;
+	}
+	.color-theme-dark(){
+		color: darken(@theme, 15%);
+	}
+	.background-theme(){
+		background-color: @theme;
+	}
+	.background-theme-dark(){
+		background-color: darken(@theme, 15%);
+	}
+	.border-theme(){
+		border-color: @theme;
+	}
+	.border-theme-dark(){
+		border-color: darken(@theme, 15%);
+	}
+	/*** Breadcrumb ***/
+	.breadcrumb{
+		li.active{
+			.color-theme;
+		}
+	}
+	/*** Local Header ***/
+	.local-header{
+		h1{
+			.color-theme;
+			&:after{
+				.background-theme-dark;
+			}
+		}
+	}
+	/*** Local Nav ***/
+	.local-nav{
+		a{
+			&:hover{
+				.color-theme;
+			}
+		}
+		.drop-down{
+			&:hover:after{
+				.color-theme-dark;
+			}
+		}
+		.drop-list a{
+			&:hover{
+				.color-theme-dark;
+			}
+		}
+	}
+	/*** Post Content ***/
+	.post-content{
+		h1 { .color-theme }
+		h2, h3, h4, h5, h6 { .color-theme }
+		p, li{
+			a:hover{ .color-theme-dark }
+		}
+		.bt-social{
+			.color-theme;
+			&:hover{
+				.color-theme-dark;
+			}
+		}
+	}
+	/*** Page Title ***/
+	header{
+		.page-title{
+			.color-theme-dark;
+		}
+	}
+	/*** Post Data ***/
+	.post-data{
+		.background-theme-dark;
+	}
+	/*** Post Title ***/
+	.post-title{
+		.color-theme;
+	}
+	/*** Post Subtitle ***/
+	.subtitle{
+		.color-theme;
+	}
+	/*
+	*
+	* Widgets - Podem ser alterados as cores, adicionando a classe theme-*
+	*
+	*/
+
+	.btn{
+		.btn-color(@theme);
+	}
+
+	.icon-box{
+		i{
+			.background-theme-dark;
+		}
+		.icon-text{
+			.color-theme-dark;
+			.border-theme-dark;
+		}
+	}
+
+	.definition-table{
+		dt{
+			.background-theme;
+			&:after{
+				.background-theme;
+			}
+		}
+		dd{
+			.border-theme;
+		}
+	}
+
+	.definition-icon{
+		dt{ .color-theme; }
+		dd{ .border-theme; }
+		span{ .background-theme; }
+		/* Custom colors*/
+		&.theme-celulas{
+			dt{	color: @theme1!important; }
+			dd{	border-color: @theme1!important; }
+			i{ background-color: @theme1!important; }
+		}
+		&.theme-apoio{
+			dt{	color: @theme2!important; }
+			dd{	border-color: @theme2!important; }
+			i{ background-color: @theme2!important; }
+		}
+		&.theme-missoes{
+			dt{	color: @theme3!important; }
+			dd{	border-color: @theme3!important; }
+			i{ background-color: @theme3!important; }
+		}
+		&.theme-social{
+			dt{	color: @theme4!important; }
+			dd{	border-color: @theme4!important; }
+			i{ background-color: @theme4!important; }
+		}
+		&.theme-conteudo{
+			dt{	color: @theme5!important; }
+			dd{	border-color: @theme5!important; }
+			i{ background-color: @theme5!important; }
+		}
+		&.theme-eventos{
+			dt{	color: @theme6!important; }
+			dd{	border-color: @theme6!important; }
+			i{ background-color: @theme6!important; }
+		}
+	}
+
+	.people-one, .people-team, .people-group{
+		.background-theme;
+		.background-custom;
+	}
+
+	.title-other{
+		.color-theme;
+		.color-custom;
+		&.inverse{
+			.background-theme!important;
+			color: @color0!important;
+		}
+	}
+	.artes-description .title-other {
+		color: @color0;
+		.background-theme;
+	}
+	.accordion .pergunta:after{ .color-theme; }
+	/* Tabela-celulas */
+
+	.table-celulas{
+		.border-theme;
+		tr{
+			&:nth-child(1) .sub-heading{ background-color: lighten(@theme, 30%); }
+			&:nth-child(2) .sub-heading{ background-color: lighten(@theme, 20%); }
+			&:nth-child(3) .sub-heading{ background-color: lighten(@theme, 10%); }
+		}
+		.heading{ background-color: darken(@theme, 15%); }
+		.table-comum{
+			color: @theme;
+			border-color: @theme;
+		}
+		/* Custom colors*/
+		&.theme-celulas{
+			border-color: @theme1!important;
+			tr{
+				&:nth-child(1) .sub-heading{ background-color: lighten(@theme1, 30%)!important; }
+				&:nth-child(2) .sub-heading{ background-color: lighten(@theme1, 20%)!important; }
+				&:nth-child(3) .sub-heading{ background-color: lighten(@theme1, 10%)!important; }
+			}
+			.heading{ background-color: darken(@theme1, 15%)!important; }
+			.table-comum{
+				color: @theme1!important;
+				border-color: @theme1!important;
+			}
+		}
+		&.theme-apoio{
+			border-color: @theme2!important;
+			tr{
+				&:nth-child(1) .sub-heading{ background-color: lighten(@theme2, 30%)!important; }
+				&:nth-child(2) .sub-heading{ background-color: lighten(@theme2, 20%)!important; }
+				&:nth-child(3) .sub-heading{ background-color: lighten(@theme2, 10%)!important; }
+			}
+			.heading{ background-color: darken(@theme2, 15%)!important; }
+			.table-comum{
+				color: @theme2!important;
+				border-color: @theme2!important;
+			}
+		}
+		&.theme-missoes{
+			border-color: @theme3!important;
+			tr{
+				&:nth-child(1) .sub-heading{ background-color: lighten(@theme3, 30%)!important; }
+				&:nth-child(2) .sub-heading{ background-color: lighten(@theme3, 20%)!important; }
+				&:nth-child(3) .sub-heading{ background-color: lighten(@theme3, 10%)!important; }
+			}
+			.heading{ background-color: darken(@theme3, 15%)!important; }
+			.table-comum{
+				color: @theme3!important;
+				border-color: @theme3!important;
+			}
+		}
+		&.theme-social{
+			border-color: @theme4!important;
+			tr{
+				&:nth-child(1) .sub-heading{ background-color: lighten(@theme4, 30%)!important; }
+				&:nth-child(2) .sub-heading{ background-color: lighten(@theme4, 20%)!important; }
+				&:nth-child(3) .sub-heading{ background-color: lighten(@theme4, 10%)!important; }
+			}
+			.heading{ background-color: darken(@theme4, 15%)!important; }
+			.table-comum{
+				color: @theme4!important;
+				border-color: @theme4!important;
+			}
+		}
+		&.theme-conteudo{
+			border-color: @theme5!important;
+			tr{
+				&:nth-child(1) .sub-heading{ background-color: lighten(@theme5, 30%)!important; }
+				&:nth-child(2) .sub-heading{ background-color: lighten(@theme5, 20%)!important; }
+				&:nth-child(3) .sub-heading{ background-color: lighten(@theme5, 10%)!important; }
+			}
+			.heading{ background-color: darken(@theme5, 15%)!important; }
+			.table-comum{
+				color: @theme5!important;
+				border-color: @theme5!important;
+			}
+		}
+		&.theme-eventos{
+			border-color: @theme6!important;
+			tr{
+				&:nth-child(1) .sub-heading{ background-color: lighten(@theme6, 30%)!important; }
+				&:nth-child(2) .sub-heading{ background-color: lighten(@theme6, 20%)!important; }
+				&:nth-child(3) .sub-heading{ background-color: lighten(@theme6, 10%)!important; }
+			}
+			.heading{ background-color: darken(@theme6, 15%)!important; }
+			.table-comum{
+				color: @theme6!important;
+				border-color: @theme6!important;
+			}
+		}
+	}
+	.cursos{
+		.cursos-helper{
+			color: @color0;
+			.background-theme;
+		}
+		h2{
+			.color-theme;
+		}
+	}
+	// Modal
+	.cursos {
+		.close-modal{
+			.background-theme;
+		}
+	}
+	span.label {
+		background: @theme;
+	}
+
+}
+
+
+// Guards
+.theme-color(@theme) when (lightness(@theme) >= 10%){
+	.local-nav .nav-item > a:hover{
+		background-color: lighten(@theme, 46%);
+	}
+}
+
+.theme-color(@theme) when (lightness(@theme) >= 50%){
+	.local-nav .nav-item > a:hover{
+		background-color: lighten(@theme, 36%);
+	}
+}
+
+.theme-color(@theme) when (@theme = @theme5) {
+	.local-nav .nav-item > a:hover{
+		background-color: lighten(@theme, 40%);
+	}
+}
+

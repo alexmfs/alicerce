@@ -1,0 +1,185 @@
+/*==========================================
+=			Vitrine - Produtos			=
+==========================================*/
+.produtos{
+	.header-section{
+		.column(12);
+	}
+	.lista-produtos{
+		.wrap;
+		&.grid{
+			.produto-item{
+				.column(3);
+				height: 378px;
+			}
+			.bandeiras{
+				margin: 6px 0 10px -3%;
+			}
+		}
+		&.list{
+			.produto-item{
+				.column(12);
+			}
+		}
+	}
+}
+
+.produto-item{
+	border-bottom: 8px solid @color-secondary-light1;
+	.border-radius(2em 2em 0 0);
+	.transition(0.3s);
+	background: @white;
+	.space-bottom-2x;
+	position: relative;
+	&:hover{
+		.background-secondary-light1;
+		border-bottom: 8px solid @color-secondary;
+	}
+	a{
+		display: block;
+		padding: 5px 6px;
+	}
+	.produto-img{
+		.border-radius(1.8em);
+	}
+}
+
+.produto-nome{
+	display: block;
+	height: 30px;
+	.color-base;
+	.font-size(1.4);
+	margin-bottom: 10px;
+}
+
+.bandeiras{
+	height: 36px;
+	position: relative;
+	width: 106%;
+	span{
+		display: block;
+		position: absolute;
+		text-align: center;
+		height: 18px;
+		.line-height(1.8);
+		.font-size(1.2);
+		text-transform: uppercase;
+	}
+}
+
+.pre-venda{
+	width: 50%;
+	background: @color-other1;
+	.color-secondary-light1;
+	top: 0;
+	left: 0;
+}
+
+.lancamento{
+	width: 50%;
+	.background-primary;
+	.color-secondary-light1;
+	top: 0;
+	right: 0;
+}
+
+.frete{
+	width: 100%;
+	.background-secondary;
+	.color-primary;
+	bottom: 0;
+	left: 0;
+}
+
+.preco{
+	position: relative;
+	height: 46px;
+	div{
+		position: absolute;
+		left:0px;
+	}
+	&-de{
+		.font-size(1.1);
+		color: #888;
+		top: 0px;
+		text-decoration: line-through;
+	}
+	&-por{
+		.font-size(1.8);
+		.color-primary;
+		top: 14px;
+	}
+	&-parcelado{
+		.font-size(1.4);
+		.color-primary-dark;
+		bottom: 0px;
+	}
+}
+
+
+
+
+.lista-produtos.list{
+	.produto-item{
+
+
+		figure, img, .bandeiras{
+			float: left;
+		}
+		figure{
+			width: 70%;
+		}
+		img {
+			width: initial!important;
+		}
+		.produto-nome{
+			position: absolute;
+			left: 228px;
+			top: 22px;
+			width: 200px;
+		}
+		.bandeiras {
+			width: 260px;
+			span{
+				width: 90%;
+				left: 5%;
+			}
+		}
+		.pre-venda{
+			top: 70px;
+		}
+		.lancamento{
+			top: 100px;
+		}
+		.frete{
+			top: 130px;
+		}
+		.preco {
+			width: 30%;
+			padding-top: 25px;
+			float: left;
+			height: 186px;
+			div{
+				left: 15px;
+			}
+		}
+		.preco-de{
+			top: 70px;
+		}
+		.preco-por{
+			top: 90px;
+		}
+		.preco-parcelado{
+			bottom: 60px;
+		}
+
+
+	}
+}
+
+// Corrige bug que ocorre no momento de transicao entre grid e lista
+.hack-gridview{
+	display: table;
+	min-height: 600px;
+}
+

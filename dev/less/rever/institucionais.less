@@ -1,0 +1,78 @@
+.conteudo-container{
+	padding-bottom: 40px;
+	& > h1, & > h2{
+		.color-base;
+		.font-bold;
+		.font-size(1.4);
+	}
+	& > h1{
+		.line-height(3.4);
+		.space-bottom-2x;
+		text-transform: uppercase;
+	}
+	& > h2{
+		.space-bottom;
+	}
+	& > p{
+		.color-base;
+		.font-regular;
+		.font-size(1.4);
+		.line-height(2.0);
+	}
+	& > p{
+		.space-bottom;
+	}
+}
+
+.faq{
+	.color-base;
+	.font-size(1.4);
+	dt{
+		.font-bold;
+		.space-bottom;
+	}
+	dd{
+		.font-regular;
+		.line-height(2.0);
+		.space-bottom-2x;
+	}
+}
+
+.login {
+	&-box{
+		.box-round(@color-primary);
+		display: table;
+		margin: 0 auto;
+		position: relative;
+		legend{
+			text-align: center;
+			background: none;
+			.font-bold;
+			.color-primary;
+			text-transform: uppercase;
+		}
+	}
+	&-form {
+		width: 430px;
+		padding: 20px 40px;
+		float: left;
+		margin: 20px;
+		& + .login-form:after {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 1px;
+			.background-primary;
+			top: 0;
+			left: 50%;
+		}
+	}
+}
+
+
+
+.cadastro, .login-form {
+	input[type="submit"]{
+		float: right;
+	}
+}
