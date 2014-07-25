@@ -1,0 +1,87 @@
+.border-bottom{
+	border-bottom:1px solid #eee;
+}
+.border{
+	border:1px solid #eee;
+}
+
+h1.hc{
+	.column(12);
+	.font-base(normal, 1.5, 1.5);
+	border-bottom: 1px solid;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.hc.colors{
+
+	> div{
+		clear: both;
+	}
+	span{
+		.column(2);
+		height: 110px;
+		float: left;
+		margin-bottom: 40px;
+		font-size: 10px;
+		text-align: center;
+		.border;
+		padding: 10px;
+		span{
+			display: block;
+			width: 100%;
+			height: 50px;
+			margin: 10px auto;
+		}
+	}
+	.hc-base span{.background-base;}
+	.hc-black span{.background-black;}
+	.hc-white span{.background-white;}
+
+	.hc-primary span{.background-primary;}
+	.hc-primary-light1 span{.background-primary-light1;}
+	.hc-primary-light2 span{.background-primary-light2;}
+	.hc-primary-dark1 span{.background-primary-dark1;}
+	.hc-primary-dark2 span{.background-primary-dark2;}
+
+	.hc-secondary span{.background-secondary;}
+	.hc-secondary-light1 span{.background-secondary-light1;}
+	.hc-secondary-light2 span{.background-secondary-light2;}
+	.hc-secondary-dark1 span{.background-secondary-dark1;}
+	.hc-secondary-dark2 span{.background-secondary-dark2;}
+}
+
+section.hc{
+	.wrap;
+	display: table;
+	padding: 20px 0px;
+	margin: 20px 0px;
+	.border;
+}
+
+.hc.types{
+	p{
+		.column(10);
+		margin-bottom: 20px;
+		position: relative;
+		span{
+			display: block;
+			font: inherit;
+			margin-bottom: 10px;
+			.border-bottom;
+		}
+	}
+	input[type="number"]{
+		position: absolute;
+		top: 0;
+		right: -162px;
+		text-align: center;
+		height: 60px;
+		text-indent: 10px;
+	}
+}
+
+.hc.types{
+	.hc-base		{.font-base(normal, 1.6, 1.8)}
+	.hc-base-bold	{.font-base(bold, 1.6, 1.8)}
+}

@@ -1,9 +1,18 @@
-<div class="helper-colors">
+<section class="hc colors" id="hc-colors">
+	<h1 class="hc">Paleta de Cores</h1>
 	<div>
 		<span class="hc-base">
 			<span></span>
 			color base
-		</span>	
+		</span>
+		<span class="hc-black">
+			<span></span>
+			color black
+		</span>
+		<span class="hc-white">
+			<span></span>
+			color white
+		</span>
 	</div>
 	<div>
 		<span class="hc-primary-light2">
@@ -25,7 +34,7 @@
 		<span class="hc-primary-dark2">
 			<span></span>
 			color primary dark2
-		</span>		
+		</span>
 	</div>
 	<div>
 		<span class="hc-secondary-light2">
@@ -47,6 +56,6 @@
 		<span class="hc-secondary-dark2">
 			<span></span>
 			color secondary dark2
-		</span>		
+		</span>
 	</div>
-</div>
+</section>

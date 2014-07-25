@@ -23,6 +23,7 @@
 
 		<?php include ("includes/helpers/colors.php"); ?>
 		<?php include ("includes/helpers/types.php"); ?>
+		<?php include ("includes/helpers/buttons.php"); ?>
 
 	</main>
 

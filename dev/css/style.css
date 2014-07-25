@@ -44,84 +44,6 @@ body:after {
 	background: url(../img/sprite.png) no-repeat;
 }
 
-.helper-colors {
-	width: 100%;
-	width: 960px;
-	margin: 0 auto;
-	display: table;
-}
-
-.helper-colors > div {
-	clear: both;
-}
-
-.helper-colors div > span {
-	width: 150px;
-	height: 110px;
-	float: left;
-	margin: 10px 20px;
-	font-size: 10px;
-	text-align: center;
-	border: 1px solid #eee;
-	padding: 10px;
-}
-
-.helper-colors div > span span {
-	display: block;
-	width: 100%;
-	height: 50px;
-	margin: 10px auto;
-}
-
-.helper-colors .hc-base span {
-	background-color: #000000;
-}
-
-.helper-colors .hc-primary span {
-	background-color: #d2ab69;
-}
-
-.helper-colors .hc-primary-light1 span {
-	background-color: #ffe8be;
-}
-
-.helper-colors .hc-primary-light2 span {
-	background-color: #faf3e5;
-}
-
-.helper-colors .hc-primary-dark1 span {
-	background-color: #c68a42;
-	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
-}
-
-.helper-colors .hc-primary-dark2 span {
-	background-color: #261912;
-}
-
-.helper-colors .hc-secondary span {
-	background-color: #de4228;
-}
-
-.helper-colors .hc-secondary-light1 span {
-	background-color: #fbe9e6;
-	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
-}
-
-.helper-colors .hc-secondary-light2 span {
-	background-color: #ffffff;
-	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
-}
-
-.helper-colors .hc-secondary-dark1 span {
-	background-color: #b7251c;
-	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
-}
-
-.helper-colors .hc-secondary-dark2 span {
-	background-color: #8b1518;
-	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
-}
-
 /* Basic font project -------------------------------------- */
 
 /* Font Face */
@@ -191,6 +113,175 @@ li,
 
 p {
 	margin-bottom: 10px;
+}
+
+/* Button - Pattern */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"] {
+	display: inline-block;
+	background-color: #ffffff;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em; /*Pixel value Fallback*/
+	font: normal 14px/11px Opensans, Fallback, sans-serif; /*Rem value*/
+	font: normal 1.4rem/1.1rem Opensans, Fallback, sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	cursor: pointer;
+	margin: 1px 1px;
+	color: #838383;
+	border: 1px solid;
+	padding: 5px 20px 8px 20px;
+	padding: 6px 8px; /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjIiLz4KICAgIDxzdG9wIG9mZnNldD0iMSUiIHN0b3AtY29sb3I9IiMwMzAzMDMiIHN0b3Atb3BhY2l0eT0iMC4yIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background-image: -webkit-linear-gradient(to top, transparent, rgba(0, 0, 0, 0.1));
+	background-image: -moz-linear-gradient(to top, transparent, rgba(0, 0, 0, 0.1));
+	background-image: -o-linear-gradient(to top, transparent, rgba(0, 0, 0, 0.1));
+	background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.1)); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00ffffff', GradientType=0); /* IE6-8 */
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover { /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjIiLz4KICAgIDxzdG9wIG9mZnNldD0iMSUiIHN0b3AtY29sb3I9IiMwMzAzMDMiIHN0b3Atb3BhY2l0eT0iMC4yIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background-image: -webkit-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+	background-image: -moz-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+	background-image: -o-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1)); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00ffffff', GradientType=0); /* IE6-8 */
+}
+
+.button.desactive,
+button.desactive,
+input[type="submit"].desactive,
+input[type="reset"].desactive {
+	background-image: none;
+	cursor: default; /* Fallback */
+	cursor: not-allowed;
+}
+
+.button.desactive:focus,
+button.desactive:focus,
+input[type="submit"].desactive:focus,
+input[type="reset"].desactive:focus,
+.button.desactive:active,
+button.desactive:active,
+input[type="submit"].desactive:active,
+input[type="reset"].desactive:active {
+	outline: 0;
+}
+
+.button.danger,
+button.danger,
+input[type="submit"].danger,
+input[type="reset"].danger {
+	background-color: #a12a5c;
+	border-color: #791f45;
+	color: #ffffff;
+}
+
+.button.danger.is-desactive,
+button.danger.is-desactive,
+input[type="submit"].danger.is-desactive,
+input[type="reset"].danger.is-desactive {
+	background-color: #7f7f7f;
+	border-color: #4c4c4c;
+}
+
+.button.success,
+button.success,
+input[type="submit"].success,
+input[type="reset"].success {
+	background-color: #d2ab69;
+	border-color: #c69542;
+	color: #ffffff;
+}
+
+.button.success.is-desactive,
+button.success.is-desactive,
+input[type="submit"].success.is-desactive,
+input[type="reset"].success.is-desactive {
+	background-color: #b7b7b7;
+	border-color: #848484;
+}
+
+.button.warning,
+button.warning,
+input[type="submit"].warning,
+input[type="reset"].warning {
+	background-color: #de4228;
+	border-color: #b7321c;
+	color: #ffffff;
+}
+
+.button.warning.is-desactive,
+button.warning.is-desactive,
+input[type="submit"].warning.is-desactive,
+input[type="reset"].warning.is-desactive {
+	background-color: #aa938f;
+	border-color: #785f5b;
+}
+
+.button.pp,
+button.pp,
+input[type="submit"].pp,
+input[type="reset"].pp {
+	padding: 3px 4px; /*Pixel value Fallback*/
+	font: normal 11px/11px Opensans, Fallback, sans-serif; /*Rem value*/
+	font: normal 1.1rem/1.1rem Opensans, Fallback, sans-serif;
+}
+
+.button.p,
+button.p,
+input[type="submit"].p,
+input[type="reset"].p {
+	padding: 3px 4px;
+}
+
+.button.m,
+button.m,
+input[type="submit"].m,
+input[type="reset"].m {
+	padding: 9px 6px;
+}
+
+.button.g,
+button.g,
+input[type="submit"].g,
+input[type="reset"].g {
+	padding: 9px 12px;
+}
+
+.button.xg,
+button.xg,
+input[type="submit"].xg,
+input[type="reset"].xg {
+	padding: 12px 16px;
+}
+
+.button.full,
+button.full,
+input[type="submit"].full,
+input[type="reset"].full {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.button i,
+button i,
+input[type="submit"] i,
+input[type="reset"] i {
+	font-size: 150%;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
 }
 
 html {
@@ -1507,5 +1598,152 @@ html {
 
 .hidden-block {
 	display: none;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #eee;
+}
+
+.border {
+	border: 1px solid #eee;
+}
+
+h1.hc {
+	display: inline;
+	float: left;
+	width: 97.91666667%;
+	margin: 0 1.04166667%; /*Pixel value Fallback*/
+	font: normal 15px/15px Opensans, Fallback, sans-serif; /*Rem value*/
+	font: normal 1.5rem/1.5rem Opensans, Fallback, sans-serif;
+	border-bottom: 1px solid;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.hc.colors > div {
+	clear: both;
+}
+
+.hc.colors span {
+	display: inline;
+	width: 14.58333333%;
+	margin: 0 1.04166667%;
+	height: 110px;
+	float: left;
+	margin-bottom: 40px;
+	font-size: 10px;
+	text-align: center;
+	border: 1px solid #eee;
+	padding: 10px;
+}
+
+.hc.colors span span {
+	display: block;
+	width: 100%;
+	height: 50px;
+	margin: 10px auto;
+}
+
+.hc.colors .hc-base span {
+	background-color: #000000;
+}
+
+.hc.colors .hc-black span {
+	background-color: #000000;
+}
+
+.hc.colors .hc-white span {
+	background-color: #ffffff;
+}
+
+.hc.colors .hc-primary span {
+	background-color: #d2ab69;
+}
+
+.hc.colors .hc-primary-light1 span {
+	background-color: #ffe8be;
+}
+
+.hc.colors .hc-primary-light2 span {
+	background-color: #faf3e5;
+}
+
+.hc.colors .hc-primary-dark1 span {
+	background-color: #c68a42;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
+}
+
+.hc.colors .hc-primary-dark2 span {
+	background-color: #261912;
+}
+
+.hc.colors .hc-secondary span {
+	background-color: #de4228;
+}
+
+.hc.colors .hc-secondary-light1 span {
+	background-color: #fbe9e6;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
+}
+
+.hc.colors .hc-secondary-light2 span {
+	background-color: #ffffff;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
+}
+
+.hc.colors .hc-secondary-dark1 span {
+	background-color: #b7251c;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
+}
+
+.hc.colors .hc-secondary-dark2 span {
+	background-color: #8b1518;
+	box-shadow: 0px -9px 0px 11px #ffffff, 0px 27px 0px 11px #ffffff, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;
+}
+
+section.hc {
+	width: 100%;
+	width: 960px;
+	margin: 0 auto;
+	display: table;
+	padding: 20px 0px;
+	margin: 20px 0px;
+	border: 1px solid #eee;
+}
+
+.hc.types p {
+	display: inline;
+	float: left;
+	width: 81.25%;
+	margin: 0 1.04166667%;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.hc.types p span {
+	display: block;
+	font: inherit;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.hc.types input[type="number"] {
+	position: absolute;
+	top: 0;
+	right: -162px;
+	text-align: center;
+	height: 60px;
+	text-indent: 10px;
+}
+
+.hc.types .hc-base { /*Pixel value Fallback*/
+	font: normal 16px/18px Opensans, Fallback, sans-serif; /*Rem value*/
+	font: normal 1.6rem/1.8rem Opensans, Fallback, sans-serif;
+}
+
+.hc.types .hc-base-bold { /*Pixel value Fallback*/
+	font: bold 16px/18px Opensans, Fallback, sans-serif; /*Rem value*/
+	font: bold 1.6rem/1.8rem Opensans, Fallback, sans-serif;
 }
 

@@ -1,6 +1,6 @@
 /* Button - Pattern */
 // Padrão básico aplicado a todos os botões através do uso de &:extend
-.button, button{
+.button, button, input[type="submit"], input[type="reset"]{
 	@height: 6px;
 	// @width: 20px;
 	@width: 8px;
@@ -9,11 +9,9 @@
 	@color2: #38be0a;
 
 	display: inline-block;
-	background-color: @white;
+	.background-white;
 	.border-radius(0.3em);
-	.font-size(1.4);
-	.line-height(1.1);
-	.font-regular;
+	.font-base(normal, 1.4, 1.1);
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: .05em;
@@ -24,6 +22,7 @@
 	padding: 5px 20px 8px 20px;
 	padding: @height @width;
 	.linear-gradient(@to: top);
+
 	// State rules
 	&:hover{
 		.linear-gradient(@to: bottom);
@@ -42,12 +41,13 @@
 	}
 
 	&.danger{
-		.btn-color(@color-third);
+		.btn-color(#a12a5c);
 	}
 
 	&.success{
-		.btn-color(#aeca5c);
+		.btn-color(@color-primary);
 	}
+
 	&.warning{
 		.btn-color(@color-secondary);
 	}
@@ -55,7 +55,7 @@
 	//
 	&.pp{
 		padding: @height/2 @width/2;
-		.font-size(1.1);
+		.font-base(normal, 1.1, 1.1);
 	}
 	&.p{
 		padding: @height/2 @width/2;
@@ -86,7 +86,7 @@
 .btn-color(@x){
 	background-color: @x;
 	border-color: darken(@x, 10%);
-	color: @white;
+	.color-white;
 	// State rule
 	&.is-desactive{
 		background-color: desaturate(lighten(@x, 10%),60%);
