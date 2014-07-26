@@ -6,7 +6,7 @@
 
 			<h1>
 				<a href="../" class="logo">
-					<img src="img/logo.png" height="" width="" alt="">
+					<img src="img/logo.png" height="" width="" alt="NOME DO CLIENTE">
 				</a>
 			</h1>
 
@@ -24,6 +24,7 @@
 		<?php include ("includes/helpers/colors.php"); ?>
 		<?php include ("includes/helpers/types.php"); ?>
 		<?php include ("includes/helpers/buttons.php"); ?>
+		<?php include ("includes/helpers/tooltips.php"); ?>
 
 	</main>
 

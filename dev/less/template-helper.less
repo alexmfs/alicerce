@@ -1,22 +1,47 @@
+.logo img{
+	.background-secondary-dark2;
+	border-radius: 1em;
+	overflow: hidden;
+	width: 100%;
+}
+
+.border{
+	border:1px solid #eee;
+}
 .border-bottom{
 	border-bottom:1px solid #eee;
 }
-.border{
-	border:1px solid #eee;
+.border-bottom-double{
+	border-bottom: 5px solid #eee;
 }
 
 h1.hc{
 	.column(12);
-	.font-base(normal, 1.5, 1.5);
+	.font-base(normal, 2.8, 2.8);
 	border-bottom: 1px solid;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
+	small{
+		.font-base(normal, 1.2, 2.8);
+		float: right;
+		.color-base;
+	}
 }
+h2.hc, .h2.hc{
+	.font-base(normal, 1.8, 1.8);
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	.border-bottom-double;
+}
+
 .hc.colors{
 
 	> div{
 		clear: both;
+		> span{
+			.border;
+		}
 	}
 	span{
 		.column(2);
@@ -25,8 +50,13 @@ h1.hc{
 		margin-bottom: 40px;
 		font-size: 10px;
 		text-align: center;
-		.border;
 		padding: 10px;
+		&:hover span{
+			.linear-gradient;
+		}
+		&:focus span{
+			.linear-gradient(bottom);
+		}
 		span{
 			display: block;
 			width: 100%;
@@ -68,7 +98,6 @@ section.hc{
 			display: block;
 			font: inherit;
 			margin-bottom: 10px;
-			.border-bottom;
 		}
 	}
 	input[type="number"]{
@@ -84,4 +113,22 @@ section.hc{
 .hc.types{
 	.hc-base		{.font-base(normal, 1.6, 1.8)}
 	.hc-base-bold	{.font-base(bold, 1.6, 1.8)}
+}
+
+.hc.buttons{
+	>div{
+		.column(12);
+		margin-bottom: 30px;
+		>div {
+			float: left;
+			width: 50%;
+		}
+	}
+}
+.hc.tooltips{
+	a{
+		text-align: center;
+		margin: 50px auto;
+		display: table;
+	}
 }

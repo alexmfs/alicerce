@@ -13,32 +13,42 @@
 
 @null: ~";box-shadow: 0px -9px 0px 11px @{color-white}, 0px 27px 0px 11px @{color-white}, -9px -18px 0px 3px #bbb, 9px -18px 0px 3px #bbb, 9px 36px 0px 3px #bbb, -9px 36px 0px 3px #bbb;";
 
+// apply ~"@{null}";
 // Theme
 
-@color-primary: #d2ab69;
+@color-primary: #b7251c;
 	// Calculate colors
-	@color-primary-light1: lighten(@color-primary, 43%);
-	@color-primary-light2: lighten(@color-primary, 63%);
+	@color-primary-light1: lighten(spin(@color-primary, 5), 10%);
+	@color-primary-light2: lighten(spin(@color-primary, 10), 20%);
 	@color-primary-dark1: darken(spin(@color-primary, -5), 10%);
 	@color-primary-dark2: darken(spin(@color-primary, -10), 20%);
+
 	// Custom colors
-	@color-primary-light1: #ffe8be;
-	@color-primary-light2: #faf3e5;
-	@color-primary-dark1: darken(spin(@color-primary, -5), 10%) ~"@{null}";
-	@color-primary-dark2: #261912;
+	// @color-primary-light1: #ffe8be;
+	// @color-primary-light2: #faf3e5;
+	// @color-primary-dark1: darken(spin(@color-primary, -5), 10%) ~"@{null}";;
+	// @color-primary-dark2: #261912;
+
+
+// @base: #663333;
+// @complement1: spin(@base, 180);
+// @complement2: darken(spin(@base, 180), 5%);
+// @lighten1: lighten(@base, 15%);
+// @lighten2: lighten(@base, 30%);
 
 
 @color-secondary: #de4228;
+@color-secondary: darken(spin(@color-primary, 180), 5%);
 	// Calculate colors
 	@color-secondary-light1: lighten(@color-secondary, 43%);
 	@color-secondary-light2: lighten(@color-secondary, 63%);
 	@color-secondary-dark1: darken(spin(@color-secondary, -5), 10%);
 	@color-secondary-dark2: darken(spin(@color-secondary, -10), 20%);
 	// Custom colors
-	@color-secondary-light1: lighten(@color-secondary, 43%) ~"@{null}";
-	@color-secondary-light2: lighten(@color-secondary, 63%) ~"@{null}";
-	@color-secondary-dark1: darken(spin(@color-secondary, -5), 10%) ~"@{null}";
-	@color-secondary-dark2: darken(spin(@color-secondary, -10), 20%) ~"@{null}";
+	// @color-secondary-light1: lighten(@color-secondary, 43%);
+	// @color-secondary-light2: lighten(@color-secondary, 63%);
+	// @color-secondary-dark1: darken(spin(@color-secondary, -5), 10%);
+	// @color-secondary-dark2: darken(spin(@color-secondary, -10), 20%);
 
 
 
