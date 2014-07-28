@@ -170,6 +170,14 @@ input[type="reset"]:hover { /* IE9 SVG, needs conditional override of 'filter' t
 	background-image: -o-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.09));
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.09)); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00ffffff', GradientType=0); /* IE6-8 */
+	text-decoration: none;
+}
+
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+	background-image: none!important;
 }
 
 .button.desactive,
@@ -1864,11 +1872,11 @@ h2.hc,
 }
 
 .hc.colors .hc-primary-light1 span {
-	background-color: #de4228;
+	background-color: #e87c6a;
 }
 
 .hc.colors .hc-primary-light2 span {
-	background-color: #e57554;
+	background-color: #f9e0d9;
 }
 
 .hc.colors .hc-primary-dark1 span {
@@ -1884,11 +1892,11 @@ h2.hc,
 }
 
 .hc.colors .hc-secondary-light1 span {
-	background-color: #a4edf1;
+	background-color: #54dce5;
 }
 
 .hc.colors .hc-secondary-light2 span {
-	background-color: #fcfeff;
+	background-color: #c3f3f6;
 }
 
 .hc.colors .hc-secondary-dark1 span {
