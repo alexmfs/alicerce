@@ -73,6 +73,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.min.css" />
 
 	<!-- Scripts -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<script type="text/javascript" src="http://www.z3host.com.br/recursos/cssrefresh.js"></script>
 

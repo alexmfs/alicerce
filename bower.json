@@ -1,0 +1,24 @@
+{
+  "name": "Start",
+  "version": "0.0.0",
+  "homepage": "https://github.com/alexmfs/start",
+  "authors": [
+    "Alex Machado <alex_mfarias@hotmail.com>"
+  ],
+  "description": "Start Boilerplate",
+  "keywords": [
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1"
+  }
+}

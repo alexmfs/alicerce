@@ -29,6 +29,16 @@ module.exports = function(grunt) {
 		    }
 		  }
 		},
+
+		copy: {
+		  main: {
+		    files: [
+		      // includes files within path
+		      {expand: false, src: ['bower_components/jquery/jquery.min.js'], dest: 'public/js/jquery.min.js', filter: 'isFile'},
+		    ]
+		  }
+		},
+
 		// Atualizar
 		watch: {
 			styles: {
@@ -43,4 +53,5 @@ module.exports = function(grunt) {
 	});
 	// registrando tarefa default
 	grunt.registerTask( 'default', ['watch'] );
+	grunt.registerTask( 'c', ['copy'] );
 };
