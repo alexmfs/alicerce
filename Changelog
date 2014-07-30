@@ -1,0 +1,59 @@
+commit 28145932e784b26caf1365941ccb30ce4e7546be
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Tue Jul 29 23:21:42 2014 -0300
+
+    Delete teste.txt
+
+commit ebd80a10d9de903696d817b262540c7f0ff81593
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Tue Jul 29 16:31:19 2014 -0300
+
+    teste.txt
+
+commit c33c61aeffb98ea17f73f0d033a2744f36bf810e
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Mon Jul 28 15:18:46 2014 -0300
+
+    [if lt IE 7] :: browsehappy
+
+commit 022afad5f25767cd18a732a6e06a8b384ad5095d
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Mon Jul 28 13:56:02 2014 -0300
+
+    init bower
+
+commit 329a00ed0605bd58e80f6a81860bae1ddfb2ffec
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Mon Jul 28 01:32:30 2014 -0300
+
+    update
+
+commit 9d9d19d103e8204e4ffe89d3846b65df46131eec
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Sat Jul 26 19:50:13 2014 -0300
+
+    add tooltypes e edit colors
+
+commit f085c22831970142407356fb513bbc76864be417
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Thu Jul 24 23:11:54 2014 -0300
+
+    Types :: adicionado painel de visualizacao
+
+commit a0d2bf29a8e61e49ca741be78b85c8200fe98a2a
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Thu Jul 24 10:42:31 2014 -0300
+
+    colors :: Aplicado shadow para cores que foram calculadas
+
+commit f19f039e82a246ee4830c8305c9cb268d32c33fe
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Thu Jul 24 09:27:39 2014 -0300
+
+    Iniciado Boilerplate
+
+commit e210bc27e3a2b5971d6383cd6595e28b8eb6fbcb
+Author: Alex Machado <alex_mfarias@hotmail.com>
+Date:   Thu Jul 24 09:20:10 2014 -0300
+
+    Initial commit

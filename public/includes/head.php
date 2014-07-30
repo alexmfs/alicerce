@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="canonical" href="http://www.DOMINIO.com.br" />
+	<base href="http://www.w3schools.com/images/" target="_blank">
 
 	<!-- Viewport RWD Design -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -41,7 +43,14 @@
 	<meta property="business:contact_data:email" content="atendimento@DESENVOLVIMENTO.com.br" />
 	<meta property="business:contact_data:website" content="http://www.DESENVOLVIMENTO.com.br" />
 
-	<!-- Facebook -->
+	<!-- Social: Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@autor_twitter">
+	<meta name="twitter:title" content="Autor Twiiter">
+	<meta name="twitter:description" content="Descrição">
+	<meta name="twitter:image:src" content="http://site.com.br/img/social/img.jpg">
+
+	<!-- Social: Facebook -->
 	<meta property="og:locale" content="pt_BR" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="" />
