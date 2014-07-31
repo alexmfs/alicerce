@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<link rel="canonical" href="http://www.DOMINIO.com.br" />
-	<base href="http://www.w3schools.com/images/" target="_blank">
+	<!-- <base href="http://www.DOMINIO.com.br/img" target="_blank"> -->
 
 	<!-- Viewport RWD Design -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
