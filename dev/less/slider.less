@@ -1,0 +1,35 @@
+.slider {
+	height: 600px;
+	position: relative;
+}
+
+.slide {
+	display: none;
+	width: 100%;
+	height: 600px;
+	background-position: center 96px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.bullets {
+	display: table;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	li{
+		padding: 5px;
+		display: inline-block;
+		.border-radius(5em);
+		.background-primary-light1;
+		margin: 5px;
+		cursor: pointer;
+		&.active, &:hover{
+			.background-primary-dark1;
+		}
+	}
+}

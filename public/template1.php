@@ -21,14 +21,19 @@
 		</div>
 	</header>
 
+	<section class="slider" id="slideshow">
+
+		<div class="slide" style="background-image: url(img/banners/slider-001.jpg);"></div>
+		<div class="slide" style="background-image: url(img/banners/slider-002.jpg);"></div>
+		<div class="slide" style="background-image: url(img/banners/slider-003.jpg);"></div>
+		<div class="slide" style="background-image: url(img/banners/slider-004.jpg);"></div>
+
+
+	</section>
+
 	<!-- Main Section -->
 	<main class="main" role="main">
 
-		<?php include ("includes/helpers/forms.php"); ?>
-		<?php include ("includes/helpers/colors.php"); ?>
-		<?php include ("includes/helpers/types.php"); ?>
-		<?php include ("includes/helpers/buttons.php"); ?>
-		<?php include ("includes/helpers/tooltips.php"); ?>
 
 	</main>
 

@@ -83,8 +83,12 @@
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
+
 	<script type="text/javascript" src="http://www.z3host.com.br/recursos/cssrefresh.js"></script>
+
+	<!-- <script data-main="js/main" src="js/require.js"></script> -->
 
 	<!-- título -->
 	<title>Site Name</title>

@@ -2,13 +2,25 @@ html {
   font-size: 62.5%; /* Sets up the Base 10 stuff */
 }
 
+body{
+	padding-top: 96px;
+}
+
 header.principal{
 	.background-primary;
 	padding: @space 0;
 	overflow: auto;
+	.header-fixed;
 	.logo{
 		.column(2);
 	}
+}
+
+.header-fixed(){
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 100;
 }
 
 .nav-global{
@@ -26,6 +38,7 @@ footer.principal{
 	.wrap;
 	.space;
 	display: table;
+	height: 900px;
 	> section{
 		margin-top: @space;
 	}

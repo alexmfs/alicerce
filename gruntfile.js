@@ -35,6 +35,8 @@ module.exports = function(grunt) {
 		    files: [
 		      // includes files within path
 		      {expand: false, src: ['bower_components/jquery/jquery.min.js'], dest: 'public/js/jquery.min.js', filter: 'isFile'},
+		      {expand: false, src: ['bower_components/jquery/jquery-migrate.min.js'], dest: 'public/js/jquery-migrate.min.js', filter: 'isFile'},
+		      {expand: false, src: ['bower_components/requirejs/require.js'], dest: 'public/js/require.js', filter: 'isFile'},
 		    ]
 		  }
 		},
