@@ -1,0 +1,68 @@
+grid{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  overflow: auto;
+  background: #eee;
+}
+
+x-column{
+  display: inline-block;
+  float: left;
+  overflow: auto;
+  margin-top: 5px!important;
+  margin-bottom: 5px!important;
+  & > div{
+    text-align: center;
+    background-color:#d8f7ff;
+    color: #416997;
+    height: 100px;
+    .font-size(1.8);
+  }
+}
+
+@media @mobile{
+  [mobile="1"]{.column(1);}
+  [mobile="2"]{.column(2);}
+  [mobile="3"]{.column(3);}
+  [mobile="4"]{.column(4);}
+  [mobile="5"]{.column(5);}
+  [mobile="6"]{.column(6);}
+  [mobile="7"]{.column(7);}
+  [mobile="8"]{.column(8);}
+  [mobile="9"]{.column(9);}
+  [mobile="10"]{.column(10);}
+  [mobile="11"]{.column(11);}
+  [mobile="12"]{.column(12);}
+}
+
+@media @tablet{
+  [tablet="1"]{.column(1);}
+  [tablet="2"]{.column(2);}
+  [tablet="3"]{.column(3);}
+  [tablet="4"]{.column(4);}
+  [tablet="5"]{.column(5);}
+  [tablet="6"]{.column(6);}
+  [tablet="7"]{.column(7);}
+  [tablet="8"]{.column(8);}
+  [tablet="9"]{.column(9);}
+  [tablet="10"]{.column(10);}
+  [tablet="11"]{.column(11);}
+  [tablet="12"]{.column(12);}
+}
+
+@media @desktop{
+  [desktop="1"]{.column(1);}
+  [desktop="2"]{.column(2);}
+  [desktop="3"]{.column(3);}
+  [desktop="4"]{.column(4);}
+  [desktop="5"]{.column(5);}
+  [desktop="6"]{.column(6);}
+  [desktop="7"]{.column(7);}
+  [desktop="8"]{.column(8);}
+  [desktop="9"]{.column(9);}
+  [desktop="10"]{.column(10);}
+  [desktop="11"]{.column(11);}
+  [desktop="12"]{.column(12);}
+}

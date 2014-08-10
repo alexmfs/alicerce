@@ -92,4 +92,8 @@ $(document).ready(function () {
 		});
 	}
 
+	$('.feedback  .close').on('click', function (){
+		$(this).parent().fadeOut();
+	});
+
 });

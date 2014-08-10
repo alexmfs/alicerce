@@ -29,6 +29,8 @@
 		<?php include ("includes/helpers/types.php"); ?>
 		<?php include ("includes/helpers/buttons.php"); ?>
 		<?php include ("includes/helpers/tooltips.php"); ?>
+		<?php include ("includes/helpers/messages.php"); ?>
+		<?php include ("includes/helpers/x-grid.php"); ?>
 
 	</main>
 

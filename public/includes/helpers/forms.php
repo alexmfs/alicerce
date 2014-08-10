@@ -33,8 +33,8 @@
 		<label for="">Busca</label>
 		<input type="search">
 		<input type="submit" value="buscar" class="btn success">
-		<label for="">Senha</label>
-		<input type="password">
+		<label for="">Senha <small>(máximo 15 caracteres)</small></label>
+		<input type="password" maxlength="15" required>
 		<label for="">Range</label>
 		<input type="range" min="0" max="100">
 		<label for="">Numero</label>
