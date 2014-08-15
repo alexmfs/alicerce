@@ -6,14 +6,32 @@ body{
 	padding-top: 96px;
 }
 
+.box{
+	padding: @space 0px;
+	margin: @space 0px;
+	.border;
+}
+
+.center{
+	text-align: center;
+}
+
+.shape {
+	height: 50px;
+	text-align: center;
+	width: 100%;
+	.font-base(normal, 1.2, 5.0);
+    .background-primary-light1;
+	.color-white;
+	margin-bottom: @margin * 2;
+}
+
+
 header.principal{
 	.background-primary;
 	padding: @space 0;
 	overflow: auto;
 	.header-fixed;
-	.logo{
-		.column(2);
-	}
 }
 
 .header-fixed(){
@@ -24,7 +42,6 @@ header.principal{
 }
 
 .nav-global{
-	.column(10);
 	text-align: right;
 }
 
@@ -38,9 +55,9 @@ footer.principal{
 	.wrap;
 	.space;
 	display: table;
-	height: 900px;
 	> section{
-		margin-top: @space;
+		.wrap;
+		.box;
 	}
 }
 

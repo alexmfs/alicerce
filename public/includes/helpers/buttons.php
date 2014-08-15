@@ -1,26 +1,25 @@
-<section class="hc buttons" id="hc-buttons">
-	<h1 class="hc">Buttons <small>cores de estados são definidos separadamente</small></h1>
-	<div>
+<section id="hc-buttons">
+	<div class="desktop-12">
+		<h1 class="hc">Buttons <small>cores de estados são definidos separadamente</small></h1>
 		<h2 class="hc">Sizes</h2>
+	</div>
+	<div class="desktop-4">
 		<button class="">default</button>
 		<button class="pp">pp</button>
 		<button class="p">p</button>
 		<button class="m">m</button>
 		<button class="g">g</button>
 		<button class="xg">xg</button>
+	</div>
+	<div class="desktop-8">
 		<button class="full">default full</button>
-		<br>
 		<button class="full pp">pp full</button>
-		<br>
 		<button class="full p">p full</button>
-		<br>
 		<button class="full m">m full</button>
-		<br>
 		<button class="full g">g full</button>
-		<br>
 		<button class="full xg">xg full</button>
 	</div>
-	<div>
+	<div class="desktop-4">
 		<h2 class="hc">Tag Span</h2>
 		<div>
 			<p>State normal</p>
@@ -35,7 +34,7 @@
 			<span class="button success is-desactive">Success</span>
 		</div>
 	</div>
-	<div>
+	<div class="desktop-4">
 		<h2 class="hc">Tag Button</h2>
 		<div>
 			<p>State normal</p>
@@ -50,7 +49,7 @@
 			<button class="success desactive" enable>Success</button>
 		</div>
 	</div>
-	<div>
+	<div class="desktop-4">
 		<h2 class="hc">Tag A</h2>
 		<div>
 			<p>State normal</p>
@@ -65,7 +64,7 @@
 			<a href="#" class="button success desactive">Success</a>
 		</div>
 	</div>
-	<div>
+	<div class="desktop-4">
 		<h2 class="hc">Tag input type="submit"</h2>
 		<div>
 			<p>Rule State normal</p>
@@ -80,7 +79,7 @@
 			<input type="submit" value="Success" class="success desactive">
 		</div>
 	</div>
-	<div>
+	<div class="desktop-4">
 		<h2 class="hc">Tag input type="reset"</h2>
 		<div>
 			<p>Rule State normal</p>

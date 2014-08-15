@@ -3,11 +3,13 @@
 
 		<section class="header-top">
 			<div class="wrap">
-				<h1>
-					<a href="../" class="logo">
-						<img src="img/logo-paradadapanela.png" height="139" width="141" alt="Parada da Panela">
-					</a>
- 				</h1>
+				<div class="desktop-2">
+					<h1>
+						<a href="../" class="logo">
+							<img src="img/logo-paradadapanela.png" height="139" width="141" alt="Parada da Panela">
+						</a>
+	 				</h1>
+				</div>
 				<div class="box-atendimento">
 					<span class="login">Seja bem-vindo (a)! <a href="login.php">Faça seu login</a></span>
 					<span class="dados">
@@ -25,7 +27,7 @@
 		<section class="header-bottom">
 			<div class="wrap">
 
-				<form action="" class="search-bar" role="search">			
+				<form action="" class="search-bar" role="search">
 					<span class="helper" for="">Busca</span>
 					<input type="search">
 					<select>
