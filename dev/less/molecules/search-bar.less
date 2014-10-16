@@ -1,0 +1,30 @@
+.search-bar{
+	background: @color-base-light2;
+	margin: 0 0 @space*2 0;
+	padding: @space;
+	overflow: auto;
+	label{
+		float: left;
+		.font-base(bold, 1.4, 2.0);
+
+	}
+	input[type="search"]{
+		float: left;
+		width: 176px;
+		margin: 2px 0px 2px 10px;
+	}
+	select{
+		float: left;
+		width: 150px;
+		margin: 2px 0px 2px 5px;
+	}
+	button, input[type="submit"]{
+		height: 90%;
+		margin: 2px;
+		float: right;
+		padding: 0px 0px 7px 5px;
+		i{
+			.font-size(1.8);
+		}
+	}
+}
