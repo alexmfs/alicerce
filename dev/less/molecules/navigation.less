@@ -1,0 +1,50 @@
+.nav-global{
+	background-color:@color-primary-light1;
+	display: table;
+	width: 100%;
+	.item{
+		color: @color-white;
+		.font-base(normal, 1.4, 1.4);
+		margin:0 1.8em;
+		padding: 0.8em 0;
+		height: 100%;
+		.uppercase;
+		border-bottom: 3px solid @color-primary-light1;;
+		display: block;
+		float: left;
+		.transition();
+		&:hover, &.active{
+			text-decoration: none;
+			border-bottom: 3px solid @color-white;
+		}
+	}
+}
+
+.nav-local{
+	&:extend(#aside all);
+	.item{
+		display: block;
+		.font-base(bold, 1.4, 1.4);
+		text-transform: uppercase;
+		color: @color-primary;
+		margin-bottom: @space - 5;
+		position: relative;
+		.transition();
+		&:hover, &.active{
+			color: @color-base-dark1;
+			text-decoration: none;
+			&:before{
+				background: @color-base-dark1;
+			}
+		}
+		&:before{
+			content: "";
+			display: block;
+			width: 10px;
+			height: 8px;
+			background: @color-primary;
+			float: left;
+			margin: 2px 6px 0 0;
+		}
+	}
+}
