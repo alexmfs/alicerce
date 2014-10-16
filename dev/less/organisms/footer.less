@@ -1,0 +1,36 @@
+footer.principal{
+	#container(100px);
+	padding-top: @space * 2;
+	background: @color-primary-dark1;
+	color: @color-white;
+	a, p, span {
+		color: inherit;
+	}
+	.subtitle{
+		&:extend(.newsletter label);
+		display: block;
+		margin-bottom: 8px;
+	}
+	address{
+		span > span{
+			margin: 0 10px;
+		}
+	}
+}
+
+.logo-dev{
+	float: right;
+	margin-top: -5px;
+}
+
+.dados{
+	&:extend(#table);
+	background: @color-primary;
+	padding: 2.2em 0!important;
+}
+
+.copyright {
+	display: table;
+	width: 100%;
+	margin: 25px 0;
+}
