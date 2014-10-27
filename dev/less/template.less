@@ -120,3 +120,151 @@ footer.principal{
 .hidden-block {
 	display: none;
 }
+
+html{
+	font-size: 62.5%;
+}
+
+
+.main{
+	min-height: 400px;
+	display: table;
+	width: 100%;
+	margin-bottom: @space * 4;
+}
+
+#row{
+	display: table;
+	width: 100%;
+}
+
+#only{
+	.column(10);
+	&:extend(#float);
+	.push(1);
+	.pull(1);
+}
+
+#container(@val:50px){
+	display: table;
+	min-height: @val;
+	width: 100%;
+}
+
+#table{
+	width: 100%;
+	display: table;
+	float: left;
+}
+
+#float{
+	display: inline;
+	float: left;
+	margin: 0 @margin;
+}
+
+#aside(@type){
+	&:extend(#float);
+	@media @mobile{
+		.column(@columns);
+	}
+	@media @tablet{
+		.column(@columns);
+	}
+	@media @desktop{
+		.column(3);
+	}
+	+ .content{
+		&:extend(#float);
+		@media @mobile{
+			.column(@columns);
+		}
+		@media @tablet{
+			.column(@columns);
+		}
+		@media @desktop{
+			.column(12);
+			.push(1);
+		}
+	}
+}
+
+#aside-m{
+	&:extend(#float);
+	@media @mobile{
+		.column(@columns);
+	}
+	@media @tablet{
+		.column(@columns);
+	}
+	@media @desktop{
+		.column(4);
+	}
+	+ .content{
+		&:extend(#float);
+		@media @mobile{
+			.column(@columns);
+		}
+		@media @tablet{
+			.column(@columns);
+		}
+		@media @desktop{
+			.column(12);
+		}
+	}
+}
+
+#content{
+	&:extend(#float);
+	@media @mobile{
+		.column(@columns);
+	}
+	@media @tablet{
+		.column(@columns);
+	}
+	@media @desktop{
+		.column(9);
+	}
+}
+
+#content2{
+	&:extend(#float);
+	@media @mobile{
+		.column(@columns);
+	}
+	@media @tablet{
+		.column(@columns);
+	}
+	@media @desktop{
+		.column(8);
+	}
+}
+
+#section{
+	display: table;
+	width: 100%;
+	padding: @space 0;
+}
+
+
+.table(@padding: @space 0, @margin: 0){
+  display: table;
+  width:100%;
+  padding: @padding;
+  margin: @margin;
+}
+
+#fullbar{
+  .table(20px 0);
+  > div{
+    .wrap;
+  }
+}
+
+.wrap .container{
+	&:extend(#float);
+	.column(@columns);
+}
+
+
+
