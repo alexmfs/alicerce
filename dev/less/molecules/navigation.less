@@ -48,3 +48,39 @@
 		}
 	}
 }
+
+
+.nav-local{
+	&:extend(#aside all);
+	margin-top: 60px!important;
+	.item{
+		display: block;
+		margin-bottom: @space;
+		.font-base(bold, 1.4, 1.4);
+		color: @color-base-dark1;
+		&.active, &:hover{
+			color: @color-primary;
+		}
+	}
+	.nav-marker-before(true);
+}
+
+.nav-marker-before(@a) when ((@a) = true){
+	.item{
+		&:before {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 8px;
+			background: @color-base-dark1;
+			float: left;
+			margin: 3px 12px 0 0;
+		}
+		&:hover:before{
+			background: @color-primary;
+		}
+	}
+	.active:before{
+		background: @color-primary;
+	}
+}
