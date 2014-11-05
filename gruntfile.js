@@ -41,6 +41,7 @@ module.exports = function(grunt) {
 		concat: {
 			basic: {
 				src: [
+					'bower_components/modernizr/modernizr.js',
 					'bower_components/jquery/jquery.min.js',
 					'bower_components/jquery/jquery-migrate.min.js',
 
