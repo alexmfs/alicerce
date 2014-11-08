@@ -70,7 +70,7 @@ $pagina = str_replace('/_NOVOPROJETO/public/','',$this->here); //pr($pagina);
 
 	<footer class="principal">
 
-		<p>Conteudo da Footer</p>
+		<h1>Footer</h1>
 
 	</footer>
 
