@@ -10,43 +10,60 @@ Development: Html5, CSS3, Jquery, LESS, Semantic.gs, Grunt.js, Bower.js
 */
 
 // Base
-@import "visibility.less";
-// @import "_semantic.less"; 						// Framework Grid
-@import "_variables.less"; 							// Global Customization
-@import "_mixins.less"; 							// Resouces Less
-@import "_colors.less";								// Pallet Colors - Variables and Mixins
-@import "_types.less";								// Typography
-@import "x-grid.less";								// Grid Experimental
-@import "supergrid.less";							// Grid
+@import "_base/animations.less";
+@import "_base/colors.less";
+@import "_base/embeds.less";
+@import "_base/mixins.less";
+// @import "_base/semantic.less";
+@import "_base/shadows.less";
+@import "_base/supergrid.less";
+@import "_base/types.less";
+@import "_base/utilitys.less";
+@import "_base/variables.less";
+@import "_base/visibility.less";
+// @import "_base/x-grid.less";
 
 // Atoms
-// @import "headings.less";
-// @import "links.less";
-@import "buttons.less";
-@import "tooltips.less";
-@import "forms.less";
-@import "messages.less";
-// @import "titles.less";
+@import "atoms/_undefined.less";
+@import "atoms/buttons.less";
+@import "atoms/figures.less";
+@import "atoms/inputs.less";
+@import "atoms/titles.less";
+@import "atoms/tooltips.less";
+@import "atoms/messages.less";
+// @import "atoms/headings.less";
+// @import "atoms/links.less";				// analisar
+// @import "atoms/inlines.less";			// analisar
+// @import "atoms/maps.less";				// analisar
+// @import "atoms/svg.less";				// analisar
+// @import "atoms/shapes.less";				// fila de desenvolvimento
 
 // Molecules
-// @import "navigation.less";
-// @import "pagination.less";
-// @import "breadcrumb.less";
-@import "slider.less";
-// @import "modal.less";
-// @import "search-bar.less";
+@import "molecules/accordion.less";
+@import "molecules/breadcrumb.less";
+@import "molecules/forms.less";
+@import "molecules/navigation.less";
+// @import "molecules/lists.less";			// analisar
+@import "molecules/pagination.less";
+// @import "molecules/changegrid.less";
+// @import "molecules/slider.less";
+// @import "molecules/modal.less";
+// @import "molecules/gallery.less";
+// @import "molecules/products.less"
+
 
 // Organisms
-// @import "header.less";
-// @import "footer.less";
+// @import "organisms/headers.less";
+// @import "organisms/footer.less";
+// @import "organisms/search-bar.less";
+// @import "organisms/articles.less";
 
 // Template
-@import "template.less";							// Geral Grid
-@import "template-helper.less";			            // Geral Grid
-@import "templates/error-cake.less";
-@import "templates/ie-mordenizr.less";
+// @import "template.less";
+// @import "template-helper.less";
 @import "templates/print.less";
+@import "templates/ie-mordenizr.less";
+@import "templates/error-cake.less";
 
 // Pages - Exceptions
-// @import "articles.less";
-// @import "contato.less";
+// @import "pages.less";

@@ -1,0 +1,43 @@
+@m-font: 20px;
+@m-altura: (@m-font * 2);
+
+#medidor{
+	display: none;
+	width: 100%;
+	height: @m-altura;
+	color: #fff;
+	text-align: center;
+	font: @m-font/@m-altura Arial;
+	@media @mobile {
+		background: orange;
+	}
+	@media @tablet {
+		background: purple;
+	}
+	@media @desktop {
+		background: green;
+	}
+	@media @desktop-xl {
+		background: gray;
+	}
+	@media @highdensity {
+		background: blue;
+	}
+	&:before {
+		@media @mobile {
+			content: "mobile : ";
+		}
+		@media @tablet {
+			content: "tablet : ";
+		}
+		@media @desktop {
+			content: "desktop : ";
+		}
+		@media @desktop-xl {
+			content: "desktop-xl : ";
+		}
+		@media @highdensity {
+			content: "highdensity : ";
+		}
+	}
+}

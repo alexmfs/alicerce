@@ -1,0 +1,47 @@
+// Accordion
+// Version: 1.0.1
+// Date: 22/07/2014
+// Last Update: 29/09/2014
+
+.accordion{
+	list-style: none!important;
+	margin-bottom: 16px;
+	.pergunta{
+		display: block;
+		.font-base(bold, 1.4, 1.8);
+		.color-base;
+		text-decoration: none;
+		padding: 8px 0px;
+		position: relative;
+		cursor: pointer;
+		border-top: 1px solid lighten(@color-base, 50%);
+		&:after {
+			.awesome; // view http://fontawesome.io/icons/
+			content: "\f067";
+			.background-primary;
+			.font-size(1.2);
+			.color-white;
+			padding: 3px 4px;
+			margin-right: 10px;
+			float: left;
+		}
+	}
+	.resposta{
+		padding: 0 0 @space 0;
+		.font-base(bold, 1.4, 1.4);
+		.color-base-light1;
+		color: lighten(@color-base, 50%);
+	}
+	.selected{
+		// background: darken(@color4, 5%);
+		&:after {
+			content: "\f068";
+		}
+	}
+	.btn{
+		margin-top: 16px;
+	}
+	* + p{
+		margin-top: 10px;
+	}
+}

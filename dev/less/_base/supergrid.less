@@ -1,0 +1,118 @@
+////////* Grid  http://semantic.gs/ *////////
+
+// Semantic.gs customizado
+
+// Altere estes valores de acordo com grid do projeto
+
+@column-width: 60; 	// largura das colunas
+@gutter-width: 20; 	// largura das margens
+@columns: 12; 		// número de colunas
+
+@gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+
+@total-width: 100%;
+
+
+/* Base */
+.clearfix() {
+	*zoom:1;
+
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+body {
+	width: 100%;
+	.clearfix;
+}
+
+// img{
+// 	max-width: 100%;
+// 	height: auto;
+// }
+
+// Grid
+
+.row(@columns:@columns) {
+	display: block;
+	width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
+	margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1);
+	.clearfix;
+}
+
+.column(@x,@columns:@columns) {
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+}
+
+.push(@offset:1) {
+	margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.pull(@offset:1) {
+	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+/* Determine a largura do seu container. */
+.wrap {
+	width: 100%;
+	max-width: 960px; // max-width: 960px == responsivo
+	display: table;
+	margin: 0 auto;
+}
+
+// Breakpoints
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:      ~"only screen and (max-width: 610px)";
+@tablet:      ~"only screen and (min-width: 611px) and (max-width: 949px)";
+@desktop:     ~"only screen and (min-width: 950px) ";
+
+// @desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+// @desktop-xl:  ~"only screen and (min-width: 1129px)";
+
+
+// Large screen / wide desktop
+@screen-lg-min: 1200px;
+
+// Grid Mixin
+
+// Width
+.generate-columns(@n, @device, @i: 1) when (@i =< @n) {
+	.@{device}-@{i} {
+		.column(@i);
+	}
+	.generate-columns(@n, @device, (@i + 1));
+}
+
+// Margin and Float
+#device(@device){
+	[class^="@{device}-"]{
+		display: inline;
+		float: left;
+		margin: 0 @margin;
+	}
+}
+
+@margin: @total-width*((@gutter-width*.5)/@gridsystem-width);
+
+// Combo
+#grid(@columns, @device){
+	.generate-columns(@columns, @device);
+  	#device(@device);
+}
+
+// Responsive Grid Gerenator
+/* Responsive Grid */
+@media @mobile	{#grid(@columns, mobile);}
+@media @tablet	{#grid(@columns, tablet);}
+@media @desktop	{#grid(@columns, desktop);}

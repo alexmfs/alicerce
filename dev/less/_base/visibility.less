@@ -1,0 +1,60 @@
+
+// Rever
+
+#visible{
+	.mobile-visible,
+	.tablet-visible,
+	.desktop-visible {
+		display: block;
+	}
+}
+
+@media @mobile{
+	#visible;
+	.mobile-hidden{
+		display: none;
+	}
+}
+
+@media @tablet{
+	#visible;
+	.tablet-hidden{
+		display: none;
+	}
+}
+
+@media @desktop{
+	#visible;
+	.desktop-hidden{
+		display: none;
+	}
+}
+
+.svg-mask {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@media @mobile{
+	.visible-mobile{display: block;}
+	.visible-tablet{display: none;}
+	.visible-desktop{display: none;}
+	.hidden-mobile{display: none;}
+}
+
+@media @tablet{
+	.visible-mobile{display: none;}
+	.visible-tablet{display: block;}
+	.visible-desktop{display: none;}
+	.hidden-tablet{display: none;}
+}
+
+@media @desktop{
+	.visible-mobile{display: none;}
+	.visible-tablet{display: none;}
+	.visible-desktop{display: block;}
+	.hidden-desktop{display: none;}
+}
