@@ -16,7 +16,11 @@
 
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
+
 $pagina = str_replace('/_NOVOPROJETO/public/','',$this->here); //pr($pagina);
+
+if($pagina == ""){$pagina = 'home';}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,7 +41,7 @@ $pagina = str_replace('/_NOVOPROJETO/public/','',$this->here); //pr($pagina);
 		echo $this->fetch('script');
 	?>
 </head>
-<body <?php if($pagina == ""){echo 'class="page-home"';}	else {echo 'class="page-'.$pagina.'"';}	?>>
+<body class="page-<?php echo $pagina ?>">
 
 	<header class="principal" role="banner">
 		<nav class="nav-global" role="navigation">
@@ -54,7 +58,7 @@ $pagina = str_replace('/_NOVOPROJETO/public/','',$this->here); //pr($pagina);
 		</nav>
 	</header>
 
-	<?php if($pagina == ""){ ?>
+	<?php if($pagina == "home"){ ?>
 
 	<h1>Módulo que só aparece na página Inicial</h1>
 
