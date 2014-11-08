@@ -16,12 +16,10 @@
 
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
-$pagina = str_replace('/NOMEdoPROJETO/public/','',$this->here); //pr($pagina);
+$pagina = str_replace('/_NOVOPROJETO/public/','',$this->here); //pr($pagina);
 ?>
-
 <!DOCTYPE html>
-<html class="no-js" lang="pt-br">
-<head>
+<html>
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
@@ -31,7 +29,7 @@ $pagina = str_replace('/NOMEdoPROJETO/public/','',$this->here); //pr($pagina);
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('style.min','//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'));
+		echo $this->Html->css(array('style.min','cake.generic','//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'));
 		echo $this->Html->script(array('vendors','scripts','refresh'));
 
 		echo $this->fetch('meta');
@@ -39,10 +37,8 @@ $pagina = str_replace('/NOMEdoPROJETO/public/','',$this->here); //pr($pagina);
 		echo $this->fetch('script');
 	?>
 </head>
-<body <?php
-	if($pagina == ""){echo 'class="page-home"';}
-	else {echo 'class="page-'.$pagina.'"';}
-	?>>
+<body <?php if($pagina == ""){echo 'class="page-home"';}	else {echo 'class="page-'.$pagina.'"';}	?>>
+
 	<header class="principal" role="banner">
 		<nav class="nav-global" role="navigation">
 			<a
@@ -58,9 +54,11 @@ $pagina = str_replace('/NOMEdoPROJETO/public/','',$this->here); //pr($pagina);
 		</nav>
 	</header>
 
-	<?php if($pagina == ''){ ?>
-	<h1>Módulos exclusivo da página inicial (geralmente banner)</h1>
-	<?}?>
+	<?php if($pagina == ""){ ?>
+
+	<h1>Módulo que só aparece na página Inicial</h1>
+
+	<?php } ?>
 
 	<main class="main" role="main">
 
@@ -72,7 +70,7 @@ $pagina = str_replace('/NOMEdoPROJETO/public/','',$this->here); //pr($pagina);
 
 	<footer class="principal">
 
-	<p>Conteudo da Footer</p>
+		<p>Conteudo da Footer</p>
 
 	</footer>
 
