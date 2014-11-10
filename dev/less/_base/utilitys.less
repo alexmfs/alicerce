@@ -33,3 +33,27 @@
 .box{
 	.border();
 }
+
+.show-only(@display){
+	@media @mobile{
+		display: none;
+	}
+	@media @tablet{
+		display: none;
+	}
+	@media @desktop{
+		display: @display;
+	}
+}
+
+.hide-only(@display){
+	@media @mobile{
+		display: none;
+	}
+	@media @tablet{
+		display: none;
+	}
+	@media @desktop{
+		display: none;
+	}
+}
