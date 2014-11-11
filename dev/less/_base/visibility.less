@@ -1,60 +1,32 @@
 
 // Rever
 
-#visible{
-	.mobile-visible,
-	.tablet-visible,
-	.desktop-visible {
-		display: block;
-	}
+.show-only(@a, @display:block) when ((@a) = mobile){
+	@media @mobile	{ display: @display }
+	@media @tablet	{ display: none }
+	@media @desktop	{ display: none }
 }
 
-@media @mobile{
-	#visible;
-	.mobile-hidden{
-		display: none;
-	}
+.show-only(@a, @display:block) when ((@a) = tablet){
+	@media @mobile	{ display: none }
+	@media @tablet	{ display: @display }
+	@media @desktop	{ display: none }
 }
 
-@media @tablet{
-	#visible;
-	.tablet-hidden{
-		display: none;
-	}
+.show-only(@a, @display:block) when ((@a) = desktop){
+	@media @mobile	{ display: none }
+	@media @tablet	{ display: none }
+	@media @desktop	{ display: @display }
 }
 
-@media @desktop{
-	#visible;
-	.desktop-hidden{
-		display: none;
-	}
+.hide-only(@a) when ((@a) = mobile){
+	@media @mobile	{ display: none }
 }
 
-.svg-mask {
-	width: 0;
-	height: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
+.hide-only(@a) when ((@a) = tablet){
+	@media @tablet	{ display: none }
 }
 
-@media @mobile{
-	.visible-mobile{display: block;}
-	.visible-tablet{display: none;}
-	.visible-desktop{display: none;}
-	.hidden-mobile{display: none;}
-}
-
-@media @tablet{
-	.visible-mobile{display: none;}
-	.visible-tablet{display: block;}
-	.visible-desktop{display: none;}
-	.hidden-tablet{display: none;}
-}
-
-@media @desktop{
-	.visible-mobile{display: none;}
-	.visible-tablet{display: none;}
-	.visible-desktop{display: block;}
-	.hidden-desktop{display: none;}
+.hide-only(@a) when ((@a) = desktop){
+	@media @desktop	{ display: none }
 }
