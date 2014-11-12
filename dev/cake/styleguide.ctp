@@ -5,9 +5,9 @@
 	<?php echo $this->element('helpers/types'); ?>
 	<?php echo $this->element('helpers/buttons'); ?>
 	<?php echo $this->element('helpers/forms'); ?>
-	<?php echo $this->element("helpers/tooltips.php"); ?>
-	<?php echo $this->element("helpers/messages.php"); ?>
-	<?php echo $this->element("helpers/grid.php"); ?>
-	<?php // echo $this->element("helpers/x-grid.php"); ?>
+	<?php echo $this->element("helpers/tooltips"); ?>
+	<?php echo $this->element("helpers/messages"); ?>
+	<?php echo $this->element("helpers/grid"); ?>
+	<?php // echo $this->element("helpers/x-grid"); ?>
 
 </div>
