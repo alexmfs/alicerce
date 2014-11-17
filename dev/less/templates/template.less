@@ -92,16 +92,16 @@ footer.principal{
 	margin: 0 @margin;
 }
 
-#aside(@type){
+#aside(@type, @cols:3) when ((@type) = menu){
 	&:extend(#float);
-	@media @mobile{
-		.column(@columns);
+	@media @mobile
+{		.column(@columns);
 	}
-	@media @tablet{
-		.column(@columns);
+	@media @tablet
+{		.column(@columns);
 	}
-	@media @desktop{
-		.column(3);
+	@media @desktop
+{		.column(@cols);
 	}
 	+ .content{
 		&:extend(#float);
@@ -112,13 +112,12 @@ footer.principal{
 			.column(@columns);
 		}
 		@media @desktop{
-			.column(12);
-			.push(1);
+			.column(@columns - @cols);
 		}
 	}
 }
 
-#aside-m{
+#aside(@type, @cols) when ((@type) = aside){
 	&:extend(#float);
 	@media @mobile{
 		.column(@columns);
@@ -127,23 +126,11 @@ footer.principal{
 		.column(@columns);
 	}
 	@media @desktop{
-		.column(4);
-	}
-	+ .content{
-		&:extend(#float);
-		@media @mobile{
-			.column(@columns);
-		}
-		@media @tablet{
-			.column(@columns);
-		}
-		@media @desktop{
-			.column(12);
-		}
+		.column(@cols);
 	}
 }
 
-#content{
+#content(@col){
 	&:extend(#float);
 	@media @mobile{
 		.column(@columns);
@@ -152,22 +139,10 @@ footer.principal{
 		.column(@columns);
 	}
 	@media @desktop{
-		.column(9);
+		.column(@col);
 	}
 }
 
-#content2{
-	&:extend(#float);
-	@media @mobile{
-		.column(@columns);
-	}
-	@media @tablet{
-		.column(@columns);
-	}
-	@media @desktop{
-		.column(8);
-	}
-}
 
 #section{
 	display: table;
