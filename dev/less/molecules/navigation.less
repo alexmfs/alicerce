@@ -21,38 +21,7 @@
 }
 
 .nav-local{
-	&:extend(#aside all);
-	.item{
-		display: block;
-		.font-base(bold, 1.4, 1.4);
-		text-transform: uppercase;
-		color: @color-primary;
-		margin-bottom: @space - 5;
-		position: relative;
-		.transition();
-		&:hover, &.active{
-			color: @color-base-dark1;
-			text-decoration: none;
-			&:before{
-				background: @color-base-dark1;
-			}
-		}
-		&:before{
-			content: "";
-			display: block;
-			width: 10px;
-			height: 8px;
-			background: @color-primary;
-			float: left;
-			margin: 2px 6px 0 0;
-		}
-	}
-}
-
-
-.nav-local{
-	&:extend(#aside all);
-	margin-top: 60px!important;
+	#aside(menu);
 	.item{
 		display: block;
 		margin-bottom: @space;
