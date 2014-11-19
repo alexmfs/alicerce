@@ -2,8 +2,21 @@ html {
   font-size: 62.5%; /* Sets up the Base 10 stuff */
 }
 
-body{
-	padding-top: 96px;
+#onepage(@a) when ((@a) = true){
+	> section{
+		float: left;
+		width: 100%;
+	}
+}
+
+#fixedmenu(@a, @nav-height:100px) when ((@a) = true){
+	padding-bottom: @nav-height;
+	header.principal{
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 100;
+	}
 }
 
 .box{
