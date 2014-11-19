@@ -23,7 +23,7 @@ body{
 	.font-base(normal, 1.2, 5.0);
     .background-primary-light1;
 	.color-white;
-	margin-bottom: @margin * 2;
+	margin-bottom: @space * 2;
 }
 
 
@@ -42,7 +42,8 @@ header.principal{
 }
 
 .nav-global{
-	text-align: right;
+	text-align: right
+	;
 }
 
 footer.principal{
@@ -52,10 +53,9 @@ footer.principal{
 }
 
 .main{
-	display: table;
 	width: 100%;
-	min-height: 400px;
-	margin-bottom: @space
+	margin: @space 0px;
+	display: table;
 	> section{
 		.wrap;
 		.box;
@@ -89,19 +89,19 @@ footer.principal{
 #float{
 	display: inline;
 	float: left;
-	margin: 0 @margin;
+	margin: 0 @space;
 }
 
 #aside(@type, @cols:3) when ((@type) = menu){
 	&:extend(#float);
-	@media @mobile
-{		.column(@columns);
+	@media @mobile{
+		.column(@columns);
 	}
-	@media @tablet
-{		.column(@columns);
+	@media @tablet{
+		.column(@columns);
 	}
-	@media @desktop
-{		.column(@cols);
+	@media @desktop{
+		.column(@cols);
 	}
 	+ .content{
 		&:extend(#float);
@@ -143,13 +143,19 @@ footer.principal{
 	}
 }
 
-
 #section{
 	display: table;
 	width: 100%;
 	padding: @space 0;
 }
 
+#uppercase(@a) when ((@a) = true){
+	text-transform: uppercase;
+}
+
+#uppercase(@a) when ((@a) = false){
+	text-transform: none;
+}
 
 .table(@padding: @space 0, @margin: 0){
   display: table;
@@ -175,4 +181,3 @@ footer.principal{
 	@media @tablet{.column(@b);}
 	@media @desktop{.column(@a);}
 }
-
