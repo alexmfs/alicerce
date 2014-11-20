@@ -67,11 +67,11 @@
 	.border-radius(@radius);
 }
 
-.border-box(){
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
+.border-box(@string:border-box){
+	-webkit-box-sizing: @string;
+	-moz-box-sizing: @string;
+	-ms-box-sizing: @string;
+	box-sizing: @string;
 }
 
 .border(@color, @width: 1px, @type:solid){
