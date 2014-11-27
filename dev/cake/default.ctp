@@ -19,7 +19,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
 
 $pagina = str_replace('/_NOVOPROJETO/public/','',$this->here); //pr($pagina);
 
-if($pagina == ""){$pagina = 'home';}
+/* Verificação para setar classe de acordo com a URL */
+if($pagina == ""){$class = 'home';}
+else {$exp = explode('/',$pagina); $class = $exp[0];}
+
+?>
 
 ?>
 <!DOCTYPE html>
@@ -114,7 +118,7 @@ if($pagina == ""){$pagina = 'home';}
 		echo $this->fetch('script');
 	?>
 </head>
-<body class="page-<?php echo $pagina ?>" itemscope itemtype="http://schema.org/WebPage">
+<body class="page-<?=$class?>" itemscope itemtype="http://schema.org/WebPage">
 
 
 	<header class="principal" role="banner">
