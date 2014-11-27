@@ -2,7 +2,7 @@
 
 <ol class="pagination">
 	<li class="disabled">
-		<a>Anterior <i class="fa fa-caret-left"></i></a>
+		<a><i class="fa fa-caret-left"></i> Anterior</a>
 	</li>
 	<li class="active">
 		<a>1</a>
