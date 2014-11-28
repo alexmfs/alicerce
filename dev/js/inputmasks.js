@@ -35,4 +35,13 @@
 			$(this).addClass('invalid');
 			$(this).prev().addClass('invalid');
 		});
+		
+		
+		// $(':required').on('change', function() {
+		// 	if( !$(this).val() ) {
+		//     	alert("preencha");
+		//  	} else {
+		//  		alert("preenchido");
+		//  	}
+		// });
 	}
