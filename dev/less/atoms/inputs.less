@@ -15,9 +15,11 @@
 
 @color-placeholder: @color-primary;
 
-
 @select-background: @color-primary-light2;
 @select-color: @color-primary;
+
+@color-invalid: red;
+@color-valided: green;
 
 form {
 	// display: table;
@@ -43,8 +45,9 @@ label {
 	.color-base;
 	.font-base(normal, 1.2, 1.2);
 	margin: 5px 0 2px;
-	.invalid &{ color: red; }
-	.valided &{ color: green; }
+	.focus &{ color: @color-base; }
+	.invalid &{ color: @color-invalid; }
+	.valided &{ color: @color-valided; }
 	small {
 		float: right;
 		font-size: 75%;
@@ -86,8 +89,8 @@ input[type="datetime"]{
 		outline: 1px solid @color-primary;
 		border-color: @color-primary;
 	}
-	.invalid &{border-color: red;}
-	.valided &{border-color: green;}
+	.invalid &{ border-color: @color-invalid; }
+	.valided &{ border-color: @color-valided; }
 }
 
 textarea {
@@ -104,6 +107,8 @@ textarea {
 		outline: 1px solid @color-primary;
 		border-color: @color-primary;
 	}
+	.invalid &{ border-color: @color-invalid; }
+	.valided &{ border-color: @color-valided; }
 }
 
 select, option{
