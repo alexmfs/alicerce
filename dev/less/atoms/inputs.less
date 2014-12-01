@@ -89,8 +89,18 @@ input[type="datetime"]{
 		outline: 1px solid @color-primary;
 		border-color: @color-primary;
 	}
-	.invalid &{ border-color: @color-invalid; }
-	.valided &{ border-color: @color-valided; }
+	.invalid &{
+		border-color: @color-invalid;
+		&:focus{
+			outline: 1px solid @color-invalid;
+		}
+	}
+	.valided &{
+		border-color: @color-valided;
+		&:focus{
+			outline: 1px solid @color-valided;
+		}
+	}
 }
 
 textarea {
@@ -107,8 +117,18 @@ textarea {
 		outline: 1px solid @color-primary;
 		border-color: @color-primary;
 	}
-	.invalid &{ border-color: @color-invalid; }
-	.valided &{ border-color: @color-valided; }
+	.invalid &{
+		border-color: @color-invalid;
+		&:focus{
+			outline: 1px solid @color-invalid;
+		}
+	}
+	.valided &{
+		border-color: @color-valided;
+		&:focus{
+			outline: 1px solid @color-valided;
+		}
+	}
 }
 
 select, option{
