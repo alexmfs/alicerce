@@ -43,6 +43,8 @@ label {
 	.color-base;
 	.font-base(normal, 1.2, 1.2);
 	margin: 5px 0 2px;
+	.invalid &{ color: red; }
+	.valided &{ color: green; }
 	small {
 		float: right;
 		font-size: 75%;
@@ -84,6 +86,8 @@ input[type="datetime"]{
 		outline: 1px solid @color-primary;
 		border-color: @color-primary;
 	}
+	.invalid &{border-color: red;}
+	.valided &{border-color: green;}
 }
 
 textarea {
