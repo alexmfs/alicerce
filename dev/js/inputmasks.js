@@ -31,17 +31,11 @@
 				element.mask("(99) 9999-9999?9");
 			}
 		}).trigger('focusout');
-		$(':required').one('blur keydown', function() {
-			$(this).addClass('invalid');
-			$(this).prev().addClass('invalid');
+		$(':required').on('blur', function() {
+			if( !$(this).val() ) {
+				$(this).parent().removeClass('valided').addClass('invalid');
+			} else {
+				$(this).parent().removeClass('invalid').addClass('valided');
+			}
 		});
-		
-		
-		// $(':required').on('change', function() {
-		// 	if( !$(this).val() ) {
-		//     	alert("preencha");
-		//  	} else {
-		//  		alert("preenchido");
-		//  	}
-		// });
 	}
