@@ -11,3 +11,14 @@ $(document).scroll(function () {
     menu.removeClass('fixo');
   }
 });
+
+if($('html').hasClass('no-opacity')){
+
+	$('.vitrine-conceitual li:nth-child(odd)').addClass('odd');
+	$('.vitrine-conceitual li:nth-child(even)').addClass('even');
+
+	for (var i = 0; i < ($('.vitrine-conceitual li').length); i++) {
+		$('.vitrine-conceitual li').eq(i).addClass('child-'+(i+1));
+	};
+
+}
