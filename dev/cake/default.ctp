@@ -24,8 +24,6 @@ if($pagina == ""){$class = 'home';}
 else {$exp = explode('/',$pagina); $class = $exp[0];}
 
 ?>
-
-?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="pt-br">
 <head>
