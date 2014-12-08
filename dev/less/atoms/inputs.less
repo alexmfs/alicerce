@@ -32,17 +32,16 @@ legend{
 	display: block;
 	width: 100%;
 	background: @legend-background;
-	.color-base;
+	color: @color-base;
 	.font-base(normal, 1.4, 3.2);
 	text-indent: 10px;
 	height: @input-height;
 	margin-bottom: 5px;
-	.border-box;
 }
 label {
 	display: block;
 	height: @label-heigth;
-	.color-base;
+	color: @color-base;
 	.font-base(normal, 1.2, 1.2);
 	margin: 5px 0 2px;
 	.focus &{ color: @color-base; }
@@ -78,8 +77,8 @@ input[type="number"],
 input[type="url"],
 input[type="datetime"]{
 	height: @input-height;
-	.color-primary;
-	.background-white;
+	color: @color-primary;
+	background: @color-white;
 	box-shadow: inset 1px 1px 3px 0px darken(@color-white, 20%);
 	border: 1px solid @input-border-color;
 	text-indent: 10px;
@@ -106,8 +105,8 @@ input[type="datetime"]{
 textarea {
 	width: 100%;
 	height: 100px;
-	.color-primary;
-	.background-white;
+	color: @color-primary;
+	background: @color-white;
 	// box-shadow: inset 1px 1px 3px 0px darken(@textarea-background, 20%);
 	border: @border-width solid @textarea-border-color;
 	padding: 10px;
@@ -185,13 +184,13 @@ option{
 	margin: 2px 0 10px;
 	label{
 		// display: block;
-		.color-base;
-	    cursor: pointer;
-	    position: relative;
+		color: @color-base;
+		cursor: pointer;
+		position: relative;
 		margin-bottom: 5px;
 		margin: 10px 0;
 		float: left;
-	    &:before {
+		&:before {
 		    .border-radius(3px);
 		}
 		&+input+label{
