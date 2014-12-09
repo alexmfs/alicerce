@@ -44,6 +44,7 @@ module.exports = function(grunt) {
 					'bower_components/modernizr/modernizr.js',
 					'bower_components/jquery/jquery.min.js',
 					'bower_components/jquery/jquery-migrate.min.js',
+					'dev/js/refresh.js',
 
 				],
 				dest: '<%= dirs.folder %>js/vendors.js',
