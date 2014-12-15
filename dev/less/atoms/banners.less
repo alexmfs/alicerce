@@ -1,0 +1,47 @@
+// Banners
+
+banners{
+	div{
+		display: table;
+		.shadow6;
+	}
+	span{
+		color: @color-primary;
+		display: block;
+		#uppercase(true);
+	}
+	.name{
+		.font(@font-base, bold, 1.4, 1.4);
+	}
+	.description{
+		.font(@font-base, normal, 1.4, 1.4);
+	}
+}
+
+.banner-p{
+	#template(4, 8, 16);
+	&:extend(banners all);
+}
+.banner-m{
+	#template(8, 8, 16);
+	&:extend(banners all);
+}
+.banner-g{
+	#template(12, 12, 16);
+	&:extend(banners all);
+}
+.banner-gg{
+	#template(4, 8, 16);
+	&:extend(banners all);
+}
+
+
+// Analisar
+.banner-full{
+	#template(4, 8, 16);
+}
+
+.banners-home {
+	margin-bottom: 50px;
+	display: table;
+}
