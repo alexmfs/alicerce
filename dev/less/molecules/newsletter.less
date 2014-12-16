@@ -1,20 +1,57 @@
 .newsletter{
+	.wrap;
+	border: solid @color-base-light1;
+	border-width: 1px 0px;
+	legend{
+		.font(@font-base, bold, 1.6, 1.6);
+		color: @color-base-dark2;
+		background: none;
+		padding: 0;
+		text-indent: 0;
+		margin: 0;
+		span{
+			.font(@font-base, bold, 1.6, 1.6);
+			color: @color-primary;
+			#uppercase(true);
+		}
+	}
 	label{
-		.font-base(bold, 1.4, 1.4);
-		.uppercase;
-		color: @color-white;
+		.font(@font-base,normal, 1.4, 1.4);
+		#uppercase(false);
+		color: @color-base;
 		height: 20px;
 	}
-	div {
-		position: relative;
+	#newletter(oneline);
+}
+
+#newletter(@type) when ((@type) = oneline){
+	display: table;
+	width: 100%;
+	max-width: 960px;
+	padding: 10px 0px;
+	vertical-align: middle;
+	legend, label, input{
+		display: table-cell;
+		float: none;
+		width: auto;
+		margin: 0;
 	}
-	input[type="email"] {
-		width: 98%;
+	label {
+		padding: 0 4px;
+	}
+	input {
+		height: 30px;
+		margin: 4px;
 	}
 	.button {
-		position: absolute;
-		top: 1px;
-		right: 0;
-		height: 28px;
+		float: right;
+		margin-right: 0;
 	}
+	input[type="email"], input[type="text"] {
+		width: 130px;
+	}
+}
+
+#newletter(@type) when ((@type) = multipleline){
+
 }
