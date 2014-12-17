@@ -83,5 +83,5 @@ module.exports = function(grunt) {
 	});
 	// registrando tarefa default
 	grunt.registerTask( 'default', ['watch'] );
-	grunt.registerTask( 'initial', ['less','cmq','cssmin','concat'] );
+	grunt.registerTask( 'initial', ['less','cmq','cssmin','concat','watch'] );
 };

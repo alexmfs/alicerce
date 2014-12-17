@@ -33,7 +33,7 @@ legend{
 	width: 100%;
 	background: @legend-background;
 	color: @color-base;
-	.font-base(normal, 1.4, 3.2);
+	.font(@font-base, normal, 1.4, 3.2);
 	text-indent: 10px;
 	height: @input-height;
 	margin-bottom: 5px;
@@ -42,7 +42,7 @@ label {
 	display: block;
 	height: @label-heigth;
 	color: @color-base;
-	.font-base(normal, 1.2, 1.2);
+	.font(@font-base, normal, 1.2, 1.2);
 	margin: 5px 0 2px;
 	.focus &{ color: @color-base; }
 	.invalid &{ color: @color-invalid; }

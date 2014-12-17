@@ -4,7 +4,7 @@
 	width: 100%;
 	.item{
 		color: @color-white;
-		.font-base(normal, 1.4, 1.4);
+		.font(@font-base, normal, 1.4, 1.4);
 		margin:0 1.8em;
 		padding: 0.8em 0;
 		height: 100%;
@@ -25,7 +25,7 @@
 	.item{
 		display: block;
 		margin-bottom: @space;
-		.font-base(bold, 1.4, 1.4);
+		.font(@font-base, bold, 1.4, 1.4);
 		color: @color-base-dark1;
 		&.active, &:hover{
 			color: @color-primary;

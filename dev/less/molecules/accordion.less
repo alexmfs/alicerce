@@ -8,7 +8,7 @@
 	margin-bottom: 16px;
 	.pergunta{
 		display: block;
-		.font-base(bold, 1.4, 1.8);
+		.font(@font-base, bold, 1.4, 1.8);
 		.color-base;
 		text-decoration: none;
 		padding: 8px 0px;
@@ -28,7 +28,7 @@
 	}
 	.resposta{
 		padding: 0 0 @space 0;
-		.font-base(bold, 1.4, 1.4);
+		.font(@font-base, bold, 1.4, 1.4);
 		.color-base-light1;
 		color: lighten(@color-base, 50%);
 	}

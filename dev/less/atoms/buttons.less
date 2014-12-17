@@ -11,7 +11,7 @@
 	display: inline-block;
 	.background-white;
 	.border-radius(0.3em);
-	.font-base(bold, 1.2, 1.1);
+	.font(@font-base, bold, 1.2, 1.1);
 	text-decoration: none;
 	// .uppercase;
 	letter-spacing: .05em;
@@ -71,7 +71,7 @@
 
 	&.pp{
 		padding: @height/2 @width/2;
-		.font-base(normal, 1.1, 1.1);
+		.font(@font-base, normal, 1.1, 1.1);
 	}
 	&.p{
 		padding: @height/2 @width/2;
