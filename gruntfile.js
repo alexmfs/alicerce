@@ -83,5 +83,6 @@ module.exports = function(grunt) {
 	});
 	// registrando tarefa default
 	grunt.registerTask( 'default', ['watch'] );
-	grunt.registerTask( 'initial', ['less','cmq','cssmin','concat','watch'] );
+	grunt.registerTask( 'compile', ['less','cmq','cssmin','concat','watch'] );
+	grunt.registerTask( 'deploy', ['deploy'] );
 };
