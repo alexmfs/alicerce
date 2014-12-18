@@ -72,39 +72,3 @@
 	.font-special(@string, @size, @line){
 		#font-spotlight(@string, @size, @line);
 	}
-
-
-body{
-  	font-style: normal;
-  	font-weight: 200;
-  	font-size: 62.5%;
-}
-b, strong{
-	font-weight: 400;
-	font-family: inherit;
-}
-i, em{
-  	font-style: italic;
-  	font-weight: 200;
-  	font-family: inherit;
-}
-
-// How to use
-
-// .yourclass{
-// 	.font-especial;
-// }
-
-p, span, a, li, .text-base{
-	.font-base(normal, 1.3, 1.5);
-	.color-base;
-}
-a:hover{
-	text-decoration: underline;
-}
-p{
-	margin-bottom: 10px;
-}
-h1, h2, h3, h4, h5, h6{
-	.color-primary;
-}
