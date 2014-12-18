@@ -9,7 +9,7 @@
 	.pergunta{
 		display: block;
 		.font(@font-base, bold, 1.4, 1.8);
-		.color-base;
+		color: @color-base;
 		text-decoration: none;
 		padding: 8px 0px;
 		position: relative;
@@ -18,9 +18,9 @@
 		&:after {
 			.awesome; // view http://fontawesome.io/icons/
 			content: "\f067";
-			.background-primary;
+			background: @color-primary;
 			.font-size(1.2);
-			.color-white;
+			color: @color-white;
 			padding: 3px 4px;
 			margin-right: 10px;
 			float: left;
@@ -29,7 +29,7 @@
 	.resposta{
 		padding: 0 0 @space 0;
 		.font(@font-base, bold, 1.4, 1.4);
-		.color-base-light1;
+		color: @color-base-light1;
 		color: lighten(@color-base, 50%);
 	}
 	.selected{

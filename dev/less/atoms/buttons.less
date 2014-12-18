@@ -9,11 +9,11 @@
 	@color2: #38be0a;
 
 	display: inline-block;
-	.background-white;
+	background: @color-white;
 	.border-radius(0.3em);
 	.font(@font-base, bold, 1.2, 1.1);
 	text-decoration: none;
-	// .uppercase;
+	// #uppercase(true);
 	letter-spacing: .05em;
 	cursor: pointer;
 	margin: 1px 1px;
@@ -102,7 +102,7 @@
 .btn-color(@x){
 	background-color: @x;
 	border-color: darken(@x, 10%);
-	.color-white;
+	color: @color-white;
 	// State rule
 	&.is-desactive{
 		background-color: desaturate(lighten(@x, 10%),60%);

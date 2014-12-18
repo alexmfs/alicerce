@@ -189,7 +189,7 @@ button,
 input[type="submit"],
 input[type="reset"] {
 	display: inline-block;
-	background-color: #ffffff;
+	background: #ffffff;
 	-webkit-border-radius: 0.3em;
 	-moz-border-radius: 0.3em;
 	border-radius: 0.3em; /*Pixel value Fallback*/
@@ -677,7 +677,7 @@ option:hover {
 	color: #b7251c;
 	-webkit-box-shadow: inset 1px 1px 3px 0px #797ad8;
 	box-shadow: inset 1px 1px 3px 0px #797ad8;
-	background-color: #6570d3;
+	background: #6570d3;
 	text-align: center;
 	display: block;
 	float: left;
@@ -1164,7 +1164,7 @@ h6 {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	content: "\f067";
-	background-color: #293c8f;
+	background: #293c8f;
 	font-size: 12px;
 	font-size: 1.2rem;
 	color: #ffffff;
@@ -1450,13 +1450,13 @@ form .helper a:hover {
 	width: 100%; /*Pixel value Fallback*/
 	font: normal 12px/50px din, Fallback, sans-serif; /*Rem value*/
 	font: normal 1.2rem/5rem din, Fallback, sans-serif;
-	background-color: #6570d3;
+	background: #6570d3;
 	color: #ffffff;
 	margin-bottom: 30px;
 }
 
 header.principal {
-	background-color: #293c8f;
+	background: #293c8f;
 	padding: 15px 0;
 	overflow: auto;
 	width: 100%;
@@ -1470,7 +1470,7 @@ header.principal {
 }
 
 footer.principal {
-	background-color: #293c8f;
+	background: #293c8f;
 	padding: 15px 0;
 	overflow: auto;
 }

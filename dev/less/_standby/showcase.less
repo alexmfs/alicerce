@@ -39,7 +39,7 @@
 	.space-bottom-2x;
 	position: relative;
 	&:hover{
-		.background-secondary-light1;
+		background: @color-secondary-light1;
 		border-bottom: 8px solid @color-secondary;
 	}
 	a{
@@ -54,7 +54,7 @@
 .produto-nome{
 	display: block;
 	height: 30px;
-	.color-base;
+	color: @color-base;
 	.font-size(1.4);
 	margin-bottom: 10px;
 }
@@ -77,23 +77,23 @@
 .pre-venda{
 	width: 50%;
 	background: @color-other1;
-	.color-secondary-light1;
+	color: @color-secondary-light1;
 	top: 0;
 	left: 0;
 }
 
 .lancamento{
 	width: 50%;
-	.background-primary;
-	.color-secondary-light1;
+	background: @color-primary;
+	color: @color-secondary-light1;
 	top: 0;
 	right: 0;
 }
 
 .frete{
 	width: 100%;
-	.background-secondary;
-	.color-primary;
+	background: @color-secondary;
+	color: @color-primary;
 	bottom: 0;
 	left: 0;
 }
@@ -113,12 +113,12 @@
 	}
 	&-por{
 		.font-size(1.8);
-		.color-primary;
+		color: @color-primary;
 		top: 14px;
 	}
 	&-parcelado{
 		.font-size(1.4);
-		.color-primary-dark;
+		color: @color-primary-dark;
 		bottom: 0px;
 	}
 }

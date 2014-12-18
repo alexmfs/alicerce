@@ -54,11 +54,11 @@ label {
 		top: 1px;
 	}
 	a {
-		.color-base;
+		color: @color-base;
 		float: right;
 		text-decoration: underline;
 		&:hover{
-			.color-primary;
+			color: @color-primary;
 		}
 	}
 }
@@ -203,11 +203,11 @@ option{
 	input[type=checkbox] + label:before,
 	input[type=radio] + label:before {
 	    content: "";
-		.color-base;
+		color: @color-base;
 		// text-shadow: inset 1px 1px 1px @cor13;
 		-webkit-box-shadow: inset 1px 1px 3px 0px darken(@input-background, 20%);
 		box-shadow: inset 1px 1px 3px 0px darken(@input-background, 20%);
-		.background-primary-light1;
+		background: @color-primary-light1;
 		text-align: center;
 		display: block;
 		float: left;
@@ -222,11 +222,11 @@ option{
 }
 .checkbox input[type=checkbox]:checked + label:before {
 	    content: "\2714";
-	    .color-primary;
+	    color: @color-primary;
 }
 .radio input[type=radio]:checked + label:before {
 	    content: "\25CF";
-	    .color-primary;
+	    color: @color-primary;
 }
 
 /*==========  Personalizacao dos atributos dos formularios  ==========*/
@@ -250,7 +250,7 @@ input.invalido::-moz-placeholder {}/* Firefox 19+ */
 input.invalido:-ms-input-placeholder {}/* Firefox 19+ */
 
 /* Ie8 */
-.placeholder { .color-base; }
+.placeholder { color: @color-base; }
 .invalido.placeholder {}
 
 :required {
