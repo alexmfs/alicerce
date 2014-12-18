@@ -7,7 +7,7 @@
 
 #fixedmenu(@a, @nav-height:100px) when ((@a) = true){
 	padding-bottom: @nav-height;
-	header.principal{
+	.header-principal{
 		width: 100%;
 		position: fixed;
 		top: 0;
@@ -15,47 +15,17 @@
 	}
 }
 
-.box{
-	padding: @space 0px;
-	margin: @space 0px;
-	.border;
-}
-
-.center{
-	text-align: center;
-}
-
-.shape {
-	height: 50px;
-	text-align: center;
-	width: 100%;
-	.font(@font-base, normal, 1.2, 5.0);
-    background: @color-primary-light1;
-	color: @color-white;
-	margin-bottom: @space * 2;
-}
-
-
-header.principal{
+.header-principal{
 	background: @color-primary;
 	padding: @space 0;
 	overflow: auto;
-	.header-fixed;
-}
-
-.header-fixed(){
-	width: 100%;
-	position: fixed;
-	top: 0;
-	z-index: 100;
 }
 
 .nav-global{
-	text-align: right
-	;
+	text-align: right;
 }
 
-footer.principal{
+.footer-principal{
 	background: @color-primary;
 	padding: @space 0;
 	overflow: auto;
