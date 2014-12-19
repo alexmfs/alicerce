@@ -2,21 +2,21 @@
 =            Forms            =
 =============================*/
 @input-radius: 0.5em;
-@input-height: 28px;
+@input-height: 30px;
 
-@label-heigth: 28px;
+@label-heigth: 23px;
 
-@input-border-color: @color-primary-light1;
+@input-border-color: @color-base;
 @border-width: 1px;
-@textarea-border-color: @color-primary;
+@textarea-border-color: @color-base;
 @select-background: @color-primary-light2;
-@legend-background: @color-primary-light2;
-@input-background: @color-primary-light2;
+@legend-background: none;
+@input-background: @color-white;
 
-@color-placeholder: @color-primary;
+@color-placeholder: @color-base;
 
 @select-background: @color-primary-light2;
-@select-color: @color-primary;
+@select-color: @color-base;
 
 @color-invalid: red;
 @color-valided: green;
@@ -34,7 +34,6 @@ legend{
 	background: @legend-background;
 	color: @color-base;
 	.font(@font-base, normal, 1.4, 3.2);
-	text-indent: 10px;
 	height: @input-height;
 	margin-bottom: 5px;
 }
@@ -42,11 +41,21 @@ label {
 	display: block;
 	height: @label-heigth;
 	color: @color-base;
-	.font(@font-base, normal, 1.2, 1.2);
+	.font(@font-base, normal, 1.5, 1.5);
 	margin: 5px 0 2px;
 	.focus &{ color: @color-base; }
-	.invalid &{ color: @color-invalid; }
-	.valided &{ color: @color-valided; }
+	.invalid &{
+		color: @color-invalid;
+		&:after{
+			content: '(campo obrigatório)';
+			.font(@font-base, normal, 1.2, 1.2);
+			margin-left: 5px;
+			#uppercase(false);
+		}
+	}
+	.valided &{
+		color: @color-valided;
+	}
 	small {
 		float: right;
 		font-size: 75%;
@@ -65,7 +74,7 @@ label {
 input, textarea, select, option{
 	// margin: 0px 5px 5px 0px;
 	margin: 0px 5px 10px 0px;
-	.border-radius(@input-radius);
+	// .border-radius(@input-radius);
 }
 
 input[type="text"],
@@ -76,17 +85,23 @@ input[type="password"],
 input[type="number"],
 input[type="url"],
 input[type="datetime"]{
+	.font(@font-base, normal, 1.4, 1.4);
 	height: @input-height;
 	color: @color-primary;
-	background: @color-white;
-	box-shadow: inset 1px 1px 3px 0px darken(@color-white, 20%);
+	background: @input-background;
+	// box-shadow: inset 1px 1px 3px 0px darken(@color-white, 20%);
 	border: 1px solid @input-border-color;
 	text-indent: 10px;
 	width: 100%;
 	margin: 2px 0 10px;
+	#with-icon(true);
 	&:focus{
-		outline: 1px solid @color-primary;
+		// outline: 1px solid @color-primary;
 		border-color: @color-primary;
+		& + i{
+			color: @color-primary;
+			border-color: @color-primary;
+		}
 	}
 	.invalid &{
 		border-color: @color-invalid;
@@ -103,6 +118,7 @@ input[type="datetime"]{
 }
 
 textarea {
+	.font(@font-base, normal, 1.4, 1.4);
 	width: 100%;
 	height: 100px;
 	color: @color-primary;
@@ -113,7 +129,7 @@ textarea {
 	resize: none;
 	margin: 2px 0 10px;
 	&:focus{
-		outline: 1px solid @color-primary;
+		// outline: 1px solid @color-primary;
 		border-color: @color-primary;
 	}
 	.invalid &{
@@ -130,7 +146,8 @@ textarea {
 	}
 }
 
-select, option{
+select{
+	.font(@font-base, normal, 1.4, 1.4);
 	width: 100%;
 	height: @input-height;
 	color: @select-color;
@@ -138,37 +155,43 @@ select, option{
 	box-shadow: inset 1px 1px 3px 0px darken(@select-background, 20%);
 	border: none;
 	outline: none;
-	text-indent: 10px;
+	text-indent: 6px;
 	// margin-bottom: 5px;
-	&:focus{
-		outline: 1px solid @color-primary;
-		border-color: @color-primary!important;
-	}
+	// &:focus{
+	// 	outline: 1px solid @color-primary;
+	// 	border-color: @color-primary!important;
+	// }
 }
 .select {
-	height: @input-height;
+	@select-height: @input-height + 2;
+	height: @select-height;
 	background: @input-background url(../img/select-box.png) no-repeat right;
 	position: relative;
 	z-index: 5;
-}
-.select select{
-	background: transparent;
+	.border-radius(.8em);
+	overflow: hidden;
 	border: 1px solid @input-border-color;
-	width: 100%;
-	border-radius: 0;
-	// box-shadow:none;
-	-webkit-appearance: none;
-   	-moz-appearance:    none;
-   	appearance:         none;
+	margin: 2px 0 10px;
+	select{
+		height: @select-height;
+		background: transparent;
+		width: 100%;
+		border-radius: 0;
+		box-shadow:none;
+		-webkit-appearance: none;
+		-moz-appearance:    none;
+		appearance:         none;
+	}
 }
 option{
 	-webkit-appearance: none;
-   	-moz-appearance:    none;
-   	appearance:         none;
-   	&:hover{
-   		background: #000;
-   	}
+	-moz-appearance:    none;
+	appearance:         none;
+	&:hover{
+		background: #000;
+	}
 }
+
 .checkbox2, .radio2 {
     display: table;
     label, input {
@@ -191,42 +214,48 @@ option{
 		margin: 10px 0;
 		float: left;
 		&:before {
-		    .border-radius(3px);
+			.border-radius(3px);
 		}
 		&+input+label{
 			margin-left: 10px;
 		}
 	}
 	input[type=checkbox], input[type=radio] {
-	    display: none;
+		display: none;
 	}
 	input[type=checkbox] + label:before,
 	input[type=radio] + label:before {
-	    content: "";
+		content: "";
 		color: @color-base;
 		// text-shadow: inset 1px 1px 1px @cor13;
-		-webkit-box-shadow: inset 1px 1px 3px 0px darken(@input-background, 20%);
-		box-shadow: inset 1px 1px 3px 0px darken(@input-background, 20%);
-		background: @color-primary-light1;
+		// -webkit-box-shadow: inset 1px 1px 3px 0px darken(@input-background, 20%);
+		// box-shadow: inset 1px 1px 3px 0px darken(@input-background, 20%);
+		background: @color-white;
 		text-align: center;
 		display: block;
 		float: left;
 		width: 15px;
 		height: 14px;
 		margin-right: 5px;
-		.border-radius(3px);
+		.border-radius(0px);
+		border: 1px solid @color-base;
+		line-height: 12px!important;
 	}
 	input[type=radio] + label:before{
 		.border-radius(10px);
 	}
 }
 .checkbox input[type=checkbox]:checked + label:before {
-	    content: "\2714";
-	    color: @color-primary;
+	.awesome;
+	content: "\2714";
+	color: @color-primary;
+
 }
 .radio input[type=radio]:checked + label:before {
-	    content: "\25CF";
-	    color: @color-primary;
+	.awesome;
+	content: "\25CF";
+	color: @color-primary;
+
 }
 
 /*==========  Personalizacao dos atributos dos formularios  ==========*/
@@ -288,3 +317,30 @@ input.invalido:-ms-input-placeholder {}/* Firefox 19+ */
 }
 
 ::-webkit-validation-bubble-message { display: none; }
+
+
+#with-icon(@a) when ((@a) = true){
+	& + i {
+		.awesome;
+		display: block;
+		height: 28px;
+		width: 36px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		text-align: center;
+		font-size: 16px;
+		border-left: 1px solid;
+		line-height: 28px;
+		color: @color-base;
+	}
+}
+
+input[type="email"]	{& + i:before{content: "\f003"}}
+input[type="tel"]	{& + i:before{content: "\f095"}}
+
+#with-icon(@a) when ((@a) = false){
+	& + i{
+		display: none;
+	}
+}
