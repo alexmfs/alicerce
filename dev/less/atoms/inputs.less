@@ -48,7 +48,7 @@ label {
 		color: @color-invalid;
 		&:after{
 			content: '(campo obrigatório)';
-			.font(@font-base, normal, 1.2, 1.2);
+			font-size: 85%;
 			margin-left: 5px;
 			#uppercase(false);
 		}
@@ -256,6 +256,10 @@ option{
 	content: "\25CF";
 	color: @color-primary;
 
+}
+
+input[type="range"] {
+	width: 100%;
 }
 
 /*==========  Personalizacao dos atributos dos formularios  ==========*/

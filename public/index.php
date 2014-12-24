@@ -23,14 +23,14 @@
 	<!-- Main Section -->
 	<main class="main" role="main">
 
-		<div class="wrap">
+		<div class="box-helpers">
 
-		<?php include ("includes/helpers/forms.php"); ?>
 		<?php // include ("includes/helpers/colors.php"); ?>
-		<?php // include ("includes/helpers/types.php"); ?>
+		<?php // include ("includes/helpers/forms.php"); ?>
+		<?php include ("includes/helpers/types.php"); ?>
 		<?php // include ("includes/helpers/buttons.php"); ?>
 		<?php // include ("includes/helpers/tooltips.php"); ?>
-		<?php include ("includes/helpers/messages.php"); ?>
+		<?php // include ("includes/helpers/messages.php"); ?>
 		<?php // include ("includes/helpers/grid.php"); ?>
 		<?php // include ("includes/helpers/x-grid.php"); ?>
 

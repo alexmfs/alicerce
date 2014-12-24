@@ -1,7 +1,9 @@
-<section class="wrap">
-	<header class="">
-		<h1 class="title">Forms</h1>
-	</header>
+<section>
+
+	<h1 class="title">Forms</h1>
+
+	<h2 class="subtitle">Máscaras</h2>
+
 	<form action="#" method="post">
 		<div>
 			<label for="">Telefone</label>
@@ -24,11 +26,14 @@
 			<input type="text" class="mask-cep" required>
 		</div>
 	</form>
-	<form action="" class="">
+
+	<h2 class="subtitle">Sizes</h2>
+
+	<form action="#" method="post" class="">
 		<legend>Legenda</legend>
 		<div>
 			<label for="">Input genérico</label>
-			<input type="text" placeholder="placeholder">
+			<input type="text" placeholder="placeholder" required>
 		</div>
 		<div>
 			<label for="">Input obrigatório</label>
@@ -92,29 +97,28 @@
 				<label for="check2">Checkbox No. 2</label>
 			</div>
 		</div>
-		<fieldset>
-			<div>
+		<div>
+			<select name="" id="">
+				<option value="">opção 1</option>
+				<option value="">opção 2</option>
+				<option value="">opção 3</option>
+				<option value="">opção 4</option>
+			</select>
+		</div>
+		<div>
+			<div class="select">
 				<select name="" id="">
-					<option value="">opção 1</option>
+					<option value="">select personalizado opção 1</option>
 					<option value="">opção 2</option>
 					<option value="">opção 3</option>
 					<option value="">opção 4</option>
 				</select>
 			</div>
-			<div>
-				<div class="select">
-					<select name="" id="">
-						<option value="">select personalizado opção 1</option>
-						<option value="">opção 2</option>
-						<option value="">opção 3</option>
-						<option value="">opção 4</option>
-					</select>
-				</div>
-			</div>
-		</fieldset>
+		</div>
 		<div>
 			<input type="reset" class="danger" value="apagar tudo">
 			<input type="submit" class="success" value="enviar">
 		</div>
 	</form>
+
 </section>
