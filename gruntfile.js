@@ -15,6 +15,28 @@ module.exports = function(grunt) {
 			'dev/css/style.css': ['dev/less/__style.less']
 		},
 
+		// Change Name for dinamic theme colors
+		replace: {
+			themeColorsName: {
+				src: ['dev/css/style.css'],
+				dest: 'dev/css/style.css',
+				replacements: [
+					{
+						from: '.theme-1',
+						to: '.theme-yellow'
+					},
+					{
+						from: '.theme-2',
+						to: '.theme-green'
+					},
+					{
+						from: '.theme-3',
+						to: '.theme-red'
+					},
+				]
+			}
+		},
+
 		// Reorganize Media Queries
 		cmq: {
 			options: {
@@ -39,7 +61,7 @@ module.exports = function(grunt) {
 
 		// Js files
 		concat: {
-			basic: {
+			vendors: {
 				src: [
 					'bower_components/modernizr/modernizr.js',
 					'bower_components/jquery/jquery.min.js',
@@ -49,7 +71,7 @@ module.exports = function(grunt) {
 				],
 				dest: '<%= dirs.folder %>js/vendors.js',
 			},
-			extras: {
+			scripts: {
 				src: [
 					'dev/js/_intro.js',
 					'dev/js/sliderVertical.js',
@@ -74,7 +96,7 @@ module.exports = function(grunt) {
 			styles: {
 				// Which files to watch (all .less files recursively in the less directory)
 				files: ['gruntfile.js','dev/less/*.less','dev/less/*/*.less','dev/less/style.css','dev/js/*.js'],
-				tasks: ['less','cmq','cssmin','concat'],
+				tasks: ['less','replace','cmq','cssmin','concat'],
 				options: {
 					nospawn: true
 				}
