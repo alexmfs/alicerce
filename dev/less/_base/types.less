@@ -25,20 +25,20 @@
 		/*Pixel value Fallback*/
 		font: @string ~"@{pxSize}px/@{pxline}px @{family-name}", Fallback, sans-serif;
 		/*Rem value*/
-		font: @string ~"@{remSize}rem/@{remline}rem @{family-name}", Fallback, sans-serif;
+		font: @string ~"@{remSize}em/@{remline}em @{family-name}", Fallback, sans-serif;
 	}
 
 	.font-size(@sizeValue) {
 		@remValue: @sizeValue;
 		@pxValue: (@sizeValue * 10);
 		font-size: ~"@{pxValue}px";
-		font-size: ~"@{remValue}rem";
+		font-size: ~"@{remValue}em";
 	}
 	.line-height(@sizeValue) {
 		@remValue: @sizeValue;
 		@pxValue: (@sizeValue * 10);
 		line-height: ~"@{pxValue}px";
-		line-height: ~"@{remValue}rem";
+		line-height: ~"@{remValue}em";
 	}
 
 /* Project Fonts -------------------------------------- */

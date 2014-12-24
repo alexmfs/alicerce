@@ -1,4 +1,4 @@
-<section id="hc-buttons">
+<section class="hc" id="hc-buttons">
 	<div class="desktop-12">
 		<h1 class="hc">Buttons <small>cores de estados são definidos separadamente</small></h1>
 		<h2 class="hc">Sizes</h2>

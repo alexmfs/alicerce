@@ -6,8 +6,8 @@ module.exports = function(grunt) {
 	// Configuração do projeto
 	grunt.initConfig({
 		dirs: {
-			folder: 'public/app/webroot/'
-			// folder: 'public/'
+			// folder: 'public/app/webroot/'
+			folder: 'public/'
 		},
 
 		// Compile Less

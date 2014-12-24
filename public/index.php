@@ -4,43 +4,42 @@
 	<![endif]-->
 
 	<!-- Header -->
-	<header class="principal" role="banner">
+	<header class="header-principal" role="banner">
 		<div class="wrap">
-			<div class="desktop-2 mobile-6 tablet-6">
-				<h1>
-					<a href="../" class="logo">
-						<img src="img/logo.png" height="" width="" alt="NOME DO CLIENTE">
-					</a>
-				</h1>
-			</div>
-
-			<div class="desktop-10">
-				<nav class="nav-global" role="navigation">
-					<a href="" class="item active">Menu 1</a>
-					<a href="" class="item">Menu 2</a>
-				</nav>
-			</div>
-
+			<h1>
+				<a href="../" class="logo">
+					<img src="img/logo.png" height="" width="" alt="NOME DO CLIENTE">
+				</a>
+			</h1>
+			<nav class="nav-global" role="navigation">
+				<a href="" class="item active">Menu 1</a>
+				<a href="" class="item">Menu 2</a>
+			</nav>
 		</div>
 	</header>
+
+	<?php //include ("includes/helpers/slider.php"); ?>
 
 	<!-- Main Section -->
 	<main class="main" role="main">
 
-		<?php include ("includes/helpers/slider.php"); ?>
-		<?php //include ("includes/helpers/forms.php"); ?>
-		<?php //include ("includes/helpers/colors.php"); ?>
-		<?php //include ("includes/helpers/types.php"); ?>
-		<?php //include ("includes/helpers/buttons.php"); ?>
-		<?php //include ("includes/helpers/tooltips.php"); ?>
-		<?php //include ("includes/helpers/messages.php"); ?>
-		<?php //include ("includes/helpers/grid.php"); ?>
-		<?php //include ("includes/helpers/x-grid.php"); ?>
+		<div class="wrap">
+
+		<?php include ("includes/helpers/forms.php"); ?>
+		<?php // include ("includes/helpers/colors.php"); ?>
+		<?php // include ("includes/helpers/types.php"); ?>
+		<?php // include ("includes/helpers/buttons.php"); ?>
+		<?php // include ("includes/helpers/tooltips.php"); ?>
+		<?php include ("includes/helpers/messages.php"); ?>
+		<?php // include ("includes/helpers/grid.php"); ?>
+		<?php // include ("includes/helpers/x-grid.php"); ?>
+
+		</div>
 
 	</main>
 
 	<!-- Footer -->
-	<footer class="principal" role="contentinfo">
+	<footer class="footer-principal" role="contentinfo">
 		<div class="wrap">
 			<address itemscope itemtype="http://schema.org/LocalBusiness">
 				<span>

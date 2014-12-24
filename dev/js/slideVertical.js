@@ -44,3 +44,16 @@ function slideVertical(containerSlider){
 };
 slideVertical('.mais-indicados');
 slideVertical('.nossos-produtos');
+
+
+function slider(containerSlider){
+
+ var
+  container = containerSlider + " .item",
+  larguraSlide = $(container + " .item").width(),
+  quantidadeSlide = $(container + " li").length;
+
+  alert(quantidadeSlide);
+};
+
+slider('.slider-home');
