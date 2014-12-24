@@ -1,7 +1,5 @@
 <x-grid class="box">
-	<header class="desktop-12">
-		<h1 class="hc">X-Grid <small>Atributos criados</small></h1>
-	</header>
+	<h1 class="title">X-Grid <small>Atributos criados</small></h1>
 	<x-column mobile="12" tablet="12" desktop="12">
 		<p class="shape visible-desktop">12</p>
 		<p class="shape visible-tablet">12</p>

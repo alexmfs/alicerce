@@ -1,9 +1,8 @@
-<section class="hc" id="hc-buttons">
-	<div class="desktop-12">
-		<h1 class="hc">Buttons <small>cores de estados são definidos separadamente</small></h1>
-		<h2 class="hc">Sizes</h2>
-	</div>
-	<div class="desktop-4">
+<section>
+	<h1 class="title">Buttons <small>cores de estados são definidos separadamente</small></h1>
+	<h2 class="subtitle">Sizes</h2>
+
+	<div>
 		<button class="">default</button>
 		<button class="pp">pp</button>
 		<button class="p">p</button>
@@ -11,7 +10,7 @@
 		<button class="g">g</button>
 		<button class="xg">xg</button>
 	</div>
-	<div class="desktop-8">
+	<div>
 		<button class="full">default full</button>
 		<button class="full pp">pp full</button>
 		<button class="full p">p full</button>
@@ -19,8 +18,11 @@
 		<button class="full g">g full</button>
 		<button class="full xg">xg full</button>
 	</div>
-	<div class="desktop-4">
-		<h2 class="hc">Tag Span</h2>
+</section>
+
+<section>
+	<h2 class="subtitle">Tag Span</h2>
+	<div>
 		<div>
 			<p>State normal</p>
 			<span class="button">Comum</span>
@@ -34,8 +36,11 @@
 			<span class="button success is-desactive">Success</span>
 		</div>
 	</div>
-	<div class="desktop-4">
-		<h2 class="hc">Tag Button</h2>
+</section>
+
+<section>
+	<h2 class="subtitle">Tag Button</h2>
+	<div>
 		<div>
 			<p>State normal</p>
 			<button>Comum</button>
@@ -49,8 +54,11 @@
 			<button class="success desactive" enable>Success</button>
 		</div>
 	</div>
-	<div class="desktop-4">
-		<h2 class="hc">Tag A</h2>
+</section>
+
+<section>
+	<h2 class="subtitle">Tag A</h2>
+	<div>
 		<div>
 			<p>State normal</p>
 			<a href="#" class="button">Comum</a>
@@ -64,8 +72,11 @@
 			<a href="#" class="button success desactive">Success</a>
 		</div>
 	</div>
-	<div class="desktop-4">
-		<h2 class="hc">Tag input type="submit"</h2>
+</section>
+
+<section>
+	<h2 class="subtitle">Tag input type="submit"</h2>
+	<div>
 		<div>
 			<p>Rule State normal</p>
 			<input type="submit" value="Comum">
@@ -79,8 +90,11 @@
 			<input type="submit" value="Success" class="success desactive">
 		</div>
 	</div>
-	<div class="desktop-4">
-		<h2 class="hc">Tag input type="reset"</h2>
+</section>
+
+<section>
+	<h2 class="subtitle">Tag input type="reset"</h2>
+	<div>
 		<div>
 			<p>Rule State normal</p>
 			<input type="reset" value="Comum">

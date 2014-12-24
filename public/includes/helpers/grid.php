@@ -1,7 +1,5 @@
 <section id="hc-tooltips">
-	<header class="desktop-12">
-		<h1 class="hc">Grid <small>Aplicação de Classes</small></h1>
-	</header>
+	<h1 class="title">Grid <small>Aplicação de Classes</small></h1>
 	<div class="desktop-12 tablet-12 mobile-12">
 		<p class="shape visible-desktop">12</p>
 		<p class="shape visible-tablet">12</p>
