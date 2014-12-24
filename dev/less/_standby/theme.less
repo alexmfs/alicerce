@@ -1,0 +1,76 @@
+.colors(@theme-primary){
+  @coloreds-primary: @theme-primary;
+  @coloreds-primary-light1: lighten(spin(@coloreds-primary, 5), 25%);
+  @coloreds-primary-light2: lighten(spin(@coloreds-primary, 10), 50%);
+  @coloreds-primary-dark1: darken(spin(@coloreds-primary, -5), 10%);
+  @coloreds-primary-dark2: darken(spin(@coloreds-primary, -10), 20%);
+
+  @coloreds-secondary: darken(spin(@coloreds-primary, 180), 5%);
+  @coloreds-secondary-light1: lighten(@coloreds-secondary, 25%);
+  @coloreds-secondary-light2: lighten(@coloreds-secondary, 50%);
+  @coloreds-secondary-dark1: darken(spin(@coloreds-secondary, -5), 10%);
+  @coloreds-secondary-dark2: darken(spin(@coloreds-secondary, -10), 20%);
+}
+
+//Theme Definitions by parametric mixin numbers (1), (2), etc.
+@numberOfThemes: 3; //controls theme loop
+
+//Yellow
+.themeDefs(1) {
+  .colors(#ffca0a);
+}
+
+//Red
+.themeDefs(2) {
+  .colors(#c00);
+}
+
+//Green
+.themeDefs(3) {
+  .colors(#008000);
+}
+
+//Purple
+.themeDefs(4) {
+  .colors(#426);
+}
+
+//////////////////////////////////////////////////////
+// GENERAL STYLING
+.example-theme {
+  display:inline-block;
+  width:10%;
+  padding:20px 5%;
+  margin:0 1% 20px 1%;
+}
+
+//////////////////////////////////////////////////////
+// THEME BUILDING
+
+.buildThemes(@index) when (@index < @numberOfThemes + 1) {
+
+   @i: ~'@{index}';
+   .name-theme(@i);
+
+  .theme-@{index} {
+      .themeDefs(@index);
+      color: @coloreds-primary;
+      background: @coloreds-primary-light1;
+
+      .example-theme {
+        color: @coloreds-primary;
+        background: @coloreds-primary-light1;
+      }
+      .example-title{
+        color: @coloreds-primary;
+        background: @coloreds-primary-light1;
+      }
+  }
+  .buildThemes(@index + 1);
+
+}
+
+//stop loop
+.buildThemes(@index) {}
+//start theme building loop
+.buildThemes(1);
