@@ -1,7 +1,7 @@
-<section>
+<section class="box-color">
 	<h1 class="title">Paleta de Cores</h1>
 
-	<div class="base-color">
+	<div class="widget-colors">
 		<span class="hc-base" tabindex="1">
 			<span></span>
 			color base
@@ -16,7 +16,7 @@
 		</span>
 	</div>
 
-	<div class="base-color">
+	<div class="widget-colors">
 		<span class="hc-primary-light2" tabindex="1">
 			<span></span>
 			color primary light2
@@ -39,7 +39,7 @@
 		</span>
 	</div>
 
-	<div class="base-color">
+	<div class="widget-colors">
 		<span class="hc-secondary-light2" tabindex="1">
 			<span></span>
 			color secondary light2

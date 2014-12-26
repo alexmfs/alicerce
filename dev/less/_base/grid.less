@@ -1,0 +1,30 @@
+// Width
+.generate-columns(@n, @device, @i: 1) when (@i =< @n) {
+	.@{device}-@{i} {
+		.column(@i);
+	}
+	.generate-columns(@n, @device, (@i + 1));
+}
+
+// Margin and Float
+#device(@device){
+	[class^="@{device}-"]{
+		display: inline;
+		float: left;
+		margin: 0 @margin;
+	}
+}
+
+@margin: @total-width*((@gutter-width*.5)/@gridsystem-width);
+
+// Combo
+#grid(@columns, @device){
+	.generate-columns(@columns, @device);
+  	#device(@device);
+}
+
+// Responsive Grid Gerenator
+/* Responsive Grid */
+@media @mobile	{#grid(@columns, mobile);}
+@media @tablet	{#grid(@columns, tablet);}
+@media @desktop	{#grid(@columns, desktop);}
