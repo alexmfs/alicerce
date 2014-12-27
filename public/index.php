@@ -4,7 +4,7 @@
 	<![endif]-->
 
 	<!-- Header -->
-	<header class="header-principal" role="banner">
+<!-- 	<header class="header-principal" role="banner">
 		<div class="wrap">
 			<h1>
 				<a href="../" class="logo">
@@ -16,14 +16,14 @@
 				<a href="" class="item">Menu 2</a>
 			</nav>
 		</div>
-	</header>
+	</header> -->
 
 	<?php //include ("includes/helpers/slider.php"); ?>
 
 	<!-- Main Section -->
 	<main class="main" role="main">
 
-		<div class="box-helpers">
+		<div class="widget-helpers">
 
 		<?php // include ("includes/helpers/colors.php"); ?>
 		<?php // include ("includes/helpers/types.php"); ?>
@@ -31,7 +31,7 @@
 		<?php // include ("includes/helpers/buttons.php"); ?>
 		<?php // include ("includes/helpers/tooltips.php"); ?>
 		<?php // include ("includes/helpers/messages.php"); ?>
-		<?php include ("includes/helpers/grid.php"); ?>
+		<?php include ("includes/helpers/grid16.php"); ?>
 		<?php // include ("includes/helpers/x-grid.php"); ?>
 
 		</div>
@@ -39,7 +39,7 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="footer-principal" role="contentinfo">
+<!-- 	<footer class="footer-principal" role="contentinfo">
 		<div class="wrap">
 			<address itemscope itemtype="http://schema.org/LocalBusiness">
 				<span>
@@ -51,6 +51,6 @@
 				</span>
 			</address>
 		</div>
-	</footer>
+	</footer> -->
 
 <?php include ("includes/footer.php"); ?>

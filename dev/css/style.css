@@ -83,7 +83,7 @@ img {
 
 .wrap {
 	width: 100%;
-	width: 960px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -200,7 +200,6 @@ hr {
 }
 
 .shape {
-	height: 50px;
 	text-align: center;
 	width: 100%; /*Pixel value Fallback*/
 	font: normal 12px/50px din, Fallback, sans-serif; /*Rem value*/
@@ -1296,7 +1295,7 @@ pattern-tooltip:hover:after,
 
 .breadcrumb-container {
 	width: 100%;
-	width: 960px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 1.04166667%;
 }
@@ -1649,7 +1648,7 @@ slide .item,
 
 #fullbar > div {
 	width: 100%;
-	width: 960px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -1682,7 +1681,6 @@ slide .item,
 	font: normal 28px/28px din, Fallback, sans-serif; /*Rem value*/
 	font: normal 2.8em/2.8em din, Fallback, sans-serif;
 	text-transform: uppercase;
-	margin-bottom: 20px;
 	border-bottom: 5px solid;
 }
 
@@ -1699,16 +1697,36 @@ slide .item,
 	border-bottom: 5px solid #eee;
 }
 
-.box-helpers {
+.widget-helpers {
 	width: 100%;
-	width: 960px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
-.box-helpers > section {
-	display: table;
-	width: 100%;
+.widget-helpers > section {
+	display: block;
+	width: 101.5625%;
+	margin: 0 -0.78125%;
+	*zoom: 1;
 	margin-bottom: 30px;
+}
+
+.widget-helpers > section:before,
+.widget-helpers > section:after {
+	content: "";
+	display: table;
+}
+
+.widget-helpers > section:after {
+	clear: both;
+}
+
+.widget-helpers > section > .title {
+	display: inline;
+	float: left;
+	width: 98.4375%;
+	margin: 0 0.78125%;
+	margin-bottom: 20px;
 }
 
 .widget-colors {
@@ -2054,6 +2072,46 @@ slide .item,
 	margin: 0 0.78125%;
 }
 
+.visible-mobile {
+	display: none;
+}
+
+.visible-mobile {
+	display: none;
+}
+
+.visible-tablet {
+	display: none;
+}
+
+.visible-tablet {
+	display: block;
+}
+
+.visible-desktop {
+	display: none;
+}
+
+.visible-desktop {
+	display: none;
+}
+
+.hidden-mobile {
+	display: none;
+}
+
+.hidden-tablet {
+	display: none;
+}
+
+.hidden-tablet {
+	display: none;
+}
+
+.hidden-desktop {
+	display: none;
+}
+
 form.contato {
 	display: block;
 	width: 101.5625%;
@@ -2236,6 +2294,46 @@ form.contato div:last-child {
 	display: inline;
 	float: left;
 	margin: 0 0.78125%;
+}
+
+.visible-mobile {
+	display: mobile;
+}
+
+.visible-mobile {
+	display: none;
+}
+
+.visible-tablet {
+	display: tablet;
+}
+
+.visible-tablet {
+	display: none;
+}
+
+.visible-desktop {
+	display: desktop;
+}
+
+.visible-desktop {
+	display: block;
+}
+
+.hidden-mobile {
+	display: none;
+}
+
+.hidden-tablet {
+	display: none;
+}
+
+.hidden-desktop {
+	display: none;
+}
+
+.hidden-desktop {
+	display: none;
 }
 
 form.contato {
@@ -2480,6 +2578,46 @@ form.contato .col-12 {
 	display: inline;
 	float: left;
 	margin: 0 0.78125%;
+}
+
+.visible-mobile {
+	display: none;
+}
+
+.visible-mobile {
+	display: block;
+}
+
+.visible-tablet {
+	display: none;
+}
+
+.visible-tablet {
+	display: none;
+}
+
+.visible-desktop {
+	display: none;
+}
+
+.visible-desktop {
+	display: none;
+}
+
+.hidden-mobile {
+	display: none;
+}
+
+.hidden-mobile {
+	display: none;
+}
+
+.hidden-tablet {
+	display: none;
+}
+
+.hidden-desktop {
+	display: none;
 }
 
 form.contato {
