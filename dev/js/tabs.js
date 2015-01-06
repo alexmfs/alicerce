@@ -15,7 +15,7 @@ function tabs(tab) {
     /* Oculta todas as abas abertas */
     $(content + ' li').hide();
     /* Exibe a aba que foi clicada */
-    $(content +  ' ' + $(this).attr('href')).show();
+    $(content + ' ' + $(this).attr('href')).show();
     return false;
   });
 }
