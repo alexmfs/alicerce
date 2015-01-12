@@ -1,22 +1,25 @@
-	// Popups (carrega quando página é iniciada)
-	
-	function popUp(){
+// Popups (carrega quando página é iniciada)
 
-		var
-			popupLargura = $('.popup').width() * (-1),
-			popupAltura = $('.popup').height() * (-1);
+function popUp() {
 
-		$('.popup').wrapAll('<div class="popup-overlay" />');
-		$('.popup').append('<span class="popup-close" />');
-		$('.popup-overlay, .popup').fadeIn(1000);
+  var
+    popupLargura = $('.popup').width() * (-1),
+    popupAltura = $('.popup').height() * (-1);
 
-		$('.popup-close').on('click', function () {
-			$('.popup-overlay, .popup').fadeOut();
-		});
+  $('.popup').wrapAll('<div class="overlay" />');
+  $('.popup').append('<span class="popup-close">x<span/>');
+  $('.overlay, .popup').fadeIn(1000);
 
-		$('.popup').css({
-			"margin-left": popupLargura / 2,
-			"margin-top": popupAltura / 2,
-		});
-	};
-	popUp();
+  $('.popup').css({
+    "margin-left": popupLargura / 2,
+    "margin-top": popupAltura / 2,
+  });
+
+  $('.popup-close').on('click', function () {
+    $(this).parents('.overlay, .popup').fadeOut();
+  });
+}
+
+setTimeout(function () {
+  popUp();
+}, 1000);
