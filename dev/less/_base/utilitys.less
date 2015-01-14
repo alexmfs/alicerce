@@ -1,9 +1,9 @@
 // Utilitys Classes
 // Version: 1.0.1
 // Date: 01/09/2014
-// Last Update: 01/098/2014
+// Last Update: 01/09/2014
 
-.fleft{
+.left{
 	float: left !important;
 	&-align{
 		text-align: left !important;
@@ -32,28 +32,4 @@
 
 .box{
 	.border();
-}
-
-.show-only(@display){
-	@media @mobile{
-		display: none;
-	}
-	@media @tablet{
-		display: none;
-	}
-	@media @desktop{
-		display: @display;
-	}
-}
-
-.hide-only(@display){
-	@media @mobile{
-		display: none;
-	}
-	@media @tablet{
-		display: none;
-	}
-	@media @desktop{
-		display: none;
-	}
 }
