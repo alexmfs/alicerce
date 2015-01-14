@@ -36,3 +36,33 @@
 		.font-size(1.6);
 	}
 }
+
+.search-box {
+    float: left;
+    position: relative;
+	width: 280px;
+	@radius: .4em;
+	input[type="search"] {
+		width: 90%;
+		border-radius: @radius 0 0 @radius;
+		border-right: none;
+		float: left;
+		.line-height(1.9);
+		&:focus{
+			outline: none;
+			border: 1px solid @color-base-light1;
+			border-right: none;
+		}
+	}
+	input[type="submit"] {
+		width: 10%;
+		border-radius: 0 @radius @radius 0;
+		background: #fff @sprite -175px -45px;
+		float: left;
+		padding: 0;
+		height: 30px;
+		margin: 2px 0 10px;
+		border: 1px solid @color-base-light1;
+		border-left: none;
+	}
+}
