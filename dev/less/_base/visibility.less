@@ -1,45 +1,46 @@
 
 // Visibility
+//
 // Version: 1.0.1
-// Date: 10/11/2014
+// Date:    10/11/2014
 // Updates: 14/01/2015
-// 	    13/11/2014
+//	    13/11/2014
 //	    10/11/2014
 
 
 .show-only(@a, @display:block) when ((@a) = mobile){
-	@media @mobile	{ display: @display }
+	@media @mobile	{ display: @display!important }
 	@media @tablet	{ display: none }
 	@media @desktop	{ display: none }
 }
 
 .show-only(@a, @display:block) when ((@a) = tablet){
 	@media @mobile	{ display: none }
-	@media @tablet	{ display: @display }
+	@media @tablet	{ display: @display!important }
 	@media @desktop	{ display: none }
 }
 
 .show-only(@a, @display:block) when ((@a) = desktop){
 	@media @mobile	{ display: none }
 	@media @tablet	{ display: none }
-	@media @desktop	{ display: @display }
+	@media @desktop	{ display: @display!important }
 }
 
 .hide-only(@a, @display:block) when ((@a) = mobile){
 	@media @mobile	{ display: none	}
-	@media @tablet	{ display: @display }
-	@media @desktop	{ display: @display }
+	@media @tablet	{ display: @display!important }
+	@media @desktop	{ display: @display!important }
 }
 
 .hide-only(@a, @display:block) when ((@a) = tablet){
-	@media @mobile	{ display: @display }
+	@media @mobile	{ display: @display!important }
 	@media @tablet	{ display: none }
-	@media @desktop	{ display: @display }
+	@media @desktop	{ display: @display!important }
 }
 
 .hide-only(@a, @display:block) when ((@a) = desktop){
-	@media @mobile	{ display: @display }
-	@media @tablet	{ display: @display }
+	@media @mobile	{ display: @display!important }
+	@media @tablet	{ display: @display!important }
 	@media @desktop	{ display: none }
 }
 
