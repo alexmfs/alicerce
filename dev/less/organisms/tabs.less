@@ -1,0 +1,42 @@
+.tabs-nav {
+	width: 100%;
+	float: left;
+	border-top: 1px solid @color-base-light1;
+	padding-top: 1px;
+	margin-bottom: @space * 2;
+}
+
+.tab{
+	.font(@font-base, normal,  1.4, 1.4);
+	color: @color-base;
+	#uppercase(true);
+	padding: 8px @space;
+	border: 1px solid @color-white;
+	border-bottom: none;
+	cursor: pointer;
+	float: left;
+	@media @mobile{
+		width: 100%;
+		text-align: center;
+	}
+	@media @tablet{
+		width: 100%;
+		text-align: center;
+	}
+	@media @desktop{}
+	&:hover, &.selected{
+		border: 1px solid @color-base-light2;
+		border-bottom: none;
+		.linearGradient(@stop1:0, @color-base-light2, @stop2:50%, @color-white, @stop3:100%, @color-base-light2);
+	}
+}
+
+.tabs-content {
+	float: left;
+	width: 100%;
+	display: table;
+}
+
+.tabs-veiculo{
+	#template(@columns);
+}
