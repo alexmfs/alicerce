@@ -66,6 +66,7 @@ module.exports = function(grunt) {
 					'bower_components/modernizr/modernizr.js',
 					'bower_components/jquery/jquery.min.js',
 					'bower_components/jquery/jquery-migrate.min.js',
+					'bower_components/nicescroll/jquery.nicescroll.min.js',
 					'dev/js/refresh.js',
 
 				],
@@ -83,6 +84,7 @@ module.exports = function(grunt) {
 					'dev/js/ancoras.js',
 					'dev/js/goto.js',
 					'dev/js/modal.js',
+					'dev/js/chamadasPlugins.js',
 					'dev/js/maps.config.js',
 					'dev/js/_final.js',
 					'dev/js/maps.api.js'
