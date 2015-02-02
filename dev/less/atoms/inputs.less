@@ -165,7 +165,7 @@ select{
 .select {
 	@select-height: @input-height + 2;
 	height: @select-height;
-	background: @input-background url(../img/select-box.png) no-repeat right;
+	background: @input-background @img-select no-repeat right;
 	position: relative;
 	z-index: 5;
 	.border-radius(.8em);
@@ -173,7 +173,7 @@ select{
 	border: 1px solid @input-border-color;
 	margin: 2px 0 10px;
 	select{
-		height: @select-height;
+		height: 100%;
 		background: transparent;
 		width: 100%;
 		border-radius: 0;
