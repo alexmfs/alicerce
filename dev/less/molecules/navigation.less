@@ -23,33 +23,55 @@
 .nav-local{
 	#aside(menu);
 	.item{
+		.font(@font-secondary, bold, 1.4, 1.4);
+		#uppercase(true);
+		color: @color-primary;
 		display: block;
-		margin-bottom: @space;
-		.font(@font-base, bold, 1.4, 1.4);
-		color: @color-base-dark1;
+		margin-bottom: 25px;
 		&.active, &:hover{
-			color: @color-primary;
+			color: @color-primary-light1;
 		}
 	}
-	.nav-marker-before(true);
+
+	// Selecionar estilo de marcador
+	// .nav-marker-before(<type>, <color>, <color:hover>);
+	// - retangule
+	// - circle
+	// - false
+	.nav-marker-before(circle, @color-primary, @color-primary-light1);
 }
 
-.nav-marker-before(@a) when ((@a) = true){
+.nav-marker-before(@type, @color, @hover) when ((@type) = retangule){
 	.item{
+		#nav-marker-before(@color, @hover);
 		&:before {
-			content: "";
-			display: block;
 			width: 20px;
 			height: 8px;
-			background: @color-base-dark1;
-			float: left;
 			margin: 3px 12px 0 0;
 		}
-		&:hover:before{
-			background: @color-primary;
+	}
+}
+
+.nav-marker-before(@type, @color, @hover) when ((@type) = circle){
+	.item{
+		#nav-marker-before(@color, @hover);
+		&:before {
+			width: 4px;
+			height: 4px;
+			margin: 6px 6px 0 0;
+			.border-radius(10em);
 		}
 	}
-	.active:before{
-		background: @color-primary;
+}
+
+#nav-marker-before(@color, @hover){
+	&:before{
+      content: "";
+      display: block;
+      background: @color;
+      float: left;
 	}
+    &:hover:before{
+      background: @hover;
+    }
 }
