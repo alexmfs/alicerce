@@ -1,20 +1,58 @@
 // Banners
 
 banners{
-	div{
+	.img-container{
 		display: table;
+		width: auto;
+		margin: 0 auto;
 		.shadow6;
 	}
-	span{
-		color: @color-primary;
+	.name{
+		color: @color-base-dark2;
 		display: block;
 		#uppercase(true);
-	}
-	.name{
 		.font(@font-base, bold, 1.4, 1.4);
+		i{
+			background: @sprite;
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			margin: 0px 10px -12px 0;
+			&.icon-servicos{
+				background-position: 6px 0;
+			}
+			&.icon-ofertas{
+				background-position: -38px 0px;
+			}
+			&.icon-noticias{
+				background-position: -77px 0px;
+			}
+		}
 	}
 	.description{
 		.font(@font-base, normal, 1.4, 1.4);
+	}
+	.hovershape{
+		color: @color-white;
+		.rgba(@color-primary, 0.9);
+		text-align: center;
+		padding: 20px 0px;
+		.transition();
+	}
+	#hovershape(downUp);
+	&:hover{
+		.name{
+			color: @color-primary;
+		}
+		.icon-servicos{
+			background-position: 6px -32px!important;
+		}
+		.icon-ofertas{
+			background-position: -38px -32px!important;
+		}
+		.icon-noticias{
+			background-position: -77px -32px!important;
+		}
 	}
 }
 
@@ -34,6 +72,21 @@ banners{
 	#template(4, 8, 16);
 	&:extend(banners all);
 }
+.banner-33{
+	#template(5, 5, 16);
+	@media @mobile{/*code here*/}
+	@media @tablet{
+		&:nth-child(3n + 2) {
+			margin: 0px 3.88125%;
+		}
+	}
+	@media @desktop{
+		&:nth-child(3n + 2) {
+			margin: 0px 3.88125%;
+		}
+	}
+	&:extend(banners all);
+}
 
 
 // Analisar
@@ -42,6 +95,73 @@ banners{
 }
 
 .banners-home {
-	margin-bottom: 50px;
 	display: table;
+	@media @mobile{/*code here*/}
+	@media @tablet{
+		margin-top: 50px;
+	}
+	@media @desktop{
+		margin-bottom: 50px;
+	}
+}
+
+
+
+// Effects
+
+#hovershape-forall{
+	.img-container{
+		position: relative;
+		overflow: hidden;
+	}
+	.hovershape{
+		position: absolute;
+		width: 100%;
+	}
+}
+
+#hovershape(@type) when ((@type) = downUp){
+	#hovershape-forall;
+	.hovershape{
+		left: 0;
+		bottom: -50%;
+	}
+	&:hover .hovershape{
+		bottom: 0%;
+	}
+}
+
+#hovershape(@type) when ((@type) = fade){
+	#hovershape-forall;
+	.hovershape{
+		left: 0;
+		bottom: 0;
+		.opacity(0);
+	}
+	&:hover .hovershape{
+		.opacity(1);
+	}
+}
+
+#hovershape(@type) when ((@type) = left-to-right){
+	#hovershape-forall;
+	.hovershape{
+		left: -100%;
+		bottom: 0;
+	}
+	&:hover .hovershape{
+		left: 0%;
+	}
+}
+
+
+#hovershape(@type) when ((@type) = right-to-left){
+	#hovershape-forall;
+	.hovershape{
+		right: -100%;
+		bottom: 0;
+	}
+	&:hover .hovershape{
+		right: 0%;
+	}
 }
