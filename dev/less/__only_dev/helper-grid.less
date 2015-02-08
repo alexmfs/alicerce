@@ -1,0 +1,44 @@
+.colwidth(@col){
+    opacity: 0.15;
+    background-image:
+        repeating-linear-gradient(
+          to right, 
+              transparent,
+              transparent 10px,
+              red 10px,
+              red @col + 10px,
+              transparent @col + 10px,
+              transparent @col + 20px
+          );  
+}
+
+.grid(@width){
+  position: fixed;
+  top: 0px;
+  z-index: 99999;
+  width: @width;
+  height: 100%;
+  background: transparent;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.g-960-12{
+  .grid(960px);
+  .colwidth(60);
+}
+
+.g-960-16{
+  .grid(960px);
+  .colwidth(40);
+}
+
+.g-960-24{
+  .grid(960px);
+  .colwidth(20);
+}
+
+.g-1140-12{
+  .grid(1140px);
+  .colwidth(75);
+}
