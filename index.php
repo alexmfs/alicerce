@@ -18,6 +18,8 @@
 			width: 100%;
 		}
 		#iframe{
+			width: 100%;
+			height: 90vh;
 			/*position: absolute;*/
 			margin: 0 auto;
 			display: block;
@@ -129,7 +131,7 @@
 		<!-- <p>Testar Url<input type="text" ng-model="site"></p> -->
 		<p><a href="public/">Ir para site &#9654;</a></p>
 	</div>
-     <iframe id="iframe" src="public/" frameborder="0" width="100%" height="800px">
+     <iframe id="iframe" src="public/" frameborder="0">
      </iframe>
 </body>
 </html>
