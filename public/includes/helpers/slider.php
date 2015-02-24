@@ -1,13 +1,27 @@
-<section class="slider-home">
-	<div class="slider">
-		<ul>
-			<?php for ($i = 1; $i <=5; $i++) { ?>
-			<li class="slide">
+<div class="wrap">
+
+	<div class="slider1">
+		<ul class="slider">
+			<?php for ($i = 1; $i <=10; $i++) { ?>
+			<li class="slide-item">
 				<a href="">
-					<img src="http://lorempixel.com/900/463/transport/<?=$i?>/" height="463" width="900" alt="">
+					<img src="http://lorempixel.com/280/300/transport/<?=$i?>/" width="280" height="300" alt="">
 				</a>
 			</li>
 			<?php } ?>
 		</ul>
 	</div>
-</section>
+
+	<div class="slider2">
+		<ul class="slider">
+			<?php for ($i = 1; $i <=9; $i++) { ?>
+			<li class="slide-item">
+				<a href="">
+					<img src="http://lorempixel.com/180/300/food/<?=$i?>/" width="180" height="300" alt="">
+				</a>
+			</li>
+			<?php } ?>
+		</ul>
+	</div>
+
+</div>

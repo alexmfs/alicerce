@@ -4,7 +4,7 @@
 	<![endif]-->
 
 	<!-- Header -->
-<!-- 	<header class="header-principal" role="banner">
+	<header class="header-principal" role="banner">
 		<div class="wrap">
 			<h1>
 				<a href="../" class="logo">
@@ -16,9 +16,9 @@
 				<a href="" class="item">Menu 2</a>
 			</nav>
 		</div>
-	</header> -->
+	</header>
 
-	<?php //include ("includes/helpers/slider.php"); ?>
+	<?php include ("includes/helpers/slider.php"); ?>
 
 	<!-- Main Section -->
 	<main class="main" role="main">
@@ -31,8 +31,8 @@
 		<?php // include ("includes/helpers/buttons.php"); ?>
 		<?php // include ("includes/helpers/tooltips.php"); ?>
 		<?php // include ("includes/helpers/messages.php"); ?>
-		<?php include ("includes/helpers/grid16.php"); ?>
-		<?php // include ("includes/helpers/x-grid.php"); ?>
+		<?php // include ("includes/helpers/grid16.php"); ?>
+		<?php // include ("includes/helpers/grid12.php"); ?>
 
 		</div>
 

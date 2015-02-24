@@ -1,5 +1,3 @@
-$(document).ready(function () {
-
 function slideVertical(container, quantidadeInicial, navigation, espacoInicial){
   var
   larguraSlide = $(container + " .slide-item").width(),
@@ -129,6 +127,3 @@ function slideVertical(container, quantidadeInicial, navigation, espacoInicial){
 
 slideVertical('.slider1', 3, 'bullets', 0);
 slideVertical('.slider2', 5, 'bullets', 0);
-
-
-});

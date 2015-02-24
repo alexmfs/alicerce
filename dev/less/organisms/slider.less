@@ -1,72 +1,80 @@
-// .slider {
-// 	height: 600px;
-// 	position: relative;
-// }
 
-// .slide {
-// 	display: none;
-// 	width: 100%;
-// 	height: 600px;
-// 	background-position: center 96px;
-// 	background-attachment: fixed;
-// 	background-repeat: no-repeat;
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// }
-
-// .bullets {
-// 	display: table;
-// 	width: 100%;
-// 	position: absolute;
-// 	bottom: 0;
-// 	text-align: center;
-// 	li{
-// 		padding: 5px;
-// 		display: inline-block;
-// 		.border-radius(5em);
-// 		background: @color-primary-light1;
-// 		margin: 5px;
-// 		cursor: pointer;
-// 		&.active, &:hover{
-// 			background: @color-primary-dark1;
-// 		}
-// 	}
-// }
-
-slide {
+.sliderall(@height, @margin: 50px){
 	position: relative;
-	height: 100%;
 	overflow: hidden;
-	ul{
-		height: 100%;
-		overflow: hidden;
+	height: @height + 40;
+	background: #eee;
+	margin-top: @margin;
+	margin-bottom: @margin;
+	.bullets {
+		display: table;
+		margin: @height + 20 auto 0;
+		li {
+			float: left;
+			margin: 0 5px;
+			width: 15px;
+			height: 15px;
+			background: @color-white;
+			border: 1px solid @color-base-light1;
+			.border-radius(10em);
+			.transition();
+			&:hover, &.active {
+				background: @color-primary;
+				border: 1px solid @color-primary
+			}
+		}
+		a {
+			text-indent: -9999px;
+			display: block;
+		}
 	}
-	.item{
+}
+
+#slide-item(@width){
+	.slide-item{
 		height: 100%;
 		display: block;
 		float: left;
+		overflow: hidden;
+		width: @width;
+		text-align: center;
 	}
 }
 
-.slideshow{
-	&:extend(slide all);
-	.item {
-		background: no-repeat top center;
+
+
+#slider(@slider, @height:100px) when ((@slider) = horizontal){
+	.sliderall(@height);
+	.slider{
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		.transform(translateX(0px));
+		.transition(2s);
 	}
-	img{
-		max-width: initial;
+}
+
+#slider(@slider, @height:100px) when ((@slider) = fade){
+	.sliderall(@height);
+	.slider{
+		display: block;
+		width: 100%;
+		height: 100%;
 		position: absolute;
 		top: 0;
-		left: 50%;
-		margin-left: -980px;
+		left: 0;
+		background-position: top center;
 	}
 }
 
-.slidevertical{
-	&:extend(slide all);
+// Configs
+
+.slider1{
+	#slider(horizontal, 300px);
+	#slide-item(320px);
 }
 
-.slider-home{
-	height: 470px;
+.slider2{
+	#slider(horizontal, 300px);
+	#slide-item(192px);
 }
