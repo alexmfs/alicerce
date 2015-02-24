@@ -15,13 +15,7 @@ function slideVertical(container, quantidadeInicial, navigation, espacoInicial){
 
   if (quantidadeSlide > quantidadeInicial) {
 
-    $("#thumblist .slider").css({
-      "-webkit-transform": "translateX(" + espacoInicial + "px)",
-      "-moz-transform": "translateX(" + espacoInicial + "px)",
-      "-ms-transform": "translateX(" + espacoInicial + "px)",
-      "-o-transform": "translateX(" + espacoInicial + "px)",
-      "transform": "translateX(" + espacoInicial + "px)"
-    });
+    translateX(container + " .slider", espacoInicial);
 
     if (navigation == 'arrow') {
       $(container + " .slider").before('<span class="arrow-prev"></span>');
@@ -39,7 +33,7 @@ function slideVertical(container, quantidadeInicial, navigation, espacoInicial){
     // Navigation bullets
     $(container + " .bullets li").eq(0).addClass('active');
 
-    function transform(selector, value) {
+    function translateX(selector, value) {
       $(selector).css({
           "-webkit-transform": "translateX(-" + value + "px)",
           "-moz-transform": "translateX(-" + value + "px)",
@@ -60,18 +54,18 @@ function slideVertical(container, quantidadeInicial, navigation, espacoInicial){
 
       $(this).addClass('active');
 
-      transform(container + " .slider", bulletMove);
+      translateX(container + " .slider", bulletMove);
 
       // if ($(this).is(":last-child")){
       //   if(sobra = 0){
-      //     transform(container + " .slider", bulletMove);
+      //     translateX(container + " .slider", bulletMove);
       //   }
       //   else{
-      //     transform(container + " .slider", bulletMoveSobra);
+      //     translateX(container + " .slider", bulletMoveSobra);
       //   }
       // }
       // else{
-      //   transform(container + " .slider", bulletMove);
+      //   translateX(container + " .slider", bulletMove);
       // }
 
       return false;
@@ -126,4 +120,4 @@ function slideVertical(container, quantidadeInicial, navigation, espacoInicial){
 };
 
 slideVertical('.slider1', 3, 'bullets', 0);
-slideVertical('.slider2', 5, 'bullets', 0);
+slideVertical('.slider2', 5, 'arrow', 0);

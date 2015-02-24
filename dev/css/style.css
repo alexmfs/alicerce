@@ -1578,6 +1578,39 @@ form .helper a:hover {
 	display: block;
 }
 
+.slider1 .arrow-prev,
+.slider1 .arrow-next {
+	display: block;
+	width: 20px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: red;
+	z-index: 1000;
+}
+
+.slider1 .arrow-prev:after,
+.slider1 .arrow-next:after {
+	color: #ffffff;
+	text-align: center;
+}
+
+.slider1 .arrow-prev {
+	left: 0;
+}
+
+.slider1 .arrow-prev:after {
+	content: "<";
+}
+
+.slider1 .arrow-next {
+	right: 0;
+}
+
+.slider1 .arrow-next:after {
+	content: ">";
+}
+
 .slider1 .slider {
 	display: block;
 	overflow: hidden;
@@ -1643,6 +1676,39 @@ form .helper a:hover {
 .slider2 .bullets a {
 	text-indent: -9999px;
 	display: block;
+}
+
+.slider2 .arrow-prev,
+.slider2 .arrow-next {
+	display: block;
+	width: 20px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background: red;
+	z-index: 1000;
+}
+
+.slider2 .arrow-prev:after,
+.slider2 .arrow-next:after {
+	color: #ffffff;
+	text-align: center;
+}
+
+.slider2 .arrow-prev {
+	left: 0;
+}
+
+.slider2 .arrow-prev:after {
+	content: "<";
+}
+
+.slider2 .arrow-next {
+	right: 0;
+}
+
+.slider2 .arrow-next:after {
+	content: ">";
 }
 
 .slider2 .slider {

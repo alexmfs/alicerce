@@ -28,6 +28,32 @@
 			display: block;
 		}
 	}
+	.arrow-prev, .arrow-next{
+		display: block;
+		width: 20px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		background: red;
+		z-index: 1000;
+		&:after{
+			color: @color-white;
+			text-align: center;
+			
+		}
+	}
+	.arrow-prev{
+		left: 0;
+		&:after{
+			content: "<";
+		}
+	}
+	.arrow-next{
+		right: 0;
+		&:after{
+			content: ">";
+		}
+	}
 }
 
 #slide-item(@width){
