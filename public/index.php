@@ -39,7 +39,7 @@
 	</main>
 
 	<!-- Footer -->
-<!-- 	<footer class="footer-principal" role="contentinfo">
+	<footer class="footer-principal" role="contentinfo">
 		<div class="wrap">
 			<address itemscope itemtype="http://schema.org/LocalBusiness">
 				<span>
@@ -51,6 +51,7 @@
 				</span>
 			</address>
 		</div>
-	</footer> -->
+		<p>© copyright <?php echo date('Y');?> todos os direitos reservado</p>
+	</footer>
 
 <?php include ("includes/footer.php"); ?>

@@ -92,28 +92,68 @@ function slideVertical(container, quantidadeInicial, navigation, espacoInicial){
 
   // Navgation arrow
   $(container + " .arrow-next").click(function() {
-    if(numClicks == (quantidadeSlide - quantidadeInicial)){
-      $(container + " .slider" ).animate({ "left": espacoInicial}, "slow" );
+
+    var
+
+    bulletMove = larguraSlide * quantidadeInicial;
+
+    if(numClicks == (quantidadeBullet)){
       numClicks = 0;
+      translateX(container + " .slider", espacoInicial);
     }
     else{
-      $(container + " .slider" ).animate({ "left": "-="+larguraSlide+"px" }, "slow" );
       numClicks++;
+      translateX(container + " .slider", bulletMove);
     }
-    return numClicks;
+    console.log(numClicks);
+    console.log(quantidadeSlide);
+    console.log(quantidadeInicial);
+    console.log(bulletMove);
   });
 
   $(container + " .arrow-prev").click(function() {
+
+    var
+
+    bulletMove = larguraSlide * quantidadeInicial;
+
     if(numClicks == 0){
-      $(container + " .slider").animate({ "left": "-"+animaVoltando+"px" }, "slow" );
       numClicks = (quantidadeSlide - quantidadeInicial);
     }
     else{
-      $(container + " .slider").animate({ "left": "+="+larguraSlide+"px" }, "slow" );
       numClicks--;
     }
-    return numClicks;
+    console.log(numClicks);
+    console.log(quantidadeSlide);
+    console.log(quantidadeInicial);
+    console.log(bulletMove);
   });
+
+
+  // $(container + " .arrow-next").click(function() {
+  //   if(numClicks == (quantidadeSlide - quantidadeInicial)){
+  //     $(container + " .slider" ).animate({ "left": espacoInicial}, "slow" );
+  //     numClicks = 0;
+  //   }
+  //   else{
+  //     $(container + " .slider" ).animate({ "left": "-="+larguraSlide+"px" }, "slow" );
+  //     translateX(container + " .slider", bulletMove);
+  //     numClicks++;
+  //   }
+  //   return numClicks;
+  // });
+
+  // $(container + " .arrow-prev").click(function() {
+  //   if(numClicks == 0){
+  //     $(container + " .slider").animate({ "left": "-"+animaVoltando+"px" }, "slow" );
+  //     numClicks = (quantidadeSlide - quantidadeInicial);
+  //   }
+  //   else{
+  //     $(container + " .slider").animate({ "left": "+="+larguraSlide+"px" }, "slow" );
+  //     numClicks--;
+  //   }
+  //   return numClicks;
+  // });
 
 
 

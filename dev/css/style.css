@@ -1581,18 +1581,43 @@ form .helper a:hover {
 .slider1 .arrow-prev,
 .slider1 .arrow-next {
 	display: block;
-	width: 20px;
+	width: 50px;
 	height: 100%;
 	position: absolute;
 	top: 0;
-	background: red;
+	background-color: #7f7f7f;
+	background-color: rgba(127, 127, 127, 0.1);
+	zoom: 1;
+	background-color: transparent\9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#1a7f7f7f, endColorstr=#1a7f7f7f)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1a7f7f7f, endColorstr=#1a7f7f7f);
 	z-index: 1000;
 }
 
 .slider1 .arrow-prev:after,
 .slider1 .arrow-next:after {
 	color: #ffffff;
+	width: 100%;
 	text-align: center;
+	display: block;
+	font-size: 1.8rem;
+	font-size: 18px;
+	font-size: 1.8em;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	cursor: pointer;
 }
 
 .slider1 .arrow-prev {
@@ -1600,7 +1625,7 @@ form .helper a:hover {
 }
 
 .slider1 .arrow-prev:after {
-	content: "<";
+	content: "\f053";
 }
 
 .slider1 .arrow-next {
@@ -1608,7 +1633,7 @@ form .helper a:hover {
 }
 
 .slider1 .arrow-next:after {
-	content: ">";
+	content: "\f054";
 }
 
 .slider1 .slider {
@@ -1681,18 +1706,43 @@ form .helper a:hover {
 .slider2 .arrow-prev,
 .slider2 .arrow-next {
 	display: block;
-	width: 20px;
+	width: 50px;
 	height: 100%;
 	position: absolute;
 	top: 0;
-	background: red;
+	background-color: #7f7f7f;
+	background-color: rgba(127, 127, 127, 0.1);
+	zoom: 1;
+	background-color: transparent\9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#1a7f7f7f, endColorstr=#1a7f7f7f)";
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1a7f7f7f, endColorstr=#1a7f7f7f);
 	z-index: 1000;
 }
 
 .slider2 .arrow-prev:after,
 .slider2 .arrow-next:after {
 	color: #ffffff;
+	width: 100%;
 	text-align: center;
+	display: block;
+	font-size: 1.8rem;
+	font-size: 18px;
+	font-size: 1.8em;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	cursor: pointer;
 }
 
 .slider2 .arrow-prev {
@@ -1700,7 +1750,7 @@ form .helper a:hover {
 }
 
 .slider2 .arrow-prev:after {
-	content: "<";
+	content: "\f053";
 }
 
 .slider2 .arrow-next {
@@ -1708,7 +1758,7 @@ form .helper a:hover {
 }
 
 .slider2 .arrow-next:after {
-	content: ">";
+	content: "\f054";
 }
 
 .slider2 .slider {

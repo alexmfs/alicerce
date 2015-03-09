@@ -30,28 +30,33 @@
 	}
 	.arrow-prev, .arrow-next{
 		display: block;
-		width: 20px;
+		width: 50px;
 		height: 100%;
 		position: absolute;
 		top: 0;
-		background: red;
+		.rgba(@color-base, 10%);
 		z-index: 1000;
 		&:after{
 			color: @color-white;
+			width: 100%;
 			text-align: center;
-			
+			display: block;
+			.font-size(1.8);
+			.centralize;
+			.awesome;
+			cursor: pointer;
 		}
 	}
 	.arrow-prev{
 		left: 0;
 		&:after{
-			content: "<";
+			content: "\f053";
 		}
 	}
 	.arrow-next{
 		right: 0;
 		&:after{
-			content: ">";
+			content: "\f054";
 		}
 	}
 }

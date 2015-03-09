@@ -194,3 +194,17 @@
 	-o-animation: @string;
 	animation: @string;
 }
+
+.filter(@string){
+	filter: @string;
+	-webkit-filter: @string;
+	-moz-filter: @string;
+	-o-filter: @string;
+	-ms-filter: @string;
+}
+
+.centralize(){
+	position: relative;
+	top: 50%;
+	.transform(translateY(-50%));
+}
