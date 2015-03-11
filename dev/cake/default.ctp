@@ -57,9 +57,10 @@ else {$exp = explode('/',$pagina); $class = $exp[0];}
 	<meta name="rating" content="general" />
 
 	<!-- Robots -->
-	<meta name="GOOGLEBOT" content="INDEX, FOLLOW" />
 	<meta name="robots" content="index, follow" />
-	<meta name="msnbot" content="NOODP" />
+	<meta name="glooglebot" content="index, follow" />
+	<meta name="msnbot" content="noodp" />
+	<meta name="slurp" content="noydir" />
 	<meta name="revisit-after" content="7 day"/>
 	<meta http-equiv="cache-control" content="no-cache" />
 
