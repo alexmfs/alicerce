@@ -54,5 +54,4 @@ echo @color-base: %idColorBase%;>> dev/less/config.less
 echo @color-primary: %idColorPrimary%;>> dev/less/config.less
 echo @color-secondary: %idColorSecondary%;>> dev/less/config.less
 
-del config.bat
 exit
