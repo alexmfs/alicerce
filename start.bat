@@ -1,6 +1,6 @@
 echo "Installing dependencies..."
-bower install && npm install && grunt initial
+bower install && npm install && grunt compile
 rm -rf start.bat
 rm start
-rm publicold
+rm construtor
 exit
