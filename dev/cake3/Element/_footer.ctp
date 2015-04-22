@@ -1,4 +1,4 @@
-    <footer class="principal">
+    <footer class="footer-principal">
         <div class="wrap">
 
             <h1>Footer</h1>
