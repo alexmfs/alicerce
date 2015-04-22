@@ -5,36 +5,15 @@
 	}
 }
 
-#fixedmenu(@a, @nav-height:100px) when ((@a) = true){
-	padding-bottom: @nav-height;
-	.header-principal{
-		width: 100%;
-		position: fixed;
-		top: 0;
-		z-index: 100;
-	}
-}
-
-.header-principal{
-	background: @color-primary;
-	padding: @space 0;
-	overflow: auto;
-}
-
 .nav-global{
 	text-align: right;
-}
-
-.footer-principal{
-	background: @color-primary;
-	padding: @space 0;
-	overflow: auto;
 }
 
 .main{
 	width: 100%;
 	margin: @space 0px;
 	display: table;
+	min-height: 650px;
 	> section{
 		width: 100%;
 		float: left;
