@@ -1,3 +1,5 @@
+<?php $this->layout = 'default-home'; ?>
+
 <div class="wrap">
     <h1>Home</h1>
 
