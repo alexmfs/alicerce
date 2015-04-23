@@ -28,3 +28,21 @@
 @media @mobile	{#grid(@columns, mobile);}
 @media @tablet	{#grid(@columns, tablet);}
 @media @desktop	{#grid(@columns, desktop);}
+
+
+// Responsive Columns
+.column-mobile(@col) {
+  @media (@mobile) {
+  	.column(@col);
+  }
+}
+.column-tablet(@col) {
+  @media (@tablet) {
+  	.column(@col);
+  }
+}
+.column-desktop(@col) {
+  @media (@desktop) {
+  	.column(@col);
+  }
+}
