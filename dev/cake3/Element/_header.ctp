@@ -24,8 +24,3 @@
             </nav>
         </div>
     </header>
-
-    <div class="wrap">
-        <!-- Analisar utilidade -->
-        <?= $this->fetch('title') ?>
-    </div>
