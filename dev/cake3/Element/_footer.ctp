@@ -1,10 +1,38 @@
     <footer class="footer-principal">
         <div class="wrap">
-
-            <h1>Footer</h1>
-
+            <ul class="sitemaps">
+                <li class="sitemap-nivel1">
+                    <ul class="sitemap-nivel1-list">
+                        <li class="sitemap-nivel2">
+                            <span class="sitemap-title">Titulo</span>
+                        </li>
+                        <li class="sitemap-nivel2">
+                            <a href="" class="sitemap-links">link de sitemap</a>
+                        </li>
+                        <li class="sitemap-nivel2">
+                            <a href="" class="sitemap-links">link de sitemap</a>
+                        </li>
+                        <li class="sitemap-nivel2">
+                            <a href="" class="sitemap-links">link de sitemap</a>
+                        </li>
+                        <li class="sitemap-nivel2">
+                            <a href="" class="sitemap-links">link de sitemap</a>
+                        </li>
+                        <li class="sitemap-nivel2">
+                            <a href="" class="sitemap-links">link de sitemap</a>
+                        </li>
+                        <li class="sitemap-nivel2">
+                            <a href="" class="sitemap-links">link de sitemap</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-
+        <div class="dados">
+            <div class="wrap">
+                <p class="copyright">© copyright <?php echo date('Y');?> todos os direitos reservados. <a href="" class="logo-dev">boideia</a></p>
+            </div>
+        </div>
     </footer>
     <div id="fb-root"></div>
     <script>
