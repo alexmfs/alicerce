@@ -10,20 +10,24 @@
 
 .title-page{
 	.font(@font-special, normal, 3.8, 4.0);
-	color: @color-white;
-	min-width: 190px;
-	padding-right: 120px;
-	border-bottom: 1px solid @color-white;
-	float: left;
+	// color: @color-white;
+	// min-width: 190px;
+	// padding-right: 120px;
+	// border-bottom: 1px solid @color-white;
+	// float: left;
 }
 
 .title-section{
 	.font(@font-base, bold, 2.8, 2.8);
-	color: @color-primary;
-	border-bottom: 2px solid;
-	text-align: center;
-	#uppercase(true);
-	padding-bottom: @space;
+	color: @color-base;
+	margin-bottom: 10px!important;
+	small{
+		&:extend(#title-small);
+	}
+	// border-bottom: 2px solid;
+	// text-align: center;
+	// #uppercase(true);
+	// padding-bottom: @space;
 }
 
 .title{
@@ -45,6 +49,13 @@ h1.title{
 
 .subtitle{
 	.font(@font-base, normal, 1.3, 1.3);
+}
+
+
+#title-small{
+	display: block;
+	&:extend(p);
+	margin: 10px 0 0 0;
 }
 
 
