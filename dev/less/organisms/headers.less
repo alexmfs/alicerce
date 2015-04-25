@@ -1,26 +1,25 @@
 #fixedmenu(@a, @nav-height:100px) when ((@a) = true){
-	padding-top: @nav-height;
-	.header-principal{
-		width: 100%;
-		height: @nav-height;
-		position: fixed;
-		top: 0;
-		z-index: 100;
-	}
+    padding-top: @nav-height;
+        .header-principal{
+        width: 100%;
+        height: @nav-height;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
 }
 
 body{
-	#fixedmenu(true, 80px);
+    #fixedmenu(true, 80px);
 }
 
 .header-principal{
-	background: @color-white;
-	padding: @space - 5 0;
-	overflow: auto;
-	border-top: 2px solid @color-primary;
-	border-bottom: 1px solid @color-base-light2;
+    background: @color-white;
+    padding: @space - 5 0;
+    border-top: 2px solid @color-primary;
+    border-bottom: 1px solid @color-base-light2;
 }
 
 .brand{
-	.column(2);
+    .column(2);
 }
