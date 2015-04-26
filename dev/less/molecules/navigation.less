@@ -1,14 +1,20 @@
 .nav-global{
-	// background-color:@color-primary-light1;
+	background-color:@color-base-light2;
 	// display: table;
 	// width: 100%;
 	.column(10);
-	.item{
-		color: @color-primary;
-		.font(@font-base, normal, 1.4, 1.4);
+	.centralize;
+	li{
 		margin:0 1.8em;
 		padding: 0.8em 0;
 		height: 100%;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	.item{
+		color: @color-primary;
+		.font(@font-base, normal, 1.4, 1.4);
 		#uppercase(false);
 		// border-bottom: 3px solid @color-primary-light1;
 		// display: block;
