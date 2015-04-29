@@ -51,6 +51,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <meta name="description" content="" />
     <!-- Classificação etária -->
     <meta name="rating" content="general" />
+    <!-- Skype -->
+    <meta name="format-detection" content="telephone=no">
 
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
