@@ -2,5 +2,3 @@ node_modules/
 bower_components/
 start/
 start.bat
-style.css
-style.min.css
