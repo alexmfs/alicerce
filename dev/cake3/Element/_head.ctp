@@ -106,8 +106,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css(array('style.min','//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')); ?>
-    <?= $this->Html->script(array('vendors','scripts','refresh')); ?>
+    <?= $this->Html->css(['style.min','//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css']); ?>
+    <?= $this->Html->script(['vendors','scripts','refresh']); ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
