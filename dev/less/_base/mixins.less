@@ -208,3 +208,7 @@
 	top: 50%;
 	.transform(translateY(-50%));
 }
+
+.sprite(@position:0 0, @bg-color: transparent){
+	background: @bg-color @sprite no-repeat @position;
+}
