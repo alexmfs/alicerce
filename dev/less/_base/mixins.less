@@ -133,6 +133,13 @@
 	transform:			scale(@value);
 }
 
+.rotate(@value){
+	-webkit-transform:	rotate(@value);
+	-moz-transform:		rotate(@value);
+	-ms-transform:		rotate(@value);
+	transform:			rotate(@value);
+}
+
 
 .transform (@string){
 	-webkit-transform:	@string;
@@ -140,10 +147,6 @@
 	-ms-transform:		@string;
 	-o-transform:		@string;
 	transform:			@string;
-}
-
-.sprite{
-	background: url(../img/sprite.png) no-repeat;
 }
 
 .awesome{
@@ -209,6 +212,71 @@
 	.transform(translateY(-50%));
 }
 
-.sprite(@position:0 0, @bg-color: transparent){
+.sprite(@position: 0 0, @bg-color: transparent){
 	background: @bg-color @sprite no-repeat @position;
+}
+
+
+.square(@square){
+	width: @square;
+	height: @square;
+}
+
+
+.border-triangule(@tom, @bg-color){
+	background: @bg-color;
+	position: relative;
+	&:after, &:before{
+		content: '';
+		width: 14px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 99;
+	}
+	&:before{
+		background: ~"url(../img/triangulo-@{tom}/left.png) repeat-y 0 bottom";
+		left: -14px;
+	}
+	&:after{
+		background: ~"url(../img/triangulo-@{tom}/right.png) repeat-y 0 bottom";
+		right: -14px;
+	}
+	.triangule-before, .triangule-after{
+		height: 14px;
+		position: relative;
+		width: 100%;
+		&:after, &:before{
+			content: '';
+			width: 15px;
+			height: 14px;
+			position: absolute;
+			top: 0;
+			z-index: 0;
+		}
+	}
+	.triangule-before{
+		background: ~"url(../img/triangulo-@{tom}/top.png) repeat-x 0 top";
+		top: -13px;
+		&:before{
+			background: ~"url(../img/triangulo-@{tom}/left-top.png) repeat-y";
+			left: -15px;
+		}
+		&:after{
+			background: ~"url(../img/triangulo-@{tom}/right-top.png) repeat-y";
+			right: -15px;
+		}
+	}
+	.triangule-after{
+		background: ~"url(../img/triangulo-@{tom}/bottom.png) repeat-x 0 bottom";
+		top: 13px;
+		&:before{
+			background: ~"url(../img/triangulo-@{tom}/left-bottom.png) repeat-y";
+			left: -15px;
+		}
+		&:after{
+			background: ~"url(../img/triangulo-@{tom}/right-bottom.png) repeat-y";
+			right: -15px;
+		}
+	}
 }
