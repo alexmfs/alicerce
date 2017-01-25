@@ -1,0 +1,142 @@
+.color-primary {
+	color: #eb0f0f;
+}
+
+.bg-color {
+	background: #385173;
+}
+
+body {
+	width: 100%;
+	*zoom: 1;
+}
+
+body:before,
+body:after {
+	content: "";
+	display: table;
+}
+
+body:after {
+	clear: both;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.col {
+	display: inline;
+	float: left;
+}
+
+.wrap {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.button {
+	padding: 8px 18px;
+	display: inline-block;
+	background: #fafafa;
+	border-radius: 2em;
+	border: 1px solid #f1f1f1;
+	cursor: pointer;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.button i {
+	margin-right: 5px;
+}
+
+.button.negative {
+	background-color: #de4228;
+	border-color: #b7321c;
+	color: #fff;
+}
+
+.button.negative.is-desactive {
+	background-color: #aa938f;
+	border-color: #785f5b;
+}
+
+.button.negative i {
+	color: #fff;
+}
+
+.button.negative.inverse,
+.button.negative:hover {
+	border-color: #de4228;
+	color: #de4228;
+	background-color: #fff;
+}
+
+.button.positive {
+	background-color: #385173;
+	border-color: #273951;
+	color: #fff;
+}
+
+.button.positive.is-desactive {
+	background-color: #6f6f6f;
+	border-color: #3c3c3c;
+}
+
+.button.positive i {
+	color: #fff;
+}
+
+.button.positive.inverse {
+	border-color: #385173;
+	color: #385173;
+	background-color: #fff;
+}
+
+.button.positive:hover {
+	border-color: #385173;
+	color: #385173;
+	background-color: #fff;
+}
+
+.button:hover {
+	border-radius: 2em;
+	border-color: #e5e5e5;
+	background-color: #f0f0f0;
+	text-decoration: none;
+}
+
+.button:hover i {
+	color: inherit;
+}
+
+.button:focus {
+	box-shadow: none;
+}
+
+.button.sem-anexo {
+	padding: 8px 28px;
+}
+
+.button.full {
+	display: block;
+}
+
+.button-group {
+	width: 100%;
+	float: left;
+	padding: 0 1.04166667%;
+	margin-bottom: 10px !important;
+}
+
+.button-group .button + .button {
+	margin-left: 10px;
+}
+
+.button-group.edit a {
+	float: right;
+}
+

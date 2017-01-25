@@ -1,0 +1,96 @@
+@import "colors.less";
+@import "semantic.less";
+
+// Button - Pattern
+
+@button-radius: 2em;
+@space: 10px;
+
+// Button - Mixin Colors
+.button-color(@x){
+	background-color: @x;
+	border-color: darken(@x, 10%);
+	color: @color-white;
+	&.is-desactive{
+		background-color: desaturate(lighten(@x, 10%),60%);
+		border-color: desaturate(darken(@x, 10%),60%);
+	}
+	i {
+		color: @color-white;
+	}
+}
+
+.button-ghost(@x){
+	border-color: @x;
+	color: @x;
+    background-color: @color-white;
+  //   &:hover{
+  //   	color: @color-white;
+		// background-color: desaturate(@x, 10%);
+  //   }
+}
+
+.button{
+	// margin: 1px;
+	padding: 8px 18px;
+	display: inline-block;
+	background: #fafafa;
+	border-radius: @button-radius;
+	border: 1px solid #f1f1f1;
+	cursor: pointer;
+	transition: .2s;
+	i {
+		margin-right: 5px;
+	}
+	&.negative{
+		.button-color(@color-secondary);
+		&.inverse, &:hover{
+			.button-ghost(@color-secondary);
+		}
+	}
+	&.positive{
+		.button-color(@color-primary);
+		&.inverse{
+			.button-ghost(@color-primary);
+		}
+		&:hover{
+			.button-ghost(@color-primary);
+		}
+	}
+	&:hover{
+		border-radius: 2em;
+		border-color: @color-base-light1;
+		background-color: @color-base-light2;
+		text-decoration: none;
+		i{
+			color: inherit;
+		}
+	}
+	&:focus{
+		box-shadow: none;
+	}
+	&.sem-anexo {
+		padding: 8px 28px;
+	}
+	&.full{
+		display: block;
+	}
+}
+
+.button-group {
+	width: 100%;
+	float: left;
+	padding: 0 1.04166667%;
+	margin-bottom: @space!important;
+	.button + .button {
+		margin-left: 10px;
+	}
+	&.edit a {
+		float: right;
+	}
+}
+
+
+.button{
+
+}
