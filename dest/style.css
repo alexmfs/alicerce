@@ -1,9 +1,89 @@
-.color-primary {
-	color: #eb0f0f;
+@font-face {
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: 100;
+	src: local("Roboto Thin Italic"),local(Roboto-ThinItalic),url(//fonts.gstatic.com/s/roboto/v15/12mE4jfMSBTmg-81EiS-YVQlYEbsez9cZjKsNMjLOwM.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/12mE4jfMSBTmg-81EiS-YRsxEYwM7FgeyaSgU71cLG0.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/12mE4jfMSBTmg-81EiS-YRsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
 }
 
-.bg-color {
-	background: #385173;
+@font-face {
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: 300;
+	src: local("Roboto Light Italic"),local(Roboto-LightItalic),url(//fonts.gstatic.com/s/roboto/v15/7m8l7TlFO-S3VkhHuR0at2fQcKutQXcIrRfyR5jdjY8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/7m8l7TlFO-S3VkhHuR0at4bN6UDyHWBl620a-IRfuBk.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/7m8l7TlFO-S3VkhHuR0at4bN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: 400;
+	src: local("Roboto Italic"),local(Roboto-Italic),url(//fonts.gstatic.com/s/roboto/v15/OiNnAEwKzzJkQCr4qZmeq_esZW2xOQ-xsNqO47m55DA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/1pO9eUAp8pSF8VnRTP3xnvesZW2xOQ-xsNqO47m55DA.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/1pO9eUAp8pSF8VnRTP3xnvesZW2xOQ-xsNqO47m55DA.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: 500;
+	src: local("Roboto Medium Italic"),local(Roboto-MediumItalic),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0WfQcKutQXcIrRfyR5jdjY8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0YbN6UDyHWBl620a-IRfuBk.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0YbN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: 700;
+	src: local("Roboto Bold Italic"),local(Roboto-BoldItalic),url(//fonts.gstatic.com/s/roboto/v15/t6Nd4cfPRhZP44Q5QAjcC2fQcKutQXcIrRfyR5jdjY8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/t6Nd4cfPRhZP44Q5QAjcC4bN6UDyHWBl620a-IRfuBk.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/t6Nd4cfPRhZP44Q5QAjcC4bN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: italic;
+	font-weight: 900;
+	src: local("Roboto Black Italic"),local(Roboto-BlackItalic),url(//fonts.gstatic.com/s/roboto/v15/bmC0pGMXrhphrZJmniIZpWfQcKutQXcIrRfyR5jdjY8.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/bmC0pGMXrhphrZJmniIZpYbN6UDyHWBl620a-IRfuBk.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/bmC0pGMXrhphrZJmniIZpYbN6UDyHWBl620a-IRfuBk.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 100;
+	src: local("Roboto Thin"),local(Roboto-Thin),url(//fonts.gstatic.com/s/roboto/v15/PP2U5prMl9yvKSWVu6DtvPesZW2xOQ-xsNqO47m55DA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	src: local("Roboto Light"),local(Roboto-Light),url(//fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUffY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 400;
+	src: local(Roboto),local(Roboto-Regular),url(//fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	src: local("Roboto Medium"),local(Roboto-Medium),url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUfY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 700;
+	src: local("Roboto Bold"),local(Roboto-Bold),url(//fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOPY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 900;
+	src: local("Roboto Black"),local(Roboto-Black),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIvY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+html {
+	font-size: 62.5%;
 }
 
 body {
@@ -38,105 +118,232 @@ img {
 	position: relative;
 }
 
+.box-shadow-pattern {
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, .15);
+}
+
 .button {
-	padding: 8px 18px;
-	display: inline-block;
-	background: #fafafa;
-	border-radius: 2em;
-	border: 1px solid #f1f1f1;
-	cursor: pointer;
-	-webkit-transition: .2s;
-	transition: .2s;
-}
-
-.button i {
-	margin-right: 5px;
-}
-
-.button.negative {
-	background-color: #de4228;
-	border-color: #b7321c;
-	color: #fff;
-}
-
-.button.negative.is-desactive {
-	background-color: #aa938f;
-	border-color: #785f5b;
-}
-
-.button.negative i {
-	color: #fff;
-}
-
-.button.negative.inverse,
-.button.negative:hover {
-	border-color: #de4228;
-	color: #de4228;
-	background-color: #fff;
-}
-
-.button.positive {
-	background-color: #385173;
-	border-color: #273951;
-	color: #fff;
-}
-
-.button.positive.is-desactive {
-	background-color: #6f6f6f;
-	border-color: #3c3c3c;
-}
-
-.button.positive i {
-	color: #fff;
-}
-
-.button.positive.inverse {
-	border-color: #385173;
-	color: #385173;
-	background-color: #fff;
-}
-
-.button.positive:hover {
-	border-color: #385173;
-	color: #385173;
-	background-color: #fff;
-}
-
-.button:hover {
-	border-radius: 2em;
-	border-color: #e5e5e5;
-	background-color: #f0f0f0;
+	font: normal 14px "Roboto";
+	font: normal 1.4rem "Roboto";
 	text-decoration: none;
-}
-
-.button:hover i {
-	color: inherit;
+	margin: 0;
+	min-width: 50px;
+	min-width: 5rem;
+	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	padding: 1rem 2rem;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	background: #2dd0c2;
+	color: #fff;
+	button-style: "button-metro";
 }
 
 .button:focus {
-	box-shadow: none;
+	outline: none;
 }
 
-.button.sem-anexo {
-	padding: 8px 28px;
+.button:hover {
+	background: #56dacf;
 }
 
-.button.full {
+.button:focus {
+	background: #24a69b;
+}
+
+.button-negative {
+	font: normal 14px "Roboto";
+	font: normal 1.4rem "Roboto";
+	text-decoration: none;
+	margin: 0;
+	min-width: 50px;
+	min-width: 5rem;
 	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	padding: 1rem 2rem;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	background: #2dd0c2;
+	color: #fff;
+	button-style: "button-metro";
 }
 
-.button-group {
-	width: 100%;
-	float: left;
-	padding: 0 1.04166667%;
-	margin-bottom: 10px !important;
+.button-negative:focus {
+	outline: none;
+}
+
+.button-negative:hover {
+	background: #56dacf;
+}
+
+.button-negative:focus {
+	background: #24a69b;
 }
 
 .button-group .button + .button {
 	margin-left: 10px;
 }
 
-.button-group.edit a {
-	float: right;
+#button-default {
+	font: normal 14px "Roboto";
+	font: normal 1.4rem "Roboto";
+	text-decoration: none;
+	margin: 0;
+	min-width: 50px;
+	min-width: 5rem;
+	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	padding: 1rem 2rem;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	background: #2dd0c2;
+	color: #fff;
+}
+
+#button-default:focus {
+	outline: none;
+}
+
+#button-metro {
+	font: normal 14px "Roboto";
+	font: normal 1.4rem "Roboto";
+	text-decoration: none;
+	margin: 0;
+	min-width: 50px;
+	min-width: 5rem;
+	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	padding: 1rem 2rem;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	background: #2dd0c2;
+	color: #fff;
+	button-style: "button-metro";
+}
+
+#button-metro:focus {
+	outline: none;
+}
+
+#button-metro:hover {
+	background: #56dacf;
+}
+
+#button-metro:focus {
+	background: #24a69b;
+}
+
+#button-round {
+	button-style: "button-round";
+	font: normal 14px "Roboto";
+	font: normal 1.4rem "Roboto";
+	text-decoration: none;
+	margin: 0;
+	min-width: 50px;
+	min-width: 5rem;
+	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	padding: 1rem 2rem;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	background: #2dd0c2;
+	color: #fff;
+	border-radius: 0.4em;
+}
+
+#button-round:focus {
+	outline: none;
+}
+
+#button-round:hover {
+	border-radius: 0em;
+}
+
+#button-fullround {
+	button-style: "fullround";
+	font: normal 14px "Roboto";
+	font: normal 1.4rem "Roboto";
+	text-decoration: none;
+	margin: 0;
+	min-width: 50px;
+	min-width: 5rem;
+	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	padding: 1rem 2rem;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	background: #2dd0c2;
+	color: #fff;
+	border-radius: 2em;
+}
+
+#button-fullround:focus {
+	outline: none;
+}
+
+#button-fullround:hover {
+	border-radius: 0em;
+}
+
+#button-gradient {
+	button-style: "gradient";
+	font: normal 14px "Roboto";
+	font: normal 1.4rem "Roboto";
+	text-decoration: none;
+	margin: 0;
+	min-width: 50px;
+	min-width: 5rem;
+	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	padding: 1rem 2rem;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	background: #2dd0c2;
+	color: #fff;
+	background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, .2));
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .2)); /* W3C */
+}
+
+#button-gradient:focus {
+	outline: none;
+}
+
+#button-gradient:hover {
+	background-image: none;
 }
 

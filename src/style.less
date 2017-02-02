@@ -1,96 +1,68 @@
-@import "colors.less";
+// @import "colors.less";
+html{
+	font-size: 62.5%;
+}
+
+@transition: 0.2s;
+@radius: .4em;
+@fullradius: 2em;
+@space: 10px;
+@font-stack: "Roboto";
+
+
+@white: #fff;
+@color-primary       : #2dd0c2;
+@color-primary-hover : lighten(@color-primary, 10%);
+@color-primary-focus : darken(@color-primary, 10%);
+
+@color-complement : spin(@color-primary, 180);
+@color-complement-hover : lighten(@color-complement, 10%);
+@color-complement-focus : darken(@color-complement, 10%);
 @import "semantic.less";
+@import "mixins.less";
+@import "buttons.less";
+
 
 // Button - Pattern
 
-@button-radius: 2em;
-@space: 10px;
-
-// Button - Mixin Colors
-.button-color(@x){
-	background-color: @x;
-	border-color: darken(@x, 10%);
-	color: @color-white;
-	&.is-desactive{
-		background-color: desaturate(lighten(@x, 10%),60%);
-		border-color: desaturate(darken(@x, 10%),60%);
-	}
-	i {
-		color: @color-white;
-	}
-}
-
-.button-ghost(@x){
-	border-color: @x;
-	color: @x;
-    background-color: @color-white;
-  //   &:hover{
-  //   	color: @color-white;
-		// background-color: desaturate(@x, 10%);
-  //   }
-}
-
-.button{
-	// margin: 1px;
-	padding: 8px 18px;
-	display: inline-block;
-	background: #fafafa;
-	border-radius: @button-radius;
-	border: 1px solid #f1f1f1;
-	cursor: pointer;
-	transition: .2s;
-	i {
-		margin-right: 5px;
-	}
-	&.negative{
-		.button-color(@color-secondary);
-		&.inverse, &:hover{
-			.button-ghost(@color-secondary);
-		}
-	}
-	&.positive{
-		.button-color(@color-primary);
-		&.inverse{
-			.button-ghost(@color-primary);
-		}
-		&:hover{
-			.button-ghost(@color-primary);
-		}
-	}
-	&:hover{
-		border-radius: 2em;
-		border-color: @color-base-light1;
-		background-color: @color-base-light2;
-		text-decoration: none;
-		i{
-			color: inherit;
-		}
-	}
-	&:focus{
-		box-shadow: none;
-	}
-	&.sem-anexo {
-		padding: 8px 28px;
-	}
-	&.full{
-		display: block;
-	}
-}
-
-.button-group {
-	width: 100%;
-	float: left;
-	padding: 0 1.04166667%;
-	margin-bottom: @space!important;
-	.button + .button {
-		margin-left: 10px;
-	}
-	&.edit a {
-		float: right;
-	}
-}
 
 
-.button{
 
-}
+
+
+
+
+// h1 {
+//     font-family: "Open Sans", fontstack("Arial");
+// }
+
+
+// :root{
+//   --color-primary: green;
+//   // --color-primary-hover: lighten(var(--color-primary), 10%);
+//   // --color-primary-focus: darken(var(--color-primary), 10%);
+//   --color-white: #fff;
+//   --bg: var(--color-primary);
+// }
+
+// [class^="btn"] {
+//  display: inline-block;
+//  padding: 10px 20px;
+//  color: var(--color, var(--color-white));
+//  background: var(--bg, var(--color-primary));
+//  transition: background .2s;
+// }
+
+// [class^="btn"]:hover {
+//  color: var(--bg, #000);
+//  background: var(--color, var(--color-primary));
+// }
+
+
+// .btn-positive {
+//   --bg: gold;
+// }
+
+// .btn-negative {
+//   --bg: red;
+// }
