@@ -127,6 +127,7 @@ img {
 }
 
 .button {
+	button-style: "button-round";
 	font: normal 1.4rem "Roboto";
 	text-decoration: none;
 	margin: 0;
@@ -141,7 +142,7 @@ img {
 	transition: 0.2s;
 	background: #385173;
 	color: #fff;
-	button-style: "button-metro";
+	border-radius: 0.4em;
 }
 
 .button:focus {
@@ -149,14 +150,11 @@ img {
 }
 
 .button:hover {
-	background: #496995;
-}
-
-.button:focus {
-	background: #273951;
+	border-radius: 0em;
 }
 
 .button-negative {
+	button-style: "button-round";
 	font: normal 1.4rem "Roboto";
 	text-decoration: none;
 	margin: 0;
@@ -171,7 +169,7 @@ img {
 	transition: 0.2s;
 	background: #385173;
 	color: #fff;
-	button-style: "button-metro";
+	border-radius: 0.4em;
 }
 
 .button-negative:focus {
@@ -179,11 +177,7 @@ img {
 }
 
 .button-negative:hover {
-	background: #496995;
-}
-
-.button-negative:focus {
-	background: #273951;
+	border-radius: 0em;
 }
 
 .button-group .button + .button {
@@ -319,6 +313,32 @@ img {
 }
 
 #button-gradient:hover {
+	background-image: none;
+}
+
+#button-ghost {
+	button-style: "ghost";
+	font: normal 1.4rem "Roboto";
+	text-decoration: none;
+	margin: 0;
+	min-width: 5rem;
+	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	border: none;
+	padding: 1rem 2rem;
+	transition: 0.2s;
+	background: #385173;
+	color: #fff;
+}
+
+#button-ghost:focus {
+	outline: none;
+}
+
+#button-ghost:hover {
 	background-image: none;
 }
 
