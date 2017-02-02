@@ -12,13 +12,13 @@ var less = require('gulp-less');
 var cssnano = require('cssnano');
 var fontmagician = require('postcss-font-magician');
 var pixrem = require('gulp-pixrem');
-var cssnext = require("postcss-cssnext")
+// var cssnext = require("postcss-cssnext")
  
 gulp.task('css', function () {
     var processors = [
         fontmagician
         ,pixrem
-        ,cssnext
+        // ,cssnext
         // ,cssnano
     ];
     return gulp.src('./src/style.less')

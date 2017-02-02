@@ -82,8 +82,12 @@
 	src: local("Roboto Black"),local(Roboto-Black),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIvY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
 }
 
-html {
-	font-size: 62.5%;
+.color-primary {
+	color: #eb0f0f;
+}
+
+.bg-color {
+	background: #385173;
 }
 
 body {
@@ -119,15 +123,13 @@ img {
 }
 
 .box-shadow-pattern {
-	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, .15);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
 }
 
 .button {
-	font: normal 14px "Roboto";
 	font: normal 1.4rem "Roboto";
 	text-decoration: none;
 	margin: 0;
-	min-width: 50px;
 	min-width: 5rem;
 	display: block;
 	float: left;
@@ -135,11 +137,9 @@ img {
 	box-sizing: border-box;
 	cursor: pointer;
 	border: none;
-	padding: 10px 20px;
 	padding: 1rem 2rem;
-	-webkit-transition: 0.2s;
 	transition: 0.2s;
-	background: #2dd0c2;
+	background: #385173;
 	color: #fff;
 	button-style: "button-metro";
 }
@@ -149,19 +149,17 @@ img {
 }
 
 .button:hover {
-	background: #56dacf;
+	background: #496995;
 }
 
 .button:focus {
-	background: #24a69b;
+	background: #273951;
 }
 
 .button-negative {
-	font: normal 14px "Roboto";
 	font: normal 1.4rem "Roboto";
 	text-decoration: none;
 	margin: 0;
-	min-width: 50px;
 	min-width: 5rem;
 	display: block;
 	float: left;
@@ -169,11 +167,9 @@ img {
 	box-sizing: border-box;
 	cursor: pointer;
 	border: none;
-	padding: 10px 20px;
 	padding: 1rem 2rem;
-	-webkit-transition: 0.2s;
 	transition: 0.2s;
-	background: #2dd0c2;
+	background: #385173;
 	color: #fff;
 	button-style: "button-metro";
 }
@@ -183,11 +179,11 @@ img {
 }
 
 .button-negative:hover {
-	background: #56dacf;
+	background: #496995;
 }
 
 .button-negative:focus {
-	background: #24a69b;
+	background: #273951;
 }
 
 .button-group .button + .button {
@@ -195,11 +191,9 @@ img {
 }
 
 #button-default {
-	font: normal 14px "Roboto";
 	font: normal 1.4rem "Roboto";
 	text-decoration: none;
 	margin: 0;
-	min-width: 50px;
 	min-width: 5rem;
 	display: block;
 	float: left;
@@ -207,11 +201,9 @@ img {
 	box-sizing: border-box;
 	cursor: pointer;
 	border: none;
-	padding: 10px 20px;
 	padding: 1rem 2rem;
-	-webkit-transition: 0.2s;
 	transition: 0.2s;
-	background: #2dd0c2;
+	background: #385173;
 	color: #fff;
 }
 
@@ -220,11 +212,9 @@ img {
 }
 
 #button-metro {
-	font: normal 14px "Roboto";
 	font: normal 1.4rem "Roboto";
 	text-decoration: none;
 	margin: 0;
-	min-width: 50px;
 	min-width: 5rem;
 	display: block;
 	float: left;
@@ -232,11 +222,9 @@ img {
 	box-sizing: border-box;
 	cursor: pointer;
 	border: none;
-	padding: 10px 20px;
 	padding: 1rem 2rem;
-	-webkit-transition: 0.2s;
 	transition: 0.2s;
-	background: #2dd0c2;
+	background: #385173;
 	color: #fff;
 	button-style: "button-metro";
 }
@@ -246,20 +234,18 @@ img {
 }
 
 #button-metro:hover {
-	background: #56dacf;
+	background: #496995;
 }
 
 #button-metro:focus {
-	background: #24a69b;
+	background: #273951;
 }
 
 #button-round {
 	button-style: "button-round";
-	font: normal 14px "Roboto";
 	font: normal 1.4rem "Roboto";
 	text-decoration: none;
 	margin: 0;
-	min-width: 50px;
 	min-width: 5rem;
 	display: block;
 	float: left;
@@ -267,11 +253,9 @@ img {
 	box-sizing: border-box;
 	cursor: pointer;
 	border: none;
-	padding: 10px 20px;
 	padding: 1rem 2rem;
-	-webkit-transition: 0.2s;
 	transition: 0.2s;
-	background: #2dd0c2;
+	background: #385173;
 	color: #fff;
 	border-radius: 0.4em;
 }
@@ -286,11 +270,9 @@ img {
 
 #button-fullround {
 	button-style: "fullround";
-	font: normal 14px "Roboto";
 	font: normal 1.4rem "Roboto";
 	text-decoration: none;
 	margin: 0;
-	min-width: 50px;
 	min-width: 5rem;
 	display: block;
 	float: left;
@@ -298,11 +280,9 @@ img {
 	box-sizing: border-box;
 	cursor: pointer;
 	border: none;
-	padding: 10px 20px;
 	padding: 1rem 2rem;
-	-webkit-transition: 0.2s;
 	transition: 0.2s;
-	background: #2dd0c2;
+	background: #385173;
 	color: #fff;
 	border-radius: 2em;
 }
@@ -317,11 +297,9 @@ img {
 
 #button-gradient {
 	button-style: "gradient";
-	font: normal 14px "Roboto";
 	font: normal 1.4rem "Roboto";
 	text-decoration: none;
 	margin: 0;
-	min-width: 50px;
 	min-width: 5rem;
 	display: block;
 	float: left;
@@ -329,14 +307,11 @@ img {
 	box-sizing: border-box;
 	cursor: pointer;
 	border: none;
-	padding: 10px 20px;
 	padding: 1rem 2rem;
-	-webkit-transition: 0.2s;
 	transition: 0.2s;
-	background: #2dd0c2;
+	background: #385173;
 	color: #fff;
-	background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, .2));
-	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .2)); /* W3C */
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)); /* W3C */
 }
 
 #button-gradient:focus {
@@ -345,5 +320,78 @@ img {
 
 #button-gradient:hover {
 	background-image: none;
+}
+
+.pagination.center {
+	margin: 0 auto;
+	display: table;
+}
+
+.pagination.right {
+	float: right;
+}
+
+.pagination.right + * {
+	clear: both;
+}
+
+.pagination li {
+	display: inline-block;
+}
+
+.pagination a {
+	display: block;
+	padding: 6px 8px;
+	float: left;
+	font: 1.4rem/2rem "Arial";
+	color: #444;
+	background: none;
+}
+
+.pagination a:hover {
+	background: #F5F5F5;
+	color: #444;
+}
+
+.pagination .prev a {
+	border-radius: 8px 0px 0px 8px;
+}
+
+.pagination .next a {
+	border-radius: 0px 8px 8px 0px;
+}
+
+.pagination .disabled a {
+	background: none;
+	color: #444;
+}
+
+.pagination .disabled:first-child a {
+	border-radius: 8px 0px 0px 8px;
+}
+
+.pagination .disabled:last-child a {
+	border-radius: 0px 8px 8px 0px;
+}
+
+.pagination .active a {
+	color: #444;
+	background: #F5F5F5;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.pagination {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	list-style: none;
 }
 

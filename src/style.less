@@ -1,14 +1,13 @@
 // @import "colors.less";
-html{
-	font-size: 62.5%;
-}
 
 @transition: 0.2s;
 @radius: .4em;
 @fullradius: 2em;
 @space: 10px;
 @font-stack: "Roboto";
-
+@font-base: "Arial";
+@size-base: 1.4rem;
+@line-base: 2rem;
 
 @white: #fff;
 @color-primary       : #2dd0c2;
@@ -18,17 +17,42 @@ html{
 @color-complement : spin(@color-primary, 180);
 @color-complement-hover : lighten(@color-complement, 10%);
 @color-complement-focus : darken(@color-complement, 10%);
+
+// @import "default.less";
+@import "colors.less";
+@import "variables.less";
 @import "semantic.less";
 @import "mixins.less";
 @import "buttons.less";
+@import "pagination.less";
 
 
 // Button - Pattern
 
+body{
+	#reset(default);
+}
 
+html{
+	font-size: 62.5%;
+}
 
+#reset(@reset){
+	&when ((@reset) = list){
+		padding: 0;
+		margin: 0;
+		border: 0;
+		list-style: none;
+	}	
+	&when ((@reset) = default){
+		padding: 0;
+		margin: 0;
+	}	
+}
 
-
+.pagination{
+	#reset(list);
+}
 
 
 
