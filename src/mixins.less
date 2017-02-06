@@ -19,6 +19,14 @@
 	border: @width @type @color;
 }
 
+
+.calc(@prop; @val) {
+  @{prop}: calc(~'@{val}');
+  @{prop}: -moz-calc(~'@{val}');
+  @{prop}: -webkit-calc(~'@{val}');
+  @{prop}: -o-calc(~'@{val}');
+}
+
 .linear-gradient(@to: top, @gradient1: transparent, @gradient2: rgba(0,0,0,.2)){
 	background-image: linear-gradient(to @to, @gradient1, @gradient2); /* W3C */
 }

@@ -82,14 +82,6 @@
 	src: local("Roboto Black"),local(Roboto-Black),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIvY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
 }
 
-.color-primary {
-	color: #eb0f0f;
-}
-
-.bg-color {
-	background: #385173;
-}
-
 body {
 	width: 100%;
 	*zoom: 1;
@@ -126,9 +118,84 @@ img {
 	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
 }
 
+.img {
+	position: relative;
+}
+
+.img:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	border: 1px dashed #fff;
+	margin: 4px 5px 5px 5px;
+}
+
+.link {
+	font: 1.4rem "Arial";
+	color: #d79e45;
+	transition: 0.2s;
+}
+
+.link:hover {
+	color: #457ed7;
+}
+
+#link-menu {
+	font: 1.4rem "Arial";
+	color: #d79e45;
+	text-decoration: none;
+	position: relative;
+	padding: 2px 20px 2px 18px;
+}
+
+#link-menu:before {
+	content: "";
+	display: block;
+	transform: skew(-30deg);
+	background-color: #d79e45;
+	width: 0;
+	height: 120%;
+	position: absolute;
+	top: -10%;
+	left: -1%;
+	z-index: -1;
+	transition: .5s;
+}
+
+#link-menu:after {
+	content: "";
+	display: block;
+	transform: skew(-30deg);
+	border-right: 2px solid #d79e45;
+	width: 100%;
+	height: 120%;
+	position: absolute;
+	top: -10%;
+	left: 0%;
+	z-index: -1;
+}
+
+#link-menu:hover,
+#link-menu:focus {
+	color: #fff;
+	outline: none;
+}
+
+#link-menu:hover:before,
+#link-menu:focus:before {
+	width: 102%;
+}
+
 .button {
-	button-style: "button-round";
 	font: normal 1.4rem "Roboto";
+	padding: 1rem 2rem;
+	transition: 0.2s;
+	background: #d79e45;
+	color: #fff;
 	text-decoration: none;
 	margin: 0;
 	min-width: 5rem;
@@ -137,12 +204,11 @@ img {
 	text-align: center;
 	box-sizing: border-box;
 	cursor: pointer;
-	border: none;
-	padding: 1rem 2rem;
-	transition: 0.2s;
-	background: #385173;
-	color: #fff;
-	border-radius: 0.4em;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	vertical-align: middle;
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)); /* W3C */
 }
 
 .button:focus {
@@ -150,268 +216,177 @@ img {
 }
 
 .button:hover {
-	border-radius: 0em;
+	background-image: none;
 }
 
-.button-negative {
-	button-style: "button-round";
-	font: normal 1.4rem "Roboto";
-	text-decoration: none;
-	margin: 0;
-	min-width: 5rem;
-	display: block;
-	float: left;
-	text-align: center;
-	box-sizing: border-box;
-	cursor: pointer;
-	border: none;
-	padding: 1rem 2rem;
-	transition: 0.2s;
-	background: #385173;
-	color: #fff;
-	border-radius: 0.4em;
-}
-
-.button-negative:focus {
-	outline: none;
-}
-
-.button-negative:hover {
-	border-radius: 0em;
+.button-group {
+	margin: 20px auto;
+	width: 600px;
+	display: table;
 }
 
 .button-group .button + .button {
 	margin-left: 10px;
 }
 
-#button-default {
-	font: normal 1.4rem "Roboto";
-	text-decoration: none;
-	margin: 0;
-	min-width: 5rem;
-	display: block;
+.hr {
+	width: 100%;
 	float: left;
+	border-top: 4px double #d79e45;
 	text-align: center;
-	box-sizing: border-box;
-	cursor: pointer;
-	border: none;
-	padding: 1rem 2rem;
-	transition: 0.2s;
-	background: #385173;
-	color: #fff;
 }
 
-#button-default:focus {
-	outline: none;
+.hr:after {
+	content: '\002665';
+	display: inline-block;
+	position: relative;
+	top: -15px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	color: #d79e45;
+	font-size: 18px;
 }
 
-#button-metro {
-	font: normal 1.4rem "Roboto";
-	text-decoration: none;
+.pagination {
+	padding: 0;
 	margin: 0;
-	min-width: 5rem;
-	display: block;
-	float: left;
-	text-align: center;
-	box-sizing: border-box;
-	cursor: pointer;
-	border: none;
-	padding: 1rem 2rem;
-	transition: 0.2s;
-	background: #385173;
-	color: #fff;
-	button-style: "button-metro";
-}
-
-#button-metro:focus {
-	outline: none;
-}
-
-#button-metro:hover {
-	background: #496995;
-}
-
-#button-metro:focus {
-	background: #273951;
-}
-
-#button-round {
-	button-style: "button-round";
-	font: normal 1.4rem "Roboto";
-	text-decoration: none;
-	margin: 0;
-	min-width: 5rem;
-	display: block;
-	float: left;
-	text-align: center;
-	box-sizing: border-box;
-	cursor: pointer;
-	border: none;
-	padding: 1rem 2rem;
-	transition: 0.2s;
-	background: #385173;
-	color: #fff;
-	border-radius: 0.4em;
-}
-
-#button-round:focus {
-	outline: none;
-}
-
-#button-round:hover {
-	border-radius: 0em;
-}
-
-#button-fullround {
-	button-style: "fullround";
-	font: normal 1.4rem "Roboto";
-	text-decoration: none;
-	margin: 0;
-	min-width: 5rem;
-	display: block;
-	float: left;
-	text-align: center;
-	box-sizing: border-box;
-	cursor: pointer;
-	border: none;
-	padding: 1rem 2rem;
-	transition: 0.2s;
-	background: #385173;
-	color: #fff;
-	border-radius: 2em;
-}
-
-#button-fullround:focus {
-	outline: none;
-}
-
-#button-fullround:hover {
-	border-radius: 0em;
-}
-
-#button-gradient {
-	button-style: "gradient";
-	font: normal 1.4rem "Roboto";
-	text-decoration: none;
-	margin: 0;
-	min-width: 5rem;
-	display: block;
-	float: left;
-	text-align: center;
-	box-sizing: border-box;
-	cursor: pointer;
-	border: none;
-	padding: 1rem 2rem;
-	transition: 0.2s;
-	background: #385173;
-	color: #fff;
-	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)); /* W3C */
-}
-
-#button-gradient:focus {
-	outline: none;
-}
-
-#button-gradient:hover {
-	background-image: none;
-}
-
-#button-ghost {
-	button-style: "ghost";
-	font: normal 1.4rem "Roboto";
-	text-decoration: none;
-	margin: 0;
-	min-width: 5rem;
-	display: block;
-	float: left;
-	text-align: center;
-	box-sizing: border-box;
-	cursor: pointer;
-	border: none;
-	padding: 1rem 2rem;
-	transition: 0.2s;
-	background: #385173;
-	color: #fff;
-}
-
-#button-ghost:focus {
-	outline: none;
-}
-
-#button-ghost:hover {
-	background-image: none;
-}
-
-.pagination.center {
-	margin: 0 auto;
-	display: table;
-}
-
-.pagination.right {
-	float: right;
-}
-
-.pagination.right + * {
-	clear: both;
+	font: 1.4rem "Arial";
+	border: 0;
+	list-style: none;
+	margin-bottom: 20px;
 }
 
 .pagination li {
 	display: inline-block;
+	margin-right: 5px;
 }
 
 .pagination a {
+	font: 1.4rem "Arial";
+	color: #d79e45;
+	text-decoration: none;
+	position: relative;
+	padding: 2px 20px 2px 18px;
+}
+
+.pagination a:before {
+	content: "";
 	display: block;
-	padding: 6px 8px;
+	transform: skew(-30deg);
+	background-color: #d79e45;
+	width: 0;
+	height: 120%;
+	position: absolute;
+	top: -10%;
+	left: -1%;
+	z-index: -1;
+	transition: .5s;
+}
+
+.pagination a:after {
+	content: "";
+	display: block;
+	transform: skew(-30deg);
+	border-right: 2px solid #d79e45;
+	width: 100%;
+	height: 120%;
+	position: absolute;
+	top: -10%;
+	left: 0%;
+	z-index: -1;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+	color: #fff;
+	outline: none;
+}
+
+.pagination a:hover:before,
+.pagination a:focus:before {
+	width: 102%;
+}
+
+.breadcrumb {
+	padding: 0;
+	margin: 0;
+	font: 1.4rem "Arial";
+	border: 0;
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+.breadcrumb li {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.breadcrumb a {
+	font: 1.4rem "Arial";
+	color: #d79e45;
+	transition: 0.2s;
+}
+
+.breadcrumb a:hover {
+	color: #457ed7;
+}
+
+.nav-global {
+	padding: 0;
+	margin: 0;
+	font: 1.4rem "Arial";
+	border: 0;
+	list-style: none;
+}
+
+.nav-global li {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.nav-global a {
+	font: 1.4rem "Arial";
+	color: #d79e45;
+	transition: 0.2s;
+}
+
+.nav-global a:hover {
+	color: #457ed7;
+}
+
+.header-site {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 6000;
+	box-sizing: border-box;
+	padding: 10px 40px;
+	border-bottom: 1px double #d79e45;
+}
+
+.header-site .brand {
 	float: left;
-	font: 1.4rem/2rem "Arial";
-	color: #444;
-	background: none;
 }
 
-.pagination a:hover {
-	background: #F5F5F5;
-	color: #444;
-}
-
-.pagination .prev a {
-	border-radius: 8px 0px 0px 8px;
-}
-
-.pagination .next a {
-	border-radius: 0px 8px 8px 0px;
-}
-
-.pagination .disabled a {
-	background: none;
-	color: #444;
-}
-
-.pagination .disabled:first-child a {
-	border-radius: 8px 0px 0px 8px;
-}
-
-.pagination .disabled:last-child a {
-	border-radius: 0px 8px 8px 0px;
-}
-
-.pagination .active a {
-	color: #444;
-	background: #F5F5F5;
+.header-site .nav-global {
+	float: right;
 }
 
 body {
 	padding: 0;
 	margin: 0;
+	font: 1.4rem "Arial";
 }
 
 html {
 	font-size: 62.5%;
 }
 
-.pagination {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	list-style: none;
+.group {
+	margin: 20px auto;
+	width: 600px;
+	display: table;
 }
 

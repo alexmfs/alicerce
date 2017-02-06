@@ -1,0 +1,30 @@
+@header-style: default;
+@header-site-bg: @white;
+@header-border: @color-primary;
+
+.header-site{
+	#header(@header-style);
+}
+
+#header(@header-style){
+	&when ((@header-style) = default)		{ #header-default(); }
+}
+
+#header-default(){
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: @header-site-bg;
+	z-index: @zindex-header;
+	box-sizing: border-box;
+	padding: 10px 40px;
+	border-bottom: 1px double @header-border; 
+	.brand {
+		float: left;
+	}
+
+	.nav-global {
+		float: right;
+	}
+}
