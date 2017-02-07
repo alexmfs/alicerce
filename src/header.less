@@ -12,6 +12,13 @@
 	&when ((@header-style) = default)		{ #header-default(); }
 }
 
+.nav-global li:first-child:not(:only-child) {
+    background: red;
+}
+
+.header-site > div:first-child:not(:only-child) {
+    background: #525252;
+}
 
 
 #header-default(){
@@ -23,7 +30,6 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 7rem;
 	z-index: @zindex-header;
 	box-sizing: border-box;
 	// padding: 10px 40px;
