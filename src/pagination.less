@@ -98,14 +98,18 @@
 }
 
 .nav-global{
-	#reset(list);
+	ul{
+		#reset(list);
+	}
 	li{
 		display: inline-block;
-		margin-right: 5px;
+		+ li{
+			margin-left: 15px;
+		}
 	}
- 	a{
- 		#link-default;
- 	}	
+	a:not(.button){
+		#link(@link-style);
+	}
 }
 
 #list-links{

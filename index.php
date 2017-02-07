@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="dest/style.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<title>Site Modular</title>
 	<script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
 	<script>
@@ -15,128 +16,152 @@
 
 	<?php
 
-	function headerSite($brand, $tipo = "default", $menu = [])
-	{
-		echo "<header class='header-site'>";
-		echo "<h1 class='brand'>$brand</h1>";
-		echo "<nav class='nav-global'>";
+	// function headerSite($brand, $tipo = "default", $menu = [])
+	// {
+	// 	echo "<header class='header-site'>";
+	// 	echo "<h1 class='brand'>$brand</h1>";
+	// 	echo "<nav class='nav-global'>";
 
-		// if ($tipo == "default") {
-			echo '<ul>';
-			foreach($menu as $a){
-				$item = $a[0];
-				$link = $a[1];
-				$class = $a[2] = "menu-item";
-				echo '<li><a class="'.$class.'" href="'.$link.'">'.$item.'</a></li>';
-			}
-			echo '</ul>';
-		// }
+	// 	// if ($tipo == "default") {
+	// 		echo '<ul>';
+	// 		foreach($menu as $a){
+	// 			$item = $a[0];
+	// 			$link = $a[1];
+	// 			$class = $a[2] = "menu-item";
+	// 			echo '<li><a class="'.$class.'" href="'.$link.'">'.$item.'</a></li>';
+	// 		}
+	// 		echo '</ul>';
+	// 	// }
 
-		echo '</nav>';
-		echo '</header>';
-	}
+	// 	echo '</nav>';
+	// 	echo '</header>';
+	// }
 
-	echo headerSite(
-		$brand = "boideia",
-		$tipo = "default",
-		$menu = [
-			["Início","/"],
-			["Contato","contato"],
-			["Sacolas personalizadas","sacolas-personalizadas"]
-		]
-	);
+	// echo headerSite(
+	// 	$brand = "boideia",
+	// 	$tipo = "default",
+	// 	$menu = [
+	// 		["Início","/"],
+	// 		["Contato","contato"],
+	// 		["Sacolas personalizadas","sacolas-personalizadas"]
+	// 	]
+	// );
 
 	?>
-	<div class="group">
+	<header class="header-site" role="banner">
+		<div class="header-top">
+			<a href="#" class="brand">Boideia</a>
+			<nav class="nav-global">
+				<ul>
+					<li><a class="menu-item" href="/">Início</a></li>
+					<li><a class="menu-item" href="contato">Contato</a></li>
+					<li><a class="menu-item" href="sacolas-personalizadas">Sacolas personalizadas</a></li>
+					<li><a class="button" href="sacolas-personalizadas">Entrar</a></li>
+				</ul>
+			</nav>
+			<form action="" class="search-bar">
+				<label for="">Pesquisar:</label>
+				<input type="search" name="" id="" placeholder="Digite sua busca aqui">
+				<input type="submit" value="&#xf002;">
+			</form>
+		</div>
+	</header>
 
-		<a href="#" class="link">Link</a>
-		<a href="#" class="link">Link</a>
-		<a href="#" class="link">Link</a>
-		<a href="#" class="link">Link</a>
-
-	</div>
-
-	<div class="group">
-
-		<a href="#" class="link">Link</a>
-
-	</div>
-
-	<div class="box button-group" role="group" aria-label="...">
+	<main class="main" role="main">
 		
-		<a href="#" class="button">botao</a>
-		<button href="#" class="button">botao</button>
-		<a href="#" class="button">botao</a>
-
-	</div>
-
-	<div class="group">
+		<div class="group">
+			<ol class="breadcrumb">
+				<li><a href="">Inicial</a></li>
+				<li><a href="">Sub-Página</a></li>
+				<li class="active">Página Atual</li>
+			</ol>
+		</div>
 		
-		<button class="button">botao</button>
-		
-	</div>
+		<div class="group">
 
-	<hr class="hr">
+			<a href="#" class="link">Link</a>
+			<a href="#" class="link">Link</a>
+			<a href="#" class="link">Link</a>
+			<a href="#" class="link">Link</a>
 
-	<div class="group">
-
-		<input type="submit" class="button" value="botao">
-
-	</div>
-
-	<div class="group">
-		<img class="img" src="http://lorempixel.com/400/200/nature/1" alt="" width="100%">
-	</div>
-
-
-	<div class="group">
-
-
-		<?php for ($i=0; $i < 3; $i++) { ?>
-
-		<div class="box">
-			teste	
 		</div>
 
-		<?php } ?>
+		<div class="group">
 
-	</div>
+			<a href="#" class="link">Link</a>
 
-	<div class="group">
+		</div>
 
-		<ol class="pagination">
-			<li class="disabled">
-				<a><i class="fa fa-caret-left"></i> Anterior</a>
-			</li>
-			<li class="active">
-				<a>1</a>
-			</li>
-			<li>
-				<a href="#">2</a>
-			</li>
-			<li>
-				<a href="#">3</a>
-			</li>
-			<li>
-				<a href="#">4</a>
-			</li>
-			<li>
-				<a href="#">5</a>
-			</li>
-			<li>
-				<a href="#">6</a>
-			</li>
-			<li class="next">
-				<a href="#" rel="next" currentClass="disabled">Próxima <i class="fa fa-caret-right"></i></a>
-			</li>
-		</ol>
+		<div class="box button-group" role="group" aria-label="...">
+			
+			<a href="#" class="button">botao</a>
+			<button href="#" class="button">botao</button>
+			<a href="#" class="button">botao</a>
 
-		<ol class="breadcrumb">
-		    <li><a href="">Inicial</a></li>
-		    <li><a href="">Sub-Página</a></li>
-		    <li class="active">Página Atual</li>
-		</ol>
+		</div>
 
-	</div>
+		<div class="group">
+			
+			<button class="button">botao</button>
+			
+		</div>
+
+		<hr class="hr">
+
+		<div class="group">
+
+			<input type="submit" class="button" value="botao">
+
+		</div>
+
+		<div class="group">
+			<img class="img" src="http://lorempixel.com/400/200/nature/1" alt="" width="100%">
+		</div>
+
+
+		<div class="group">
+
+
+			<?php for ($i=0; $i < 3; $i++) { ?>
+
+			<div class="box">
+				teste	
+			</div>
+
+			<?php } ?>
+
+		</div>
+
+		<div class="group">
+
+			<ol class="pagination">
+				<li class="disabled">
+					<a><i class="fa fa-caret-left"></i> Anterior</a>
+				</li>
+				<li class="active">
+					<a>1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+				<li>
+					<a href="#">4</a>
+				</li>
+				<li>
+					<a href="#">5</a>
+				</li>
+				<li>
+					<a href="#">6</a>
+				</li>
+				<li class="next">
+					<a href="#" rel="next" currentClass="disabled">Próxima <i class="fa fa-caret-right"></i></a>
+				</li>
+			</ol>
+
+		</div>
+	</main>
 </body>
 </html>
