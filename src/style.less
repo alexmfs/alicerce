@@ -1,31 +1,46 @@
-// @import "colors.less";
-
-
+// Bosons
 
 // @import "default.less";
 // @import "colors.less";
 @import "resets.less";
-@import "variables.less";
+@import "bosons/variables.less";
+@import "bosons/animations.less";
 @import "semantic.less";
 @import "mixins.less";
-@import "box.less";
 
-@import "links.less";
+// Atoms
+
+// @import "atoms/";
+@import "atoms/inputs.less";
+@import "atoms/labels.less";
+@import "atoms/titles.less";
+@import "box.less";
 @import "buttons.less";
 @import "hr.less";
+@import "links.less";
 @import "shadows.less";
+@import "hero.less";
 
+// Molecules -
+
+@import "molecules/forms.less";
+@import "molecules/searchs.less";
 @import "pagination.less";
+
+// Organisms
+
+// @import "organisms/";
 @import "header.less";
 
-
-@import "molecules/search-bar.less";
+// testas
 
 
 // Button - Pattern
 
 body{
 	#reset(default);
+	animation: fadein 2s;
+	animation-fill-mode: forwards;
 }
 
 html{

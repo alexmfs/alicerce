@@ -108,10 +108,10 @@
 #hr-14() { 
 	border: 0; 
 	height: 1px; 
-	background-image: -webkit-linear-gradient(left, #f0f0f0, @hr-color, #f0f0f0);
-	background-image: -moz-linear-gradient(left, #f0f0f0, @hr-color, #f0f0f0);
-	background-image: -ms-linear-gradient(left, #f0f0f0, @hr-color, #f0f0f0);
-	background-image: -o-linear-gradient(left, #f0f0f0, @hr-color, #f0f0f0); 
+	background-image: -webkit-linear-gradient(left, @body-bg, @hr-color, @body-bg);
+	background-image: -moz-linear-gradient(left, @body-bg, @hr-color, @body-bg);
+	background-image: -ms-linear-gradient(left, @body-bg, @hr-color, @body-bg);
+	background-image: -o-linear-gradient(left, @body-bg, @hr-color, @body-bg); 
 }
 
 
@@ -124,7 +124,7 @@
 		position: relative;
 		top: -15px;
 		padding: 0 10px;
-		background: #f0f0f0;
+		background: @body-bg;
 		color: @hr-color;
 		font-size: 18px;
 	}
@@ -139,7 +139,7 @@
 		top: -12px; 
 		left: 40px; 
 		padding: 0 3px; 
-		background: #f0f0f0; 
+		background: @body-bg; 
 		color: @hr-color; 
 		font-size: 18px; 
 	}
@@ -155,7 +155,7 @@
 		position: relative;
 		top: -14px;
 		padding: 0 10px;
-		background: #f0f0f0;
+		background: @body-bg;
 		color: @hr-color;
 		font-size: 1.8rem;
 		transform: rotate(60deg);

@@ -12,19 +12,9 @@
 	&when ((@header-style) = default)		{ #header-default(); }
 }
 
-.nav-global li:first-child:not(:only-child) {
-    background: red;
-}
-
-.header-site > div:first-child:not(:only-child) {
-    background: #525252;
-}
 
 
 #header-default(){
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	background: @header-site-bg;
 	position: fixed!important;
 	top: 0;
@@ -32,18 +22,24 @@
 	width: 100%;
 	z-index: @zindex-header;
 	box-sizing: border-box;
-	// padding: 10px 40px;
 	border-bottom: 1px double @header-border;
-	.header-top{
+
+
+	> div{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		background: @header-site-bg;
 		width: 100%;
-		padding: 10px 40px;		
+		padding: 10px 40px;
+		&:first-child:not(:only-child) {
+			background: @color-base;
+		}
 	}
+
+
+
 	.brand {
-		float: left;
 		margin: 0;
 		text-decoration: none;
 		font: @size-stack @font-stack;
@@ -51,7 +47,4 @@
 		text-transform: uppercase;
 	}
 
-	.nav-global {
-		float: right;
-	}
 }

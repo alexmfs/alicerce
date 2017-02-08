@@ -82,6 +82,76 @@
 	src: local("Roboto Black"),local(Roboto-Black),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIvY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
 }
 
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: italic;
+	font-weight: 100;
+	src: local("Josefin Sans Thin Italic"),local(JosefinSans-ThinItalic),url(//fonts.gstatic.com/s/josefinsans/v9/s7-P1gqRNRNn-YWdOYnAOa4TT5J8ULaPC23bJYiVmx8.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/s7-P1gqRNRNn-YWdOYnAOaEyK9Hr0SO5vc2-ZCW-Yes.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/s7-P1gqRNRNn-YWdOYnAOaEyK9Hr0SO5vc2-ZCW-Yes.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: italic;
+	font-weight: 300;
+	src: local("Josefin Sans Light Italic"),local(JosefinSans-LightItalic),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33GyH_XWDaITL6s384ufbsW_o.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G20Xvi9kvVpeKmlONF1xhUs.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G20Xvi9kvVpeKmlONF1xhUs.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: italic;
+	font-weight: 400;
+	src: local("Josefin Sans Italic"),local(JosefinSans-Italic),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3dzoGYR7Z3iWH66EXnaJoKgg.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3d3pumDtkw9GHrrDfd7ZnWpU.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3d3pumDtkw9GHrrDfd7ZnWpU.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: italic;
+	font-weight: 600;
+	src: local("Josefin Sans SemiBold Italic"),local(JosefinSans-SemiBoldItalic),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33GxHNzmFb2hSkh0OZsv7eSbE.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G6xza3rXaV_G32gF04a66fI.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G6xza3rXaV_G32gF04a66fI.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: italic;
+	font-weight: 700;
+	src: local("Josefin Sans Bold Italic"),local(JosefinSans-BoldItalic),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33Gyy7jlJQNiTiB3-MejPw_5E.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G70qgHI2SEqiJszC-CVc3gY.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G70qgHI2SEqiJszC-CVc3gY.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: normal;
+	font-weight: 100;
+	src: local("Josefin Sans Thin"),local(JosefinSans-Thin),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3d9P2OS6Bzu7BENq0TH5sayk.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3dy1dfeF-hbOdKKuBDEXxqhQ.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3dy1dfeF-hbOdKKuBDEXxqhQ.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: normal;
+	font-weight: 300;
+	src: local("Josefin Sans Light"),local(JosefinSans-Light),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z4ySLpARcVRs9uFJp0LRZgE.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z2Fp2sMiApZm5Dx7NpSTOZk.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z2Fp2sMiApZm5Dx7NpSTOZk.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Josefin Sans"),local(JosefinSans),url(//fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5nZ2MAKAc2x4R1uOSeegc5U.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5nhCUOGz7vYGh680lGh-uXM.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5nhCUOGz7vYGh680lGh-uXM.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: normal;
+	font-weight: 600;
+	src: local("Josefin Sans SemiBold"),local(JosefinSans-SemiBold),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zzBIQ40lcwWW3vj9tFMKvqw.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z9Od4RnLmtUrdSQkDmC5b8k.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z9Od4RnLmtUrdSQkDmC5b8k.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Josefin Sans Bold"),local(JosefinSans-Bold),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z2msoyWrDyoltQVIP7q_RGg.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z3l4twXkwp3_u9ZoePkT564.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z3l4twXkwp3_u9ZoePkT564.woff) format("woff");
+}
+
 *,
 *:before,
 *:after {
@@ -120,10 +190,6 @@ img {
 	position: relative;
 }
 
-.box-shadow-pattern {
-	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
-}
-
 /* 
 
 Font Awesome 
@@ -131,14 +197,166 @@ http://fontawesome.io/cheatsheet/
 
 */
 
-.awesome {
-	display: inline-block;
-	font-family: FontAwesome;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+.input {
+	font: 1.4rem "Arial";
+	color: #d79e45;
+	width: 100%;
+	transition: 0.2s;
+	display: block;
+	background: #eee;
+	border: 1px solid #d79e45;
+	text-indent: 10px;
+	height: 30px;
+}
+
+.input:focus {
+	outline: none;
+}
+
+.input::-webkit-input-placeholder {
+	font: 1.4rem "Arial";
+	color: #444;
+	font-style: italic;
+}
+
+.input:-moz-placeholder {
+	font: 1.4rem "Arial";
+	color: #444;
+	font-style: italic;
+}
+
+.input::-moz-placeholder {
+	font: 1.4rem "Arial";
+	color: #444;
+	font-style: italic;
+}
+
+.input:-ms-input-placeholder {
+	font: 1.4rem "Arial";
+	color: #444;
+	font-style: italic;
+}
+
+.input:focus {
+	border-color: #444;
+	border-style: dashed;
+}
+
+.invalid .input {
+	border-color: #39ad0b;
+}
+
+.invalid .input:focus {
+	outline: 1px solid #39ad0b;
+}
+
+.valided .input {
+	border-color: #39ad0b;
+}
+
+.textarea {
+	font: 1.4rem "Arial";
+	color: #d79e45;
+	width: 100%;
+	transition: 0.2s;
+	display: block;
+	background: #eee;
+	border: 1px solid #d79e45;
+	text-indent: 10px;
+	height: auto;
+}
+
+.textarea:focus {
+	outline: none;
+}
+
+.textarea::-webkit-input-placeholder {
+	font: 1.4rem "Arial";
+	color: #444;
+	font-style: italic;
+}
+
+.textarea:-moz-placeholder {
+	font: 1.4rem "Arial";
+	color: #444;
+	font-style: italic;
+}
+
+.textarea::-moz-placeholder {
+	font: 1.4rem "Arial";
+	color: #444;
+	font-style: italic;
+}
+
+.textarea:-ms-input-placeholder {
+	font: 1.4rem "Arial";
+	color: #444;
+	font-style: italic;
+}
+
+.textarea:focus {
+	border-color: #444;
+	border-style: dashed;
+}
+
+.invalid .textarea {
+	border-color: #39ad0b;
+}
+
+.invalid .textarea:focus {
+	outline: 1px solid #39ad0b;
+}
+
+.valided .textarea {
+	border-color: #39ad0b;
+}
+
+::-webkit-input-placeholder {
+	color: red;
+}
+
+:-moz-placeholder {
+	color: red;
+}
+
+::-moz-placeholder {
+	color: red;
+}
+
+:-ms-input-placeholder {
+	color: red;
+}
+
+.title-page {
+	margin: 1em 0 0.5em 0;
+	font-weight: 100;
+	text-transform: uppercase;
+	color: #d79e45;
+	font-style: italic;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 5.8rem;
+	line-height: 5.4rem;
+	text-shadow: 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.box {
+	padding: 5px;
+	margin-bottom: 15px;
+	background: #d79e45;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.box:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	border: 1px dashed #fff;
+	margin: 4px 5px 5px 5px;
 }
 
 .img {
@@ -155,6 +373,63 @@ http://fontawesome.io/cheatsheet/
 	height: calc(100% - 10px);
 	border: 1px dashed #fff;
 	margin: 4px 5px 5px 5px;
+}
+
+.button {
+	font: normal 1.4rem "Roboto";
+	padding: 1rem 2rem;
+	transition: 0.2s;
+	background: #d79e45;
+	color: #fff;
+	text-decoration: none;
+	margin: 0;
+	min-width: 5rem;
+	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	vertical-align: middle;
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)); /* W3C */
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button:hover {
+	background-image: none;
+}
+
+.button-group {
+	margin: 20px auto;
+	width: 600px;
+	display: table;
+}
+
+.button-group .button + .button {
+	margin-left: 10px;
+}
+
+.hr {
+	width: 100%;
+	float: left;
+	border-top: 4px double #d79e45;
+	text-align: center;
+}
+
+.hr:after {
+	content: '\002665';
+	display: inline-block;
+	position: relative;
+	top: -15px;
+	padding: 0 10px;
+	background: #fff;
+	color: #d79e45;
+	font-size: 18px;
 }
 
 .link {
@@ -213,63 +488,6 @@ http://fontawesome.io/cheatsheet/
 	width: 102%;
 }
 
-.button {
-	font: normal 1.4rem "Roboto";
-	padding: 1rem 2rem;
-	transition: 0.2s;
-	background: #d79e45;
-	color: #fff;
-	text-decoration: none;
-	margin: 0;
-	min-width: 5rem;
-	display: block;
-	float: left;
-	text-align: center;
-	box-sizing: border-box;
-	cursor: pointer;
-	background-image: none;
-	border: 1px solid transparent;
-	white-space: nowrap;
-	vertical-align: middle;
-	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)); /* W3C */
-}
-
-.button:focus {
-	outline: none;
-}
-
-.button:hover {
-	background-image: none;
-}
-
-.button-group {
-	margin: 20px auto;
-	width: 600px;
-	display: table;
-}
-
-.button-group .button + .button {
-	margin-left: 10px;
-}
-
-.hr {
-	width: 100%;
-	float: left;
-	border-top: 4px double #d79e45;
-	text-align: center;
-}
-
-.hr:after {
-	content: '\002665';
-	display: inline-block;
-	position: relative;
-	top: -15px;
-	padding: 0 10px;
-	background: #f0f0f0;
-	color: #d79e45;
-	font-size: 18px;
-}
-
 .shadow {
 	position: relative;
 }
@@ -293,6 +511,34 @@ http://fontawesome.io/cheatsheet/
 	transform: rotate(3deg);
 	right: 10px;
 	left: auto;
+}
+
+.hero {
+	height: 100vh;
+	background: #d79e45;
+}
+
+.form input {
+	margin: 0px 5px 25px 0px;
+}
+
+.search-bar {
+	align-items: center;
+	display: flex;
+}
+
+.search-bar label {
+	margin-right: 10px;
+}
+
+.search-bar input {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .pagination {
@@ -385,6 +631,8 @@ http://fontawesome.io/cheatsheet/
 	font: 1.4rem "Arial";
 	border: 0;
 	list-style: none;
+	display: flex;
+	align-items: center;
 }
 
 .nav-global li {
@@ -406,9 +654,6 @@ http://fontawesome.io/cheatsheet/
 }
 
 .header-site {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	background: #fff;
 	position: fixed!important;
 	top: 0;
@@ -419,7 +664,7 @@ http://fontawesome.io/cheatsheet/
 	border-bottom: 1px double #d79e45;
 }
 
-.header-site .header-top {
+.header-site > div {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -428,8 +673,11 @@ http://fontawesome.io/cheatsheet/
 	padding: 10px 40px;
 }
 
+.header-site > div:first-child:not(:only-child) {
+	background: #444;
+}
+
 .header-site .brand {
-	float: left;
 	margin: 0;
 	text-decoration: none;
 	font: 2.8rem "Roboto";
@@ -437,41 +685,12 @@ http://fontawesome.io/cheatsheet/
 	text-transform: uppercase;
 }
 
-.header-site .nav-global {
-	float: right;
-}
-
-.nav-global li:first-child:not(:only-child) {
-	background: red;
-}
-
-.header-site > div:first-child:not(:only-child) {
-	background: #525252;
-}
-
-.search-bar {
-	align-items: center;
-	display: flex;
-}
-
-.search-bar label {
-	margin-right: 10px;
-}
-
-.search-bar input {
-	display: inline-block;
-	font-family: FontAwesome;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 body {
 	padding: 0;
 	margin: 0;
 	font: 1.4rem "Arial";
+	animation: fadein 2s;
+	animation-fill-mode: forwards;
 }
 
 html {
@@ -486,5 +705,17 @@ html {
 	margin: 20px auto;
 	width: 600px;
 	display: table;
+}
+
+@keyframes fadein {
+
+from {
+	opacity: 0;
+}
+
+to {
+	opacity: 1;
+}
+
 }
 

@@ -31,7 +31,7 @@
 	background-image: linear-gradient(to @to, @gradient1, @gradient2); /* W3C */
 }
 
-.box-shadow-pattern{
+.box-shadow-pattern(){
 	box-shadow: 0px 1px 1px 0px rgba(0,0,0,.15);
 }
 
@@ -60,7 +60,7 @@ http://fontawesome.io/cheatsheet/
 
 */
 
-.awesome{
+.awesome(){
 	display: inline-block;
 	font-family: FontAwesome;
 	font-style: normal;
@@ -68,4 +68,36 @@ http://fontawesome.io/cheatsheet/
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.placeholder(@rules) {
+
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
+
+.selection(@rules) {
+
+	// background: green; 
+	// color: #FFFFFF;
+
+	&::selection{
+		@rules();
+
+	}
+	&::-moz-selection{
+		@rules();
+	}
+
 }

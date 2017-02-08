@@ -1,0 +1,30 @@
+@form-style: default;
+
+.form{
+	#form(@form-style);
+}
+
+#form(@form-style){
+	&when ((@form-style) = default)		{ #form-default(); }
+	&when ((@form-style) = inline)		{ #form-inline(); }
+}
+
+#form-default(){
+	input{
+		margin: 0px 5px 25px 0px;
+	}
+}
+
+
+#form-inline(){
+	display: table;
+	width: 100%;
+	label, input {
+		display: table-cell;
+		margin-bottom: 15px;
+	}
+	label {
+	}
+}
+
+

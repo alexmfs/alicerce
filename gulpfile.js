@@ -31,7 +31,7 @@ gulp.task('css', function () {
 
 gulp.task('default', function() {
     // corpo da tarefa 
-    gulp.watch('./src/*.less', function(event) {
+    gulp.watch(['./src/*.less','./src/**/*.less'], function(event) {
         gutil.log('File '+event.path+' was '+event.type+', running tasks...');
         gulp.run('css');
     });
