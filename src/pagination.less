@@ -87,10 +87,20 @@
 
 .breadcrumb{
 	#reset(list);
+	@breadcrumb-gutter: 5px;
 	margin-bottom: @space * 2;
 	li{
 		display: inline-block;
-		margin-right: 5px;
+		+ li{
+			margin-left: @breadcrumb-gutter;
+			&:before{
+				.awesome;
+				content: @icon-angle-right;
+				margin-right: @breadcrumb-gutter;
+				colors: @color-base;
+			}	
+		}
+
 	}
  	a{
  		#link-default;

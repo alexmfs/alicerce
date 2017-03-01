@@ -52,9 +52,10 @@
   // }
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="<?= $lang ?>">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="dest/style.css">
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<!-- <title>Site Modular</title> -->
@@ -106,7 +107,9 @@
 	// 	]
 	// );
 
-		function i($type = "cappuccino")
+		$type = "cappuccino";
+
+		function i($type)
 		{
 		    return "Fazendo uma xícara de café $type.\n";
 		}
@@ -139,13 +142,99 @@
 		</div>
 
 	</header>
-<!-- 
-	<section class="hero">
+
+<!-- 	<section class="hero">
 		
 	</section> -->
 	<main class="main wrap" role="main">
 		
 		<h1 class="title-page"><?= $LANG['header'];?></h1>
+
+		<div class="group">
+			
+			<ul class="showcase" data-layout="grid">
+				<?php for ($i=0; $i < 4; $i++) { ?>
+				<li>
+					<a href="#">
+						<figure>
+							<img src="http://www.lojabat.com/images/501/50048/mini/hellboy.jpg" alt="">
+							<figcaption class="showcase-nome">Nome do Produto</figcaption>
+						</figure>
+					</a>
+					<div class="showcase-info">
+						<p>Indisponível</p>
+					</div>
+					<a class="button" href="#">Comprar</a>
+				</li>
+				<li>
+					<a href="#">
+						<figure>
+							<img src="http://www.lojabat.com/images/im/sem-foto-mini.png" alt="">
+							<figcaption class="showcase-nome">Nome do Produto grande pra caramba</figcaption>
+						</figure>
+					</a>
+					<div class="showcase-info">
+						<p>Indisponível</p>
+					</div>
+					<a class="button" href="#">Comprar</a>
+				</li>
+				<li>
+					<a href="#">
+						<figure>
+							<img src="http://www.lojabat.com/images/501/50039/mini/43831-520x520.jpg" alt="">
+							<figcaption class="showcase-nome">Nome do Produto</figcaption>
+						</figure>
+					</a>
+					<div class="showcase-info">
+						<p class="showcase-preco-de">R$ 139.90</p>
+						<p class="showcase-preco-por">R$ 119.90 </p>
+						<p>Em estoque: 2</span>
+					</div>
+
+					<a class="button" href="#">Comprar</a>
+				</li>
+				<li>
+					<a href="#">
+						<figure>
+							<img src="http://www.lojabat.com/images/im/sem-foto-mini.png" alt="">
+							<figcaption class="showcase-nome">Nome do Produto grande pra caramba</figcaption>
+						</figure>
+					</a>
+					<div class="showcase-info">
+						<p class="showcase-preco-de">R$ 139.90</p>
+						<p class="showcase-preco-por">R$ 119.90 </p>
+						<p>Em estoque: 2</span>
+					</div>
+
+					<a class="button" href="#">Comprar</a>
+				</li>
+				<?php } ?>
+			</ul>
+
+
+		</div>
+
+		<div class="group">
+			<ul class="planos">
+				<?php for ($i=0; $i < 5; $i++) { ?>
+				<li class="plano">
+					<h3 class="plano-nome">Nome do plano</h3>
+					
+					<ul class="plano-descricoes">
+						<li>Usuários: 50</li>
+						<li>Empresas: 50</li>
+						<li>
+							<span class="plano-preco">R$50</span>
+							<span class="plano-mensal">mensais</span>
+						</li>
+					</ul>
+				 
+					<a href="#" class="button">Selecionar plano</a>
+					
+				</li>
+				<?php } ?>
+			</ul>
+		</div>
 
 		<div class="group">
 			<ol class="breadcrumb">
@@ -192,6 +281,9 @@
 			<a href="#" class="link">Link</a>
 
 		</div>
+
+
+
 
 		<div class="box button-group" role="group" aria-label="...">
 			

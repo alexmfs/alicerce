@@ -1,4 +1,4 @@
-@title-style: default;
+@title-style: outline;
 @title-color: @color-primary;
 
 .title-page{
@@ -6,8 +6,12 @@
 }
 
 #title(@title-style){
-	// &when ((@title-style) = default)		{ #title-default(); }
-	&when ((@title-style) = default)		{ #title-2(); }
+	&when ((@title-style) = default)		{ #title-default(); }
+	&when ((@title-style) = 2)				{ #title-2(); }
+	&when ((@title-style) = algerian)		{ #title-algerian(); }
+	&when ((@title-style) = castellar)		{ #title-castellar(); }
+	&when ((@title-style) = outline)		{ #title-outline(); }
+	&when ((@title-style) = neon)			{ #title-neon(); }
 }
 
 #title-default(){

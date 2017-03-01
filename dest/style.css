@@ -1,4 +1,32 @@
 @font-face {
+	font-family: Signika;
+	font-style: normal;
+	font-weight: 300;
+	src: local(Signika-Light),url(//fonts.gstatic.com/s/signika/v6/koFYE26bhT88HgRA8f4vbVQlYEbsez9cZjKsNMjLOwM.eot?#) format("eot"),url(//fonts.gstatic.com/s/signika/v6/koFYE26bhT88HgRA8f4vbRsxEYwM7FgeyaSgU71cLG0.woff) format("woff2"),url(//fonts.gstatic.com/s/signika/v6/koFYE26bhT88HgRA8f4vbRsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
+}
+
+@font-face {
+	font-family: Signika;
+	font-style: normal;
+	font-weight: 400;
+	src: local(Signika),local(Signika-Regular),url(//fonts.gstatic.com/s/signika/v6/VXdqIs7WDCt-XY_CZ2hksw.eot?#) format("eot"),url(//fonts.gstatic.com/s/signika/v6/_M5k9_BZTkfaM2dnN0vNGw.woff) format("woff2"),url(//fonts.gstatic.com/s/signika/v6/_M5k9_BZTkfaM2dnN0vNGw.woff) format("woff");
+}
+
+@font-face {
+	font-family: Signika;
+	font-style: normal;
+	font-weight: 600;
+	src: local(Signika-Semibold),url(//fonts.gstatic.com/s/signika/v6/FZa_MODmDkR9DTu5jHSnSVQlYEbsez9cZjKsNMjLOwM.eot?#) format("eot"),url(//fonts.gstatic.com/s/signika/v6/FZa_MODmDkR9DTu5jHSnSRsxEYwM7FgeyaSgU71cLG0.woff) format("woff2"),url(//fonts.gstatic.com/s/signika/v6/FZa_MODmDkR9DTu5jHSnSRsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
+}
+
+@font-face {
+	font-family: Signika;
+	font-style: normal;
+	font-weight: 700;
+	src: local(Signika-Bold),url(//fonts.gstatic.com/s/signika/v6/7M5kxD4eGxuhgFaIk95pBVQlYEbsez9cZjKsNMjLOwM.eot?#) format("eot"),url(//fonts.gstatic.com/s/signika/v6/7M5kxD4eGxuhgFaIk95pBRsxEYwM7FgeyaSgU71cLG0.woff) format("woff2"),url(//fonts.gstatic.com/s/signika/v6/7M5kxD4eGxuhgFaIk95pBRsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
+}
+
+@font-face {
 	font-family: Roboto;
 	font-style: italic;
 	font-weight: 100;
@@ -82,76 +110,6 @@
 	src: local("Roboto Black"),local(Roboto-Black),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIvY6323mHUZFJMgTvxaG2iE.eot?#) format("eot"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff2"),url(//fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
 }
 
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: italic;
-	font-weight: 100;
-	src: local("Josefin Sans Thin Italic"),local(JosefinSans-ThinItalic),url(//fonts.gstatic.com/s/josefinsans/v9/s7-P1gqRNRNn-YWdOYnAOa4TT5J8ULaPC23bJYiVmx8.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/s7-P1gqRNRNn-YWdOYnAOaEyK9Hr0SO5vc2-ZCW-Yes.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/s7-P1gqRNRNn-YWdOYnAOaEyK9Hr0SO5vc2-ZCW-Yes.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: italic;
-	font-weight: 300;
-	src: local("Josefin Sans Light Italic"),local(JosefinSans-LightItalic),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33GyH_XWDaITL6s384ufbsW_o.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G20Xvi9kvVpeKmlONF1xhUs.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G20Xvi9kvVpeKmlONF1xhUs.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: italic;
-	font-weight: 400;
-	src: local("Josefin Sans Italic"),local(JosefinSans-Italic),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3dzoGYR7Z3iWH66EXnaJoKgg.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3d3pumDtkw9GHrrDfd7ZnWpU.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3d3pumDtkw9GHrrDfd7ZnWpU.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: italic;
-	font-weight: 600;
-	src: local("Josefin Sans SemiBold Italic"),local(JosefinSans-SemiBoldItalic),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33GxHNzmFb2hSkh0OZsv7eSbE.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G6xza3rXaV_G32gF04a66fI.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G6xza3rXaV_G32gF04a66fI.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: italic;
-	font-weight: 700;
-	src: local("Josefin Sans Bold Italic"),local(JosefinSans-BoldItalic),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33Gyy7jlJQNiTiB3-MejPw_5E.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G70qgHI2SEqiJszC-CVc3gY.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/ppse0J9fKSaoxCIIJb33G70qgHI2SEqiJszC-CVc3gY.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: normal;
-	font-weight: 100;
-	src: local("Josefin Sans Thin"),local(JosefinSans-Thin),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3d9P2OS6Bzu7BENq0TH5sayk.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3dy1dfeF-hbOdKKuBDEXxqhQ.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3dy1dfeF-hbOdKKuBDEXxqhQ.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: normal;
-	font-weight: 300;
-	src: local("Josefin Sans Light"),local(JosefinSans-Light),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z4ySLpARcVRs9uFJp0LRZgE.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z2Fp2sMiApZm5Dx7NpSTOZk.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z2Fp2sMiApZm5Dx7NpSTOZk.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: normal;
-	font-weight: 400;
-	src: local("Josefin Sans"),local(JosefinSans),url(//fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5nZ2MAKAc2x4R1uOSeegc5U.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5nhCUOGz7vYGh680lGh-uXM.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5nhCUOGz7vYGh680lGh-uXM.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: normal;
-	font-weight: 600;
-	src: local("Josefin Sans SemiBold"),local(JosefinSans-SemiBold),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zzBIQ40lcwWW3vj9tFMKvqw.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z9Od4RnLmtUrdSQkDmC5b8k.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z9Od4RnLmtUrdSQkDmC5b8k.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Josefin Sans";
-	font-style: normal;
-	font-weight: 700;
-	src: local("Josefin Sans Bold"),local(JosefinSans-Bold),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z2msoyWrDyoltQVIP7q_RGg.eot?#) format("eot"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z3l4twXkwp3_u9ZoePkT564.woff) format("woff2"),url(//fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z3l4twXkwp3_u9ZoePkT564.woff) format("woff");
-}
-
 *,
 *:before,
 *:after {
@@ -189,6 +147,12 @@ img {
 	margin: 0 auto;
 	position: relative;
 }
+
+/*
+
+Grid
+
+*/
 
 /* 
 
@@ -328,15 +292,8 @@ http://fontawesome.io/cheatsheet/
 }
 
 .title-page {
-	margin: 1em 0 0.5em 0;
-	font-weight: 100;
-	text-transform: uppercase;
-	color: #d79e45;
-	font-style: italic;
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 5.8rem;
-	line-height: 5.4rem;
-	text-shadow: 2px 5px 0 rgba(0, 0, 0, 0.2);
+	color: #fff;
+	text-shadow: 1px 1px 0 #d79e45, -1px 1px 0 #d79e45, 1px -1px 0 #d79e45, -1px -1px 0 #d79e45;
 }
 
 .box {
@@ -384,8 +341,6 @@ http://fontawesome.io/cheatsheet/
 	text-decoration: none;
 	margin: 0;
 	min-width: 5rem;
-	display: block;
-	float: left;
 	text-align: center;
 	box-sizing: border-box;
 	cursor: pointer;
@@ -393,7 +348,15 @@ http://fontawesome.io/cheatsheet/
 	border: 1px solid transparent;
 	white-space: nowrap;
 	vertical-align: middle;
-	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2)); /* W3C */
+	font: bold 15px 'Signika';
+	background-color: #333;
+	display: block;
+	padding: 5px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 0px #000, 2px 5px 4px 1px rgba(0, 0, 0, 0.5);
+	transition: all .1s ease;
+	transform: translateY(-2px);
+	background-image: linear-gradient(to top, #333, #333);
 }
 
 .button:focus {
@@ -401,7 +364,11 @@ http://fontawesome.io/cheatsheet/
 }
 
 .button:hover {
-	background-image: none;
+	background-image: linear-gradient(to top, #807c7c, #595459);
+}
+
+.button:active {
+	transform: translateY(3px);
 }
 
 .button-group {
@@ -518,6 +485,78 @@ http://fontawesome.io/cheatsheet/
 	background: #d79e45;
 }
 
+.showcase {
+	padding: 0;
+	margin: 0;
+	font: 1.4rem "Arial";
+	border: 0;
+	list-style: none;
+	width: 100%;
+}
+
+.showcase[data-layout="grid"] {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.showcase[data-layout="list"] {
+	display: flex;
+	flex-flow: column;
+}
+
+.showcase li {
+	text-align: center;
+	margin-bottom: 45px;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column;
+}
+
+.showcase .button {
+	display: block;
+	margin: 0 auto;
+	max-width: 80%;
+	width: 100%;
+}
+
+.showcase a:not(.button) {
+	display: block;
+	text-decoration: none;
+}
+
+.showcase p {
+	margin: 0;
+}
+
+.showcase .showcase-info {
+	margin: 5px 0 10px;
+}
+
+.showcase figure {
+	height: 210px;
+	margin: 0;
+	position: relative;
+}
+
+.showcase img {
+	max-height: 160px;
+	margin: 0 auto;
+}
+
+.showcase-nome {
+	height: 35px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.showcase-preco-de {
+	color: red;
+	text-decoration: line-through;
+}
+
 .form input {
 	margin: 0px 5px 25px 0px;
 }
@@ -612,7 +651,23 @@ http://fontawesome.io/cheatsheet/
 
 .breadcrumb li {
 	display: inline-block;
+}
+
+.breadcrumb li + li {
+	margin-left: 5px;
+}
+
+.breadcrumb li + li:before {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: "\f105";
 	margin-right: 5px;
+	colors: #444;
 }
 
 .breadcrumb a {
@@ -653,6 +708,115 @@ http://fontawesome.io/cheatsheet/
 	color: #457ed7;
 }
 
+.price {
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	transition: 0.5s;
+	float: left;
+}
+
+.price + li {
+	margin-left: 20px;
+}
+
+.price-nome {
+	margin: 0;
+	padding: 20px 0px;
+	background: #e5e5e5;
+	transition: 0.5s;
+}
+
+.price-preco {
+	font-size: 38px;
+	font-weight: bold;
+}
+
+.price-mensal {
+	display: block;
+}
+
+.price .button {
+	margin: 10px auto;
+	float: none;
+	display: inline-block;
+}
+
+.price:hover {
+	border-color: #d79e45;
+}
+
+.price:hover .plano-nome {
+	background: #d79e45;
+}
+
+#wrap {
+	width: 100%;
+	display: table;
+}
+
+li.plano:hover {
+	border-color: #d79e45;
+}
+
+.planos {
+	padding: 0;
+	margin: 0;
+	font: 1.4rem "Arial";
+	border: 0;
+	list-style: none;
+	display: table;
+}
+
+.plano {
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	transition: 0.5s;
+	float: left;
+}
+
+.plano + li {
+	margin-left: 20px;
+}
+
+.plano-nome {
+	margin: 0;
+	padding: 20px 0px;
+	background: #e5e5e5;
+	transition: 0.5s;
+}
+
+.plano-preco {
+	font-size: 38px;
+	font-weight: bold;
+}
+
+.plano-mensal {
+	display: block;
+}
+
+.plano .button {
+	margin: 10px auto;
+	float: none;
+	display: inline-block;
+}
+
+.plano:hover {
+	border-color: #d79e45;
+}
+
+.plano:hover .plano-nome {
+	background: #d79e45;
+}
+
+.plano-descricoes {
+	padding: 0;
+	margin: 0;
+	font: 1.4rem "Arial";
+	border: 0;
+	list-style: none;
+	padding: 10px 40px;
+}
+
 .header-site {
 	background: #fff;
 	position: fixed!important;
@@ -664,7 +828,7 @@ http://fontawesome.io/cheatsheet/
 	border-bottom: 1px double #d79e45;
 }
 
-.header-site > div {
+.header-site .header-section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -673,7 +837,7 @@ http://fontawesome.io/cheatsheet/
 	padding: 10px 40px;
 }
 
-.header-site > div:first-child:not(:only-child) {
+.header-site .header-section:first-child:not(:only-child) {
 	background: #444;
 }
 
@@ -703,8 +867,39 @@ html {
 
 .group {
 	margin: 20px auto;
-	width: 600px;
-	display: table;
+}
+
+@media only screen and (min-width: 611px) and (max-width: 949px) {
+
+.showcase li {
+	width: calc(33.333333333333336% - 15px);
+	box-sizing: border-box;
+	margin-left: 7.5px;
+	margin-right: 7.5px;
+}
+
+}
+
+@media only screen and (min-width: 950px) {
+
+.showcase li {
+	width: calc(20% - 15px);
+	box-sizing: border-box;
+	margin-left: 7.5px;
+	margin-right: 7.5px;
+}
+
+}
+
+@media only screen and (max-width: 610px) {
+
+.showcase li {
+	width: calc(50% - 15px);
+	box-sizing: border-box;
+	margin-left: 7.5px;
+	margin-right: 7.5px;
+}
+
 }
 
 @keyframes fadein {
