@@ -31,7 +31,7 @@ function getForm($arr){
             echo
                 "<div $options>",
                     '<label for="'.strtolower($value['label']).'">'.$value['label']."</label>",
-                    '<input type="'.$inputType.'" id="'.strtolower($value['label']).'">',
+                    '<input type="'.$inputType.'" id="'.strtolower($value['label']).' "'.(isset($value['checked']) && $value['checked'] ? 'checked ' : '').'>',
                 "</div>";
         }
 
@@ -58,14 +58,24 @@ getForm([
             'label' => 'Nome'
         ],
         [
-            'label' => 'Email'
+            'radio' => 'Email',
+            'items => [
+                '1'=>'cachorro',
+                '2'=>'gato',
+                 [
+                    'id' => '3',
+                  'label' => 'Mensagem',
+                  'checked' => true
+                 ],
+            ],
         ],
         [
             'label' => 'Senha',
             'type'  => 'password'
         ],
         [
-            'label' => 'Mensagem'
+            'label' => 'Mensagem',
+            'checked' => true
         ],
 
     ]
