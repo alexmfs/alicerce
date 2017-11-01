@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     // Configuração do projeto
     grunt.initConfig({
         dirs: {
-            dev: 'ui/',
+            dev: 'sass/',
             output: 'example/assets/',
 
             js: {
@@ -27,6 +27,17 @@ module.exports = function(grunt) {
             //   sourceMapFilename: '<%= dirs.output %>css/style.css.map',
             // },
             '<%= dirs.output %>styles.css': ['<%= dirs.dev %>styles.less'],
+        },
+
+        sass: {
+            options: {
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                      '<%= dirs.output %>styles.css': ['<%= dirs.dev %>styles.scss'],
+                }
+            }
         },
 
         // Reorganize Media Queries
@@ -156,15 +167,23 @@ module.exports = function(grunt) {
         watch: {
             styles: {
                 // Which files to watch (all .less files recursively in the less directory)
+                // files: [
+                //     'Gruntfile.js',
+                //     '<%= dirs.dev %>*.less',
+                //     '<%= dirs.dev %>*/*.less',
+                //     '<%= dirs.dev %>*.js',
+                //     '<%= dirs.dev %>*/*.js',
+                // ],
                 files: [
                     'Gruntfile.js',
-                    '<%= dirs.dev %>*.less',
-                    '<%= dirs.dev %>*/*.less',
+                    '<%= dirs.dev %>*.scss',
+                    '<%= dirs.dev %>*/*.scss',
                     '<%= dirs.dev %>*.js',
                     '<%= dirs.dev %>*/*.js',
                 ],
                 // tasks: ['less','replace','cmq','cssmin','concat'],
-                tasks: ['less','cmq','postcss','concat','uglify'],
+                // tasks: ['less','cmq','postcss','concat','uglify'],
+                tasks: ['sass','cmq','postcss','concat','uglify'],
                 options: {
                     nospawn: true
                 }
@@ -173,6 +192,7 @@ module.exports = function(grunt) {
     });
     // registrando tarefa default
     grunt.registerTask( 'default', ['watch'] );
-    grunt.registerTask( 'compile', ['less','cmq','postcss','concat','uglify','copy','watch'] );
+    // grunt.registerTask( 'compile', ['less','cmq','postcss','concat','uglify','copy','watch'] );
+    grunt.registerTask( 'compile', ['sass','cmq','postcss','concat','uglify','copy','watch'] );
     grunt.registerTask( 'deploy', ['deploy'] );
 };

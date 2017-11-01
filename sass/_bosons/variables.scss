@@ -1,0 +1,22 @@
+$color-primary: red !default;
+$color-secondary: #090909 !default;
+
+$colors: (
+  // nested map inception
+  text: #FFF,
+  background: #333,
+
+  primary: (
+    base: $color-primary,
+    light: lighten($color-primary, 15%),
+    dark: darken($color-primary, 15%),
+    trans: transparentize($color-primary, 0.5)
+  ),
+  // and another. is the totem still spinning?
+  secondary: (
+    base: $color-secondary,
+    light: lighten($color-secondary, 15%),
+    dark: darken($color-secondary, 15%),
+    trans: transparentize($color-secondary, 0.5)
+  )
+);

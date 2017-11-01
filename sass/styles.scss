@@ -1,0 +1,15 @@
+
+$color-primary: yellow;
+$color-secondary: purple;
+
+@import 'ui';
+
+body {
+  background-color: color(background);
+  font-family: "Alice";
+  font-size: 1.8rem;
+}
+// using the function to get a nested map color
+h1 {
+  color: color(primary, base);
+}
