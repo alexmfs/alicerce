@@ -6,6 +6,8 @@
 	<script src="<?=$assets?>vendors.min.js"></script>
 	<script src="<?=$assets?>scripts.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 	<title></title>
 
 	<style>

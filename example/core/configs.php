@@ -8,4 +8,4 @@
 
 	$img = '/assets/images/';
 	$icon = '/assets/icons/';
-	$assets = '/assets/';
+	$assets = '/modulos/example/assets/';

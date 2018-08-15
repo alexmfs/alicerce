@@ -10,19 +10,19 @@ getHeader([
 
 						[
 								'label' => 'Home',
-								'url' => '/home'
+								'url' => '/modulos/example/home'
 						],
 						[
 								'label' => 'About',
-								'url' => '/?p=buttons'
+								'url' => '/modulos/example/?p=buttons'
 						],
 						[
 								'label' => 'Blog',
-								'url' => '/?p=buttons'
+								'url' => '/modulos/example/?p=buttons'
 						],
 						[
 								'label' => 'Contact',
-								'url' => '/?p=buttons'
+								'url' => '/modulos/example/?p=buttons'
 						],
 
 				],
