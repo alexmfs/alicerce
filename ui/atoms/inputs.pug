@@ -1,0 +1,57 @@
+mixin input(type, label, classe)
+    - classe = classe || '';
+    .form-control
+        label.label-control= label 
+        input.input-control(type=type, class=`${classe}`)
+
+mixin inputText(label)
+ +input("text", label)
+
+mixin inputTel(label)
+ +input("tel", label)
+
+mixin inputUrl(label)
+ +input("url", label)
+
+mixin inputPassword(label)
+ +input("password", label)
+
+mixin inputEmail(label)
+ +input("email", label)
+
+mixin textarea(label)
+    .form-control
+        label.label-control= label 
+        textarea.input-control
+
+//- Customs
+mixin inputData(label)
+ +input("text", label, "data")
+
+mixin inputCpf(label)
+ +input("text", label, "cpf")
+
+mixin inputCep(label)
+ +input("text", label, "cep")
+
+mixin checkbox(label, name, id)
+    - name = name || 'name';
+    - id   = id || 'id';
+    .form-control
+        .switch
+            input(type="checkbox" id=id, name=name)
+            label(for=id)= label
+
+mixin checkbox-group(items, name)
+    .form-control.options
+        each item, index in items
+            .switch
+                input(type="checkbox" id=index, name=name)
+                label(for=index)= item
+                
+mixin spinner(min=null,max=null,step=null,val=null)      
+  .spinner
+      input(type="text", data-min=min, data-max=max, data-step=step, value=val)
+      .nav
+          .up +
+          .down -   

@@ -1,0 +1,22 @@
+.text{
+	
+}
+
+
+p:not([class]) {
+
+	.font-base;
+
+	a{
+		text-decoration: none;
+		transition: @transition-slow;
+		color: @color-primary;
+		&:hover{
+			color: @color-primary-dark1;
+		}
+	}
+
+	+ p{
+		margin-top: @space * 3;
+	}
+}

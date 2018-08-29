@@ -1,0 +1,71 @@
+extends layouts/layout.pug
+
+block content
+
+    section.card
+        .card-header
+            h2.card-title Pacientes
+
+        form.pacientes(action="")           
+            
+            fieldset 
+                legend Geral
+                +inputText("Nome")
+                +inputData("Data de nascimento")
+                +inputText("Sexo")
+                +inputText("Tipo Sanguíneo")
+                +inputText("Fator RH")
+                +inputText("Fator DU")
+                +textarea("Observação")
+                +inputText("Nome do pai")
+                +inputText("Nome da mãe")
+
+            fieldset 
+                legend Documentos
+                +inputCpf("CPF")
+                +inputText("RG")
+                +inputText("Cor da pele")
+                +inputText("Etnia")
+
+            fieldset 
+                legend Endereços
+                +inputCep("Cep")
+                +inputText("Lograduro")
+                +inputText("Número")
+                +inputText("Complemento")
+                +inputText("Bairro")
+                +inputText("Estado")
+                +inputText("Cidade")
+                +inputTel("Telefone")
+
+            fieldset 
+                legend Menor de idade
+                +inputText("Nome do responsável")
+                +inputText("Documento")
+                +inputText("Número")
+
+            fieldset 
+                legend Maternidade
+                +checkbox("Filhos")
+                +checkbox-group([
+                    "Cras justo odio",
+                    "Cras justo odio",
+                    "Cras justo odio"
+                ],"name")
+                +spinner("30","720","15","72")
+                +inputText("Parto normal")
+                +inputText("Cesariana")
+                +inputText("Aborto")
+                +inputText("Gestação")
+                +inputText("Lactante")
+            
+            fieldset 
+                legend Ciclo menstrual
+                +inputText("Menstrução recente")
+                +input("Menopausa")
+                +inputText("Histerectomizada")
+                                  
+            .button-group
+                +button("Cancelar")
+                +buttonLink("Voltar")
+                +buttonPositivePrimary("Avançar")

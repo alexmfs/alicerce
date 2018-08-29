@@ -1,0 +1,14 @@
+mixin th(label, value)
+    th(ng-show="filter'"+`${value}`+"'")
+        a(href="#", ng-click="sortType = '"+`${value}`+"'; sortReverse = !sortReverse")= label
+            span.asc(ng-show="sortType == '"+`${value}`+"' && sortReverse")
+            span.desc(ng-show="sortType == '"+`${value}`+"' && !sortReverse")
+
+mixin td(label, value)
+    td(ng-show="filter"+`${value}`+"")= label
+
+mixin link(coluna)
+ th(ng-show="filter'#{coluna}'")
+   a(href='#', ng-click="sortType='#{coluna}'; sortReverse= !sortReverse") #{coluna}
+      span(ng-show="sortType == '#{coluna}' && !sortReverse").desc
+      span(ng-show="sortType == '#{coluna}' && sortReverse").asc

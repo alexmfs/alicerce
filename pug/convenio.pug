@@ -1,0 +1,34 @@
+extends layouts/layout.pug
+
+block content
+
+    section.card
+        h2.card-title Convênio
+        h3.subtitle Cards selecionáveis
+
+        form.convenios(action="")
+
+            .card-select
+                input#um(type="radio",name="convenio")
+                label(for="um")
+                    .card-header
+                        p Unimed
+                        .card-options
+                            +buttonEdit
+                            +buttonDelete
+                    .card-content
+                        p.plano-numero 0 005 000004181302 0
+                        p.plano-tipo RB04 Básico
+            
+            .button-group
+                +button("Cancelar")
+                +buttonLink("Voltar")
+                +buttonPositivePrimary("Avançar")
+        
+    section.card
+         h2.card-title Switcher
+
+         .switch
+            input#outro(type="checkbox", name="outro", value="outro")
+            label(for="outro") Opção Outro
+            
