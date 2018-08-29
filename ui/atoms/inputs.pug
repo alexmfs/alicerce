@@ -49,7 +49,7 @@ mixin checkbox-group(items, name)
                 input(type="checkbox" id=index, name=name)
                 label(for=index)= item
                 
-mixin spinner(min=null,max=null,step=null,val=null)      
+mixin spinner(min=null,max=null,step=null,val=0)      
   .spinner
       input(type="text", data-min=min, data-max=max, data-step=step, value=val)
       .nav

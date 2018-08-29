@@ -22,7 +22,7 @@ $('.spinner').each(function() {
       var
         valor = input.val(),
         valor2 = valor/min,
-        resto = valor % min
+        resto = valor % min,
         corrigeUp = min - resto,
         corrigeDown = resto;
   

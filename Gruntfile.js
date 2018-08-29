@@ -57,6 +57,7 @@ module.exports = function(grunt) {
             scripts: {
                 src: [
                     '<%= dirs.js.bosons %>_start.js',
+                    '<%= dirs.js.bosons %>keycodes.js',
                     '<%= dirs.js.bosons %>goto.js',
                     '<%= dirs.js.bosons %>masks.js',
                     '<%= dirs.js.bosons %>openClose.js',                    
@@ -81,7 +82,7 @@ module.exports = function(grunt) {
                 }
               },
               files: [ {
-                cwd: "pug/",
+                cwd: "app/",
                 src: "*.pug",
                 dest: "www/",
                 expand: true,
@@ -102,7 +103,7 @@ module.exports = function(grunt) {
             pug: {
                 files: [
                     'Gruntfile.js',
-                    'pug/*.pug',
+                    'app/*.pug',
                     '<%= dirs.dev %>*/*.pug',
                 ],
                 tasks: ['pug'],
@@ -130,10 +131,9 @@ module.exports = function(grunt) {
                     nospawn: true
                 }
             }            
-        },
+        }  
     });
     // registrando tarefa default
     grunt.registerTask( 'default', ['watch'] );
     grunt.registerTask( 'compile', ['less','postcss','concat','uglify','pug','watch'] );
-    grunt.registerTask( 'deploy', ['deploy'] );
 };

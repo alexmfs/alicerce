@@ -1,0 +1,6 @@
+mixin spinner(min=null,max=null,step=null,val=0)      
+  .spinner
+      input(type="text", data-min=min, data-max=max, data-step=step, value=val)
+      .nav
+          .up +
+          .down -   
