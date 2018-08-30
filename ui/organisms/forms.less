@@ -1,0 +1,109 @@
+  .form-flex{
+    .form-control{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        > label{
+            flex: 1 0 100px;
+            max-width: 200px;            
+            + * {
+                flex: 1 0 200px;
+            }
+        }
+    }
+  }
+
+
+
+.form-content{
+    // .columns;
+    // .is-multiline;
+    // .form-control {        
+    //     .column;
+    // }
+    .wrap;
+    display: table;
+
+    .label-control{
+        margin-bottom: 5px;
+    }
+    .form-control{
+        .column-desktop(12);
+        margin-bottom: @gap-large!important;
+    }
+}
+
+// pacientes
+
+.form-header{
+    .column-desktop(12);
+    margin-top: @gap!important;
+    margin-bottom: @gap!important;
+}
+
+.form-control{
+    // clear: both;
+    &.nome{
+        .column-desktop(12);
+    }
+    &.data-de-nascimento{
+        .column-desktop(2);
+    }
+    &.sexo{
+        .column-desktop(2);
+    }
+    &.tipo-sanguíneo{
+        .column-desktop(2);
+    }
+    &.fator-rh{
+        .column-desktop(2);
+    }
+    &.fator-du{ 
+        .column-desktop(2);
+    }
+    &.observação{
+        .column-desktop(12);
+    }
+    &.nome-do-pai{
+        .column-desktop(6);
+    }
+    &.nome-da-mãe{
+        .column-desktop(6);
+    }
+    &.cpf{
+        .column-desktop(3);
+    }
+    &.rg{
+        .column-desktop(3)
+    }
+    &.cor-da-pele{
+        .column-desktop(3)
+    }
+    &.etnia{
+        .column-desktop(3)
+    }
+    &.cep{
+        .column-desktop(2)
+    }
+    &.logradouro{
+        .column-desktop(10)
+    }
+    &.número{
+        .column-desktop(2)
+    }
+    &.complemento{
+        .column-desktop(5)
+    }
+    &.bairro{
+        .column-desktop(5)
+    }
+    &.estado{
+        .column-desktop(3)
+    }
+    &.cidade{
+        .column-desktop(3)
+    }
+    &.telefone-1, &.telefone-2{
+        .column-desktop(3)
+    }       
+}

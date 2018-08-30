@@ -1,8 +1,8 @@
-mixin input(type, label, classe)
-    - classe = classe || '';
-    .form-control
+mixin input(type, label, classe=null)
+     .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
         label.label-control= label 
-        input.input-control(type=type, class=`${classe}`)
+        input.input-control(type=type, class=classe)
+//- .form-control(class=label.replace(' ','-').toLowerCase())
 
 mixin inputText(label)
  +input("text", label)
@@ -20,7 +20,7 @@ mixin inputEmail(label)
  +input("email", label)
 
 mixin textarea(label)
-    .form-control
+    .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
         label.label-control= label 
         textarea.input-control
 
@@ -42,16 +42,16 @@ mixin checkbox(label, name, id)
             input(type="checkbox" id=id, name=name)
             label(for=id)= label
 
-mixin checkbox-group(items, name)
+mixin checkbox-group(items, name, id)
     .form-control.options
         each item, index in items
             .switch
                 input(type="checkbox" id=index, name=name)
                 label(for=index)= item
                 
-mixin spinner(min=null,max=null,step=null,val=0)      
-  .spinner
-      input(type="text", data-min=min, data-max=max, data-step=step, value=val)
-      .nav
-          .up +
-          .down -   
+mixin inputSelect(items, label, id)
+    .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
+        label.label-control= label
+        select.input-control(id=id)
+            each item, index in items
+                option(value=item)=item

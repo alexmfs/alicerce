@@ -10,12 +10,12 @@
 			border-color: @color-primary;
 		}
 	}
-	&:not(.required) label:after{
-		content: "(opcional)";
-		margin-left: 5px;
-		opacity: 0.7;
-		font-size: 75%;
-	}
+	// &:not(.required) label:after{
+	// 	content: "(opcional)";
+	// 	margin-left: 5px;
+	// 	opacity: 0.7;
+	// 	font-size: 75%;
+	// }
 	&.options{
 		.switch + .switch{
 			margin-top: 10px;
@@ -30,10 +30,14 @@
 .input-control{
 	.font-base;
 	width: 100%;
-	border: 1px solid @color-dark1;
+	border: 1px solid @color-grayscale3;
 	border-radius: .2em;
 	padding: .8rem;
 	transition: @transition;
+	background: transparent;
+	&:not(textarea){
+		height: 32px;
+	}
 	&:focus{
 		border-color: @color-primary;
 	}
@@ -162,12 +166,13 @@ textarea{
 
 // textarea
 
-fieldset{
+.fieldset{
 	padding: .67em .75em .35em .75em;
-	border: 1px solid;
+	border: 1px solid #eee;
 	margin-bottom: 20px;
+
 }
 
 legend{
 	padding: 2px 8px 2px 2px;
-} 
+}

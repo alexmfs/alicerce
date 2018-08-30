@@ -1,5 +1,5 @@
 include ../../ui/ui.pug
-doctype
+doctype html
 html(lang="pt-BR")
   head
     meta(name="robots", content="index, follow")
@@ -12,8 +12,10 @@ html(lang="pt-BR")
 
     link(rel="icon" href="favicon.png" type="image/x-icon")
     link(rel="shortcut icon" href="favicon.png" type="image/x-icon")
-    link(rel="stylesheet" href="assets/styles.min.css")
-    link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
+    block styles
+      link(rel="stylesheet" href="assets/styles.min.css")
+    block scriptsHead
+      link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
     
     title Unilab | Gestão inteligente para laboratórios
 
@@ -98,5 +100,5 @@ html(lang="pt-BR")
 
   footer
     p footer
-  script(src="assets/vendors.min.js")
-  script(src="assets/scripts.min.js")
+    script(src="assets/vendors.min.js")
+    script(src="assets/scripts.min.js")
