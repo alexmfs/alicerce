@@ -1309,6 +1309,9 @@ ol.list li:before {
     margin: 0 1.04166667%;
   }
 }
+.form-control.nome-do-pai {
+  clear: both;
+}
 @media only screen and (min-width: 950px)  {
   .form-control.nome-do-pai {
     display: inline;
@@ -1325,11 +1328,14 @@ ol.list li:before {
     margin: 0 1.04166667%;
   }
 }
+.form-control.cpf {
+  clear: both;
+}
 @media only screen and (min-width: 950px)  {
   .form-control.cpf {
     display: inline;
     float: left;
-    width: 22.91666667%;
+    width: 14.58333333%;
     margin: 0 1.04166667%;
   }
 }
@@ -1357,6 +1363,9 @@ ol.list li:before {
     margin: 0 1.04166667%;
   }
 }
+.form-control.cep {
+  width: 100px;
+}
 @media only screen and (min-width: 950px)  {
   .form-control.cep {
     display: inline;
@@ -1369,7 +1378,7 @@ ol.list li:before {
   .form-control.logradouro {
     display: inline;
     float: left;
-    width: 81.25%;
+    width: 64.58333333%;
     margin: 0 1.04166667%;
   }
 }
@@ -1385,7 +1394,7 @@ ol.list li:before {
   .form-control.complemento {
     display: inline;
     float: left;
-    width: 39.58333333%;
+    width: 14.58333333%;
     margin: 0 1.04166667%;
   }
 }
@@ -1401,7 +1410,7 @@ ol.list li:before {
   .form-control.estado {
     display: inline;
     float: left;
-    width: 22.91666667%;
+    width: 14.58333333%;
     margin: 0 1.04166667%;
   }
 }
@@ -1410,6 +1419,14 @@ ol.list li:before {
     display: inline;
     float: left;
     width: 22.91666667%;
+    margin: 0 1.04166667%;
+  }
+}
+@media only screen and (min-width: 950px)  {
+  .form-control.email {
+    display: inline;
+    float: left;
+    width: 47.91666667%;
     margin: 0 1.04166667%;
   }
 }

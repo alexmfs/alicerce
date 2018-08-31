@@ -8,45 +8,46 @@ block content
 
         form.pacientes(action="")
 
-            div.fieldset
+            .fieldset
                 .form-header
                     .card-title Geral
                 .form-content              
                     +inputText("Nome")
                     +inputData("Data de nascimento")
-                    +inputSelect([
-                        'Selecione',
-                        'masculino',
-                        'feminino'
+
+                    +radio-group([
+                        'Feminino',
+                        'Masculino'                        
                     ],"Sexo")
-                    +inputSelect([
-                        'Selecione',
+
+                    +radio-group([
                         'A',
                         'B',
                         'AB',
                         'O'
                     ],"Tipo Sanguíneo")
-                    +inputSelect([
-                        'Selecione',
+                    
+                    +checkbox-group([
                         'Positivo',
                         'Negativo'
-                    ],"Fator RH")   
-                    +inputSelect([
-                        'Selecione',
+                    ],"Fator RH")
+                    
+                    +checkbox-group([
                         'Positivo',
                         'Negativo'
                     ],"Fator DU")
-                    +inputCpf("CPF")
-                    +inputText("RG")                    
-                    +textarea("Observação")
+
+                    +inputText("CPF", "cpf")
+                    +inputText("RG")                
                     +inputText("Nome do pai")
                     +inputText("Nome da mãe")
+                    +textarea("Observação")
 
-            div.fieldset
+            .fieldset
                 .form-header
                     .card-title Endereços
                 .form-content.form-enderecos
-                    +inputCep("Cep")
+                    +inputText("Cep", "cep")
                     +inputText("Logradouro")
                     +inputText("Número")
                     +inputText("Complemento")
@@ -54,7 +55,45 @@ block content
                     +inputSelect([],"Estado","estados")
                     +inputSelect([],"Cidade","cidades")
 
-            div.fieldset
+            .fieldset
+                .form-header
+                    .card-title Convênios
+                .form-content.convenios
+                    .card-select
+                        input#um(type="radio",name="convenio")
+                        label(for="um")
+                            .card-header
+                                p Unimed
+                                .card-options
+                                    +buttonEdit
+                                    +buttonDelete
+                            .card-content
+                                p.plano-numero 0 005 000004181302 0
+                                p.plano-tipo RB04 Básico           
+                    .card-select
+                        input#um(type="radio",name="convenio")
+                        label(for="um")
+                            .card-header
+                                p Unimed
+                                .card-options
+                                    +buttonEdit
+                                    +buttonDelete
+                            .card-content
+                                p.plano-numero 0 005 000004181302 0
+                                p.plano-tipo RB04 Básico
+                    .card-select
+                        input#um(type="radio",name="convenio")
+                        label(for="um")
+                            .card-header
+                                p Unimed
+                                .card-options
+                                    +buttonEdit
+                                    +buttonDelete
+                            .card-content
+                                p.plano-numero 0 005 000004181302 0
+                                p.plano-tipo RB04 Básico                                                                
+                                                            
+            .fieldset
                 .form-header
                     .card-title Contatos
                 .form-content.form-enderecos
@@ -62,7 +101,7 @@ block content
                     +inputTel("Telefone 1")
                     +inputTel("Telefone 2")
 
-            div.fieldset
+            .fieldset
                 .form-header
                     .card-title Outros
                 .form-content          
