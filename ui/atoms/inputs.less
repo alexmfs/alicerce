@@ -33,7 +33,7 @@
 	.font-base;
 	width: 100%;
 	border: 1px solid @color-grayscale3;
-	border-radius: .2em;
+	.radius();
 	padding: .8rem;
 	transition: @transition;
 	background: transparent;
@@ -50,7 +50,7 @@
 	background: @color-grayscale1;
 	border: 1px solid @color-grayscale3;
 	color: @color-grayscale4;
-	border-radius: .2em;
+	.radius();
 	transition: .2s;
 	display: flex;
 	align-items: center;
@@ -165,12 +165,3 @@ textarea{
 
 // textarea
 
-.fieldset{
-	padding: .67em .75em .35em .75em;
-	border: 1px solid #eee;
-	margin-bottom: 20px;
-}
-
-legend{
-	padding: 2px 8px 2px 2px;
-}

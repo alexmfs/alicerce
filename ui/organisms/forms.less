@@ -1,20 +1,18 @@
-//   .form-flex{
-//     .form-control{
-//         display: flex;
-//         flex-wrap: wrap;
-//         align-items: center;
-//         > label{
-//             flex: 1 0 100px;
-//             max-width: 200px;            
-//             + * {
-//                 flex: 1 0 200px;
-//             }
-//         }
-//     }
-//   }
+.fieldset{
+    display: grid;
+    grid-gap: @gap;
+    border: 1px solid #eee;
+    padding: @gap;
+}
+
+legend{
+	padding: 2px 8px 2px 2px;
+}
+
+
+
 
 .form-content {
-    @gap: 20px;
     display: grid;
     grid-gap: @gap;
     grid-auto-rows: auto;    
@@ -26,7 +24,9 @@
     margin-bottom: 0;
 }
 
-
+.grid-both(){
+    grid-column-start: 1;
+}
 
 .form-content{
     // .columns;
@@ -41,7 +41,7 @@
         margin-bottom: 5px;
     }
     .form-control{
-        background: #f9e4e4;
+        background: #f5f9ff;
         grid-column-end: span 12;
         // .column-desktop(12);
         // margin-bottom: @gap-large!important;
@@ -56,8 +56,13 @@
     // margin-bottom: @gap!important;
 }
 
+form.pacientes{
+    display: grid;
+    grid-gap: @gap;
+}
+
 .form-control{
-    // clear: both;
+    // .grid-both;
     &.nome{
         // grid-column-end: span 12;
         // .column-desktop(12);
@@ -90,7 +95,7 @@
     &.nome-do-pai{
         grid-column-end: span 6;
         // .column-desktop(6);
-        clear: both;
+        .grid-both;
     }
     &.nome-da-mãe{
         grid-column-end: span 6;
@@ -99,7 +104,7 @@
     &.cpf{
         grid-column-end: span 2;
         // .column-desktop(2);
-        clear: both;
+        .grid-both;
     }
     &.rg{
         grid-column-end: span 3;
@@ -116,7 +121,6 @@
     &.cep{
         grid-column-end: span 2;
         // .column-desktop(2);
-        width: 100px;
    }
     &.logradouro{
         grid-column-end: span 8;

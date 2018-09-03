@@ -386,7 +386,7 @@ img {
   border: 1px solid #99a3ac;
   transition: 0.2s;
   text-align: center;
-  border-radius: 0.3em;
+  border-radius: 0.5em;
   font-size: 1.6rem;
   display: inline-block;
   text-decoration: none;
@@ -596,7 +596,7 @@ p:not([class]) + p {
   font: 400 1.4rem 'Arial';
   width: 100%;
   border: 1px solid #e3e6e8;
-  border-radius: .2em;
+  border-radius: 0.5em;
   padding: .8rem;
   transition: 0.2s;
   background: transparent;
@@ -611,7 +611,7 @@ p:not([class]) + p {
   background: #f6f7fa;
   border: 1px solid #e3e6e8;
   color: #99a3ac;
-  border-radius: .2em;
+  border-radius: 0.5em;
   transition: .2s;
   display: flex;
   align-items: center;
@@ -735,14 +735,6 @@ textarea {
   background: #ffffff;
   transition: 0.2s;
   color: #ffffff;
-}
-.fieldset {
-  padding: .67em .75em .35em .75em;
-  border: 1px solid #eee;
-  margin-bottom: 20px;
-}
-legend {
-  padding: 2px 8px 2px 2px;
 }
 #alert-default,
 .alert-info,
@@ -1203,11 +1195,20 @@ ol.list li:before {
   bottom: 50%;
   visibility: visible;
 }
+.fieldset {
+  display: grid;
+  grid-gap: 15px;
+  border: 1px solid #eee;
+  padding: 15px;
+}
+legend {
+  padding: 2px 8px 2px 2px;
+}
 .form-content {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 15px;
   grid-auto-rows: auto;
-  grid-template-columns: repeat(12, calc(100% / 12 - 20px));
+  grid-template-columns: repeat(12, calc(100% / 12 - 15px));
 }
 .form-content .form-control {
   margin-bottom: 0;
@@ -1216,8 +1217,12 @@ ol.list li:before {
   margin-bottom: 5px;
 }
 .form-content .form-control {
-  background: #f9e4e4;
+  background: #f5f9ff;
   grid-column-end: span 12;
+}
+form.pacientes {
+  display: grid;
+  grid-gap: 15px;
 }
 .form-control.data-de-nascimento {
   grid-column-end: span 2;
@@ -1236,14 +1241,14 @@ ol.list li:before {
 }
 .form-control.nome-do-pai {
   grid-column-end: span 6;
-  clear: both;
+  grid-column-start: 1;
 }
 .form-control.nome-da-mãe {
   grid-column-end: span 6;
 }
 .form-control.cpf {
   grid-column-end: span 2;
-  clear: both;
+  grid-column-start: 1;
 }
 .form-control.rg {
   grid-column-end: span 3;
@@ -1256,7 +1261,6 @@ ol.list li:before {
 }
 .form-control.cep {
   grid-column-end: span 2;
-  width: 100px;
 }
 .form-control.logradouro {
   grid-column-end: span 8;
@@ -1406,7 +1410,7 @@ ol.list li:before {
   visibility: hidden;
   transition: 0.2s;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.22);
-  border-radius: .3em;
+  border-radius: 0.5em;
   box-sizing: border-box;
   top: 30px;
   transition: .2s;
