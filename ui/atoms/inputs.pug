@@ -1,56 +1,56 @@
 mixin input(type="text", classe)
- input.input-control(type=type, class=classe)
+    input.input-control(type=type, class=classe)
 
 mixin label(label="")
- label.label-control= label
+    label.label-control= label
 
 mixin inputBase(type, label="", classe)
- .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
-  +label(label)
-  +input(type, classe)
+    .form-control(class=label)
+        +label(label)
+        +input(type, classe)
 
 mixin inputOptionsBase(type, label, classe, id, name)
- .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
-  +input(type, classe, id, name)
-  +label(label, id)
+    .form-control(class=label)
+        +input(type, classe, id, name)
+        +label(label, id)
 
 mixin radio(label, classe, id, name)
- +inputOptionsBase("radio",label, classe, id, name)
+    +inputOptionsBase("radio",label, classe, id, name)
 
 mixin checkbox(label, classe, id, name)
- +inputOptionsBase("checkbox",label, classe, id, name)  
+    +inputOptionsBase("checkbox",label, classe, id, name)  
 
 mixin textarea(label="", classe)
- .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
-  +label(label)
-  textarea.input-control(class=classe)
+    .form-control(class=label)
+        +label(label)
+        textarea.input-control(class=classe)
 
 mixin inputText(label, classe)
- +inputBase("text",label, classe)
+    +inputBase("text",label, classe)
 
 mixin inputTel(label)
- +inputBase("tel", label)
+    +inputBase("tel", label)
 
 mixin inputUrl(label)
- +inputBase("url", label)
+    +inputBase("url", label)
 
 mixin inputPassword(label)
- +inputBase("password", label)
+    +inputBase("password", label)
 
 mixin inputEmail(label)
- +inputBase("email", label)
+    +inputBase("email", label)
 
 mixin inputData(label)
- +inputBase("text", label, "data")  
+    +inputBase("text", label, "data")  
                 
 mixin inputSelect(items, label, id)
-    .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
+    .form-control(class=label)
         +label(label)
         select.input-control(id=id)
             each item, index in items
                 option(value=item)=item
 
-mixin radio-group(items, label, name= label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
+mixin radio-group(items, label, name=label)
     .form-control(class=name)
         +label(label)
         each item, index in items
@@ -58,7 +58,7 @@ mixin radio-group(items, label, name= label.replace(' ','-').replace(' ','-').re
                 input(type="radio" id=name+'-'+index, name=name)
                 label(for=name+'-'+index)= item      
 
-mixin checkbox-group(items, label, name= label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
+mixin checkbox-group(items, label, name=label)
     .form-control(class=name)
         +label(label)
         each item, index in items

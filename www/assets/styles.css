@@ -386,7 +386,7 @@ img {
   border: 1px solid #99a3ac;
   transition: 0.2s;
   text-align: center;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   font-size: 1.6rem;
   display: inline-block;
   text-decoration: none;
@@ -596,7 +596,7 @@ p:not([class]) + p {
   font: 400 1.4rem 'Arial';
   width: 100%;
   border: 1px solid #e3e6e8;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   padding: .8rem;
   transition: 0.2s;
   background: transparent;
@@ -611,7 +611,7 @@ p:not([class]) + p {
   background: #f6f7fa;
   border: 1px solid #e3e6e8;
   color: #99a3ac;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   transition: .2s;
   display: flex;
   align-items: center;
@@ -741,7 +741,7 @@ textarea {
 .alert-danger,
 .alert-success,
 .alert-warning {
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   padding: 15px;
   margin-bottom: 15px;
 }
@@ -799,7 +799,7 @@ textarea {
 }
 .cards > li {
   position: relative;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   padding: 15px;
   transition: 0.2s;
   background: #ffffff;
@@ -843,7 +843,7 @@ textarea {
 }
 .card {
   position: relative;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   padding: 15px;
   transition: 0.2s;
   background: #ffffff;
@@ -1149,7 +1149,7 @@ ol.list li:before {
   visibility: hidden;
   transition: 0.5s;
   position: relative;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   padding: 15px;
   transition: 0.2s;
   background: #ffffff;
@@ -1196,10 +1196,11 @@ ol.list li:before {
   visibility: visible;
 }
 .fieldset {
+  border: 1px solid #eee;
   display: grid;
   grid-gap: 15px;
-  border: 1px solid #eee;
   padding: 15px;
+  border-radius: 0.2em;
 }
 legend {
   padding: 2px 8px 2px 2px;
@@ -1281,7 +1282,7 @@ form.pacientes {
   grid-column-end: span 3;
 }
 .form-control.email {
-  grid-column-end: span 2;
+  grid-column-end: span 6;
 }
 .form-control.telefone-1,
 .form-control.telefone-2 {
@@ -1410,7 +1411,7 @@ form.pacientes {
   visibility: hidden;
   transition: 0.2s;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.22);
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   box-sizing: border-box;
   top: 30px;
   transition: .2s;
@@ -1715,7 +1716,7 @@ form.pacientes {
 }
 .card-select label {
   position: relative;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   padding: 15px;
   transition: 0.2s;
   background: #ffffff;
@@ -1805,7 +1806,7 @@ form.pacientes {
 }
 .slidemenu {
   position: relative;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   padding: 15px;
   transition: 0.2s;
   background: #ffffff;

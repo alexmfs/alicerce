@@ -59,39 +59,10 @@ block content
                 .form-header
                     .card-title Convênios
                 .form-content.convenios
-                    .card-select
-                        input#um(type="radio",name="convenio")
-                        label(for="um")
-                            .card-header
-                                p Unimed
-                                .card-options
-                                    +buttonEdit
-                                    +buttonDelete
-                            .card-content
-                                p.plano-numero 0 005 000004181302 0
-                                p.plano-tipo RB04 Básico           
-                    .card-select
-                        input#um(type="radio",name="convenio")
-                        label(for="um")
-                            .card-header
-                                p Unimed
-                                .card-options
-                                    +buttonEdit
-                                    +buttonDelete
-                            .card-content
-                                p.plano-numero 0 005 000004181302 0
-                                p.plano-tipo RB04 Básico
-                    .card-select
-                        input#um(type="radio",name="convenio")
-                        label(for="um")
-                            .card-header
-                                p Unimed
-                                .card-options
-                                    +buttonEdit
-                                    +buttonDelete
-                            .card-content
-                                p.plano-numero 0 005 000004181302 0
-                                p.plano-tipo RB04 Básico                                                                
+                    +card-select("unimed", "convenios")
+                    +card-select("unimed", "convenios")
+                    +card-select("unimed", "convenios")
+                    +card-select                                                                       
                                                             
             .fieldset
                 .form-header

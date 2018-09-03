@@ -1,8 +1,8 @@
 .fieldset{
-    display: grid;
-    grid-gap: @gap;
     border: 1px solid #eee;
-    padding: @gap;
+    .grid();
+    .padding();
+    .radius();
 }
 
 legend{
@@ -13,8 +13,7 @@ legend{
 
 
 .form-content {
-    display: grid;
-    grid-gap: @gap;
+    .grid();
     grid-auto-rows: auto;    
     grid-template-columns: repeat(12, ~'calc(100% / 12 - @{gap})');
 }
@@ -147,7 +146,7 @@ form.pacientes{
         // .column-desktop(3)
     }
     &.email{
-        grid-column-end: span 2;
+        grid-column-end: span 6;
         // .column-desktop(6)
     }    
     &.telefone-1, &.telefone-2{
