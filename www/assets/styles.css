@@ -1203,241 +1203,85 @@ ol.list li:before {
   bottom: 50%;
   visibility: visible;
 }
-.form-flex .form-control {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.form-flex .form-control > label {
-  flex: 1 0 100px;
-  max-width: 200px;
-}
-.form-flex .form-control > label + * {
-  flex: 1 0 200px;
-}
 .form-content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  display: table;
+  display: grid;
+  grid-gap: 20px;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(12, calc(100% / 12 - 20px));
 }
-@media only screen and (max-width: 610px) {
-  .form-content {
-    padding: 0 10px;
-  }
+.form-content .form-control {
+  margin-bottom: 0;
 }
 .form-content .label-control {
   margin-bottom: 5px;
 }
 .form-content .form-control {
-  margin-bottom: 30px !important;
+  background: #f9e4e4;
+  grid-column-end: span 12;
 }
-@media only screen and (min-width: 950px)  {
-  .form-content .form-control {
-    display: inline;
-    float: left;
-    width: 97.91666667%;
-    margin: 0 1.04166667%;
-  }
+.form-control.data-de-nascimento {
+  grid-column-end: span 2;
 }
-.form-header {
-  margin-top: 15px !important;
-  margin-bottom: 15px !important;
+.form-control.sexo {
+  grid-column-end: span 2;
 }
-@media only screen and (min-width: 950px)  {
-  .form-header {
-    display: inline;
-    float: left;
-    width: 97.91666667%;
-    margin: 0 1.04166667%;
-  }
+.form-control.tipo-sanguíneo {
+  grid-column-end: span 2;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.nome {
-    display: inline;
-    float: left;
-    width: 97.91666667%;
-    margin: 0 1.04166667%;
-  }
+.form-control.fator-rh {
+  grid-column-end: span 2;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.data-de-nascimento {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
-}
-@media only screen and (min-width: 950px)  {
-  .form-control.sexo {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
-}
-@media only screen and (min-width: 950px)  {
-  .form-control.tipo-sanguíneo {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
-}
-@media only screen and (min-width: 950px)  {
-  .form-control.fator-rh {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
-}
-@media only screen and (min-width: 950px)  {
-  .form-control.fator-du {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
-}
-@media only screen and (min-width: 950px)  {
-  .form-control.observação {
-    display: inline;
-    float: left;
-    width: 97.91666667%;
-    margin: 0 1.04166667%;
-  }
+.form-control.fator-du {
+  grid-column-end: span 2;
 }
 .form-control.nome-do-pai {
+  grid-column-end: span 6;
   clear: both;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.nome-do-pai {
-    display: inline;
-    float: left;
-    width: 47.91666667%;
-    margin: 0 1.04166667%;
-  }
-}
-@media only screen and (min-width: 950px)  {
-  .form-control.nome-da-mãe {
-    display: inline;
-    float: left;
-    width: 47.91666667%;
-    margin: 0 1.04166667%;
-  }
+.form-control.nome-da-mãe {
+  grid-column-end: span 6;
 }
 .form-control.cpf {
+  grid-column-end: span 2;
   clear: both;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.cpf {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
+.form-control.rg {
+  grid-column-end: span 3;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.rg {
-    display: inline;
-    float: left;
-    width: 22.91666667%;
-    margin: 0 1.04166667%;
-  }
+.form-control.cor-da-pele {
+  grid-column-end: span 3;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.cor-da-pele {
-    display: inline;
-    float: left;
-    width: 22.91666667%;
-    margin: 0 1.04166667%;
-  }
-}
-@media only screen and (min-width: 950px)  {
-  .form-control.etnia {
-    display: inline;
-    float: left;
-    width: 22.91666667%;
-    margin: 0 1.04166667%;
-  }
+.form-control.etnia {
+  grid-column-end: span 3;
 }
 .form-control.cep {
+  grid-column-end: span 2;
   width: 100px;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.cep {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
+.form-control.logradouro {
+  grid-column-end: span 8;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.logradouro {
-    display: inline;
-    float: left;
-    width: 64.58333333%;
-    margin: 0 1.04166667%;
-  }
+.form-control.número {
+  grid-column-end: span 2;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.número {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
+.form-control.complemento {
+  grid-column-end: span 2;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.complemento {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
+.form-control.bairro {
+  grid-column-end: span 5;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.bairro {
-    display: inline;
-    float: left;
-    width: 39.58333333%;
-    margin: 0 1.04166667%;
-  }
+.form-control.estado {
+  grid-column-end: span 2;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.estado {
-    display: inline;
-    float: left;
-    width: 14.58333333%;
-    margin: 0 1.04166667%;
-  }
+.form-control.cidade {
+  grid-column-end: span 3;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.cidade {
-    display: inline;
-    float: left;
-    width: 22.91666667%;
-    margin: 0 1.04166667%;
-  }
+.form-control.email {
+  grid-column-end: span 2;
 }
-@media only screen and (min-width: 950px)  {
-  .form-control.email {
-    display: inline;
-    float: left;
-    width: 47.91666667%;
-    margin: 0 1.04166667%;
-  }
-}
-@media only screen and (min-width: 950px)  {
-  .form-control.telefone-1,
-  .form-control.telefone-2 {
-    display: inline;
-    float: left;
-    width: 22.91666667%;
-    margin: 0 1.04166667%;
-  }
+.form-control.telefone-1,
+.form-control.telefone-2 {
+  grid-column-end: span 3;
 }
 .pattern-color li {
   width: 100px;

@@ -1,17 +1,30 @@
-  .form-flex{
-    .form-control{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        > label{
-            flex: 1 0 100px;
-            max-width: 200px;            
-            + * {
-                flex: 1 0 200px;
-            }
-        }
-    }
-  }
+//   .form-flex{
+//     .form-control{
+//         display: flex;
+//         flex-wrap: wrap;
+//         align-items: center;
+//         > label{
+//             flex: 1 0 100px;
+//             max-width: 200px;            
+//             + * {
+//                 flex: 1 0 200px;
+//             }
+//         }
+//     }
+//   }
+
+.form-content {
+    @gap: 20px;
+    display: grid;
+    grid-gap: @gap;
+    grid-auto-rows: auto;    
+    grid-template-columns: repeat(12, ~'calc(100% / 12 - @{gap})');
+}
+
+.form-content .form-control {
+    // grid-column-end: -1;
+    margin-bottom: 0;
+}
 
 
 
@@ -21,95 +34,120 @@
     // .form-control {        
     //     .column;
     // }
-    .wrap;
-    display: table;
+    // .wrap;
+    // display: table;
 
     .label-control{
         margin-bottom: 5px;
     }
     .form-control{
-        .column-desktop(12);
-        margin-bottom: @gap-large!important;
+        background: #f9e4e4;
+        grid-column-end: span 12;
+        // .column-desktop(12);
+        // margin-bottom: @gap-large!important;
     }
 }
 
 // pacientes
 
 .form-header{
-    .column-desktop(12);
-    margin-top: @gap!important;
-    margin-bottom: @gap!important;
+    // .column-desktop(12);
+    // margin-top: @gap!important;
+    // margin-bottom: @gap!important;
 }
 
 .form-control{
     // clear: both;
     &.nome{
-        .column-desktop(12);
+        // grid-column-end: span 12;
+        // .column-desktop(12);
+        
     }
     &.data-de-nascimento{
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
     }
     &.sexo{
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
     }
     &.tipo-sanguíneo{
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
     }
     &.fator-rh{
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
     }
     &.fator-du{ 
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
     }
     &.observação{
-        .column-desktop(12);
+        // grid-column-end: span 12;
+        // .column-desktop(12);
     }
     &.nome-do-pai{
-        .column-desktop(6);
+        grid-column-end: span 6;
+        // .column-desktop(6);
         clear: both;
     }
     &.nome-da-mãe{
-        .column-desktop(6);
+        grid-column-end: span 6;
+        // .column-desktop(6);
     }
     &.cpf{
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
         clear: both;
     }
     &.rg{
-        .column-desktop(3);
+        grid-column-end: span 3;
+        // .column-desktop(3);
     }
     &.cor-da-pele{
-        .column-desktop(3)
+        grid-column-end: span 3;
+        // .column-desktop(3)
     }
     &.etnia{
-        .column-desktop(3)
+        grid-column-end: span 3;
+        // .column-desktop(3)
     }
     &.cep{
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
         width: 100px;
    }
     &.logradouro{
-        .column-desktop(8)
+        grid-column-end: span 8;
+        // .column-desktop(8)
     }
     &.número{
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
     }
     &.complemento{
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
     }
     &.bairro{
-        .column-desktop(5);
+        grid-column-end: span 5;
+        // .column-desktop(5);
     }
     &.estado{
-        .column-desktop(2);
+        grid-column-end: span 2;
+        // .column-desktop(2);
     }
     &.cidade{
-        .column-desktop(3)
+        grid-column-end: span 3;
+        // .column-desktop(3)
     }
     &.email{
-        .column-desktop(6)
+        grid-column-end: span 2;
+        // .column-desktop(6)
     }    
     &.telefone-1, &.telefone-2{
-        .column-desktop(3)
+        grid-column-end: span 3;
+        // .column-desktop(3)
     }       
 }
