@@ -9,13 +9,11 @@ legend{
 	padding: 2px 8px 2px 2px;
 }
 
-
-
-
 .form-content {
     .grid();
     grid-auto-rows: auto;    
     grid-template-columns: repeat(12, ~'calc(100% / 12 - @{gap})');
+    justify-content: space-between;
 }
 
 .form-content .form-control {
@@ -40,7 +38,6 @@ legend{
         margin-bottom: 5px;
     }
     .form-control{
-        background: #f5f9ff;
         grid-column-end: span 12;
         // .column-desktop(12);
         // margin-bottom: @gap-large!important;
@@ -69,14 +66,14 @@ form.pacientes{
     }
     &.data-de-nascimento{
         grid-column-end: span 2;
-        // .column-desktop(2);
     }
     &.sexo{
-        grid-column-end: span 2;
+        grid-column-start: 1;
+        grid-column-end: span 3;
         // .column-desktop(2);
     }
     &.tipo-sanguíneo{
-        grid-column-end: span 2;
+        grid-column-end: span 3;
         // .column-desktop(2);
     }
     &.fator-rh{
@@ -84,7 +81,7 @@ form.pacientes{
         // .column-desktop(2);
     }
     &.fator-du{ 
-        grid-column-end: span 2;
+        grid-column-end: span 3;
         // .column-desktop(2);
     }
     &.observação{

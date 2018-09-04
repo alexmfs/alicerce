@@ -5,12 +5,12 @@ mixin label(label="")
     label.label-control= label
 
 mixin inputBase(type, label="", classe)
-    .form-control(class=label)
+    .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
         +label(label)
         +input(type, classe)
 
 mixin inputOptionsBase(type, label, classe, id, name)
-    .form-control(class=label)
+    .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
         +input(type, classe, id, name)
         +label(label, id)
 
@@ -21,7 +21,7 @@ mixin checkbox(label, classe, id, name)
     +inputOptionsBase("checkbox",label, classe, id, name)  
 
 mixin textarea(label="", classe)
-    .form-control(class=label)
+    .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
         +label(label)
         textarea.input-control(class=classe)
 
@@ -44,24 +44,32 @@ mixin inputData(label)
     +inputBase("text", label, "data")  
                 
 mixin inputSelect(items, label, id)
-    .form-control(class=label)
+    .form-control(class=label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
         +label(label)
         select.input-control(id=id)
             each item, index in items
                 option(value=item)=item
 
-mixin radio-group(items, label, name=label)
+mixin radio-group(items, label, name= label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
     .form-control(class=name)
         +label(label)
         each item, index in items
-            .switch
+            .radio
                 input(type="radio" id=name+'-'+index, name=name)
-                label(for=name+'-'+index)= item      
+                label(for=name+'-'+index)= item 
 
-mixin checkbox-group(items, label, name=label)
+mixin checkbox-group(items, label, name= label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
     .form-control(class=name)
         +label(label)
         each item, index in items
-            .switch
+            .checkbox
                 input(type="checkbox" id=name+'-'+index, name=name)
+                label(for=name+'-'+index)= item
+
+mixin option-group-unique(items, label, name= label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
+    .form-control(class=name)
+        +label(label)
+        .input-options
+            each item, index in items
+                input(type="radio" id=name+'-'+index, name=name)
                 label(for=name+'-'+index)= item

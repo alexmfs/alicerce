@@ -204,17 +204,7 @@ http://fontawesome.io/cheatsheet/
 
 }
 
-.padding(@a: default){
-	& when ((@a) = default)	{
-		padding: @gap;
-	}
-	& when ((@a) = small)	{
-		padding: @gap-small;
-	}
-	& when ((@a) = large)	{
-		padding: @gap-large;
-	}		
-}
+
 
 .transition(@a: default){
 	& when ((@a) = default)	{
@@ -231,13 +221,17 @@ http://fontawesome.io/cheatsheet/
 	}		
 }
 
+.padding(@a: @gap){
+	padding: @gap;
+}
+
 .grid(@a: @gap){
     display: grid;
     grid-gap: @a;
 }
 
 .padding(@a: @gap){
-	padding: @gap;
+	padding: @a;
 }
 
 

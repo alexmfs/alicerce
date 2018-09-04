@@ -596,6 +596,7 @@ p:not([class]) + p {
   font: 400 1.4rem 'Arial';
   width: 100%;
   border: 1px solid #e3e6e8;
+  display: block;
   border-radius: 0.2em;
   padding: .8rem;
   transition: 0.2s;
@@ -706,7 +707,8 @@ textarea {
   position: relative;
 }
 .switch input {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 .switch input:checked + label:before {
   color: #00c394;
@@ -735,6 +737,28 @@ textarea {
   background: #ffffff;
   transition: 0.2s;
   color: #ffffff;
+}
+.input-options input {
+  opacity: 0;
+  position: absolute;
+}
+.input-options input:checked + label {
+  color: #ffffff;
+  background: #00c394;
+}
+.input-options:not(.list) {
+  display: flex;
+}
+.input-options:not(.list) label {
+  transition: 0.2s;
+  padding: 15px;
+  padding: 8px 15px;
+  border-radius: 0.2em;
+  background: #f6f7fa;
+  text-align: center;
+}
+.input-options:not(.list) label + input + label {
+  margin-left: 10px;
 }
 #alert-default,
 .alert-info,
@@ -1210,6 +1234,7 @@ legend {
   grid-gap: 15px;
   grid-auto-rows: auto;
   grid-template-columns: repeat(12, calc(100% / 12 - 15px));
+  justify-content: space-between;
 }
 .form-content .form-control {
   margin-bottom: 0;
@@ -1218,7 +1243,6 @@ legend {
   margin-bottom: 5px;
 }
 .form-content .form-control {
-  background: #f5f9ff;
   grid-column-end: span 12;
 }
 form.pacientes {
@@ -1229,16 +1253,17 @@ form.pacientes {
   grid-column-end: span 2;
 }
 .form-control.sexo {
-  grid-column-end: span 2;
+  grid-column-start: 1;
+  grid-column-end: span 3;
 }
 .form-control.tipo-sanguíneo {
-  grid-column-end: span 2;
+  grid-column-end: span 3;
 }
 .form-control.fator-rh {
   grid-column-end: span 2;
 }
 .form-control.fator-du {
-  grid-column-end: span 2;
+  grid-column-end: span 3;
 }
 .form-control.nome-do-pai {
   grid-column-end: span 6;

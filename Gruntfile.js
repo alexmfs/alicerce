@@ -63,6 +63,7 @@ module.exports = function(grunt) {
                     '<%= dirs.js.bosons %>openClose.js',                    
                     '<%= dirs.js.bosons %>table-shadow-effect.js',
                     '<%= dirs.js.atoms %>menu-mobile.js',
+                    '<%= dirs.js.atoms %>inputs.js',
                     '<%= dirs.js.atoms %>spinner.js',
                     '<%= dirs.js.molecules %>gallery.js',
                     '<%= dirs.js.organisms %>header.js',
@@ -77,6 +78,7 @@ module.exports = function(grunt) {
         pug: {
             compile: {
               options: {
+                pretty: true,
                 data: {
                   debug: false
                 }

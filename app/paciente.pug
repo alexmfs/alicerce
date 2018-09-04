@@ -9,36 +9,40 @@ block content
         form.pacientes(action="")
 
             .fieldset
-                .form-header
+                .card-header
                     .card-title Geral
-                .form-content              
+                    .card-options
+                        +buttonList
+                        +buttonGrid
+                        +buttonConfig
+                .form-content
                     +inputText("Nome")
                     +inputData("Data de nascimento")
 
-                    +radio-group([
+                    +option-group-unique([
                         'Feminino',
-                        'Masculino'                        
+                        'Masculino'
                     ],"Sexo")
 
-                    +radio-group([
+                    +option-group-unique([
                         'A',
                         'B',
                         'AB',
                         'O'
                     ],"Tipo Sanguíneo")
                     
-                    +checkbox-group([
+                    +option-group-unique([
                         'Positivo',
                         'Negativo'
                     ],"Fator RH")
                     
-                    +checkbox-group([
+                    +option-group-unique([
                         'Positivo',
                         'Negativo'
                     ],"Fator DU")
 
                     +inputText("CPF", "cpf")
-                    +inputText("RG")                
+                    +inputText("RG")
                     +inputText("Nome do pai")
                     +inputText("Nome da mãe")
                     +textarea("Observação")
@@ -60,10 +64,16 @@ block content
                     .card-title Convênios
                 .form-content.convenios
                     +card-select("unimed", "convenios")
+                      p.plano-numero 0 005 000004181302 0
+                      p.plano-tipo RB04 Básico
                     +card-select("unimed", "convenios")
+                      p.plano-numero 0 005 000004181302 0
+                      p.plano-tipo RB04 Básico
                     +card-select("unimed", "convenios")
-                    +card-select                                                                       
-                                                            
+                      p.plano-numero 0 005 000004181302 0
+                      p.plano-tipo RB04 Básico
+
+
             .fieldset
                 .form-header
                     .card-title Contatos
@@ -75,7 +85,7 @@ block content
             .fieldset
                 .form-header
                     .card-title Outros
-                .form-content          
+                .form-content
                     +inputText("Cor da pele")
                     +inputText("Etnia")
 

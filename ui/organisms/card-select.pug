@@ -1,29 +1,11 @@
-mixin card-select(name, option)
+mixin card-select(titulo, option, name)
     .card-select
-        input(type="radio",name=name, id=option)
+        input(type="radio",name=name, id=titulo)
         label(for=option)
+            if(titulo)
             .card-header
-                block header
-                p Unimed
-                .card-options
-                    a.link
+              p= titulo
+              .card-options
+                a.link
             .card-content
-                block content
-                p.plano-numero 0 005 000004181302 0
-                p.plano-tipo RB04 Básico
-
-
-//- mixin panel(titulo, tipo, footer)
-//-  - tipoPanel = tipo || 'panel-default';
-//-  .panel(class=`${tipoPanel}`)
-//-   if(titulo)
-//-    .panel-heading
-//-      h3.panel-title #{titulo}
-//-   .panel-body
-//-     block
-//-   if(footer)
-//-     .panel-footer #{footer}
-
-
-//- +panel("Panel com título", "panel-success")
-//-  p Esse é um panel com título e classe para estilizar
+              block
