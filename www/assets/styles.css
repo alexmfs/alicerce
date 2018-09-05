@@ -746,6 +746,9 @@ textarea {
   color: #ffffff;
   background: #00c394;
 }
+.input-options input:focus + label {
+  border-color: #00c394;
+}
 .input-options:not(.list) {
   display: flex;
 }
@@ -756,6 +759,7 @@ textarea {
   border-radius: 0.2em;
   background: #f6f7fa;
   text-align: center;
+  border: 1px solid transparent;
 }
 .input-options:not(.list) label + input + label {
   margin-left: 10px;

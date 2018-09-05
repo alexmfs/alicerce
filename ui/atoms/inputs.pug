@@ -69,7 +69,17 @@ mixin checkbox-group(items, label, name= label.replace(' ','-').replace(' ','-')
 mixin option-group-unique(items, label, name= label.replace(' ','-').replace(' ','-').replace(' ','-').toLowerCase())
     .form-control(class=name)
         +label(label)
-        .input-options
-            each item, index in items
-                input(type="radio" id=name+'-'+index, name=name)
-                label(for=name+'-'+index)= item
+        if items.length > 6
+            select.input-control
+                each item, index in items
+                    option(value=item)=item 
+            //- input.input-control(list='sangue')
+            //- datalist(id='sangue')
+            //-     each item, index in items
+            //-         option(value=item)=item             
+        else
+            .input-options.buttons
+                each item, index in items
+                    input(type="radio" id=name+'-'+index, name=name)
+                    label(for=name+'-'+index)= item 
+     

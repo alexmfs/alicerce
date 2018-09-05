@@ -176,6 +176,9 @@ textarea{
 			color: @color-white;
 			background: @color-primary;
 		}
+		&:focus + label{
+			border-color: @color-primary;
+		}
 	  }
 	
 	&:not(.list){
@@ -186,6 +189,7 @@ textarea{
 		.radius();
 		background: @color-grayscale1;
 		text-align: center;	
+		border: 1px solid transparent;
 		+ input{
 		  + label{
 			margin-left: 10px;
