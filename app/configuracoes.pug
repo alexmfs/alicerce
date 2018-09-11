@@ -1,0 +1,56 @@
+extends layouts/layout.pug
+
+block content
+
+    section.card
+        .card-header
+            h2.card-title Configurações
+
+        form(action="")
+
+            .fieldset
+                .card-header
+                    .card-title Paciente
+                .form-content
+                    table
+                        tr
+                            th: span Campo
+                            th: span Ativo
+                            th: span Obrigatório
+                        tr
+                            td: span Nome
+                            th: span: +switch("pacienteNomeAtivo")
+                            th: span: +switch("pacienteNomeRequired")
+                        tr
+                            td: span CPF
+                            th: span: +switch("cpfNomeAtivo")
+                            th: span: +switch("cpfNomeRequired")
+                        tr
+                            td: span RG
+                            th: span: +switch("rgNomeAtivo")
+                            th: span: +switch("rgNomeRequired")
+            .fieldset
+                .card-header
+                    .card-title Médico
+                .form-content
+                    table
+                        tr
+                            th: span Campo
+                            th: span Ativo
+                            th: span Obrigatório
+                        tr
+                            td: span Nome
+                            th: span: +switch("pacienteNomeAtivo")
+                            th: span: +switch("pacienteNomeRequired")
+                        tr
+                            td: span CPF
+                            th: span: +switch("cpfNomeAtivo")
+                            th: span: +switch("cpfNomeRequired")
+                        tr
+                            td: span RG
+                            th: span: +switch("rgNomeAtivo")
+                            th: span: +switch("rgNomeRequired")                            
+
+            .button-group
+                +buttonLink("Cancelar")
+                +buttonPositivePrimary("Salvar Paciente")
