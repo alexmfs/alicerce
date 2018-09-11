@@ -5,24 +5,25 @@ block content
     section.card
         .card-header
             h2.card-title Pacientes
+            .card-options
+                +buttonConfig
 
         form.pacientes(action="")
 
             .fieldset
                 .card-header
                     .card-title Geral
-                    .card-options
-                        +buttonList
-                        +buttonGrid
-                        +buttonConfig
                 .form-content
                     +inputText("Nome")
                     +inputData("Data de nascimento")
 
+                    +inputText("CPF", "cpf")
+                    +inputText("RG")
+
                     +option-group-unique([
                         'Feminino',
                         'Masculino'
-                    ],"Sexo")
+                    ],"Sexo")                    
 
                     +option-group-unique([
                         'A',
@@ -41,16 +42,15 @@ block content
                         'Negativo'
                     ],"Fator DU")
 
-                    +inputText("CPF", "cpf")
-                    +inputText("RG")
+
                     +inputText("Nome do pai")
                     +inputText("Nome da mãe")
-                    +textarea("Observação")
+                    //- +textarea("Observação")
 
             .fieldset
                 .form-header
                     .card-title Endereços
-                .form-content.form-enderecos
+                .form-content
                     +inputText("Cep", "cep")
                     +inputText("Logradouro")
                     +inputText("Número")
@@ -58,38 +58,41 @@ block content
                     +inputText("Bairro")
                     +inputSelect([],"Estado","estados")
                     +inputSelect([],"Cidade","cidades")
-
-            .fieldset
-                .form-header
-                    .card-title Convênios
-                .form-content.convenios
-                    +card-select("unimed", "convenios")
-                      p.plano-numero 0 005 000004181302 0
-                      p.plano-tipo RB04 Básico
-                    +card-select("unimed", "convenios")
-                      p.plano-numero 0 005 000004181302 0
-                      p.plano-tipo RB04 Básico
-                    +card-select("unimed", "convenios")
-                      p.plano-numero 0 005 000004181302 0
-                      p.plano-tipo RB04 Básico
-
+                    .button-group
+                        +buttonPositive("Adicionar outro endereço")
 
             .fieldset
                 .form-header
                     .card-title Contatos
-                .form-content.form-enderecos
-                    +inputEmail("Email")
-                    +inputTel("Telefone 1")
-                    +inputTel("Telefone 2")
-
-            .fieldset
-                .form-header
-                    .card-title Outros
                 .form-content
-                    +inputText("Cor da pele")
-                    +inputText("Etnia")
+                    +inputSelect(['celular','fixo', 'e-mail'], 'Tipo')
+                    +inputText("Telefone")
+                    +inputText("Observação contato")
+                    .button-group
+                        +buttonPositive("Adicionar outro contato")                                        
+
+
+            //- .fieldset
+            //-     .form-header
+            //-         .card-title Convênios
+            //-     .form-content.convenios
+            //-         +card-select("unimed", "convenios")
+            //-           p.plano-numero 0 005 000004181302 0
+            //-           p.plano-tipo RB04 Básico
+            //-         +card-select("unimed", "convenios")
+            //-           p.plano-numero 0 005 000004181302 0
+            //-           p.plano-tipo RB04 Básico
+            //-         +card-select("unimed", "convenios")
+            //-           p.plano-numero 0 005 000004181302 0
+            //-           p.plano-tipo RB04 Básico
+
+            //- .fieldset
+            //-     .form-header
+            //-         .card-title Outros
+            //-     .form-content
+            //-         +inputText("Cor da pele")
+            //-         +inputText("Etnia")
 
             .button-group
-                +button("Cancelar")
-                +buttonLink("Voltar")
-                +buttonPositivePrimary("Avançar")
+                +buttonLink("Cancelar")
+                +buttonPositivePrimary("Salvar Paciente")

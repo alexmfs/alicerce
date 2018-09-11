@@ -383,7 +383,7 @@ img {
   padding: 1.1rem 1.9rem .9rem;
   min-width: 3rem;
   color: #99a3ac;
-  border: 1px solid #99a3ac;
+  border: 1px solid #eeeeee;
   transition: 0.2s;
   text-align: center;
   border-radius: 0.2em;
@@ -403,7 +403,8 @@ img {
   height: 24px;
   margin-top: -10px;
 }
-.button:hover {
+.button:hover,
+.button:focus {
   color: #69737c;
   border-color: #69737c;
   background: #f3f4f7;
@@ -423,7 +424,8 @@ img {
   border-color: #f6f7fa !important;
   color: #ffffff !important;
 }
-.button[disabled]:hover {
+.button[disabled]:hover,
+.button[disabled]:focus {
   background: #ffffff !important;
   color: #f6f7fa !important;
   border-color: #f6f7fa !important;
@@ -432,7 +434,8 @@ img {
   color: #00c394;
   border-color: #00c394;
 }
-.button.positive:hover {
+.button.positive:hover,
+.button.positive:focus {
   color: #ffffff;
   background: #00c394;
 }
@@ -440,7 +443,8 @@ img {
   color: #ffffff;
   background: #00c394;
 }
-.button.positive.primary:hover {
+.button.positive.primary:hover,
+.button.positive.primary:focus {
   color: #00c394;
   border-color: #00c394;
   background: #ffffff;
@@ -449,7 +453,8 @@ img {
   color: #c42b3d;
   border-color: #c42b3d;
 }
-.button.negative:hover {
+.button.negative:hover,
+.button.negative:focus {
   color: #ffffff;
   background: #c42b3d;
 }
@@ -457,7 +462,8 @@ img {
   color: #ffffff;
   background: #c42b3d;
 }
-.button.negative.primary:hover {
+.button.negative.primary:hover,
+.button.negative.primary:focus {
   color: #c42b3d;
   border-color: #c42b3d;
   background: #ffffff;
@@ -957,6 +963,9 @@ ol.list li:before {
 .modal .button-group {
   justify-content: flex-end;
 }
+.form-content .button-group {
+  grid-column-end: span 12;
+}
 .table {
   border-collapse: collapse;
   width: 100%;
@@ -1224,7 +1233,7 @@ ol.list li:before {
   visibility: visible;
 }
 .fieldset {
-  border: 1px solid #eee;
+  border: 1px solid #eeeeee;
   display: grid;
   grid-gap: 15px;
   padding: 15px;
@@ -1253,6 +1262,9 @@ form.pacientes {
   display: grid;
   grid-gap: 15px;
 }
+form.pacientes .button-group {
+  justify-content: flex-end;
+}
 .form-control.data-de-nascimento {
   grid-column-end: span 2;
 }
@@ -1278,7 +1290,6 @@ form.pacientes {
 }
 .form-control.cpf {
   grid-column-end: span 2;
-  grid-column-start: 1;
 }
 .form-control.rg {
   grid-column-end: span 3;
@@ -1310,12 +1321,17 @@ form.pacientes {
 .form-control.cidade {
   grid-column-end: span 3;
 }
-.form-control.email {
+.form-control.e-mail {
   grid-column-end: span 6;
 }
-.form-control.telefone-1,
-.form-control.telefone-2 {
-  grid-column-end: span 3;
+.form-control.tipo {
+  grid-column-end: span 1;
+}
+.form-control.telefone {
+  grid-column-end: span 5;
+}
+.form-control.observação-contato {
+  grid-column-end: span 6;
 }
 .pattern-color li {
   width: 100px;
