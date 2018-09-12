@@ -85,7 +85,7 @@ mixin option-group-unique(items, label, name= label.replace(' ','-').replace(' '
      
 mixin switch(id, checked="sim", unchecked="não")
     .switch
-        input(type="radio", id=id)
+        input(type="checkbox", id=id)
         label(for=id)
-            span.checked= checked
-            span.unchecked= unchecked
+            //- span.checked= checked
+            //- span.unchecked= unchecked

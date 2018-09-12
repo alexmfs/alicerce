@@ -48,107 +48,330 @@
           <div class="card-header">
             <div class="card-title">Paciente</div>
           </div>
-          <div class="form-content">
-            <table>
-              <tr>
-                <th><span>Campo</span></th>
-                <th><span>Ativo</span></th>
-                <th><span>Obrigatório</span></th>
-              </tr>
-              <tr>
-                <td><span>Nome</span></td>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="pacienteNomeAtivo"/>
-                      <label for="pacienteNomeAtivo"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="pacienteNomeRequired"/>
-                      <label for="pacienteNomeRequired"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-              </tr>
-              <tr>
-                <td><span>CPF</span></td>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="cpfNomeAtivo"/>
-                      <label for="cpfNomeAtivo"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="cpfNomeRequired"/>
-                      <label for="cpfNomeRequired"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-              </tr>
-              <tr>
-                <td><span>RG</span></td>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="rgNomeAtivo"/>
-                      <label for="rgNomeAtivo"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="rgNomeRequired"/>
-                      <label for="rgNomeRequired"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="fieldset">
-          <div class="card-header">
-            <div class="card-title">Médico</div>
-          </div>
-          <div class="form-content">
-            <table>
-              <tr>
-                <th><span>Campo</span></th>
-                <th><span>Ativo</span></th>
-                <th><span>Obrigatório</span></th>
-              </tr>
-              <tr>
-                <td><span>Nome</span></td>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="pacienteNomeAtivo"/>
-                      <label for="pacienteNomeAtivo"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="pacienteNomeRequired"/>
-                      <label for="pacienteNomeRequired"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-              </tr>
-              <tr>
-                <td><span>CPF</span></td>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="cpfNomeAtivo"/>
-                      <label for="cpfNomeAtivo"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="cpfNomeRequired"/>
-                      <label for="cpfNomeRequired"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-              </tr>
-              <tr>
-                <td><span>RG</span></td>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="rgNomeAtivo"/>
-                      <label for="rgNomeAtivo"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-                <th><span>
-                    <div class="switch">
-                      <input type="radio" id="rgNomeRequired"/>
-                      <label for="rgNomeRequired"><span class="checked">sim</span><span class="unchecked">não</span></label>
-                    </div></span></th>
-              </tr>
-            </table>
-          </div>
+          <table class="table options">
+            <tr>
+              <th>Campo</th>
+              <th>Ativo</th>
+              <th>Obrigatório</th>
+            </tr>
+          </table>
+          <table class="table options">                       
+            <tr>
+              <td>Nome</td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeAtivo"/>
+                  <label for="pacienteNomeAtivo"></label>
+                </div>
+              </td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeRequired"/>
+                  <label for="pacienteNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>CPF</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeAtivo"/>
+                  <label for="cpfNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeRequired"/>
+                  <label for="cpfNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>RG</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeAtivo"/>
+                  <label for="rgNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeRequired"/>
+                  <label for="rgNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeAtivo"/>
+                  <label for="pacienteNomeAtivo"></label>
+                </div>
+              </td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeRequired"/>
+                  <label for="pacienteNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>CPF</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeAtivo"/>
+                  <label for="cpfNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeRequired"/>
+                  <label for="cpfNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>RG</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeAtivo"/>
+                  <label for="rgNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeRequired"/>
+                  <label for="rgNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeAtivo"/>
+                  <label for="pacienteNomeAtivo"></label>
+                </div>
+              </td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeRequired"/>
+                  <label for="pacienteNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>CPF</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeAtivo"/>
+                  <label for="cpfNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeRequired"/>
+                  <label for="cpfNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>RG</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeAtivo"/>
+                  <label for="rgNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeRequired"/>
+                  <label for="rgNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeAtivo"/>
+                  <label for="pacienteNomeAtivo"></label>
+                </div>
+              </td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeRequired"/>
+                  <label for="pacienteNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>CPF</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeAtivo"/>
+                  <label for="cpfNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeRequired"/>
+                  <label for="cpfNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>RG</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeAtivo"/>
+                  <label for="rgNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeRequired"/>
+                  <label for="rgNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeAtivo"/>
+                  <label for="pacienteNomeAtivo"></label>
+                </div>
+              </td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeRequired"/>
+                  <label for="pacienteNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>CPF</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeAtivo"/>
+                  <label for="cpfNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeRequired"/>
+                  <label for="cpfNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>RG</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeAtivo"/>
+                  <label for="rgNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeRequired"/>
+                  <label for="rgNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeAtivo"/>
+                  <label for="pacienteNomeAtivo"></label>
+                </div>
+              </td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeRequired"/>
+                  <label for="pacienteNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>CPF</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeAtivo"/>
+                  <label for="cpfNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeRequired"/>
+                  <label for="cpfNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>RG</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeAtivo"/>
+                  <label for="rgNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeRequired"/>
+                  <label for="rgNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeAtivo"/>
+                  <label for="pacienteNomeAtivo"></label>
+                </div>
+              </td>
+              <td>
+                <div class="switch">
+                  <input type="checkbox" id="pacienteNomeRequired"/>
+                  <label for="pacienteNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>CPF</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeAtivo"/>
+                  <label for="cpfNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="cpfNomeRequired"/>
+                  <label for="cpfNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>RG</td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeAtivo"/>
+                  <label for="rgNomeAtivo"></label>
+                </div>
+              </td>
+              <td> 
+                <div class="switch">
+                  <input type="checkbox" id="rgNomeRequired"/>
+                  <label for="rgNomeRequired"></label>
+                </div>
+              </td>
+            </tr>
+          </table>
         </div>
         <div class="button-group"><a class="button link" href="#">Cancelar</a><a class="button positive primary" href="#">Salvar Paciente</a>
         </div>
