@@ -1,0 +1,161 @@
+/*
+
+// Paleta de cores
+
+*/
+
+// Cores institucionais
+
+@color-brand-green: #006567;
+@color-brand-red: #A0151C;
+@color-brand-yellow: #EDC501;
+@color-brand-blue: #0066AE;
+
+// Cores aprimoradas
+
+@color-green: #72C096;
+@color-red: #C42B3D;
+@color-yellow: #F3D14A;
+@color-blue: #4070CE;
+
+// Cores interface
+
+@color-white: #FFF;
+
+@color-grayscale1: #F6F7FA;
+@color-grayscale2: #F3F4F7;
+@color-grayscale3: #E3E6E8;
+@color-grayscale4: #99A3AC;
+
+@color-dark1: #69737C;
+@color-dark2: #24323d;
+
+/*
+
+// Cores configurações
+
+*/
+
+// Cores padrões
+
+@color-base: @color-dark1;
+@color-base-destaque: @color-dark2;
+
+
+@color-primary: @color-green;
+@color-primary-light1 : lighten(@color-primary, 10%);
+@color-primary-light2 : lighten(@color-primary, 25%);
+@color-primary-dark1  : darken(@color-primary, 10%);
+@color-primary-dark2  : darken(@color-primary, 25%);
+
+
+// Cores validações e avisos
+
+@color-positive: @color-green;
+@color-negative: @color-red;
+@color-info: @color-blue;
+@color-warning: @color-yellow;
+
+
+@color-shadow: @color-grayscale3;
+
+// utilitys
+
+@radius-min: .3em;
+@radius: .5em;
+@fullradius: 2em;
+
+@space: 10px;
+
+
+@transition-fast: 0.2s;
+@transition-slow: 1s;
+
+// z-index
+@zindex-modal     : 9000;
+@zindex-overlay   : 8000;
+@zindex-dropdown  : 7000;
+@zindex-header    : 6000;
+@zindex-footer    : 6000;
+
+// typografy
+@font-stack: "";
+@font-base: "Overpass";
+
+@line-height: 1.5;
+
+.font-base(@size: 1.6){
+	font: 400 unit(@size, rem) @font-base;
+}
+
+@line-base: 2rem;
+@size-base: 1.4rem;
+@size-stack: 2.8rem;
+@line-stack: 3.4rem;
+
+
+@highdensity:       ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+                    ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+                    ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+                    ~"only screen and (min-device-pixel-ratio: 1.5)";
+@phone:            	~"only screen and (max-width: 610px)";
+@phone-tablet:     	~"only screen and (max-width: 949px)";
+@tablet:            ~"only screen and (min-width: 611px) and (max-width: 949px)";
+@tablet-desktop:    ~"only screen and (min-width: 611px) ";
+@desktop:           ~"only screen and (min-width: 950px) ";
+
+
+
+
+// icons
+
+@icon-chevron-up: 		"\f077";
+@icon-chevron-right: 	"\f054";
+@icon-chevron-down: 	"\f078";
+@icon-chevron-left: 	"\f053";
+
+@icon-angle-up: 		"\f106";
+@icon-angle-right: 		"\f105";
+@icon-angle-down: 		"\f107";
+@icon-angle-left: 		"\f104";
+
+@icon-check: 			"\f00c";
+
+
+// Backgrounds and Images
+
+@pattern-base: url(../img/pattern-base.png);
+@pattern-primary: url(../img/pattern-primary.png);
+@pattern-secondary: url(../img/pattern-secondary.png);
+
+@pattern-footer: url(../img/pattern-footer.jpg);
+@pattern-button-load: url(../img/pattern-button-load.jpg);
+
+@img-select: url(../img/select-box.png);
+
+@sprite: url(../img/sprite.png) no-repeat;
+
+@loading: url(../img/ajax-loader.gif) no-repeat center 45%;
+
+@arrow: url(../img/arrow.png) no-repeat;
+
+
+/*
+
+// Configurações gerais
+
+*/
+
+@button-style: skewmorphic;
+
+
+// buttons
+
+// @button-font: @font-stack;
+// @button-fz: @size-base;
+// @button-color: @white;
+// @button-bg: @color-primary;
+// @button-padding: 1rem 2rem;
+// @button-radius: @radius;
+
+// @body-bg: @white;

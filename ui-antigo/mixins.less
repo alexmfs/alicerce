@@ -1,0 +1,138 @@
+// Mixins
+
+.transition (@time: 0.5s) {
+	transition: @time;
+}
+
+.box-round(@color: @color-base-light1, @width: 1px, @radius: @radius, @bg-color: @color-base-light2){
+	border: @width solid @color;
+	// border: 1px solid @color-base-light1;
+	// .border-radius(@radius);
+	border-radius: @radius;
+	padding: @space;
+	margin-bottom: @space!important;
+	background: @bg-color;
+}
+
+
+.border(@color, @width: 1px, @type:solid){
+	border: @width @type @color;
+}
+
+
+.calc(@prop; @val) {
+  @{prop}: calc(~'@{val}');
+  @{prop}: -moz-calc(~'@{val}');
+  @{prop}: -webkit-calc(~'@{val}');
+  @{prop}: -o-calc(~'@{val}');
+}
+
+.linear-gradient(@to: top, @gradient1: transparent, @gradient2: rgba(0,0,0,.2)){
+	background-image: linear-gradient(to @to, @gradient1, @gradient2); /* W3C */
+}
+
+.box-shadow-pattern(){
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,.15);
+}
+
+.centralize(){
+	position: relative;
+	top: 50%;
+	.transform(translateY(-50%));
+}
+
+.stripes(@color, @deg:45deg){
+    background:
+		@color
+    	repeating-linear-gradient(
+		@deg,
+		transparent,
+		transparent 10px,
+		rgba(0,0,0,0.1) 10px,
+		rgba(0,0,0,0.1) 20px
+	);
+}
+
+
+/*
+
+Grid
+
+*/
+
+.col(@col, @total, @gutter: 15px){
+  @width: (100% / @total) * @col;
+  width: ~"calc(@{width} - @{gutter})";
+  box-sizing: border-box;
+  margin-left: @gutter / 2;
+  margin-right: @gutter / 2;
+}
+
+
+.col-phone(@col, @total, @gutter: 15px){
+	@media @phone{
+		.col(@col, @total, @gutter);
+	}
+}
+
+.col-tablet(@col, @total, @gutter: 15px){
+	@media @tablet{
+		.col(@col, @total, @gutter);
+	}
+}
+
+.col-desktop(@col, @total, @gutter: 15px){
+	@media @desktop{
+		.col(@col, @total, @gutter);
+	}
+}
+
+
+/* 
+
+Font Awesome 
+http://fontawesome.io/cheatsheet/
+
+*/
+
+.awesome(){
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.placeholder(@rules) {
+
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
+
+.selection(@rules) {
+
+	// background: green; 
+	// color: #FFFFFF;
+
+	&::selection{
+		@rules();
+
+	}
+	&::-moz-selection{
+		@rules();
+	}
+
+}

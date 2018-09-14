@@ -1,0 +1,68 @@
+@title-style: outline;
+@title-color: @color-primary;
+
+.title-page{
+	#title(@title-style);
+}
+
+#title(@title-style){
+	&when ((@title-style) = default)		{ #title-default(); }
+	&when ((@title-style) = 2)				{ #title-2(); }
+	&when ((@title-style) = algerian)		{ #title-algerian(); }
+	&when ((@title-style) = castellar)		{ #title-castellar(); }
+	&when ((@title-style) = outline)		{ #title-outline(); }
+	&when ((@title-style) = neon)			{ #title-neon(); }
+}
+
+#title-default(){
+	font: @size-stack @font-stack;
+	color: @color-primary;
+	.column(@columns);
+	margin-bottom: 30px;
+}
+
+#title-1(){
+	margin: 1em 0 0.5em 0;
+	color: @color-primary;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;
+	font-size: 3.6rem;
+	line-height: 4.2rem;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px @color-primary-dark1;
+}
+
+#title-2(){
+	margin: 1em 0 0.5em 0;
+	font-weight: 100;
+	text-transform: uppercase;
+	color: @color-primary;
+	font-style: italic;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 5.8rem;
+	line-height: 5.4rem;
+	text-shadow: 2px 5px 0 rgba(0,0,0,0.2);	
+}
+#title-algerian(){
+	color: @color-primary;
+    text-shadow: 1px 1px 0 @white, 2px 2px 0 @color-primary;
+	
+}
+#title-castellar(){
+    color: @white;
+    text-shadow: -1px 0 0 @color-primary, 1px 1px 0 @color-primary,
+             2px -1px 0 @color-primary, 3px 0 0 @color-primary;
+	
+}
+#title-outline(){
+    color: @white;
+    text-shadow: 1px 1px 0 @color-primary, -1px 1px 0 @color-primary,
+             1px -1px 0 @color-primary, -1px -1px 0 @color-primary;
+	
+}
+#title-neon(){
+	color: #D0F8FF;
+	text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+				 0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+				 0 0 40px #A5F1FF;
+}

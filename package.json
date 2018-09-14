@@ -1,0 +1,29 @@
+{
+  "name": "Start-projects",
+  "version": "0.1.0",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "css-parse": "^1.5.3",
+    "cssnext": "^1.8.4",
+    "grun": "^0.2.0",
+    "grunt": "^0.4.4",
+    "grunt-combine-media-queries": "^1.0.15",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-less": "^0.11.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ftp-deploy": "^0.1.2",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-text-replace": "^0.4.0",
+    "load-grunt-tasks": "^3.5.2",
+    "postcss-font-magician": "^2.0.0"
+  },
+  "dependencies": {
+    "cssnano": "^3.7.1",
+    "pixrem": "^3.0.1"
+  }
+}

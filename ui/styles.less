@@ -1,0 +1,37 @@
+@import 'ui';
+
+
+.placeholder({
+    color: @color-grayscale4;
+    font-size: 1.6rem;
+    transition: @transition-fast;
+});
+
+:focus{
+	.placeholder({
+	    color: colorCurrent;
+	});
+}
+
+
+// .selection({
+//     color: #0000FF;
+//     background: #000;
+// });
+
+*{
+	.font-smoothing;
+	font-family: @font-base;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body {
+   font-family: "Alice";
+}
+
+.main{
+	.wrap;
+}
