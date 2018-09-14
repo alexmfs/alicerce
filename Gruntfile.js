@@ -74,7 +74,6 @@ module.exports = function(grunt) {
                 dest: '<%= dirs.dev %>scripts.js',
             }
         },
-        //
         pug: {
             compile: {
               options: {

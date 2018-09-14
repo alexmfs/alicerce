@@ -490,15 +490,16 @@ button.btn-icon {
 p:not([class]) {
   font: 400 1.4rem 'Arial';
 }
-p:not([class]) a {
+.text a,
+.list li a {
   text-decoration: none;
   transition: 1s;
   color: #00c394;
 }
-p:not([class]) a:hover {
+.text a:hover {
   color: #00906d;
 }
-p:not([class]) + p {
+.text + p {
   margin-top: 30px;
 }
 #title-pattern {
@@ -983,6 +984,21 @@ ol.list li:before {
   margin-bottom: 30px;
   position: relative;
 }
+.table td {
+  font: 400 1.6rem 'Arial';
+  margin-bottom: 30px;
+}
+.table td a {
+  text-decoration: none;
+  transition: 1s;
+  color: #00c394;
+}
+.table td a:hover {
+  color: #00906d;
+}
+.table td + p {
+  margin-top: 30px;
+}
 .table th,
 .table td {
   padding: 20px 0;
@@ -1051,6 +1067,21 @@ ol.list li:before {
   width: 100%;
   margin-bottom: 30px;
   position: relative;
+}
+.table-striped td {
+  font: 400 1.6rem 'Arial';
+  margin-bottom: 30px;
+}
+.table-striped td a {
+  text-decoration: none;
+  transition: 1s;
+  color: #00c394;
+}
+.table-striped td a:hover {
+  color: #00906d;
+}
+.table-striped td + p {
+  margin-top: 30px;
 }
 .table-striped th,
 .table-striped td {
