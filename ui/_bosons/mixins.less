@@ -11,7 +11,7 @@
 }
 
 
-.border(@color, @width: 1px, @type:solid){
+.border(@color: #eee, @width: 1px, @type:solid){
 	border: @width @type @color;
 }
 
@@ -204,17 +204,7 @@ http://fontawesome.io/cheatsheet/
 
 }
 
-.padding(@a: default){
-	& when ((@a) = default)	{
-		padding: @gap;
-	}
-	& when ((@a) = small)	{
-		padding: @gap-small;
-	}
-	& when ((@a) = large)	{
-		padding: @gap-large;
-	}		
-}
+
 
 .transition(@a: default){
 	& when ((@a) = default)	{
@@ -230,6 +220,20 @@ http://fontawesome.io/cheatsheet/
 		transition: @transition-fast;
 	}		
 }
+
+.padding(@a: @gap){
+	padding: @gap;
+}
+
+.grid(@a: @gap){
+    display: grid;
+    grid-gap: @a;
+}
+
+.padding(@a: @gap){
+	padding: @a;
+}
+
 
 .margin-bottom(@a: @gap){
 	margin-bottom: @a;

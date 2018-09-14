@@ -40,30 +40,118 @@
   </body>
   <main class="main" id="teste" role="main" ng-app="sortApp" ng-controller="mainController">
     <section class="card">
-      <h2 class="title">Tabelas</h2>
-      <h3 class="subtitle">Comum com filtro</h3>
-      <div class="container" ng-init="layout=1">
-        <div class="card-header">
-          <div class="card-title">Pedidos recentes</div>
-          <div class="card-options"><span class="btn-icon"><i class="fa fa-th-list"></i></span><span class="btn-icon"><i class="fa fa-th-large"></i></span><a class="btn-icon open" href="#configuracoes" title="Configurações"><i class="fa fa-cogs"></i></a>
+      <div class="card-header">
+        <h2 class="card-title">Dados adicionais paciente</h2>
+      </div>
+      <form class="pacientes" action="">
+        <div class="fieldset">
+          <div class="card-header">
+            <div class="card-title">Menor de idade</div>
+          </div>
+          <div class="card-content">
+            <div class="form-control nome-do-responsável">
+              <label class="label-control">Nome do responsável</label>
+              <input class="input-control" type="text"/>
+            </div>
+            <div class="form-control documento">
+              <label class="label-control">Documento</label>
+              <input class="input-control" type="text"/>
+            </div>
+            <div class="form-control número">
+              <label class="label-control">Número</label>
+              <input class="input-control" type="text"/>
+            </div>
           </div>
         </div>
-        <div class="box-input"><i class="fa fa-th-large"></i>
-          <input class="input-control" type="text" placeholder="Digite aqui seu filtro" ng-model="searchPedido">
+        <div class="fieldset">
+          <div class="card-header">
+            <div class="card-title">Maternidade</div>
+          </div>
+          <div class="card-content">
+            <div class="form-control">
+              <label>Filhos               </label>
+              <div class="spinner">
+                <input type="text" data-min="1" data-max="99" data-step="1" value="0"/>
+                <div class="nav">
+                  <div class="up">+</div>
+                  <div class="down">-</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-control">
+              <label>Parto normal</label>
+              <div class="spinner">
+                <input type="text" data-min="1" data-max="99" data-step="1" value="0"/>
+                <div class="nav">
+                  <div class="up">+</div>
+                  <div class="down">-</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-control">
+              <label>Cesariana</label>
+              <div class="spinner">
+                <input type="text" data-min="1" data-max="99" data-step="1" value="0"/>
+                <div class="nav">
+                  <div class="up">+</div>
+                  <div class="down">-</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-control">
+              <label>Gestação</label>
+              <div class="spinner">
+                <input type="text" data-min="1" data-max="99" data-step="1" value="0"/>
+                <div class="nav">
+                  <div class="up">+</div>
+                  <div class="down">-</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-control">
+              <label>Aborto</label>
+              <div class="spinner">
+                <input type="text" data-min="1" data-max="99" data-step="1" value="0"/>
+                <div class="nav">
+                  <div class="up">+</div>
+                  <div class="down">-</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-control">
+              <label>Lactante</label>
+              <div class="spinner">
+                <input type="text" data-min="1" data-max="99" data-step="1" value="0"/>
+                <div class="nav">
+                  <div class="up">+</div>
+                  <div class="down">-</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <table class="table" ng-show="layout == 1">
-          <tr>
-            <th ng-show="filter'ColunaE'"><a href="#" ng-click="sortType = 'ColunaE'; sortReverse = !sortReverse">Coluna E<span class="asc" ng-show="sortType == 'ColunaE' &amp;&amp; sortReverse"></span><span class="desc" ng-show="sortType == 'ColunaE' &amp;&amp; !sortReverse"></span></a></th>
-            <th ng-show="filter'ColunaF'"><a href="#" ng-click="sortType = 'ColunaF'; sortReverse = !sortReverse">Coluna F<span class="asc" ng-show="sortType == 'ColunaF' &amp;&amp; sortReverse"></span><span class="desc" ng-show="sortType == 'ColunaF' &amp;&amp; !sortReverse"></span></a></th>
-          </tr>
-          <tr ng-repeat="pedido in pedidos | orderBy:sortType:sortReverse | filter:searchPedido" ng-if="$index &lt; 12">
-            <td ng-show="filterCodigoterceiro">{{ pedido.codigoterceiro }}</td>
-          </tr>
-          <tr class="search-empty">
-            <td>Nenhum resultado foi encontrado!<br>Experimente a <a href="#">busca avançada.</a></td>
-          </tr>
-        </table>
-      </div>
+        <div class="fieldset">
+          <div class="card-header">
+            <div class="card-title">Ciclo menstrual</div>
+          </div>
+          <div class="card-content">
+            <div class="form-control menstrução-recente">
+              <label class="label-control">Menstrução recente</label>
+              <input class="input-control" type="text"/>
+            </div>
+            <div class="form-control menopausa">
+              <label class="label-control">Menopausa</label>
+              <input class="input-control" type="text"/>
+            </div>
+            <div class="form-control histerectomizada">
+              <label class="label-control">Histerectomizada</label>
+              <input class="input-control" type="text"/>
+            </div>
+          </div>
+        </div>
+        <div class="button-group"><a class="button" href="#">Cancelar</a><a class="button link" href="#">Voltar</a><a class="button positive primary" href="#">Avançar</a>
+        </div>
+      </form>
     </section>
   </main>
   <div class="float-action"><a class="btn-icon open" href="#addPedido"><i class="fa fa-plus"></i></a><span class="btn-icon"><i class="fa fa-plus"></i></span><span class="btn-icon"><i class="fa fa-plus"></i></span>

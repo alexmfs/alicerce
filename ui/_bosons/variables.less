@@ -73,9 +73,11 @@
 
 // utilitys
 
-@radius-min: .3em;
-@radius: .5em;
-@fullradius: 2em;
+@radius-min: .2em;
+@radius-medium: .5em;
+@radius-full: 2em;
+
+@radius: @radius-min;
 
 @space: 10px;
 
@@ -104,7 +106,7 @@
 
 @line-height: 1.5;
 
-.font-base(@size: 1.6){
+.font-base(@size: 1.4){
 	font: 400 unit(@size, rem) @font-base;
 }
 

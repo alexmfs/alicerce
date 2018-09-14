@@ -5,71 +5,97 @@ block content
     section.card
         .card-header
             h2.card-title Pacientes
+            .card-options
+                +buttonConfig
 
-        form.pacientes(action="")           
-            
-            fieldset 
-                legend Geral
-                +inputText("Nome")
-                +inputData("Data de nascimento")
-                +inputText("Sexo")
-                +inputText("Tipo Sanguíneo")
-                +inputText("Fator RH")
-                +inputText("Fator DU")
-                +textarea("Observação")
-                +inputText("Nome do pai")
-                +inputText("Nome da mãe")
+        form.pacientes(action="")
 
-            fieldset 
-                legend Documentos
-                +inputCpf("CPF")
-                +inputText("RG")
-                +inputText("Cor da pele")
-                +inputText("Etnia")
+            .fieldset
+                .card-header
+                    .card-title Geral
+                .form-content
+                    +inputText("Nome")
+                    +inputData("Data de nascimento")
 
-            fieldset 
-                legend Endereços
-                +inputCep("Cep")
-                +inputText("Lograduro")
-                +inputText("Número")
-                +inputText("Complemento")
-                +inputText("Bairro")
-                +inputText("Estado")
-                +inputText("Cidade")
-                +inputTel("Telefone")
+                    +inputText("CPF", "cpf")
+                    +inputText("RG")
 
-            fieldset 
-                legend Menor de idade
-                +inputText("Nome do responsável")
-                +inputText("Documento")
-                +inputText("Número")
+                    +option-group-unique([
+                        'Feminino',
+                        'Masculino'
+                    ],"Sexo")                    
 
-            fieldset 
-                legend Maternidade
-                +checkbox("Filhos")
-                +checkbox-group([
-                    "Cras justo odio",
-                    "Cras justo odio",
-                    "Cras justo odio"
-                ],"name")
-                +spinner("1","99","1","0")
-                +spinner("1","99","1")
-                +spinner("1","99","1")
-                +spinner("1","99","1")
-                +spinner("1","99","1")
-                +inputText("Parto normal")
-                +inputText("Cesariana")
-                +inputText("Aborto")
-                +inputText("Gestação")
-                +inputText("Lactante")
-            
-            fieldset 
-                legend Ciclo menstrual
-                +inputText("Menstrução recente")
-                +input("Menopausa")
-                +inputText("Histerectomizada")
-                                  
+                    +option-group-unique([
+                        'A',
+                        'B',
+                        'AB',
+                        'A',
+                        'B',
+                        'AB',                        
+                        'O'
+                    ],"Tipo Sanguíneo")
+                    
+                    +option-group-unique([
+                        'Positivo',
+                        'Negativo'
+                    ],"Fator RH")
+                    
+                    +option-group-unique([
+                        'Positivo',
+                        'Negativo'
+                    ],"Fator DU")
+
+
+                    +inputText("Nome do pai")
+                    +inputText("Nome da mãe")
+                    //- +textarea("Observação")
+
+            .fieldset
+                .form-header
+                    .card-title Endereços
+                .form-content
+                    +inputText("Cep", "cep")
+                    +inputText("Logradouro")
+                    +inputText("Número")
+                    +inputText("Complemento")
+                    +inputText("Bairro")
+                    +inputSelect([],"Estado","estados")
+                    +inputSelect([],"Cidade","cidades")
+                    .button-group
+                        +buttonPositive("Adicionar outro endereço")
+
+            .fieldset
+                .form-header
+                    .card-title Contatos
+                .form-content
+                    +inputSelect(['celular','fixo', 'e-mail'], 'Tipo')
+                    +inputText("Telefone")
+                    +inputText("Observação contato")
+                    .button-group
+                        +buttonPositive("Adicionar outro contato")                                        
+
+
+            //- .fieldset
+            //-     .form-header
+            //-         .card-title Convênios
+            //-     .form-content.convenios
+            //-         +card-select("unimed", "convenios")
+            //-           p.plano-numero 0 005 000004181302 0
+            //-           p.plano-tipo RB04 Básico
+            //-         +card-select("unimed", "convenios")
+            //-           p.plano-numero 0 005 000004181302 0
+            //-           p.plano-tipo RB04 Básico
+            //-         +card-select("unimed", "convenios")
+            //-           p.plano-numero 0 005 000004181302 0
+            //-           p.plano-tipo RB04 Básico
+
+            //- .fieldset
+            //-     .form-header
+            //-         .card-title Outros
+            //-     .form-content
+            //-         +inputText("Cor da pele")
+            //-         +inputText("Etnia")
+
             .button-group
-                +button("Cancelar")
-                +buttonLink("Voltar")
-                +buttonPositivePrimary("Avançar")
+                +buttonLink("Cancelar")
+                +buttonPositivePrimary("Salvar Paciente")
