@@ -1,0 +1,62 @@
+// less
+
+@black: #000;
+
+
+#button(@a) {
+
+  &when ((@a) = style1){
+      border: 1px solid transparent;
+  }
+  
+  &when ((@a) = style2){
+      border-left: 5px solid;
+  }
+
+}
+
+
+.button{
+  #button(style1);
+}
+
+.border(@color: @black){
+	border: 1px solid @color;
+}
+
+
+
+#module {
+  .border();
+  padding: 10px;
+  h3 {
+    color: red; 
+  }
+}
+
+.news {
+  &:extend(#module all);
+}
+
+
+.posts{
+  &:extend(#module all);
+}
+
+
+// css
+
+.button {
+  border: 1px solid transparent;
+}
+#module,
+.news,
+.posts {
+  border: 1px solid #000;
+  padding: 10px;
+}
+#module h3,
+.news h3,
+.posts h3 {
+  color: red;
+}

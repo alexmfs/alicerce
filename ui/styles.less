@@ -4,7 +4,7 @@
 .placeholder({
     color: @color-grayscale4;
     font-size: 1.6rem;
-    transition: @transition-fast;
+    transition: @transition;
 });
 
 :focus{
@@ -29,9 +29,30 @@ html{
 }
 
 body {
-   font-family: "Alice";
+	.font-base;
 }
 
 .main{
 	.wrap;
+}
+
+#home&{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 66% 33%;
+}
+
+#convenio {
+	display: grid;	
+	grid-gap: 20px;
+	grid-template-columns: 66% 33%;
+}
+
+#addPedido{
+	width: 500px;
+}
+
+[ng-show]:not(.ng-hide){
+	opacity: 0;
+	animation: fadein .5s linear .2s 1 forwards;
 }

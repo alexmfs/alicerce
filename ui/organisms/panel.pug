@@ -1,0 +1,10 @@
+mixin panel(titulo, tipo, footer)
+ - tipoPanel = tipo || 'panel-default';
+ .panel(class=`${tipoPanel}`)
+  if(titulo)
+   .panel-heading
+     h3.panel-title #{titulo}
+  .panel-body
+    block
+  if(footer)
+    .panel-footer #{footer}

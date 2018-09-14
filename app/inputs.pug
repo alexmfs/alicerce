@@ -1,0 +1,32 @@
+extends layouts/layout.pug
+
+block content
+
+    section.card
+        h2.card-title Inputs
+
+        .form-control
+            label.label-control Label 
+            input(type="text").input-control
+
+        .box-input
+            +icon-filtro
+            input.input-control(type="text", placeholder="Digite aqui seu filtro" ng-model="searchPedido")            
+
+        .box-input(style="background-color: #fff")
+            input.input-control(type="text", placeholder="Digite aqui seu filtro" ng-model="searchPedido")            
+
+
+        .form-control
+            label.label-control Label 
+            textarea(rows="8", cols="80").input-control
+
+        .select
+            select.input-control
+                option Escolha a cidade
+                option(value="um") um
+                option(value="dois") dois
+
+        .switch
+            input(type="checkbox" id="w1")
+            label(for="w1")

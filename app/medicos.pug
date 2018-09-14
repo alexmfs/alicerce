@@ -1,0 +1,79 @@
+extends layouts/layout.pug
+
+block content
+
+    section.card
+        h2.title Tabelas
+        h3.subtitle Comum com filtro
+
+        .container(ng-init="layout=1")
+
+            .card-header
+                .card-title Cadastro de médicos
+                .card-options
+                    +buttonConfig
+
+            form(action="")
+                .form-control(ng-show="campoNome" ng-class="{ 'required': campoNomeRequiered}")
+                    label.label-control Nome
+                    input.input-control(type="text", ng-required="campoNomeRequiered", ng-disabled="!campoNome")
+
+                .form-control(ng-show="campoCRM" ng-class="{ 'required': campoCRMRequiered}")
+                    label.label-control CRM
+                    input.input-control(type="text", ng-required="campoCRMRequiered", ng-disabled="!campoCRM")
+
+                .form-control(ng-show="campoRG" ng-class="{ 'required': campoRGRequiered}")
+                    label.label-control RG
+                    input.input-control(type="text", ng-required="campoRGRequiered", ng-disabled="!campoRG")
+                    
+                .form-control(ng-show="campoCPF" ng-class="{ 'required': campoCPFRequiered}")
+                    label.label-control CPF
+                    input.input-control(type="text", ng-required="campoCPFRequiered", ng-disabled="!campoCPF")
+                +inputText("Nome")
+                +inputText("Cidade")
+                +inputText("Email")
+    
+    aside#configuracoes.slidemenu
+
+        .card-header
+            .card-title Configurações de cadastro
+            .card-options
+                +buttonClose
+        table.table
+            tr
+                th Campo
+                th Visível
+                th Obrigatório
+            tr
+                td Nome
+                td
+                    div
+                        input(type="checkbox", ng-model="campoNome")
+                td(ng-show="campoNome")
+                    div
+                        input(type="checkbox", ng-model="campoNomeRequiered")
+            tr
+                td CRM
+                td
+                    div
+                        input(type="checkbox", ng-model="campoCRM")
+                td(ng-show="campoCRM")
+                    div
+                        input(type="checkbox", ng-model="campoCRMRequiered")
+            tr
+                td RG
+                td
+                    div
+                        input(type="checkbox", ng-model="campoRG")
+                td(ng-show="campoRG")
+                    div
+                        input(type="checkbox", ng-model="campoRGRequiered")
+            tr
+                td CPF
+                td
+                    div
+                        input(type="checkbox", ng-model="campoCPF")
+                td(ng-show="campoCPF")
+                    div
+                        input(type="checkbox", ng-model="campoCPFRequiered")                                                                    
+

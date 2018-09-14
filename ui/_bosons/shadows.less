@@ -4,7 +4,7 @@
 	#shadow(@shadow-style);
 }
 
-#shadow(@shadow-style){
+#shadow(@shadow-style:default){
 	&when ((@shadow-style) = default)	{ #shadow-default(); }
 	&when ((@shadow-style) = 2)			{ #shadow-2(); }
 	&when ((@shadow-style) = 3)			{ #shadow-3(); }

@@ -1,0 +1,33 @@
+extends layouts/layout.pug
+
+block content
+
+    section.card
+        h2.title Tabelas
+        h3.subtitle Comum com filtro
+
+        .container(ng-init="layout=1")
+
+            .card-header
+                .card-title Pedidos recentes
+                .card-options
+                    +buttonList
+                    +buttonGrid
+                    +buttonConfig
+
+            .box-input
+                +icon-filtro
+                input.input-control(type="text", placeholder="Digite aqui seu filtro" ng-model="searchPedido")
+            
+            table.table(ng-show="layout == 1")
+                tr
+                  each valor, label in {"Coluna E":"ColunaE","Coluna F":"ColunaF"}
+                    +th(label, valor)
+                tr(ng-repeat="pedido in pedidos | orderBy:sortType:sortReverse | filter:searchPedido" ng-if="$index < 12")
+                    +td("{{ pedido.codigoterceiro }}", "Codigoterceiro")                  
+                tr.search-empty
+                    td
+                        | Nenhum resultado foi encontrado!
+                        br 
+                        | Experimente a 
+                        a(href="#") busca avançada.

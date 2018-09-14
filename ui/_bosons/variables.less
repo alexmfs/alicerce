@@ -13,10 +13,10 @@
 
 // Cores aprimoradas
 
-@color-green: #72C096;
+@color-green: #00C394;
 @color-red: #C42B3D;
-@color-yellow: #F3D14A;
-@color-blue: #4070CE;
+@color-yellow: #e2b70f;
+@color-blue: #0372D6;
 
 // Cores interface
 
@@ -40,7 +40,10 @@
 
 @color-base: @color-dark1;
 @color-base-destaque: @color-dark2;
-
+@color-base-light1 : lighten(@color-base, 10%);
+@color-base-light2 : lighten(@color-base, 25%);
+@color-base-dark1  : darken(@color-base, 10%);
+@color-base-dark2  : darken(@color-base, 25%);
 
 @color-primary: @color-green;
 @color-primary-light1 : lighten(@color-primary, 10%);
@@ -48,11 +51,20 @@
 @color-primary-dark1  : darken(@color-primary, 10%);
 @color-primary-dark2  : darken(@color-primary, 25%);
 
+@color-secondary: @color-blue;
+@color-secondary-light1 : lighten(@color-secondary, 10%);
+@color-secondary-light2 : lighten(@color-secondary, 25%);
+@color-secondary-dark1  : darken(@color-secondary, 10%);
+@color-secondary-dark2  : darken(@color-secondary, 25%);
+
+
 
 // Cores validações e avisos
 
 @color-positive: @color-green;
 @color-negative: @color-red;
+@color-success: @color-green;
+@color-danger: @color-red;
 @color-info: @color-blue;
 @color-warning: @color-yellow;
 
@@ -67,9 +79,17 @@
 
 @space: 10px;
 
+@gap:15px;
+@gap-small: @gap / 3;
+@gap-large: @gap * 2;
 
-@transition-fast: 0.2s;
+
 @transition-slow: 1s;
+@transition-medium: .5s;
+@transition-fast: .2s;
+
+@transition: @transition-fast;
+
 
 // z-index
 @zindex-modal     : 9000;
@@ -79,8 +99,8 @@
 @zindex-footer    : 6000;
 
 // typografy
-@font-stack: "";
-@font-base: "Overpass";
+@font-stack: 'Arial';
+@font-base: 'Arial';
 
 @line-height: 1.5;
 
@@ -92,7 +112,6 @@
 @size-base: 1.4rem;
 @size-stack: 2.8rem;
 @line-stack: 3.4rem;
-
 
 @highdensity:       ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
                     ~"only screen and (min--moz-device-pixel-ratio: 1.5)",

@@ -1,45 +1,26 @@
 module.exports = function(grunt) {
 
     // Load all tasks
-    require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+    require('load-grunt-tasks')(grunt);
 
     // Configuração do projeto
     grunt.initConfig({
         dirs: {
             dev: 'ui/',
-            output: 'example/assets/',
+            output: 'www/assets/',
 
             js: {
-                bosons: 'ui/_bosons/',
-                atoms: 'ui/atoms/',
-                molecules: 'ui/molecules/',
-                organisms: 'ui/organisms/',
-                templates: 'ui/templates/',
-                pages: 'ui/pages/',
+                bosons: '<%= dirs.dev %>_bosons/',
+                atoms: '<%= dirs.dev %>atoms/',
+                molecules: '<%= dirs.dev %>molecules/',
+                organisms: '<%= dirs.dev %>organisms/',
+                templates: '<%= dirs.dev %>templates/',
+                pages: '<%= dirs.dev %>pages/',
             }
         },
 
         less: {
-            // options: {
-            //   sourceMap: true,
-            //   outputSourceFiles: true,
-            //   sourceMapURL: 'css/style.css.map',
-            //   sourceMapFilename: '<%= dirs.output %>css/style.css.map',
-            // },
             '<%= dirs.output %>styles.css': ['<%= dirs.dev %>styles.less'],
-        },
-
-        // Reorganize Media Queries
-        cmq: {
-            options: {
-                log: true
-            },
-            dynamic: {
-                expand: true,
-                cwd: '<%= dirs.output %>styles.css',
-                src: ['*.css'],
-                dest: '<%= dirs.output %>styles.css'
-            }
         },
 
         postcss: {
@@ -50,129 +31,108 @@ module.exports = function(grunt) {
               annotation: '<%= dirs.output %>'
             },
             processors: [
+                require("css-mqpacker")(),
                 require('pixrem')(),
-                require('autoprefixer')(),
-                require('cssnext')(),
+                require('autoprefixer')({grid :  false }),
+                require('cssnext')({ features: { customProperties: {preserve : true} } }),
                 require('cssnano')(),
                 require('postcss-font-magician')({ /* options */ }),
             ]
           },
           dist: {
-            src: '<%= dirs.output %>styles.css',
-            dest: '<%= dirs.output %>styles.min.css'
+              src: '<%= dirs.output %>styles.css',
+              dest: '<%= dirs.output %>styles.min.css'
           }
-
         },
 
         // Js files
         concat: {
             vendors: {
                 src: [
-                    // 'bower_components/modernizr/modernizr.js',
-                    'bower_components/jquery/dist/jquery.min.js',
-                    // 'bower_components/jquery/jquery-migrate.min.js',
-                    // 'assets/js/refresh.js',
+                    'node_modules/jquery/dist/jquery.min.js',
+                    'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js' // https://github.com/igorescobar/jQuery-Mask-Plugin
                 ],
                 dest: '<%= dirs.dev %>vendors.js',
-            }
-            , scripts: {
+            },
+            scripts: {
                 src: [
-                    '<%= dirs.js.bosons %>_open.js',
-
-                    // '<%= dirs.js.bosons %>file.js',
-                    // '<%= dirs.js.atoms %>file.js',
-                    // '<%= dirs.js.molecules %>file.js',
-                    // '<%= dirs.js.organisms %>file.js',
-                    // '<%= dirs.js.templates %>file.js',
-
-                    '<%= dirs.js.atoms %>inputs.js',
-                    '<%= dirs.js.atoms %>dropdown.js',
-                    '<%= dirs.js.molecules %>table.js',
-                    '<%= dirs.js.pages %>design-patterns.js',
-
-
-                    // 'keycodes.js',
-                    // 'showcode.js',
-                    // 'uploadImg.js',
-                    // 'progressbar.js',
-                    // 'spinner.js',
-                    // 'uploadImg.js',
-                    // 'jscolor.min.js',
-                    // 'mostraSave.js',
-                    // 'slider.js',
-                    // 'localStorage.js',
-                    // 'notify.js',
-                    // 'slideshow.js',
-                    // 'gallery.js',
-                    // 'inputmasks.js',
-                    // 'fixedheader.js',
-                    // 'fade.js',
-                    // 'calculadora.js',
-                    // 'forms.js',
-                    // 'navmobile.js',
-                    // 'ancoras.js',
-                    // 'goto.js',
-                    // 'modal.js',
-                    // 'chamadasPlugins.js',
-                    // 'maps.config.js',
-                    // 'tabs.js',
-                    // 'responsiveslides.min.js',
-                    // 'getenderecos.js',
-                    '<%= dirs.js.bosons %>_close.js',
-
+                    '<%= dirs.js.bosons %>_start.js',
+                    '<%= dirs.js.bosons %>keycodes.js',
+                    '<%= dirs.js.bosons %>goto.js',
+                    '<%= dirs.js.bosons %>masks.js',
+                    '<%= dirs.js.bosons %>openClose.js',                    
+                    '<%= dirs.js.bosons %>table-shadow-effect.js',
+                    '<%= dirs.js.atoms %>menu-mobile.js',
+                    '<%= dirs.js.atoms %>spinner.js',
+                    '<%= dirs.js.molecules %>gallery.js',
+                    '<%= dirs.js.organisms %>header.js',
+                    '<%= dirs.js.organisms %>slider.js',
+                    '<%= dirs.js.organisms %>slidervertical.js',
+                    '<%= dirs.js.bosons %>_finish.js'
                 ],
-                // dest: '<%= dirs.dev %>js/scripts.js',
-                dest: '<%= dirs.output %>scripts.js',
+                dest: '<%= dirs.dev %>scripts.js',
             }
-            // , maps: {
-            //   src:[
-            //     '<%= dirs.dev %>js/maps2.js',
-            //     // '<%= dirs.dev %>js/maps.config.js'
-            //   ],
-            //   dest: '<%= dirs.dev %>js/scriptmaps.js',
-            // }
+        },
+        pug: {
+            compile: {
+              options: {
+                data: {
+                  debug: false
+                }
+              },
+              files: [ {
+                cwd: "app/",
+                src: "*.pug",
+                dest: "www/",
+                expand: true,
+                ext: ".html"
+              } ]
+            }
         },
 
         uglify: {
-            my_target: {
+            scripts: {
               files: {
-                '<%= dirs.output %>vendors.min.js': ['<%= dirs.dev %>vendors.js']
-                ,'<%= dirs.output %>scripts.min.js': ['<%= dirs.output %>scripts.js']
-                // ,'<%= dirs.output %>js/maps.min.js': ['<%= dirs.dev %>js/scriptmaps.js']
+                '<%= dirs.output %>vendors.min.js': ['<%= dirs.dev %>vendors.js'],
+                '<%= dirs.output %>scripts.min.js': ['<%= dirs.dev %>scripts.js']
               }
             }
         },
-
-        copy: {
-          main: {
-            expand: true,
-            cwd: '<%= dirs.dev %>atoms/icons',
-            src: '**',
-            dest: '<%= dirs.output %>/icons',
-          },
-        },
-
-        // Atualizar
         watch: {
-            styles: {
-                // Which files to watch (all .less files recursively in the less directory)
+            pug: {
                 files: [
                     'Gruntfile.js',
-                    '<%= dirs.dev %>*.less',
-                    '<%= dirs.dev %>*/*.less',
-                    '<%= dirs.dev %>*.js',
-                    '<%= dirs.dev %>*/*.js',
+                    'app/*.pug',
+                    '<%= dirs.dev %>*/*.pug',
                 ],
-                // tasks: ['less','replace','cmq','cssmin','concat'],
-                tasks: ['less','cmq','postcss','concat','uglify'],
+                tasks: ['pug'],
                 options: {
                     nospawn: true
                 }
-            }
-        },
+            },            
+            styles: {
+                files: [
+                    'Gruntfile.js',
+                    '<%= dirs.dev %>*/*.less',
+                ],
+                tasks: ['less','postcss'],
+                options: {
+                    nospawn: true
+                }
+            },
+            scripts: {
+                files: [
+                    'Gruntfile.js',
+                    '<%= dirs.dev %>*/*.js',
+                ],
+                tasks: ['concat','uglify'],
+                options: {
+                    nospawn: true
+                }
+            }            
+        }  
     });
     // registrando tarefa default
     grunt.registerTask( 'default', ['watch'] );
-    grunt.registerTask( 'compile', ['less','cmq','postcss','concat','uglify','copy','watch'] );
-    grunt.registerTask( 'deploy', ['deploy'] );
+    grunt.registerTask( 'compile', ['less','postcss','concat','uglify','pug','watch'] );
 };

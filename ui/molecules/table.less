@@ -1,7 +1,8 @@
 #table-pattern(){
     border-collapse: collapse;
     width: 100%;
-    margin-bottom: @space * 3;
+	margin-bottom: @space * 3;
+	position: relative;
 	td{
 		.text;
 	}
@@ -17,7 +18,7 @@
 			position: relative;
 			margin-right: 30px;
 			&:before{
-				color: @color-grayscale3;
+				color: @color-grayscale3!important;
 				content: "\f0dc";
 			}
 			&:after, &:before{
@@ -65,9 +66,6 @@
 	}
 }
 
-
-.table-bordered{}
-
 .table-striped{
 	#table-pattern();
 	th {
@@ -94,4 +92,18 @@
 			border-bottom: none;
 		}
 	}
+}
+
+.table:after {
+    // content: "\f337";
+    // display: block;
+    // background: #000;
+    // height: 100%;
+    // width: 100%;
+    // top: 0;
+    // left: 0;
+    // z-index: 12;
+    // position: absolute;
+	// color: yellow !important;
+	// .awesome;
 }

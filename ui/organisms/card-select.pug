@@ -1,0 +1,28 @@
+mixin card-select
+    .card-select
+        input#um(type="radio",name="convenio")
+        label(for="um")
+            .card-header
+                p Unimed
+                .card-options
+                    a.link
+            .card-content
+                block
+                p.plano-numero 0 005 000004181302 0
+                p.plano-tipo RB04 Básico
+
+
+mixin panel(titulo, tipo, footer)
+ - tipoPanel = tipo || 'panel-default';
+ .panel(class=`${tipoPanel}`)
+  if(titulo)
+   .panel-heading
+     h3.panel-title #{titulo}
+  .panel-body
+    block
+  if(footer)
+    .panel-footer #{footer}
+
+
++panel("Panel com título", "panel-success")
+ p Esse é um panel com título e classe para estilizar

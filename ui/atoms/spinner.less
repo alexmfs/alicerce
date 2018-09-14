@@ -1,0 +1,53 @@
+.spinner{
+	width: 70px;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+	input[type="text"]{
+		width: 100%;		
+		text-align: center;
+		height: 50px;
+		float: left;
+		border: 1px solid @color-base;
+		border-right: none;
+		text-indent: initial;
+		margin: 0;
+		border-radius: 3px 0px 0px 3px;
+		font-size: 2rem;
+		:focus::-webkit-input-placeholder {color: transparent}
+		:focus::-moz-placeholder          {color: transparent}
+		:focus:-moz-placeholder           {color: transparent}
+		:focus:-ms-input-placeholder      {color: transparent}
+	}
+	.nav{
+	  width: 25px;
+	  .up, .down{
+		cursor: pointer;
+		border: 1px solid @color-base;
+		height:25px;
+		text-align: center;
+		line-height: 25px;
+		background-color: @color-base;
+		color: @color-white;
+		font-size: 2rem;
+		&:hover{
+		  background-color: @color-base-light1;
+		}
+		&::-moz-selection {
+			color: inherit;
+			background: transparent;
+		}
+  
+		&::selection {
+			color: inherit;
+			background: transparent;
+		}
+	  }
+	  .up{
+		border-top-right-radius: 3px;
+	  }
+	  .down{
+		border-bottom-right-radius: 3px;
+	  }
+	}
+  }

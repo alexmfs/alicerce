@@ -87,6 +87,14 @@ http://fontawesome.io/cheatsheet/
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
+=======
+	color: inherit;
+}
+
+.fa{
+	color: inherit;
+>>>>>>> 30f4f9a63a073c57c7dd310635f4e412197fc2e1
 }
 
 
@@ -126,6 +134,19 @@ http://fontawesome.io/cheatsheet/
 	-moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
+=======
+.incomplet-text{
+	white-space: nowrap;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	// transition: @transition-slow;
+	// &:hover{
+	// 	text-indent: -50%;
+	// }
+}
+
+>>>>>>> 30f4f9a63a073c57c7dd310635f4e412197fc2e1
 
 .icon-size(@size){
 
@@ -133,6 +154,7 @@ http://fontawesome.io/cheatsheet/
 	@size-medium: 	30px;
 	@size-large: 	36px;
 
+<<<<<<< HEAD
 	&when ((@size) = small){
 		width: @size-small;
 		height: @size-small;
@@ -142,7 +164,103 @@ http://fontawesome.io/cheatsheet/
 		height: @size-medium;
 	}
 	&when ((@size) = large){
+=======
+	& when ((@size) = small){
+		width: @size-small;
+		height: @size-small;
+	}
+	& when ((@size) = medium){
+		width: @size-medium;
+		height: @size-medium;
+	}
+	& when ((@size) = large){
+>>>>>>> 30f4f9a63a073c57c7dd310635f4e412197fc2e1
 		width: @size-large;
 		height: @size-large;
 	}
 }
+<<<<<<< HEAD
+=======
+
+.radius(@a: all){
+
+	& when ((@a) = none)	{
+		border-radius: 0;
+	}
+	& when ((@a) = all)	{
+		border-radius: @radius;
+	}
+	& when ((@a) = top) {
+		border-radius: @radius @radius 0 0;
+	}
+
+	& when ((@a) = top-left), ((@a) = left-top) {
+		border-radius: @radius 0 0 0;
+	}
+
+	& when ((@a) = top-right), ((@a) = right-top) {
+		border-radius: 0 @radius 0 0;
+	}
+
+	& when ((@a) = bottom) {
+		border-radius: 0 0 @radius @radius;
+	}
+
+	& when ((@a) = bottom-left), ((@a) = left-bottom) {
+		border-radius: 0 0 0 @radius;
+	}
+
+	& when ((@a) = bottom-right), ((@a) = right-bottom) {
+		border-radius: 0 0 @radius 0;
+	}
+
+	& when ((@a) = left)	{
+		border-radius: @radius 0 0 @radius;
+	}
+
+	& when ((@a) = right)	{
+		border-radius: 0 @radius @radius 0;
+	}
+
+}
+
+.padding(@a: default){
+	& when ((@a) = default)	{
+		padding: @gap;
+	}
+	& when ((@a) = small)	{
+		padding: @gap-small;
+	}
+	& when ((@a) = large)	{
+		padding: @gap-large;
+	}		
+}
+
+.transition(@a: default){
+	& when ((@a) = default)	{
+		transition: @transition;
+	}
+	& when ((@a) = slow)	{
+		transition: @transition-slow;
+	}
+	& when ((@a) = medium)	{
+		transition: @transition-medium;
+	}
+	& when ((@a) = fast)	{
+		transition: @transition-fast;
+	}		
+}
+
+.margin-bottom(@a: @gap){
+	margin-bottom: @a;
+}
+.margin-top(@a: @gap){
+	margin-top: @a;
+}
+.margin-left(@a: @gap){
+	margin-left: @a;
+}
+.margin-right(@a: @gap){
+	margin-right: @a;
+}
+>>>>>>> 30f4f9a63a073c57c7dd310635f4e412197fc2e1
