@@ -22,83 +22,35 @@ html(lang="pt-BR")
   body
 
     header#header
-      a#nav-btn.open(href="#main-navigation" title="Clique para expandir ou contrair a navegação")
-        span
-
-      a#logo(href="javascript:;" title="Unilab")
-        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218.3 62.3")
-          g
-            path.letter.letter-u(d="M65.7,0H44.9v34.6c0,9.5-7.7,17.3-17.3,17.3s-17.3-7.7-17.3-17.3V0H0v34.6c0,15.3,12.4,27.7,27.7,27.7s27.7-12.4,27.7-27.7V10.1L65.7,0z")
-            path.highlight(d="M17.3,13.8v20.7c0,5.7,4.6,10.4,10.4,10.4S38,40.3,38,34.6V13.8H17.3z")
-            path.letter.letter-n(d="M72.7,61.2H62.3V22.7h10.1v4.8c2.3-4,7-5.8,11.1-5.8c9.5,0,13.9,6.8,13.9,15.2v24.2H87V38.8c0-4.3-2.1-7.7-7.1-7.7c-4.5,0-7.2,3.5-7.2,8V61.2z")
-            path.letter.letter-l(d="M122,61.2V4.6h10.4v56.6H122z")
-            rect.letter.letter-i.st0(x="104.3" y="22.7" width="10.4" height="38.5")
-            path.highlight(d="M109.5,3.7c3.6,0,6.4,2.9,6.4,6.5c0,3.4-2.8,6.3-6.4,6.3c-3.5,0-6.4-2.9-6.4-6.3C103.1,6.6,106,3.7,109.5,3.7z")
-            path.letter.letter-a(d="M149.2,39.1l9.5-1.4c2.2-0.3,2.9-1.4,2.9-2.7c0-2.7-2.1-5-6.5-5c-4.5,0-7,2.9-7.3,6.3l-9.2-2c0.6-6,6.2-12.7,16.5-12.7c12.2,0,16.7,6.9,16.7,14.6v18.9c0,2,0.2,4.8,0.5,6.1h-9.5c-0.2-1-0.4-3.1-0.4-4.6c-2,3-5.6,5.7-11.3,5.7c-8.2,0-13.2-5.6-13.2-11.6C137.7,43.8,142.8,40,149.2,39.1z M161.6,45.6v-1.7l-8.7,1.3c-2.7,0.4-4.8,1.9-4.8,4.8c0,2.3,1.6,4.5,5,4.5C157.5,54.6,161.6,52.4,161.6,45.6z")
-            path.letter.letter-b(d="M178.6,61.2V4.6h10.2V27c1.7-2.7,5.9-5.2,11.6-5.2c11.3,0,17.7,8.7,17.7,20.1c0,11.6-7.2,20.3-18.1,20.3c-5.3,0-9.4-2.3-11.4-5.6v4.7H178.6z M198.3,31c-5.2,0-9.6,3.8-9.6,10.9c0,7,4.4,10.9,9.6,10.9c5.3,0,9.5-3.9,9.5-10.9C207.9,34.9,203.6,31,198.3,31z")
       
-      a#alerts.has-alerts(href="javascript:;" title="Notificações")
-
-      #user-block
-        .avatar
-          img(src="https://www.fakepersongenerator.com/Face/male/male20151083595943023.jpg" alt="Edson Nascimento")
-        .info
-          p.name Edson Nascimento
-          p.role CEO
-
-      a#user-btn(href="javascript:;" title="Clique para expandir ou contrair as opções do usuário")
-        span
 
     nav#main-navigation
-      a(href='#', title="Pedidos")
-        span.ico.ico-pedidos
-        span.label Pedidos
-      a(href='#', title="Pacientes")
-        span.ico.ico-pacientes
-        span.label Pacientes
-      a(href='#', title="Médicos")
-        span.ico.ico-medicos
-        span.label Médicos
-      a(href='#', title="Exames")
-        span.ico.ico-exames
-        span.label Exames
-      a(href='#', title="Coleta")
-        span.ico.ico-coleta
-        span.label Coleta
-      a(href='#', title="Resultados")
-        span.ico.ico-resultados
-        span.label Resultados
-      a(href='#', title="Prazos de entrega")
-        span.ico.ico-prazos
-        span.label Prazos de entrega
-      a(href='#', title="Soroteca")
-        span.ico.ico-soroteca       
-        span.label Soroteca
+      
 
-  main#teste.main(role="main" ng-app="sortApp" ng-controller="mainController")
+    main#teste.main(role="main" ng-app="sortApp" ng-controller="mainController")
 
-    block content
+      block content
 
-  .float-action
-    a(href="#addPedido").btn-icon.open
-      +icon-paciente-add
-    +buttonPaciente
-    +buttonAdd
-  
-  .modal#addPedido
-    .card-header
-      h2 Selecione um paciente
-    .content
-      form(action="")
-        .form-control
-          input.input-control(type="text", placeholder="Solicite o nome, RG ou CPF.")
-        .button-group
-          input.button.link.close(type="reset", value="Cancelar")
-          button.button.positive(type="submit")
-            +icon-config
-            | Novo Paciente      
+    .float-action
+      a(href="#addPedido").btn-icon.open
+        +icon-paciente-add
+      +buttonPaciente
+      +buttonAdd
+    
+    .modal#addPedido
+      .card-header
+        h2 Selecione um paciente
+      .content
+        form(action="")
+          .form-control
+            input.input-control(type="text", placeholder="Solicite o nome, RG ou CPF.")
+          .button-group
+            input.button.link.close(type="reset", value="Cancelar")
+            button.button.positive(type="submit")
+              +icon-config
+              | Novo Paciente      
 
-  footer
-    p footer
-    script(src="assets/vendors.min.js")
-    script(src="assets/scripts.min.js")
+    footer
+      p footer
+      script(src="assets/vendors.min.js")
+      script(src="assets/scripts.min.js")
