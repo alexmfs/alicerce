@@ -42,13 +42,13 @@
     <section class="card">
       <div class="card-header">
         <h2 class="card-title">Pacientes</h2>
+        <div class="card-options"><a class="btn-icon open" href="#configuracoes" title="Configurações"><i class="fa fa-cogs"></i></a>
+        </div>
       </div>
       <form class="pacientes" action="">
         <div class="fieldset">
           <div class="card-header">
             <div class="card-title">Geral</div>
-            <div class="card-options"><span class="btn-icon"><i class="fa fa-th-list"></i></span><span class="btn-icon"><i class="fa fa-th-large"></i></span><a class="btn-icon open" href="#configuracoes" title="Configurações"><i class="fa fa-cogs"></i></a>
-            </div>
           </div>
           <div class="form-content">
             <div class="form-control nome">
@@ -58,6 +58,14 @@
             <div class="form-control data-de-nascimento">
               <label class="label-control">Data de nascimento</label>
               <input class="input-control data" type="text"/>
+            </div>
+            <div class="form-control cpf">
+              <label class="label-control">CPF</label>
+              <input class="input-control cpf" type="text"/>
+            </div>
+            <div class="form-control rg">
+              <label class="label-control">RG</label>
+              <input class="input-control" type="text"/>
             </div>
             <div class="form-control sexo">
               <label class="label-control">Sexo</label>
@@ -98,14 +106,6 @@
                 <label for="fator-du-1">Negativo</label>
               </div>
             </div>
-            <div class="form-control cpf">
-              <label class="label-control">CPF</label>
-              <input class="input-control cpf" type="text"/>
-            </div>
-            <div class="form-control rg">
-              <label class="label-control">RG</label>
-              <input class="input-control" type="text"/>
-            </div>
             <div class="form-control nome-do-pai">
               <label class="label-control">Nome do pai</label>
               <input class="input-control" type="text"/>
@@ -114,17 +114,13 @@
               <label class="label-control">Nome da mãe</label>
               <input class="input-control" type="text"/>
             </div>
-            <div class="form-control observação">
-              <label class="label-control">Observação</label>
-              <textarea class="input-control"></textarea>
-            </div>
           </div>
         </div>
         <div class="fieldset">
           <div class="form-header">
             <div class="card-title">Endereços</div>
           </div>
-          <div class="form-content form-enderecos">
+          <div class="form-content">
             <div class="form-control cep">
               <label class="label-control">Cep</label>
               <input class="input-control cep" type="text"/>
@@ -155,51 +151,7 @@
               <select class="input-control" id="cidades">
               </select>
             </div>
-          </div>
-        </div>
-        <div class="fieldset">
-          <div class="form-header">
-            <div class="card-title">Convênios</div>
-          </div>
-          <div class="form-content convenios">
-            <div class="card-select">
-              <input type="radio" id="unimed"/>
-              <label for="convenios">
-                <div class="card-header">
-                  <p>unimed</p>
-                  <div class="card-options"><a class="link"></a></div>
-                </div>
-                <div class="card-content">
-                  <p class="plano-numero">0 005 000004181302 0</p>
-                  <p class="plano-tipo">RB04 Básico</p>
-                </div>
-              </label>
-            </div>
-            <div class="card-select">
-              <input type="radio" id="unimed"/>
-              <label for="convenios">
-                <div class="card-header">
-                  <p>unimed</p>
-                  <div class="card-options"><a class="link"></a></div>
-                </div>
-                <div class="card-content">
-                  <p class="plano-numero">0 005 000004181302 0</p>
-                  <p class="plano-tipo">RB04 Básico</p>
-                </div>
-              </label>
-            </div>
-            <div class="card-select">
-              <input type="radio" id="unimed"/>
-              <label for="convenios">
-                <div class="card-header">
-                  <p>unimed</p>
-                  <div class="card-options"><a class="link"></a></div>
-                </div>
-                <div class="card-content">
-                  <p class="plano-numero">0 005 000004181302 0</p>
-                  <p class="plano-tipo">RB04 Básico</p>
-                </div>
-              </label>
+            <div class="button-group"><a class="button positive" href="#">Adicionar outro endereço</a>
             </div>
           </div>
         </div>
@@ -207,37 +159,28 @@
           <div class="form-header">
             <div class="card-title">Contatos</div>
           </div>
-          <div class="form-content form-enderecos">
-            <div class="form-control email">
-              <label class="label-control">Email</label>
-              <input class="input-control" type="email"/>
-            </div>
-            <div class="form-control telefone-1">
-              <label class="label-control">Telefone 1</label>
-              <input class="input-control" type="tel"/>
-            </div>
-            <div class="form-control telefone-2">
-              <label class="label-control">Telefone 2</label>
-              <input class="input-control" type="tel"/>
-            </div>
-          </div>
-        </div>
-        <div class="fieldset">
-          <div class="form-header">
-            <div class="card-title">Outros</div>
-          </div>
           <div class="form-content">
-            <div class="form-control cor-da-pele">
-              <label class="label-control">Cor da pele</label>
+            <div class="form-control tipo">
+              <label class="label-control">Tipo</label>
+              <select class="input-control">
+                <option value="celular">celular</option>
+                <option value="fixo">fixo</option>
+                <option value="e-mail">e-mail</option>
+              </select>
+            </div>
+            <div class="form-control telefone">
+              <label class="label-control">Telefone</label>
               <input class="input-control" type="text"/>
             </div>
-            <div class="form-control etnia">
-              <label class="label-control">Etnia</label>
+            <div class="form-control observação-contato">
+              <label class="label-control">Observação contato</label>
               <input class="input-control" type="text"/>
+            </div>
+            <div class="button-group"><a class="button positive" href="#">Adicionar outro contato</a>
             </div>
           </div>
         </div>
-        <div class="button-group"><a class="button" href="#">Cancelar</a><a class="button link" href="#">Voltar</a><a class="button positive primary" href="#">Avançar</a>
+        <div class="button-group"><a class="button link" href="#">Cancelar</a><a class="button positive primary" href="#">Salvar Paciente</a>
         </div>
       </form>
     </section>

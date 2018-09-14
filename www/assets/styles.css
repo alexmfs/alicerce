@@ -383,7 +383,7 @@ img {
   padding: 1.1rem 1.9rem .9rem;
   min-width: 3rem;
   color: #99a3ac;
-  border: 1px solid #99a3ac;
+  border: 1px solid #eeeeee;
   transition: 0.2s;
   text-align: center;
   border-radius: 0.2em;
@@ -403,7 +403,8 @@ img {
   height: 24px;
   margin-top: -10px;
 }
-.button:hover {
+.button:hover,
+.button:focus {
   color: #69737c;
   border-color: #69737c;
   background: #f3f4f7;
@@ -423,7 +424,8 @@ img {
   border-color: #f6f7fa !important;
   color: #ffffff !important;
 }
-.button[disabled]:hover {
+.button[disabled]:hover,
+.button[disabled]:focus {
   background: #ffffff !important;
   color: #f6f7fa !important;
   border-color: #f6f7fa !important;
@@ -432,7 +434,8 @@ img {
   color: #00c394;
   border-color: #00c394;
 }
-.button.positive:hover {
+.button.positive:hover,
+.button.positive:focus {
   color: #ffffff;
   background: #00c394;
 }
@@ -440,7 +443,8 @@ img {
   color: #ffffff;
   background: #00c394;
 }
-.button.positive.primary:hover {
+.button.positive.primary:hover,
+.button.positive.primary:focus {
   color: #00c394;
   border-color: #00c394;
   background: #ffffff;
@@ -449,7 +453,8 @@ img {
   color: #c42b3d;
   border-color: #c42b3d;
 }
-.button.negative:hover {
+.button.negative:hover,
+.button.negative:focus {
   color: #ffffff;
   background: #c42b3d;
 }
@@ -457,7 +462,8 @@ img {
   color: #ffffff;
   background: #c42b3d;
 }
-.button.negative.primary:hover {
+.button.negative.primary:hover,
+.button.negative.primary:focus {
   color: #c42b3d;
   border-color: #c42b3d;
   background: #ffffff;
@@ -703,41 +709,6 @@ p:not([class]) + p {
 textarea {
   resize: none;
 }
-.switch {
-  position: relative;
-}
-.switch input {
-  opacity: 0;
-  position: absolute;
-}
-.switch input:checked + label:before {
-  color: #00c394;
-}
-.switch label {
-  padding-left: 25px;
-}
-.switch label:before {
-  display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: inherit;
-  content: "\f00c";
-  display: block;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #e3e6e8;
-  position: absolute;
-  top: -1px;
-  left: 0;
-  text-align: center;
-  background: #ffffff;
-  transition: 0.2s;
-  color: #ffffff;
-}
 .input-options input {
   opacity: 0;
   position: absolute;
@@ -763,6 +734,52 @@ textarea {
 }
 .input-options:not(.list) label + input + label {
   margin-left: 10px;
+}
+.switch {
+  position: relative;
+}
+.switch input {
+  opacity: 0;
+  position: absolute;
+}
+.switch input:checked + label {
+  background: #c9ece4;
+}
+.switch input:checked + label:after {
+  left: 10px;
+  background: #00c394;
+}
+.switch label {
+  background: #e6e6e7;
+  display: block;
+  height: 10px;
+  width: 100%;
+  border-radius: 4px;
+}
+.switch label:after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #d4d4d4;
+  border-radius: 100%;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  transition: .2s;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.30196);
+}
+.table.options {
+  padding: 0;
+  margin-bottom: 0;
+}
+.table.options .switch {
+  margin: 0 auto;
+  width: 25px;
+}
+form {
+  display: grid;
+  grid-gap: 20px;
 }
 #alert-default,
 .alert-info,
@@ -956,6 +973,9 @@ ol.list li:before {
 }
 .modal .button-group {
   justify-content: flex-end;
+}
+.form-content .button-group {
+  grid-column-end: span 12;
 }
 .table {
   border-collapse: collapse;
@@ -1224,7 +1244,7 @@ ol.list li:before {
   visibility: visible;
 }
 .fieldset {
-  border: 1px solid #eee;
+  border: 1px solid #eeeeee;
   display: grid;
   grid-gap: 15px;
   padding: 15px;
@@ -1253,6 +1273,9 @@ form.pacientes {
   display: grid;
   grid-gap: 15px;
 }
+form.pacientes .button-group {
+  justify-content: flex-end;
+}
 .form-control.data-de-nascimento {
   grid-column-end: span 2;
 }
@@ -1278,7 +1301,6 @@ form.pacientes {
 }
 .form-control.cpf {
   grid-column-end: span 2;
-  grid-column-start: 1;
 }
 .form-control.rg {
   grid-column-end: span 3;
@@ -1310,12 +1332,17 @@ form.pacientes {
 .form-control.cidade {
   grid-column-end: span 3;
 }
-.form-control.email {
+.form-control.e-mail {
   grid-column-end: span 6;
 }
-.form-control.telefone-1,
-.form-control.telefone-2 {
-  grid-column-end: span 3;
+.form-control.tipo {
+  grid-column-end: span 1;
+}
+.form-control.telefone {
+  grid-column-end: span 5;
+}
+.form-control.observação-contato {
+  grid-column-end: span 6;
 }
 .pattern-color li {
   width: 100px;

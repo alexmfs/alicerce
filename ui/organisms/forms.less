@@ -1,5 +1,5 @@
 .fieldset{
-    border: 1px solid #eee;
+    .border();
     .grid();
     .padding();
     .radius();
@@ -55,6 +55,9 @@ legend{
 form.pacientes{
     display: grid;
     grid-gap: @gap;
+	.button-group{
+		justify-content: flex-end;
+	}
 }
 
 .form-control{
@@ -70,84 +73,70 @@ form.pacientes{
     &.sexo{
         grid-column-start: 1;
         grid-column-end: span 3;
-        // .column-desktop(2);
     }
     &.tipo-sanguíneo{
         grid-column-end: span 3;
-        // .column-desktop(2);
     }
     &.fator-rh{
         grid-column-end: span 2;
-        // .column-desktop(2);
     }
     &.fator-du{ 
         grid-column-end: span 3;
-        // .column-desktop(2);
     }
     &.observação{
-        // grid-column-end: span 12;
-        // .column-desktop(12);
+
     }
     &.nome-do-pai{
         grid-column-end: span 6;
-        // .column-desktop(6);
+
         .grid-both;
     }
     &.nome-da-mãe{
         grid-column-end: span 6;
-        // .column-desktop(6);
     }
     &.cpf{
         grid-column-end: span 2;
-        // .column-desktop(2);
-        .grid-both;
     }
     &.rg{
         grid-column-end: span 3;
-        // .column-desktop(3);
     }
     &.cor-da-pele{
         grid-column-end: span 3;
-        // .column-desktop(3)
     }
     &.etnia{
         grid-column-end: span 3;
-        // .column-desktop(3)
     }
     &.cep{
         grid-column-end: span 2;
-        // .column-desktop(2);
    }
     &.logradouro{
         grid-column-end: span 8;
-        // .column-desktop(8)
     }
     &.número{
         grid-column-end: span 2;
-        // .column-desktop(2);
     }
     &.complemento{
         grid-column-end: span 2;
-        // .column-desktop(2);
     }
     &.bairro{
         grid-column-end: span 5;
-        // .column-desktop(5);
     }
     &.estado{
         grid-column-end: span 2;
-        // .column-desktop(2);
     }
     &.cidade{
         grid-column-end: span 3;
-        // .column-desktop(3)
     }
-    &.email{
+    &.e-mail{
         grid-column-end: span 6;
-        // .column-desktop(6)
     }    
-    &.telefone-1, &.telefone-2{
-        grid-column-end: span 3;
-        // .column-desktop(3)
-    }       
+    &.tipo{
+        grid-column-end: span 1;
+    }    
+    &.telefone{
+        grid-column-end: span 5;
+    }
+    &.observação-contato{
+        grid-column-end: span 6;
+    }
 }
