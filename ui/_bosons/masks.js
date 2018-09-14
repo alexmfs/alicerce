@@ -4,10 +4,10 @@
 
 if ($("form").length > 0) {
 
-  $(".cep").mask("99999-999", { placeholder: "_____-___" });
-  $(".cpf").mask("999.999.999-99", { placeholder: "___.___.__-__" });
-  $(".cnpj").mask("99.999.999/9999-99", { placeholder: "__.___.___/0001-67" });
-  $(".data").mask("99/99/9999", { placeholder: "__/__/____" });
+  $("input.cep").mask("99999-999", { placeholder: "_____-___" });
+  $("input.cpf").mask("999.999.999-99", { placeholder: "___.___.__-__" });
+  $("input.cnpj").mask("99.999.999/9999-99", { placeholder: "__.___.___/0001-67" });
+  $("input.data").mask("99/99/9999", { placeholder: "__/__/____" });
 
   // Telefone e Celular - 8 ou 9 digitos
     var maskBehavior = function (val) {
