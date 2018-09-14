@@ -1,0 +1,245 @@
+// Mixins
+
+.box-round(@color: @color-base-light1, @width: 1px, @radius: @radius, @bg-color: @color-base-light2){
+	border: @width solid @color;
+	// border: 1px solid @color-base-light1;
+	// .border-radius(@radius);
+	border-radius: @radius;
+	padding: @space;
+	margin-bottom: @space!important;
+	background: @bg-color;
+}
+
+
+.border(@color, @width: 1px, @type:solid){
+	border: @width @type @color;
+}
+
+.linear-gradient(@to: top, @gradient1: transparent, @gradient2: rgba(0,0,0,.2)){
+	background-image: linear-gradient(to @to, @gradient1, @gradient2); /* W3C */
+}
+
+.centralize(){
+	position: relative;
+	top: 50%;
+	.transform(translateY(-50%));
+}
+
+.stripes(@color, @deg:45deg){
+    background:
+		@color
+    	repeating-linear-gradient(
+		@deg,
+		transparent,
+		transparent 10px,
+		rgba(0,0,0,0.1) 10px,
+		rgba(0,0,0,0.1) 20px
+	);
+}
+
+
+/*
+
+Grid
+
+*/
+
+.col(@col, @total, @gutter: 15px){
+  @width: (100% / @total) * @col;
+  width: ~"calc(@{width} - @{gutter})";
+  box-sizing: border-box;
+  margin-left: @gutter / 2;
+  margin-right: @gutter / 2;
+}
+
+
+.col-phone(@col, @total, @gutter: 15px){
+	@media @phone{
+		.col(@col, @total, @gutter);
+	}
+}
+
+.col-tablet(@col, @total, @gutter: 15px){
+	@media @tablet{
+		.col(@col, @total, @gutter);
+	}
+}
+
+.col-desktop(@col, @total, @gutter: 15px){
+	@media @desktop{
+		.col(@col, @total, @gutter);
+	}
+}
+
+
+/*
+
+Font Awesome
+http://fontawesome.io/cheatsheet/
+
+*/
+
+.awesome(){
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: inherit;
+}
+
+.fa{
+	color: inherit;
+}
+
+
+.placeholder(@rules) {
+
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
+
+.selection(@rules) {
+
+	// background: green;
+	// color: #FFFFFF;
+
+	&::selection{
+		@rules();
+
+	}
+	&::-moz-selection{
+		@rules();
+	}
+
+}
+
+.font-smoothing(){
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.incomplet-text{
+	white-space: nowrap;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	// transition: @transition-slow;
+	// &:hover{
+	// 	text-indent: -50%;
+	// }
+}
+
+
+.icon-size(@size){
+
+	@size-small: 	24px;
+	@size-medium: 	30px;
+	@size-large: 	36px;
+
+	& when ((@size) = small){
+		width: @size-small;
+		height: @size-small;
+	}
+	& when ((@size) = medium){
+		width: @size-medium;
+		height: @size-medium;
+	}
+	& when ((@size) = large){
+		width: @size-large;
+		height: @size-large;
+	}
+}
+
+.radius(@a: all){
+
+	& when ((@a) = none)	{
+		border-radius: 0;
+	}
+	& when ((@a) = all)	{
+		border-radius: @radius;
+	}
+	& when ((@a) = top) {
+		border-radius: @radius @radius 0 0;
+	}
+
+	& when ((@a) = top-left), ((@a) = left-top) {
+		border-radius: @radius 0 0 0;
+	}
+
+	& when ((@a) = top-right), ((@a) = right-top) {
+		border-radius: 0 @radius 0 0;
+	}
+
+	& when ((@a) = bottom) {
+		border-radius: 0 0 @radius @radius;
+	}
+
+	& when ((@a) = bottom-left), ((@a) = left-bottom) {
+		border-radius: 0 0 0 @radius;
+	}
+
+	& when ((@a) = bottom-right), ((@a) = right-bottom) {
+		border-radius: 0 0 @radius 0;
+	}
+
+	& when ((@a) = left)	{
+		border-radius: @radius 0 0 @radius;
+	}
+
+	& when ((@a) = right)	{
+		border-radius: 0 @radius @radius 0;
+	}
+
+}
+
+.padding(@a: default){
+	& when ((@a) = default)	{
+		padding: @gap;
+	}
+	& when ((@a) = small)	{
+		padding: @gap-small;
+	}
+	& when ((@a) = large)	{
+		padding: @gap-large;
+	}		
+}
+
+.transition(@a: default){
+	& when ((@a) = default)	{
+		transition: @transition;
+	}
+	& when ((@a) = slow)	{
+		transition: @transition-slow;
+	}
+	& when ((@a) = medium)	{
+		transition: @transition-medium;
+	}
+	& when ((@a) = fast)	{
+		transition: @transition-fast;
+	}		
+}
+
+.margin-bottom(@a: @gap){
+	margin-bottom: @a;
+}
+.margin-top(@a: @gap){
+	margin-top: @a;
+}
+.margin-left(@a: @gap){
+	margin-left: @a;
+}
+.margin-right(@a: @gap){
+	margin-right: @a;
+}
