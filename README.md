@@ -1,6 +1,0 @@
-start
-=====
-
-Boilerplate projects
-alicerce
-========

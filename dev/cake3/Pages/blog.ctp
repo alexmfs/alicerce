@@ -1,1 +1,0 @@
-<?= $this->assign('title','Blog'); ?>
