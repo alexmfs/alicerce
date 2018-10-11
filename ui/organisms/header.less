@@ -1,9 +1,23 @@
-.header-site {
-    position: sticky;
+.fixed-header(@hero){
+
+	& when ((@hero) = true){
+        position: fixed;
+        width: 100%;
+    }
+    
+    & when ((@hero) = false){
+        position: sticky;
+    }
+   
     z-index: 1000;
     top: 0;
+
+}
+
+.header-site {
+    .fixed-header(true);    
     padding: 10px 0;
-    background: @color-primary;
+    background: fade(@color-primary, 50%);
 }
 
 .header-site .wrap {
