@@ -487,8 +487,9 @@ button.btn-icon {
   border: none;
   background: none;
 }
-p:not([class]) {
+.text {
   font: 400 1.4rem 'Arial';
+  margin-bottom: 30px;
 }
 .text a,
 .list li a {
@@ -985,7 +986,7 @@ ol.list li:before {
   position: relative;
 }
 .table td {
-  font: 400 1.6rem 'Arial';
+  font: 400 1.4rem 'Arial';
   margin-bottom: 30px;
 }
 .table td a {
@@ -1069,7 +1070,7 @@ ol.list li:before {
   position: relative;
 }
 .table-striped td {
-  font: 400 1.6rem 'Arial';
+  font: 400 1.4rem 'Arial';
   margin-bottom: 30px;
 }
 .table-striped td a {
