@@ -68,16 +68,3 @@ img{
 .pull(@offset:1) {
 	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
 }
-
-
-// Determine a largura do seu container. //
-.wrap {
-	width: 100%;
-	max-width: 1200px; // max-width: 960px == responsivo
-	// display: table;
-	margin: 0 auto;
-	position: relative;
-	@media @phone{
-		padding: 0 10px;
-	}
-}

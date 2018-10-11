@@ -1,33 +1,69 @@
 extends layouts/layout.pug
 
+block banner
+
+    .slider(style="background: #00b9e7 url(assets/banner.png) no-repeat top center; height: 664px; top: -50px; position: relative;")
+        ul 
+            li
+
 block content
 
-    section.card
-        h2.title Tabelas
-        h3.subtitle Comum com filtro
-
-        .container(ng-init="layout=1")
-
-            .card-header
-                .card-title Pedidos recentes
-                .card-options
-                    +buttonList
-                    +buttonGrid
-                    +buttonConfig
-
-            .box-input
-                +icon-filtro
-                input.input-control(type="text", placeholder="Digite aqui seu filtro" ng-model="searchPedido")
-            
-            table.table(ng-show="layout == 1")
-                tr
-                  each valor, label in {"Coluna E":"ColunaE","Coluna F":"ColunaF"}
-                    +th(label, valor)
-                tr(ng-repeat="pedido in pedidos | orderBy:sortType:sortReverse | filter:searchPedido" ng-if="$index < 12")
-                    +td("{{ pedido.codigoterceiro }}", "Codigoterceiro")                  
-                tr.search-empty
-                    td
-                        | Nenhum resultado foi encontrado!
-                        br 
-                        | Experimente a 
-                        a(href="#") busca avançada.
+    #home
+        #sobre
+            .wrap
+                div 
+                    h2 O que?
+                    p O objetivo da organização Todas as Nações é auxiliar, orientar e dar suporte às igrejas cristãs, missionários e suas famílias (Ef 4.15-16).
+                
+                div 
+                    h2 Como?
+                    p As orientações ocorrem por meio de devocionais, artigos, pregações, conferências, reportagens informativas, testemunhos, treinamentos, aconselhamentos, distribuição de livros, Bíblias, materiais cristãos e apoio financeiro.
+                
+                div 
+                    h2 Onde?
+                    p Hoje desenvolvemos o ministério no Brasil e no continente Africano.
+                    p A base de apoio principal fica no Brasil na cidade de Londrina/PR, e seu papel é mobilizar os cristãos para a causa missionária entre todas as nações por meio do Ide, da oração e suporte
+                
+                div 
+                    h2 Por que?
+                    p Realizamos este mandato porque entendemos a ordem que o Senhor nos deu, e a indispensável evangelização entre os povos de todas as nações, e cremos que não existe salvação em nenhum outro nome dado entre os homens debaixo dos céus, além do nome de Jesus Cristo (At 4.12).
+        #contribuicoes
+            .wrap
+                h1 Contribuições
+                p Nos ajude a manter esse ministério, você pode escolher um valor mensal que será creditado no seu cartão de crédito via Pagseguro.
+                .planos 
+                p Ou se preferir, você também pode fazer uma oferta única via Pagseguro com qualque valor que desejar a href="" class="button" Quero fazer uma oferta
+        #blog
+            .wrap
+                h1 Blog
+                h2 O que temos feito?
+            .wrap.data
+                .data-item
+                    img( src="" alt="") 
+                    h2 Nome da materia
+                    time 10/09/2018
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id elit at urna commodo convallis id vel leo. Suspendisse a pretium tortor.                
+                .data-item
+                    img( src="" alt="") 
+                    h2 Nome da materia
+                    time 10/09/2018
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id elit at urna commodo convallis id vel leo. Suspendisse a pretium tortor.                
+                .data-item
+                    img(src="" alt="") 
+                    h2 Nome da materia
+                    time 10/09/2018
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id elit at urna commodo convallis id vel leo. Suspendisse a pretium tortor.
+        #newsletter
+            .wrap
+                h1 Fique por dentro!
+                p Cadastre-se e receba nossas notícias direto no seu e-mail.
+                small Prometemos nâo fazer spam!  :)
+                form class="newsletter-bar" 
+                    input(type="text" name="" id="" placeholder="Digite seu melhor e-mail!")
+                    input(type="submit" value="Cadastrar")
+        #quem
+            .wrap
+                h1 Quem é Douglas Ortiz?
+                p Servi em regiões específicas na missão de Deus por vários anos, trabalhei em comunidades, projetos missionários, e estudei Teologia na faculdade Teológica Sul Americana, Novo Testamento na Puc-Paraná e Missiológia na FTSA e venho me preparando para o ministério pastoral e de ensino através do servir na missão de Deus e dos estudos em Dogmática na North West University.
+                p Atualmente estou no continente Africano servindo aos meus irmãos através da pregação do evangelho do Cristo de Deus e estudando. Enfrento os desafios da causa missionária transcultural e vivencio a ação do Deus soberano a cada dia e em cada situação. Através de ações missionárias em comunidades carentes, trabalho nas igrejas e o projeto de futebol com as crianças, a glória do Senhor tem se manifestado e a palavra do evangelho está se revelando a eles.
+                img(src="/assets/img/douglas-ortiz.png" alt="")

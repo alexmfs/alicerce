@@ -32,27 +32,14 @@ body {
 	.font-base;
 }
 
-.main{
-	.wrap;
-}
-
-#home&{
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: 66% 33%;
-}
-
-#convenio {
-	display: grid;	
-	grid-gap: 20px;
-	grid-template-columns: 66% 33%;
-}
-
-#addPedido{
-	width: 500px;
-}
-
-[ng-show]:not(.ng-hide){
-	opacity: 0;
-	animation: fadein .5s linear .2s 1 forwards;
+// Determine a largura do seu container. //
+.wrap {
+	width: 100%;
+	max-width: 1200px; // max-width: 960px == responsivo
+	// display: table;
+	margin: 0 auto;
+	position: relative;
+	@media @phone{
+		padding: 0 10px;
+	}
 }

@@ -1,0 +1,43 @@
+#styleguide {
+    .wrap;
+    display: grid;
+    grid-gap: @gap-large;
+    grid-template-columns: 200px 1fr;
+    .content {
+        display: grid;
+        grid-gap: 30px;
+    }
+}
+
+.nav-local{
+    ul {
+        .card;
+        position: fixed;
+        width: 200px;
+    }
+}
+
+
+#sobre .wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+#blog .data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+#home {
+    display: grid;
+    grid-gap: 30px;
+}
+
+#contato {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+

@@ -52,7 +52,7 @@ module.exports = function(grunt) {
                     'node_modules/jquery/dist/jquery.min.js',
                     'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js' // https://github.com/igorescobar/jQuery-Mask-Plugin
                 ],
-                dest: '<%= dirs.dev %>vendors.js',
+                dest: '<%= dirs.output %>vendors.js',
             },
             scripts: {
                 src: [
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
                     '<%= dirs.js.organisms %>slidervertical.js',
                     '<%= dirs.js.bosons %>_finish.js'
                 ],
-                dest: '<%= dirs.dev %>scripts.js',
+                dest: '<%= dirs.output %>scripts.js',
             }
         },
         pug: {
@@ -95,8 +95,8 @@ module.exports = function(grunt) {
         uglify: {
             scripts: {
               files: {
-                '<%= dirs.output %>vendors.min.js': ['<%= dirs.dev %>vendors.js'],
-                '<%= dirs.output %>scripts.min.js': ['<%= dirs.dev %>scripts.js']
+                '<%= dirs.output %>vendors.min.js': ['<%= dirs.output %>vendors.js'],
+                '<%= dirs.output %>scripts.min.js': ['<%= dirs.output %>scripts.js']
               }
             }
         },

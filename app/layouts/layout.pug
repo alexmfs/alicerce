@@ -17,40 +17,30 @@ html(lang="pt-BR")
     block scriptsHead
       link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
     
-    title Unilab | Gestão inteligente para laboratórios
+    title Alicerce - uma biblioteca de construção atomica
 
   body
 
-    header#header
-      
+    header.header-site(role="banner")
+      .wrap
+        img(src="/assets/img/logo.png" alt="Logo modelo")
+        nav.nav-global
+          span.nav-global-mobile
+          ul
+            li.nav-global-link: a(href="#") Início
+            li.nav-global-link: a(href="#") Sobre
+            li.nav-global-link: a(href="#") Serviços
+            li.nav-global-link: a(href="#") Contato
 
-    nav#main-navigation
-      
+    block banner            
 
-    main#teste.main(role="main" ng-app="sortApp" ng-controller="mainController")
+    main.main(role="main")
 
       block content
 
-    .float-action
-      a(href="#addPedido").btn-icon.open
-        +icon-paciente-add
-      +buttonPaciente
-      +buttonAdd
-    
-    .modal#addPedido
-      .card-header
-        h2 Selecione um paciente
-      .content
-        form(action="")
-          .form-control
-            input.input-control(type="text", placeholder="Solicite o nome, RG ou CPF.")
-          .button-group
-            input.button.link.close(type="reset", value="Cancelar")
-            button.button.positive(type="submit")
-              +icon-config
-              | Novo Paciente      
+    footer.footer-site(role="contentinfo")
+      .wrap
+        p footer
 
-    footer
-      p footer
-      script(src="assets/vendors.min.js")
-      script(src="assets/scripts.min.js")
+    script(src="assets/vendors.min.js")
+    script(src="assets/scripts.min.js")
