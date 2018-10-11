@@ -1,0 +1,43 @@
+// https://github.com/jescalan/rupture
+
+
+@phone: 610px;
+@desktop: 950px;
+
+
+.phone(@rules){
+  @media only screen and (max-width: @phone){
+    @rules();
+  }
+}
+.tablet(@rules){
+  @media only screen and (min-width: @phone + 1) and (max-width: @desktop - 1){
+    @rules();
+  }
+}
+.desktop(@rules){
+  @media only screen and (min-width: @desktop){
+    @rules();
+  }
+}
+.below(@size, @rules){
+  @media only screen and (max-width: @size){
+    @rules();
+  }
+}
+.above(@size, @rules){
+  @media only screen and (min-width: @size + 1){
+    @rules();
+  }
+}
+.between(@sizemin, @sizemax, @rules){
+  @media only screen and (min-width: @sizemin + 1) and (max-width: @sizemax - 1){
+    @rules();
+  }
+}
+
+div{
+  .between(@phone, @desktop, {
+    margin: 20px
+  })
+}
