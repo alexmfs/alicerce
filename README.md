@@ -20,6 +20,7 @@ Após baixar o projeto, rodar os comandos ```npm install``` e  ```grunt compile`
 - [Design Agnóstico](http://bradfrost.com/blog/post/managing-technology-agnostic-design-systems/)
 - [Zen Garden](http://www.csszengarden.com/)
 - [Design System customizado para cada cliente](http://bradfrost.com/blog/post/creating-themeable-design-systems/)
+- [Padrões de exibição de conteúdo](http://v3.danielmall.com/articles/content-display-patterns/) 
 
 ## Organização de arquivos
 Todos os arquivos de componentes ficam juntos, usando o mesmo nome, mudando apenas a extensão conforme cada caso
