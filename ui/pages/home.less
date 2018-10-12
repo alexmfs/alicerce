@@ -20,8 +20,16 @@
 
 #sobre .wrap {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
+    .phone({
+        grid-template-columns: repeat(2, 1fr);
+    });      
+    .tablet({
+        grid-template-columns: repeat(3, 1fr);
+    });        
+    .desktop({
+        grid-template-columns: repeat(4, 1fr);
+    });    
 }
 
 #blog .data {

@@ -19,7 +19,10 @@ html(lang="pt-BR")
     
     title Alicerce - uma biblioteca de construção atomica
 
-  body
+    - var bodyClass = '';
+    block vars
+
+  body(class=bodyClass)
 
     header.header-site(role="banner")
       .wrap

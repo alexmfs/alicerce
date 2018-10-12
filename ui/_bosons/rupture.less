@@ -2,7 +2,8 @@
 
 
 @phone: 610px;
-@desktop: 950px;
+@tablet: 800px;
+@desktop: 960px;
 
 
 .phone(@rules){
@@ -11,7 +12,7 @@
   }
 }
 .tablet(@rules){
-  @media only screen and (min-width: @phone + 1) and (max-width: @desktop - 1){
+  @media only screen and (min-width: (@phone + 1)) and (max-width: (@desktop - 1)){
     @rules();
   }
 }

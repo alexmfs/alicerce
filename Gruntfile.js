@@ -105,7 +105,7 @@ module.exports = function(grunt) {
                 files: [
                     'Gruntfile.js',
                     'app/*.pug',
-                    '<%= dirs.dev %>*/*.pug',
+                    'app/**/*.pug',
                 ],
                 tasks: ['pug'],
                 options: {
@@ -115,7 +115,8 @@ module.exports = function(grunt) {
             styles: {
                 files: [
                     'Gruntfile.js',
-                    '<%= dirs.dev %>*/*.less',
+                    '<%= dirs.dev %>*.less',
+                    '<%= dirs.dev %>**/*.less',
                 ],
                 tasks: ['less','postcss'],
                 options: {

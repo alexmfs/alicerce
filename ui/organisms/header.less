@@ -15,7 +15,10 @@
 }
 
 .header-site {
-    .fixed-header(true);    
+    .fixed-header(false);
+    .home &{
+        .fixed-header(true); 
+    }
     padding: 10px 0;
     background: fade(@color-primary, 50%);
 }
