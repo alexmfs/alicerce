@@ -13,74 +13,103 @@ block content
 
         .content
 
-            section.card
-                header
-                    h2.title Tipografia
-                    h3.subtitle Overpass
+            //- section.card
+            //-     header
+            //-         h2.title Tipografia
+            //-         h3.subtitle Overpass
                 
-                p.text Nulla iaculis finibus vulputate. Pellentesque et vestibulum dolor. Nam eu lectus id justo ullamcorper hendrerit. Nullam sed dui iaculis, sodales erat vitae, fermentum ex. Quisque tempus tortor ac nibh imperdiet posuere. In congue diam ac accumsan tincidunt. Sed rutrum placerat quam vel posuere.
+            //-     p.text Nulla iaculis finibus vulputate. Pellentesque et vestibulum dolor. Nam eu lectus id justo ullamcorper hendrerit. Nullam sed dui iaculis, sodales erat vitae, fermentum ex. Quisque tempus tortor ac nibh imperdiet posuere. In congue diam ac accumsan tincidunt. Sed rutrum placerat quam vel posuere.
 
-                p.text Nulla iaculis finibus vulputate. Pellentesque et vestibulum dolor. Nam eu lectus id justo ullamcorper hendrerit. Nullam sed dui iaculis, sodales erat vitae, fermentum ex. Quisque tempus tortor ac nibh imperdiet posuere. In congue diam ac accumsan tincidunt. Sed rutrum placerat quam vel posuere.
+            //-     p.text Nulla iaculis finibus vulputate. Pellentesque et vestibulum dolor. Nam eu lectus id justo ullamcorper hendrerit. Nullam sed dui iaculis, sodales erat vitae, fermentum ex. Quisque tempus tortor ac nibh imperdiet posuere. In congue diam ac accumsan tincidunt. Sed rutrum placerat quam vel posuere.
 
-                ul.list
-                    li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    li Orci varius natoque penatibus et magnis dis parturient montes,
-                    li O nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                    li Quisque non blandit orci.
+            //-     ul.list
+            //-         li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            //-         li Orci varius natoque penatibus et magnis dis parturient montes,
+            //-         li O nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+            //-         li Quisque non blandit orci.
                     
-                ol.list
-                    li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    li Orci varius natoque penatibus et magnis dis parturient montes,
-                    li O nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                    li Quisque non blandit orci.            
+            //-     ol.list
+            //-         li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            //-         li Orci varius natoque penatibus et magnis dis parturient montes,
+            //-         li O nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+            //-         li Quisque non blandit orci.            
 
-            section.card
-                h2.title Paleta de cores
-                h3.subtitle Cores institucionais
+            //- section.card
+            //-     h2.title Paleta de cores
+            //-     h3.subtitle Cores institucionais
 
-                ul.pattern-color
-                    li.brand-green
-                    li.brand-red
-                    li.brand-yellow
-                    li.brand-blue
+            //-     ul.pattern-color
+            //-         li.brand-green
+            //-         li.brand-red
+            //-         li.brand-yellow
+            //-         li.brand-blue
 
-                h3.subtitle Cores em escala de cinza
+            //-     h3.subtitle Cores em escala de cinza
 
-                ul.pattern-color
-                    li.color-white
-                    li.color-grayscale1
-                    li.color-grayscale2
-                    li.color-grayscale3
-                    li.color-grayscale4
-                    li.color-dark1
-                    li.color-dark2
+            //-     ul.pattern-color
+            //-         li.color-white
+            //-         li.color-grayscale1
+            //-         li.color-grayscale2
+            //-         li.color-grayscale3
+            //-         li.color-grayscale4
+            //-         li.color-dark1
+            //-         li.color-dark2
 
-            section.card
-                h2.title Alertas
-                +alert-info("Hello World")
-                +alert-danger("Hello World")
-                +alert-success("Hello World")
-                +alert-warning("Hello World")
-                +alert-i-info("This is an info alert")
-                +alert-i-info("This is an info alert with custom icon","heart")
-                +alert-i-danger("This is a danger alert")
-                +alert-i-success("This is a success alert")
-                +alert-i-warning("This is a warning alert")
-                +alert-x-info("This is an info alert")
-                +alert-x-danger("This is a danger alert")
-                +alert-x-success("This is a success alert")
-                +alert-x-warning("This is a warning alert")
-                +alert-ix-info("This is an info alert")
-                +alert-ix-danger("This is a danger alert")
-                +alert-ix-success("This is a success alert")
-                +alert-ix-warning("This is a warning alert")
+            //- section.card
+            //-     h2.title Alertas
+            //-     +alert-info("Hello World")
+            //-     +alert-danger("Hello World")
+            //-     +alert-success("Hello World")
+            //-     +alert-warning("Hello World")
+            //-     +alert-i-info("This is an info alert")
+            //-     +alert-i-info("This is an info alert with custom icon","heart")
+            //-     +alert-i-danger("This is a danger alert")
+            //-     +alert-i-success("This is a success alert")
+            //-     +alert-i-warning("This is a warning alert")
+            //-     +alert-x-info("This is an info alert")
+            //-     +alert-x-danger("This is a danger alert")
+            //-     +alert-x-success("This is a success alert")
+            //-     +alert-x-warning("This is a warning alert")
+            //-     +alert-ix-info("This is an info alert")
+            //-     +alert-ix-danger("This is a danger alert")
+            //-     +alert-ix-success("This is a success alert")
+            //-     +alert-ix-warning("This is a warning alert")
 
-            section.card
+            //- section.card
                 h2.title Progress Bar
-                +progress-bar-info(20)
                 +progress-bar-warning(60)
                 +progress-bar-danger(80)
                 +progress-bar-danger(80)
                 +progress-bar-success(10)
                 +progress-bar-primary(10)
                 +progress-bar-striped(10)
+                +progress-bar-info(20)
+             
+            section.card#inputs
+                .form-control
+                    label.label-control Label 
+                    input(type="text").input-control
+
+                .box-input
+                    +icon-filtro
+                    input.input-control(type="text", placeholder="Digite aqui seu filtro" ng-model="searchPedido")            
+
+                .box-input(style="background-color: #fff")
+                    input.input-control(type="text", placeholder="Digite aqui seu filtro" ng-model="searchPedido")            
+
+
+                .form-control
+                    label.label-control Label 
+                    textarea(rows="8", cols="80").input-control
+
+                .select
+                    select.input-control
+                        option Escolha a cidade
+                        option(value="um") um
+                        option(value="dois") dois
+
+                .switch
+                    input(type="checkbox" id="w1")
+                    label(for="w1")
+
+                +option-group-unique(['Feminino', 'Masculino', 'Ignorado'], 'Sexo')
