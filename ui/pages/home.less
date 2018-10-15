@@ -1,46 +1,41 @@
-#styleguide {
-    .wrap;
-    display: grid;
-    grid-gap: @gap-large;
-    grid-template-columns: 200px 1fr;
-    .content {
-        display: grid;
-        grid-gap: 30px;
-    }
-}
-
-.nav-local{
-    ul {
-        .card;
-        position: fixed;
-        width: 200px;
-    }
-}
-
-
-#sobre .wrap {
-    display: grid;
-    grid-gap: 30px;
-    .phone({
-        grid-template-columns: repeat(2, 1fr);
-    });      
-    .tablet({
-        grid-template-columns: repeat(3, 1fr);
-    });        
-    .desktop({
-        grid-template-columns: repeat(4, 1fr);
-    });    
-}
-
-#blog .data {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-}
-
 #home {
     display: grid;
     grid-gap: 30px;
+    > section {
+        padding: @gap-large 0;
+    }    
+}
+
+#contribuicoes{
+    .wrap > * {
+        color: @color-secondary;
+    }
+}
+
+
+#sobre{
+    .wrap {
+        display: grid;
+        grid-gap: 30px;
+        .phone({
+            grid-template-columns: repeat(2, 1fr);
+        });      
+        .tablet({
+            grid-template-columns: repeat(3, 1fr);
+        });        
+        .desktop({
+            grid-template-columns: repeat(4, 1fr);
+        });    
+    }
+}
+
+
+#blog{
+    .data {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
 }
 
 #contato {
@@ -48,4 +43,3 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
 }
-

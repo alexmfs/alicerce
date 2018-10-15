@@ -1,11 +1,11 @@
 .fixed-header(@hero){
 
-	& when ((@hero) = true){
+	& when ((@hero) = 'hero'){
         position: fixed;
         width: 100%;
     }
     
-    & when ((@hero) = false){
+    & when ((@hero) = true){
         position: sticky;
     }
    
@@ -15,9 +15,9 @@
 }
 
 .header-site {
-    .fixed-header(false);
+    .fixed-header(true);
     .home &{
-        .fixed-header(true); 
+        .fixed-header('hero'); 
     }
     padding: 10px 0;
     background: fade(@color-primary, 50%);
