@@ -1,6 +1,6 @@
 #home {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 50px;
     > section {
         padding: @gap-large 0;
     }    
@@ -32,19 +32,76 @@
         color: @color-secondary;
         margin-bottom: 5px;
     }
+    p{
+        line-height: 1.5;
+    }
 }
 
 
 #blog{
     .data {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
+        .phone({
+            grid-template-columns: repeat(2, 1fr);
+        });      
+        .tablet({
+            grid-template-columns: repeat(3, 1fr);
+        });        
+        .desktop({
+            grid-template-columns: repeat(4, 1fr);
+        });            
+    }
+    .data-item{
+        &:nth-child(1){
+            .data-content {
+                color: #00bea2;
+            }
+            .button{
+                background: #00bea2;
+                border-color: #00bea2;
+                &:hover{
+                    background: #fff;
+                    color: #00bea2
+                }
+            }
+        }
+        &:nth-child(2){
+            .data-content {
+                color: #efba2c;
+            }
+            .button{
+                background: #efba2c;
+                border-color: #efba2c;
+                &:hover{
+                    background: #fff;
+                    color: #efba2c
+                }
+            }            
+        }
+        &:nth-child(3){
+            .data-content {
+                color: @color-secondary;
+            }
+            .button{
+                background: @color-secondary;
+                border-color: @color-secondary;
+                &:hover{
+                    background: #fff;
+                    color: @color-secondary
+                }
+            }            
+        }          
     }
 }
 
 #contato {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
+    .wrap{
+        display: grid;       
+        grid-gap: 30px;        
+        .desktop({
+            grid-template-columns: repeat(2, 1fr);
+        });         
+    }
 }
+

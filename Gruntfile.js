@@ -106,6 +106,8 @@ module.exports = function(grunt) {
                     'Gruntfile.js',
                     'app/*.pug',
                     'app/**/*.pug',
+                    'ui/*.pug',
+                    'ui/**/*.pug',                    
                 ],
                 tasks: ['pug'],
                 options: {

@@ -201,7 +201,10 @@ http://fontawesome.io/cheatsheet/
 	& when ((@a) = right)	{
 		border-radius: 0 @radius @radius 0;
 	}
+}
 
+.radius-full(){
+	border-radius: 2rem;
 }
 
 
@@ -219,10 +222,6 @@ http://fontawesome.io/cheatsheet/
 	& when ((@a) = fast)	{
 		transition: @transition-fast;
 	}		
-}
-
-.padding(@a: @gap){
-	padding: @gap;
 }
 
 .grid(@a: @gap){

@@ -35,29 +35,25 @@ block content
               h1.title-section Contribuições
               p Nos ajude a manter esse ministério, você pode escolher um valor mensal que será creditado no seu cartão de crédito via Pagseguro.
               .planos 
-              p Ou se preferir, você também pode fazer uma oferta única via Pagseguro com qualque valor que desejar #[a(href="http://example.com" class="button") Quero fazer uma oferta]
+              p Ou se preferir, você também pode fazer uma oferta única via Pagseguro com qualque valor que desejar #[a.button.positive(href="http://example.com") Quero fazer uma oferta]
         section#blog
           .wrap
             h1.title-section Blog
             h2 O que temos feito?
           .wrap.data
-            .data-item
-              img(src="" alt="") 
-              h2 Nome da materia
-              time 10/09/2018
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id elit at urna commodo convallis id vel leo. Suspendisse a pretium tortor.                
-            .data-item
-              img(src="" alt="") 
-              h2 Nome da materia
-              time 10/09/2018
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id elit at urna commodo convallis id vel leo. Suspendisse a pretium tortor.                
-            .data-item
-              img(src="" alt="") 
-              h2 Nome da materia
-              time 10/09/2018
-              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id elit at urna commodo convallis id vel leo. Suspendisse a pretium tortor.
+            +data-item()
+            +data-item()
+            +data-item()
         section#contato
           .wrap
+            div
+              h1.title-section Contato
+              p Deixe seu recado através do formulário abaixo. #[br] Aproveita e siga nossas redes sociais
+            form
+              +inputText("Nome")
+              +inputEmail("E-mail")
+              +inputTel("Whatsapp")
+              +textarea("Mensagem")
         section#newsletter
           .wrap
             h1.title-section Fique por dentro!
