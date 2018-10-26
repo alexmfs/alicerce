@@ -10,8 +10,31 @@
     .wrap > * {
         color: @color-secondary;
     }
+    .planos{
+        display: grid;
+        grid-gap: 30px;
+        margin: 10px 0;
+        .phone({
+            grid-template-columns: repeat(2, 1fr);
+        });      
+        .tablet({
+            grid-template-columns: repeat(4, 1fr);
+        });        
+        .desktop({
+            grid-template-columns: repeat(4, 1fr);
+        });            
+    }
 }
 
+.plano{
+    border: 1px solid #dedddd;
+    padding: 10px;
+    .radius();
+    text-align: center;
+    span{
+        display: block;
+    }
+}
 
 #sobre{
     .wrap {
