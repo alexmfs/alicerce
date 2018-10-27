@@ -12,6 +12,20 @@
     }
 }
 
+.planos{
+    display: grid;
+    grid-gap: 30px;
+    .phone({
+        grid-template-columns: repeat(2, 1fr);
+    });       
+    .tablet({
+        grid-template-columns: repeat(2, 1fr);
+    });        
+    .desktop({
+        grid-template-columns: repeat(4, 1fr);
+    });  
+}
+
 
 #sobre{
     .wrap {
@@ -99,6 +113,7 @@
         }          
     }
 }
+
 
 #contato {
     .wrap{
