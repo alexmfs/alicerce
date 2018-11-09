@@ -7,8 +7,12 @@
 }
 
 #contribuicoes{
-    .wrap > * {
-        color: @color-secondary;
+    .wrap{
+        display: grid;
+        grid-gap: 10px;
+        > * {
+            color: @color-secondary;
+        }        
     }
     .planos{
         display: grid;
@@ -22,19 +26,59 @@
         });        
         .desktop({
             grid-template-columns: repeat(4, 1fr);
-        });            
+        });
+    }
+    .button{
+        background: @color-white;
+        color: @color-secondary;
+        border-color: @color-secondary;
+        &:hover{
+            background: @color-secondary;
+            color: @color-white;
+        }             
+    }
+    .plano > .button{
+        width: fit-content;
+        background: @color-secondary;
+        color: @color-white;
+        margin: 0 auto;
+        padding: 15px 30px;
+        font-size: 2rem;        
+        &:hover{
+            background: @color-white;
+            color: @color-secondary;
+            border-color: @color-secondary;
+        }
     }
 }
 
+
 .plano{
-    border: 1px solid #dedddd;
+    border: 1px solid @color-secondary;
     padding: 10px;
     .radius();
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    justify-content: space-around;
+    box-shadow: 0 0 12px 0px #d219345e;
+    background: #fff; 
     span{
         display: block;
     }
 }
+
+.plano-valor {
+    font: 100 6rem/1 Open Sans,sans-serif;
+    color: @color-secondary;
+    span {
+        font-size: 40%;
+        color: inherit;
+    }    
+}
+
+
 
 #sobre{
     .wrap {
