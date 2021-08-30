@@ -1,3 +1,6 @@
+![Logo Alicerce](https://raw.githubusercontent.com/alexmfs/alicerce/main/dist/_data/logo.png)
+
+
 # Abstract
 
 É uma biblioteca com objetivo de ajudar a construir interfaces sem que esta interferir no design final
