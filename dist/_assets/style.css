@@ -327,11 +327,13 @@ img {
   display: inline-block;
   transition: 0.2s;
   cursor: pointer;
-  border: var(--btn-border, var(--color-primary-medium) 1px solid);
-  color: var(--btn-color, var(--color-primary-medium));
+  appearance: none;
+  outline: none;
   background: var(--btn-bg-color, var(--color-neutral-lightest));
-  box-shadow: var(--btn-box-shadow, var(--shadow-level-0));
+  color: var(--btn-color, var(--color-primary-medium));
+  border: var(--btn-border, var(--color-primary-medium) 1px solid);
   border-radius: var(--btn-radius, var(--border-radius-xs));
+  box-shadow: var(--btn-box-shadow, var(--shadow-level-0));
   width: fit-content;
   min-width: var(--btn-min-width, 150px);
   padding: var(--btn-padding, var(--padding-squish-md));
@@ -344,21 +346,26 @@ img {
   line-height: var(--btn-line-height);
   text-decoration: none; }
   .button:hover {
-    --btn-bg-color: var(--color-primary-medium);
-    --btn-color: var(--color-neutral-lightest);
-    --btn-box-shadow: var(--shadow-level-1); }
+    background: var(--btn-hover-bg-color, var(--color-primary-medium));
+    color: var(--btn-hover-color, var(--color-neutral-lightest)); }
+  .button:focus {
+    background: var(--btn-focus-bg-color, var(--color-neutral-lightest));
+    color: var(--btn-focus-color, var(--color-primary-medium)); }
   .button.primary {
-    --btn-border: var(--border-style-none);
+    --btn-border: var(--color-primary-dark) 1px solid;
     --btn-color: var(--color-neutral-lightest);
-    --btn-bg-color: var(--color-primary-medium); }
-    .button.primary:hover {
-      --btn-bg-color: var(--color-primary-dark); }
+    --btn-bg-color: var(--color-primary-medium);
+    --btn-hover-bg-color: var(--color-primary-dark); }
   .button.secondary {
-    --btn-border: var(--border-style-none);
+    --btn-border: var(--color-primary-dark) 1px solid;
     --btn-color: var(--color-neutral-lightest);
-    --btn-bg-color: var(--color-secondary-medium); }
-    .button.secondary:hover {
-      --btn-bg-color: var(--color-secondary-dark); }
+    --btn-bg-color: var(--color-secondary-medium);
+    --btn-hover-bg-color: var(--color-secondary-dark); }
+  .button.neutral {
+    --btn-border: var(--color-neutral-dark) 1px solid;
+    --btn-color: var(--color-neutral-lightest);
+    --btn-bg-color: var(--color-neutral-medium);
+    --btn-hover-bg-color: var(--color-neutral-dark); }
   .button:focus {
     outline: none; }
 

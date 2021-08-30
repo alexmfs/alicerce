@@ -4,20 +4,41 @@
         --btn-border: var(--color-primary-dark) 1px solid;
         --btn-color: var(--color-primary-dark);
         --btn-bg-color: var(--color-neutral-lightest);
-
-        &:hover{
-            --btn-bg-color-hover: var(--color-primary-dark);
-        }
+        
+        --btn-hover-bg-color-hover: var(--color-primary-dark);
     } 
+
     @if $shape == ghost {
         --btn-border: var(--color-primary-dark) 1px solid;
         --btn-color: var(--color-primary-dark);
         --btn-bg-color: transparent;
-
-        &:hover{
-            --btn-bg-color-hover: var(--color-primary-dark);
-        }
+        
+        --btn-hover-bg-color-hover: var(--color-primary-dark);
     } 
+
+    @if $shape == primary {
+        --btn-border: var(--color-primary-dark) 1px solid;
+        --btn-color: var(--color-neutral-lightest);
+        --btn-bg-color: var(--color-primary-medium);
+        
+        --btn-hover-bg-color: var(--color-primary-dark);
+    }
+
+    @if $shape == secondary {
+        --btn-border: var(--color-primary-dark) 1px solid;
+        --btn-color: var(--color-neutral-lightest);
+        --btn-bg-color: var(--color-secondary-medium);
+        
+        --btn-hover-bg-color: var(--color-secondary-dark);
+    }
+
+    @if $shape == neutral {
+        --btn-border: var(--color-neutral-dark) 1px solid;
+        --btn-color: var(--color-neutral-lightest);
+        --btn-bg-color: var(--color-neutral-medium);
+        
+        --btn-hover-bg-color: var(--color-neutral-dark);
+    }
 
 }
 
@@ -49,40 +70,37 @@
     display: inline-block;
     transition: 0.2s;
     cursor: pointer;
+    appearance: none;    
+    outline: none;
     
     // Shape
-    border: var(--btn-border, var(--color-primary-medium) 1px solid);
-    color: var(--btn-color, var(--color-primary-medium));
     background: var(--btn-bg-color, var(--color-neutral-lightest));
-    box-shadow: var(--btn-box-shadow, var(--shadow-level-0));
+    color: var(--btn-color, var(--color-primary-medium));
+    border: var(--btn-border, var(--color-primary-medium) 1px solid);
     border-radius: var(--btn-radius, var(--border-radius-xs));
+    box-shadow: var(--btn-box-shadow, var(--shadow-level-0));
 
     &:hover{
-        --btn-bg-color: var(--color-primary-medium);   
-        --btn-color: var(--color-neutral-lightest);
-        --btn-box-shadow: var(--shadow-level-1);
+        background: var(--btn-hover-bg-color, var(--color-primary-medium));
+        color: var(--btn-hover-color, var(--color-neutral-lightest));
     }
     
+    &:focus{
+        background: var(--btn-focus-bg-color, var(--color-neutral-lightest));
+        color: var(--btn-focus-color, var(--color-primary-medium));
+    }
+
     &.primary{
-        --btn-border: var(--border-style-none);
-        --btn-color: var(--color-neutral-lightest);
-        --btn-bg-color: var(--color-primary-medium); 
-
-        &:hover{
-            --btn-bg-color: var(--color-primary-dark); 
-        }
+        @include button-shape(primary);
     }
-    
+
     &.secondary{
-        --btn-border: var(--border-style-none);
-        --btn-color: var(--color-neutral-lightest);
-        --btn-bg-color: var(--color-secondary-medium); 
-
-        &:hover{
-            --btn-bg-color: var(--color-secondary-dark); 
-        }
+        @include button-shape(secondary);
     }
 
+    &.neutral{
+        @include button-shape(neutral);
+    }
     
     
     // Size
@@ -99,6 +117,7 @@
     letter-spacing: var(--btn-letter-space);
     line-height: var(--btn-line-height);
     text-decoration: none;
+
 
 
 
