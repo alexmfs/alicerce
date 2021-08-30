@@ -4,13 +4,13 @@
 
 ## Dependências
 - Npm
-- Grunt
+- Gulp
 
 ## Instalação
-Após baixar o projeto, rodar os comandos ```npm install``` e  ```grunt compile```
+Após baixar o projeto, rodar os comandos ```npm i``` e  ```gulp```
 
 ## Tecnologias
-- Less
+- Sass
 - PostCss
 - Pug
 
@@ -27,41 +27,15 @@ Após baixar o projeto, rodar os comandos ```npm install``` e  ```grunt compile`
 ## Organização de arquivos
 Todos os arquivos de componentes ficam juntos, usando o mesmo nome, mudando apenas a extensão conforme cada caso
 ```
-ui _ atoms/
+src/_core/
+src/baseComponents/buttons/
     |
-    |_ buttons.less
+    |_ buttons.scss
     |_ buttons.pug
     |_ buttons.js
     |_ buttons.spec.js
     |_ buttons.md
     |_ buttons.fixtures.json
-```    
-
-## Deploy
-Criar um arquivo .ftpconfig na raiz do projeto
+src/components/
+src/views/
 ```
-{
-  "key1": {
-    "username": "",
-    "password": ""
-  }
-}
-```
-
-# PostCss - Plugins para testar
-
-## Variáveis nativas em media querie
-https://github.com/postcss/postcss-custom-media
-
-## Media querie inline
-https://github.com/arccoza/postcss-if-media
-npm install postcss-if-media --save
-
-## Atalho para focus, hover, active
-https://github.com/kilian/postcss-hocus
-
-## @apply
-https://github.com/pascalduez/postcss-apply
-
-## Novas fucnionalidades css nativas
-https://github.com/csstools/postcss-preset-env
