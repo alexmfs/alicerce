@@ -1,8 +1,5 @@
 ![Logo Alicerce](https://raw.githubusercontent.com/alexmfs/alicerce/main/dist/_data/logo.png)
 
-
-# Abstract
-
 - É uma API de design ou um Design System customizável a partir de tokens de design e modificações via contexto. 
 - Seu objetivo é a utilização de um código base padrão para projetos permitindo liberdade de customização de layouts
 - As modificações via contexto visam um código mais enxuto, sem necessidade de modificar o html ([Zen Garden](http://www.csszengarden.com/)).
