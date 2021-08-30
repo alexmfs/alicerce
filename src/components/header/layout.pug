@@ -1,0 +1,24 @@
+
+mixin header-site()
+	header.header-site
+		section.header-site-top
+			.wrap
+				.brand
+					a(href="/").logo
+						img(src="./_data/logo.png", alt="")
+					.menu-hamburguer
+						.bar
+						.bar 
+						.bar
+				form.search-box
+					input(type="search", placeholder="Buscar")
+					button(type="submit")
+						i.icon-search
+				+social-links
+		section.header-site-bottom 
+			.wrap 
+				if block
+					block
+		if(pageTitle !== "Inicial")
+			section.header-site-inner(style="background-image: url("+pageBanner+")")
+				+heading(pageTitle, pageSubTitle)

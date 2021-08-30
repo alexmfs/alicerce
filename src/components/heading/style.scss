@@ -1,0 +1,36 @@
+.title-section{
+    div{
+        font-family: var(--title-section-h1-inside, var(--font-family-base));
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 100;            
+    }
+
+}
+
+// div.title-section{
+//     padding: var(--title-section-header-space, 110px 0 80px );
+// }
+// header.title-section{
+//     margin-bottom: var(--title-section-header-space-bottom, 90px);
+// }
+
+
+.heading{
+    --pretitle-color: var(--color-primary-medium);
+    --pretitle-font-size: var(fz-xs);
+    --pretitle-text-transform: uppercase;
+
+    --title-color: var(--color-neutral-darkest);
+    --title-font-size: var(--fz-xl);
+
+    padding-top: var(--heading-padding-top, var(--heading-padding-height, var(--heading-padding, 0)));
+    padding-bottom: var(--heading-padding-bottom, var(--heading-padding-height, var(--heading-padding, 0)));
+    padding-left: var(--heading-padding-left, var(--heading-padding-width, var(--heading-padding, 0)));
+    padding-right: var(--heading-padding-right, var(--heading-padding-width, var(--heading-padding, 0)));
+
+    margin: 0 auto var(--heading-margin-bottom, var(--space-sm));
+    max-width: var(--wrap-base);
+
+    border-bottom: var(--heading-border-bottom, none);
+}

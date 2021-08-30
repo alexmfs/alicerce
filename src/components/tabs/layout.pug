@@ -1,0 +1,19 @@
+mixin tabs 
+    .tabs&attributes(attributes) 
+        block
+
+mixin tabs-control
+    nav.tabs-control
+        block 
+
+mixin tab-button(label, href=label)
+    a(class="tab-button", href="#"+href)= label
+
+mixin tabs-panels
+    .tabs-panels
+        block 
+
+mixin tab(href)
+    .tab(role="tabpanel", aria-labelledby=href, id=href)
+        .tab-content 
+            block

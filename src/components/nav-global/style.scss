@@ -1,0 +1,116 @@
+.nav-global {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-max(lg){
+        position: absolute;
+        width: 100%;
+        background: var(--color-primary-dark);
+        top: -70px;
+        transform: translateX(-100%);
+        transition: 0.2s;
+        &.open{
+            transform: translateX(0);
+        }
+    }
+    &-items {
+        display: flex;
+        @include media-max(lg){
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        
+        position: relative;
+        padding: 10px 20px;
+        color: var(--color-neutral-lightest);
+        transition: var(--velocity-fast);
+        position: relative;
+        &:hover, &.current{
+            background: var(--color-primary-darkest);
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }     
+}
+
+.nav-global-subitems {
+    display: var(--display-submenu, none);
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: var(--z-index-dropdown);
+    background: var(--color-primary-dark);
+}
+
+.nav-global-subitem{
+    padding: 10px 20px;
+}
+
+.has-submenu:hover {
+    --display-submenu: block;
+}
+
+.menu-global{
+    [class^="ico"]:after{
+        color: var(--color-neutral-lightest);
+        font-size: 2rem;
+    }
+    li.current [class^="ico"]:after{
+        color: var(--color-primary-medium);
+    }
+
+}
+
+
+.menu-hamburguer{
+    @include media-max(lg){
+        display: block;
+    }
+    @include media-min(lg){
+        display: none;
+    }
+    .bar{
+        width: 29px;
+        height: 3px;
+        background: var(--color-primary-medium);
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        transform: rotate(0deg);
+        transition: all .3s ease-in;
+        &:not(:first-child){
+            margin-top: 6px;
+        }
+    }
+    &.active{
+        .bar{
+            &:nth-child(1){
+                transform: rotate(45deg);
+                background: var(--color-neutral-medium);
+                top: 6px;
+                right: 2px;
+            }
+            &:nth-child(2){
+                opacity: 0;
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg);
+                background: var(--color-neutral-medium);
+                top: -12px;
+                left: 0px;
+            }
+        }
+    }
+}

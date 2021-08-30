@@ -1,0 +1,44 @@
+mixin hero(id, direction="left", img="")
+    case direction
+        when "center"
+            section(class="hero hero-"+direction, id=id, style='--hero-bg-img:url("'+img+'")')&attributes(attributes)      
+                .hero-content
+                    .hero-content-inner
+                        if block 
+                            block
+        default
+            section(class="hero hero-"+direction, id=id)&attributes(attributes)
+                .hero-image        
+                    img(src=img, alt="")
+                .hero-content
+                    .hero-content-inner
+                        if block 
+                            block
+
+
+//- mixin hero(id, direction, img="")
+//-     case direction
+//-         when "left"
+//-             section(class="hero hero-"+direction, id=id)&attributes(attributes)
+//-                 .hero-content
+//-                     if block 
+//-                         block
+//-                 img(src=img, alt="")
+//-         when "center"
+//-             section(class="hero hero-"+direction, id=id, style='--hero-bg-img:url("'+img+'")')&attributes(attributes)      
+//-                 .hero-content
+//-                     if block 
+//-                         block
+//-         when "right"
+//-             section(class="hero hero-"+direction, id=id)&attributes(attributes)
+//-                 img(src=img, alt="")
+//-                 .hero-content
+//-                     if block 
+//-                         block
+//-         default
+//-             section(class="hero hero-"+direction, id=id)
+//-                 .hero-content
+//-                     +typography('title', 'Bloco de exemplo')  
+//-                     +typography('text', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem assumenda soluta delectus unde ad perferendis corporis sint nisi vero et? Perferendis necessitatibus laborum cupiditate quisquam dolore natus repellat quod magnam.')
+//-                     +button()
+//-                 img(src="https://picsum.photos/900/400", alt="")

@@ -1,0 +1,31 @@
+ol, ul, dl{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;  
+    &:not([class]){
+        margin: unset;
+        padding: 0 0 var(--list-padding-bottom, 4rem) var(--list-padding-left, 4rem);
+    }
+}
+ol:not([class]){
+    list-style: decimal;
+}
+ul:not([class]){
+    list-style: disc;
+}
+
+li:not([class]){
+    font-family: var(--list-font-family, var(--font-family-base));
+    font-size: var(--list-font-size, var(--font-size-md));
+    font-style: var(--list-font-style, normal);
+    font-weight: var(--list-font-weight, 500);
+    color: var(--list-color, var(--base-color-text));
+    text-align: var(--list-align, left);
+    line-height: var(--list-line-height, var(--base-line-heigth));
+    margin-bottom: var(--list-margin-bottom);
+    list-style-position: var(--list-style-position, inside);
+    &::marker {
+        color: var(--list-marker-color, initial);
+        font-size: var(--list-marker-size, initial);
+    }
+}

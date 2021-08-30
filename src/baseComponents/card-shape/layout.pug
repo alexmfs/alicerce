@@ -1,0 +1,12 @@
+mixin card(title, img)
+    .card&attributes(attributes)
+        .card-header
+            p= title
+            a(href="#").link-options 
+        if block
+        .card-body
+            block
+
+mixin card-shape()
+    .card&attributes(attributes)
+        block

@@ -1,0 +1,20 @@
+@mixin typography($name, $type, $font, $fz, $fw){
+    .#{$name}{
+        font-family: var(--#{$name}-font-family, var(--font-family-#{$font}));
+        font-size: var(--#{$name}-font-size, var(--font-size-#{$fz}));
+        font-style: var(--#{$name}-font-style);
+        font-weight: var(--#{$name}-font-weight, var(--font-weight-#{$fw}));
+        color: var(--#{$name}-color, var(--base-color-#{$type}, var(--base-type-color)));
+        text-align: var(--#{$name}-align, var(--base-align));
+        text-transform: var(--#{$name}-text-transform, initial);
+        line-height: var(--#{$name}-line-height, var(--base-line-height));
+        margin-bottom: var(--#{$name}-margin-bottom); 
+    }
+}
+
+@include typography('display',   'title', 'highlight', 'xxl', 'bold');
+@include typography('titlepage', 'title', 'highlight', 'xl',  'bold');
+@include typography('pretitle',  'text',  'base',      'sm',  'bold');
+@include typography('title',     'title', 'highlight', 'lg',  'bold');
+@include typography('subtitle',  'text',  'base',      'md',  'medium');
+@include typography('text',      'text',  'base',      'md',  'medium');

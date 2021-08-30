@@ -1,0 +1,22 @@
+.card{
+    padding: var(--card-padding, var(--space-sm));
+    border: var(--card-border, 0);
+    border-radius: var(--card-border-radius, var(--border-radius-sm));
+    background-color: var(--card-bg-color, var(--color-neutral-light));
+    font: 500 var(--font-size-sm) var(--font-family-base);
+    transition: 0.2s;
+    box-shadow: var(--card-box-shadow, var(--shadow-level-3));
+    overflow: hidden;
+
+    &-header{
+        padding: var(--card-header-padding, 0);
+    }
+
+    &-body{
+        padding: var(--card-body-padding, 0)
+    }
+
+    &:hover{
+        box-shadow: var(--card-hover-box-shadow, var(--shadow-level-3));
+    }
+}

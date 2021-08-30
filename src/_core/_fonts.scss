@@ -1,0 +1,36 @@
+$fontURL: './fonts';
+
+$font-family-base: "Montserrat";
+$font-family-highlight: "Montserrat";
+
+
+@mixin font-face($fontName: sans-serif, $fontFile: $fontName, $fontWeight: normal, $fontStyle: normal) {
+    @font-face {
+        font-family: $fontName;
+        src: 
+            //  url('#{$fontURL}/#{$fontName}/#{$fontFile}.woff2') format('woff2'),
+            //  url('#{$fontURL}/#{$fontName}/#{$fontFile}.woff') format('woff'),
+             url('#{$fontURL}/#{$fontName}/#{$fontFile}.ttf') format('truetype');
+            //  url('#{$fontURL}/#{$fontName}/#{$fontFile}.eot?#iefix') format('embedded-opentype'),
+            //  url('#{$fontURL}/#{$fontName}/#{$fontFile}.eot');
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+    }
+}
+
+@include font-face(
+    $font-family-base, 
+    $font-family-base + '-Regular'
+);
+
+@include font-face(
+    $font-family-base, 
+    $font-family-base + '-Bold',
+    bold
+);
+
+@include font-face(
+    $font-family-base, 
+    $font-family-base + '-Medium',
+    500
+);

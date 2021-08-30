@@ -1,0 +1,105 @@
+// :host {
+//     display: flex;
+//     flex: 1;
+//     justify-content: center;
+
+//     &.active{
+//         display: flex;
+//         opacity: 1
+//     }
+// }
+
+.modal {
+    --padding: 20px;
+
+    display: none;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(var(--color-primary-darkest), .8);
+    z-index: 42;
+
+    opacity: 0; /* Fade in/out animation. */
+    transition: opacity 0.2s ease-in;
+    
+    &.active, &:target{
+        display: flex;
+        opacity: 1;
+
+        .modal-dialog{
+            animation: modalDownUp 0.5s forwards;
+        }
+    }
+
+    &-dialog {
+        border-radius: var(--border-radius-sm);
+        // border: 1px solid #eee;
+        box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20);
+        min-width: 400px;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    
+    &-header {
+        padding: var(--padding-md);
+        background: var(--color-primary-dark);
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        eff-typography{
+            flex: 1;
+            > {
+                color: var(--color-neutral-lightest);
+            }
+        }
+    }
+
+    
+    &-body {
+        padding: var(--padding-xl) var(--padding-md) var(--padding-md) var(--padding-md);
+        background: var(--color-neutral-lightest);
+    }
+    
+    &-footer {
+        padding: var(--padding-md);
+        background: var(--color-neutral-lightest);
+        margin-top: -1px;
+    }
+
+    .close{
+        @include icomoon('\ea0f');
+        color: var(--color-neutral-lightest);
+        text-decoration: none;
+        background: none;
+        border: none;
+    }
+}
+
+.modal-simple {
+  display : flex;
+  opacity: 0
+}
+.modal-animate {
+  display : flex;
+  opacity: 1
+}
+
+
+@keyframes modalDownUp {
+    from{
+        transform: translateY(-35%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-20%);
+        opacity: 1;
+    }
+}

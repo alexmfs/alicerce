@@ -1,0 +1,140 @@
+@mixin hero-content-align($align){
+    @if $align == right {
+        --base-align: right;
+        --button-align: flex-end;
+    }
+    @if $align == center {
+        --base-align: center;
+        --button-align: center
+    }
+}
+
+.hero {
+    --title-font-weight: bold;
+    --title-color: var(--base-type-color, var(--base-color-title)); 
+    --title-margin-bottom: var(--space-sm);
+
+    --text-font-size: var(--font-size-md);
+    --text-color: var(--base-type-color, var(--base-color-text)); 
+    --text-font-weight: normal;
+    --text-margin-bottom: var(--space-sm);
+
+    --section-padding-height: var(--padding-lg);
+
+    --img-margin: 0 auto;
+    
+    @include media-max(lg){
+        --title-font-size: var(--font-size-xl);
+        --hero-content-padding-height: var(--space-md);
+        --hero-content-padding-width: var(--space-xs);
+        --hero-display: block;
+    }
+
+    @include media-min(lg){
+        --title-font-size: var(--font-size-xxl);
+        --hero-columns: var(--wrap-columns-half);
+    }    
+
+    display: var(--hero-display, grid);
+    gap: var(--hero-gap, var(--space-md));
+    grid-template-columns: var(--hero-columns);
+    align-items: var(--hero-align, center);
+    justify-content: var(--hero-justify, center);
+
+    background-color: var(--hero-bg);
+    background-image: var(--hero-bg-img);
+    background-repeat: no-repeat;
+    background-position: var(--hero-bg-position, top center);
+    background-size: cover;
+
+    height: var(--hero-heigth);
+    position: relative;
+
+    &-content{
+        padding-top: var(--hero-content-padding-top, var(--hero-content-padding-height, var(--hero-content-padding, 0)));
+        padding-bottom: var(--hero-content-padding-bottom, var(--hero-content-padding-height, var(--hero-content-padding, 0)));
+        padding-left: var(--hero-content-padding-left, var(--hero-content-padding-width, var(--hero-content-padding, 0)));
+        padding-right: var(--hero-content-padding-right, var(--hero-content-padding-width, var(--hero-content-padding, 0)));
+        grid-column: var(--hero-content-column, wrap-start / wrap-end);
+        z-index: 1;
+        grid-row: 1 / 2;
+    }
+
+    &-image{
+        padding-top: var(--hero-image-padding-top, var(--hero-image-padding-height, var(--hero-image-padding, 0)));
+        padding-bottom: var(--hero-image-padding-bottom, var(--hero-image-padding-height, var(--hero-image-padding, 0)));
+        padding-left: var(--hero-image-padding-left, var(--hero-image-padding-width, var(--hero-image-padding, 0)));
+        padding-right: var(--hero-image-padding-right, var(--hero-image-padding-width, var(--hero-image-padding, 0)));
+        grid-column: var(--hero-img-column);
+        transform: var(--hero-img-transform);
+        border-radius: var(--hero-border-radius);
+        grid-row: 1 / 2;
+        overflow: hidden;
+        z-index: var(--hero-image-z-index);
+    }  
+
+    &.full{
+        --hero-bg: var(--color-neutral-light);
+        --section-padding-height: 0;
+        --hero-gap: 0;
+
+        --img-width: 100%;
+        --hero-img-height: 100%;
+        --hero-img-object-fit: cover;
+
+        --img-margin: unset;
+    }
+}
+@include media-min(lg){
+
+    .hero-left{
+        --hero-content-column: wrap-start / wrap-middle;
+        --hero-img-column: wrap-middle / wrap-end;        
+        &.full{
+            --hero-content-padding-right: var(--space-md);            
+            --hero-content-column: wrap-start / wrap-middle;
+            --hero-img-column: wrap-middle / end;
+        }
+    }
+
+    .hero-right{   
+        --hero-img-column: wrap-start / wrap-middle;
+        --hero-content-column: wrap-middle / wrap-end;
+        &.full{
+            --hero-content-padding-left: var(--space-md);
+            --hero-img-column: start / wrap-middle;
+            --hero-content-column: wrap-middle / wrap-end;
+        }
+    }
+}
+
+.hero-center{
+    --section-padding-height: 0;
+
+    --hero-img-column: start / end;
+    --hero-content-column: start / end;
+    --heading-title-color: var(--color-neutral-light);
+    --heading-subtitle-color: var(--color-neutral-light);
+    --heading-margin-bottom: 0;
+
+    --hero-content-padding-height: var(--space-xxl);
+
+    --base-type-color: var(--color-neutral-lightest);
+    
+    overflow: hidden;
+
+    @include media-max(lg){
+        --hero-content-padding-width: var(--space-xs);
+    }
+
+
+    .hero-content {
+        display: grid;
+        grid-template-columns: var(--hero-columns);
+        background: var(--hero-content-bg, var(--color-neutral-dark-alpha));
+    }
+
+    .hero-content-inner {
+        grid-column: wrap-start / wrap-end;
+    }
+}

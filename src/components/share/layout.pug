@@ -1,0 +1,20 @@
+mixin share-news
+    .share-news
+        +typography('text','Compartilhe:')
+        +button-control
+            a(
+                href="javascript:;", 
+                onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=https://google.com/', 'facebook', 'height=500,width=500')").button.facebook
+                    i.icon-facebook
+            a(
+                href="javascript:;", 
+                onclick="window.open('https://twitter.com/share?url=https://google.com/', 'Twitter', 'height=500, width=500')").button.twitter
+                    i.icon-twitter
+            a(
+                href="javascript:;", 
+                onclick="window.open('http://pinterest.com/pin/create/link/?url=https://google.com/', 'Pintrest', 'height=500, width=500')").button.pintrest
+                    i.icon-pinterest
+            a(
+                href="javascript:;", 
+                onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://google.com/', 'Linkedin', 'height=500, width=500')").button.linkedin
+                    i.icon-linkedin

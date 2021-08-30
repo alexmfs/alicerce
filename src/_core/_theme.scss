@@ -1,0 +1,14 @@
+// theme.scss
+:root{
+    --base-color-title: var(--color-primary-medium);
+    --base-color-text: var(--color-neutral-medium);
+    --base-color-bg: var(--color-neutral-lightest);
+    --base-line-height: var(--line-height-md);
+    --base-align: initial;
+
+    .dark-theme &{
+        --base-color-title: var(--color-primary-medium);
+        --base-color-text: var(--color-neutral-medium);
+        --base-color-bg: var(--color-neutral-dark); 
+    }
+}

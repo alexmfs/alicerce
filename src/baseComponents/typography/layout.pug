@@ -1,0 +1,9 @@
+mixin typography(type, text)
+  if type == "title"
+    h1(class=type)&attributes(attributes)!= text
+  if type == "titlepage"
+    h1(class=type)&attributes(attributes)!= text
+  if type == "subtitle"
+    h2(class=type)&attributes(attributes)!= text
+  if type == "text"
+    p(class=type)&attributes(attributes)!= text

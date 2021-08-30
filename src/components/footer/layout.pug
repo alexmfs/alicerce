@@ -1,0 +1,12 @@
+mixin footer-site()
+  footer.footer-site
+    .wrap
+        .footer-info
+            +typography('text', clientePhone).phone
+            +typography('text', clienteEmail)
+            +social-links
+        a(href="/").logo
+            img(src="/_data/logo-invertida.png", alt="")
+        .copyright 
+            +typography('text','© '+ new Date().getFullYear() + " " + siteName + ". " + textCopyright)
+            img(src="/_assets/img/assinatura.png", alt="")

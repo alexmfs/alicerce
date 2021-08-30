@@ -1,0 +1,35 @@
+@import './_core/reset';
+@import './_core/mixins';
+@import './_core/icomoon';
+@import './_core/fonts';
+@import './_core/tokens';
+@import './_core/theme';
+@import './_core/variables';
+@import './_core/animations';
+
+@import './baseComponents/button/style';
+@import './baseComponents/card-shape/style';
+@import './baseComponents/list/style';
+@import './baseComponents/input/style';
+@import './baseComponents/icon/style';
+@import './baseComponents/modal/style';
+@import './baseComponents/panel/style';
+@import './baseComponents/typography/style';
+
+@import './components/footer/style';
+@import './components/header/style';
+@import './components/heading/style';
+@import './components/nav-global/style';
+@import './components/hero/style';
+@import './components/topic/style';
+@import './components/pagination/style';
+@import './components/share/style';
+@import './components/splashscreen/style';
+@import './components/social-links/style';
+@import './components/tabs/style';
+
+@import './views/style';
+@import './views/_layouts/style';
+@import './views/blog/style';
+@import './views/contato/style';
+@import './views/sobre/style';

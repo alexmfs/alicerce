@@ -1,0 +1,58 @@
+mixin input(type, label, material) 
+    if material === true
+        .input-control-material&attributes(attributes)
+            case type
+                when "textarea"
+                    textarea(required="required")
+                when "select"
+                    select(required="required")
+                        if block
+                            block
+                default
+                    input(type=type, required="required")                            
+            label= label
+    else
+        .input-control&attributes(attributes)
+            label= label
+            case type
+                when "textarea"
+                    textarea(required="required")
+                when "select"
+                    select(required="required")
+                        if block
+                            block 
+                default
+                    input(type=type, required="required")
+
+mixin form(method, action, inputs, submitLabel, material)
+  form(method=method action=action)
+    if inputs
+        if material === true
+            each input in inputs
+                .input-control-material
+                    case input.type
+                        when 'textarea'
+                            textarea(required=input.required name=input.name id=input.id class=input.class maxlength=input.maxlength autofocus=input.autofocus autocomplete = input.autocomplete)
+                            label #{input.label}
+                        when 'checkbox'
+                        when 'radio'
+                            input(type=input.type name=input.name id=input.id class=input.class required=input.required)
+                            label #{" " + input.label}
+                        default
+                            input(type=input.type min=input.min max=input.max multiple=input.multiple pattern=input.pattern step=input.step height=input.height width=input.width required=input.required name=input.name id=input.id class=input.class maxlength=input.maxlength autofocus=input.autofocus autocomplete = input.autocomplete)
+                            label #{input.label}
+        if material === false
+            .input-control
+                each input in inputs
+                    case input.type
+                        when 'textarea'
+                            label #{input.label}
+                            textarea(placeholder=input.placeholder required=input.required name=input.name id=input.id class=input.class maxlength=input.maxlength autofocus=input.autofocus autocomplete = input.autocomplete)
+                        when 'checkbox'
+                        when 'radio'
+                            label #{" " + input.label}
+                            input(type=input.type name=input.name id=input.id class=input.class required=input.required)
+                        default
+                            label #{input.label}
+                            input(type=input.type min=input.min max=input.max multiple=input.multiple pattern=input.pattern step=input.step height=input.height width=input.width placeholder=input.placeholder required=input.required name=input.name id=input.id class=input.class maxlength=input.maxlength autofocus=input.autofocus autocomplete = input.autocomplete)
+    input(type="submit" value=submitLabel)

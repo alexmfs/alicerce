@@ -1,0 +1,21 @@
+mixin modal-header()
+    .modal-header
+      if block
+        block
+      a(href="dashboard/#close").close 
+
+mixin modal-body()
+    .modal-body
+      if block
+        block
+
+mixin modal-footer()
+    .modal-footer
+      if block
+        block
+
+mixin modal(id)
+    .modal.fade(id=id)
+      .modal-dialog
+        if block
+          block

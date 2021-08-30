@@ -1,0 +1,31 @@
+extends ../_layouts/_default
+
+block config 
+	- var pageTitle = 'Blog'
+	- var pageId = 'news-index'
+	- var pageBanner = '_data/banners/noticias.png'
+
+block content
+	section.blog-page
+		.wrap
+			- var a = 0;
+			div
+				ul.blog-list
+					while a < 4
+						li.blog-item(data-post=a++)
+							img(src="../_data/blog/medium/blog-1.png", alt="")  
+							div
+								+typography('text', 'Postado em 30 de Junho de 2021').posted-in
+								+typography('title','Lorem ipsum dolor sit amet consequr lorem ipsum')
+								+typography('text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i')
+								+button('Continue lendo','/noticias/view.html','link')
+				+pagination
+			aside.read-more
+				+typography('title', 'Últimos cadastrados')
+				- var b = 0;
+				ul.read-more-list
+					while b < 8
+						li.read-more-item(data-post=b++)
+							a(href="/noticias/view.html")
+								img(src="../_data/blog/small/blog-1.png", alt="")  
+								+typography('text','Lorem ipsum dolor sit amet consequr lorem ipsum')

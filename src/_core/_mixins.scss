@@ -1,0 +1,95 @@
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1400px;
+
+@mixin media-min($screen) {
+    @if $screen == sm {
+        @media only screen and (min-width: #{$screen-sm}){     
+            @content;
+        }
+    } @else if $screen == md {
+        @media only screen and (min-width: #{$screen-md}){     
+            @content;
+        }
+    } @else if $screen == lg {
+        @media only screen and (min-width: #{$screen-lg}){     
+            @content;
+        }
+    } @else if $screen == xl {
+        @media only screen and (min-width: #{$screen-xl}){     
+            @content;
+        }
+    } @else if $screen == xxl {
+        @media only screen and (min-width: #{$screen-xxl}){     
+            @content;
+        }
+    }
+}
+
+@mixin media-max($screen) {
+    @if $screen == sm {
+        @media only screen and (max-width: #{$screen-sm}){     
+            @content;
+        }
+    } @else if $screen == md {
+        @media only screen and (max-width: #{$screen-md}){     
+            @content;
+        }
+    } @else if $screen == lg {
+        @media only screen and (max-width: #{$screen-lg}){     
+            @content;
+        }
+    } @else if $screen == xl {
+        @media only screen and (max-width: #{$screen-xl}){     
+            @content;
+        }
+    } @else if $screen == xxl {
+        @media only screen and (max-width: #{$screen-xxl}){     
+            @content;
+        }
+    }
+}
+
+@mixin media-only($screen) {
+    @if $screen == sm {
+        @media only screen and (min-width: #{$screen-xs}) and (max-width: #{$screen-sm - 1px} ){ 
+            @content;
+        }
+    } @else if $screen == md {
+        @media only screen and (min-width: #{$screen-sm}) and (max-width: #{$screen-lg - 1px} ){    
+            @content;
+        }
+    } @else if $screen == lg {
+        @media only screen and (min-width: #{$screen-lg}) and (max-width: #{$screen-xl - 1px} ){     
+            @content;
+        }
+    } @else if $screen == xl {
+        @media only screen and (min-width: #{$screen-xl}) and (max-width: #{$screen-xxl - 1px} ){    
+            @content;
+        }
+    } @else if $screen == xxl {
+        @media only screen and (min-width: #{$screen-xxl}){    
+            @content;
+        }
+    }
+}
+
+@mixin icomoon($ico){
+    &:after{
+        content: $ico;
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: 'icomoon' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+      
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}

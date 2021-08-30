@@ -1,0 +1,46 @@
+.form-contato{
+    --section-padding-width: var(--space-xs);
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+}
+
+.company-info{
+    
+    --wrap-grid-gap: var(--space-xs);
+    --text-color: var(--color-neutral-lightest);
+
+    background: var(--color-primary-medium);
+    
+
+    @include media-max(sm){
+        --wrap-grid-columns: repeat(1, 1fr);
+    }
+
+    @include media-min(sm){
+        --wrap-grid-columns: repeat(2, 1fr);
+    }
+
+    @include media-max(lg){
+        --wrap-grid-gap: var(--space-sm);
+        --wrap-padding: var(--space-xs);
+    }
+
+    @include media-min(lg){
+        --wrap-grid-columns: repeat(4, 1fr);
+        --wrap-padding-height: var(--space-xs);
+    }
+    
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xxs);
+
+        @include media-max(lg){
+            flex-direction: column;
+            --text-align: center;
+        }
+    }
+}

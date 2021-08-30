@@ -1,0 +1,13 @@
+mixin button(text="Enviar", action, type, icon="") 
+  case type
+    when "link"
+      a.button(class=type, href=action)&attributes(attributes)
+        span= text
+    default        
+      button.button(type="submit")&attributes(attributes)
+        span= text 
+
+mixin button-control()
+  .button-control&attributes(attributes)
+    if block
+      block

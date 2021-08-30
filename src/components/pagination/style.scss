@@ -1,0 +1,69 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    margin: var(--pagination-container-margin);
+    > li {
+        margin: 0 5px;
+        > a,
+        > span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            height: 100%;
+            color: var(--pagination-color);
+            background-color: var(--pagination-bgcolor);
+            border-radius: var(--pagination-border-radius);
+            padding: 10px;
+            transition: 0.2s;
+            width: var(--pagination-width);
+            border: var(--pagination-border);
+            font-weight: var(--pagination-font-weight);
+            &:hover {
+                color: var(--pagination-color-hover);
+                background-color: var(--pagination-bgcolor-hover);
+            }
+
+        }
+    }
+
+    .current {
+        > a,
+        > span,
+        > a:hover,
+        > span:hover,
+        > a:focus,
+        > span:focus {
+            color: var(--pagination-color-current);
+            background-color: var(--pagination-bgcolor-current);
+            cursor: default;
+        }
+    }
+
+    .disabled {
+        > span,
+        > span:hover,
+        > span:focus,
+        > a,
+        > a:hover,
+        > a:focus {
+            color: var(--pagination-color-disable);
+            background-color: var(--pagination-bgcolor-disable);
+            cursor: not-allowed;
+        }
+        a:before{
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+    .next{
+        @include icomoon("\e904");
+    }
+    .prev{
+        @include icomoon("\e905");
+    }
+}

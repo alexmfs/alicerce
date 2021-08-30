@@ -1,0 +1,14 @@
+extends ../_layouts/_default
+
+block config 
+	- var pageTitle = 'Contato'
+	- var pageId = 'contact'
+	- var pageBanner = '_data/banners/contato.png'
+
+block content	
+	+heading(
+		'Preencha o formulário abaixo',
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis sed do eiusmod tempor incididunt.'
+	)
+	.mapa
+		iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.607147921897!2d-51.17993988502642!3d-23.330008284798282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb434ce50a03a1%3A0x24cafab219b8c05f!2sAv.%20Ayrton%20Senna%20da%20Silva%2C%20550%20-%20Gleba%20Fazenda%20Palhano%2C%20Londrina%20-%20PR%2C%2086050-460!5e0!3m2!1spt-BR!2sbr!4v1627910024838!5m2!1spt-BR!2sbr", width="600", height="450", style="border:0", allowfullscreen="", loading="lazy")

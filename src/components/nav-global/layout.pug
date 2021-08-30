@@ -1,0 +1,13 @@
+mixin nav-global()
+	nav.nav-global
+		ul.nav-global-items
+			each item in menu
+				- current = (pageTitle === item.title ? ' current' : '')
+				- subMenu = (item.sub ? ' has-submenu' : '')
+				li(class="nav-global-item" + current + subMenu)
+					a(href=item.url+'/').nav-global-link= item.title
+					if(item.sub)
+						ul.nav-global-subitems
+							each subitem in item.sub
+								li.nav-global-subitem
+									a(href=subitem.url)= subitem.title

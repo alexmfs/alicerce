@@ -1,0 +1,6 @@
+mixin icon(icon, type="font")
+  case type
+    when "image"
+      i(class="icon " + icon)
+    default
+      img(src="../_assets/img/icons/" + icon + ".png", alt="")

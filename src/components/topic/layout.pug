@@ -1,0 +1,12 @@
+mixin topics
+    ul.topics
+        block
+
+mixin topic(title, image)
+    li.topic
+        img(src=image, alt="")
+        +typography('title', title)
+        if block
+            block
+
+    

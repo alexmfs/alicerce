@@ -1,0 +1,107 @@
+.blog-page {
+	--section-padding-height: var(--space-xl);
+	--img-width: 100%;
+	
+	@include media-min(lg) {
+		--wrap-grid-columns: 3fr 1fr;
+		--wrap-grid-gap: var(--padding-xl);
+	};
+}
+
+.blog{
+	&-list {
+		--title-font-size: var(--font-size-lg);
+		--text-font-size: var(--font-size-sm);
+		--text-line-height: 1.2;
+		--title-text-transform: uppercase;
+		--title-line-height: 1.2;
+
+		display: grid;
+		gap: var(--space-md);
+		margin-bottom: var(--space-xl);
+
+		@include media-max(lg){
+			--title-margin-bottom: var(--space-xs);
+			--text-margin-bottom: var(--space-xs);
+			padding: 0 var(--space-xs);
+		}
+	}	
+	&-item {
+		display: flex;
+		gap: var(--space-xs);
+
+		@include media-max(lg){
+			flex-direction: column;
+		}
+
+		@include media-min(lg){
+			align-items: end;
+			div {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 100%;
+			}
+		}
+	}
+}
+
+.posted-in {
+    --text-text-transform: uppercase;
+    --text-font-weight: bold;
+}
+
+.read-more{
+    --title-margin-bottom: var(--space-xs);
+    --title-font-size: var(--font-size-lg);
+    --text-line-height: 1.2;
+	@include media-max(lg){
+		padding: 0 var(--space-xs);
+	}
+	&-list {
+		display: grid;
+		gap: var(--space-xs);
+	}
+	&-item{
+		--img-width: initial;
+		display: flex;
+		a{
+			text-decoration: none;
+			display: flex;
+			align-items: flex-start;
+			gap: var(--space-xxs);
+			transition: var(--velocity-fast);
+			&:hover{
+				--text-color: var(--color-primary-medium);
+			}
+		}
+		img {
+			height: 100%;
+		}
+	}
+}
+
+.blog{
+	@include media-max(lg){
+		&-article{
+			padding: 0 var(--space-sm);
+		}
+	}
+	&-header{
+		--title-font-size: var(--font-size-xl);
+		--title-text-transform: uppercase;
+		--title-line-height: 1.2;
+		--text-margin-bottom: var(--space-sm);
+		--button-control-margin: 0 0 var(--space-sm) 0;
+		border-bottom: 1px solid var(--color-neutral-medium);
+    	margin-bottom: var(--space-md);
+	}
+	&-body {
+		--text-margin-bottom: var(--space-xs);
+	}
+	&-cover {
+		margin-bottom: var(--space-lg);
+		border-radius: var(--border-radius-md);
+		box-shadow: var(--shadow-level-3);
+	}
+}

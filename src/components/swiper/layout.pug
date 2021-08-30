@@ -1,0 +1,15 @@
+mixin swiper(id, buttons=true, pagination=true)
+    .swiper-container(id=id) 
+        .swiper-wrapper
+            if block
+                block
+        if pagination === true        
+            .swiper-pagination
+        if buttons === true
+            .swiper-button-prev 
+            .swiper-button-next
+
+mixin swiper-item
+    .swiper-slide
+        if block
+            block

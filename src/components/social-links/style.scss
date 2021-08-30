@@ -1,0 +1,67 @@
+.social-links {
+    display: flex;
+    gap: 15px;
+
+    @include media-max(lg){
+
+        .header-site &{
+            display: none;
+        } 
+
+    }
+
+    a {
+        background: var(--social-links-bg, var(--color-primary-medium));
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--social-links-color, var(--color-neutral-lightest));
+        text-align: center;
+        border-radius: var(--border-radius-circular);
+        transition: var(--velocity-fast);
+        &:hover {
+            color: var(--social-links-color-hover, var(--color-neutral-lightest));
+            background:var(--social-links-bg-hover, var(--color-primary-dark));
+        }
+
+        &[href*="twitter"]:before,
+        &[href*="linkedin"]:before,
+        &[href*="instagram"]:before,
+        &[href*="facebook"]:before,
+        &[href*="youtube"]:before,
+        &[href*="whatsapp"]:before {
+            font-family: 'icomoon'!important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+          
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        &[href*="instagram"]:before {
+            content: "\ea92";
+        }
+        &[href*="facebook"]:before {
+            content: "\ea90";
+        }
+        &[href*="youtube"]:before {
+            content: "\ea9d";
+        }
+        &[href*="whatsapp"]:before {
+            content: "\ea93";
+        }
+        &[href*="twitter"]:before {
+            content: "\ea96";
+        }
+        &[href*="linkedin"]:before {
+            content: "\eaca";
+        }
+    }
+}

@@ -1,0 +1,65 @@
+extends ./_layouts/_default
+
+block config 
+	- var pageTitle = 'Inicial'
+	- var pageSubTitle = ''
+	- var pageId = 'home'
+
+block content
+
+	+hero('hero-id-0','right', '_assets/img/placeholder.png').full
+		+typography('title', 'Hero Section Title')
+		+typography('text', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum provident, maiores sint porro facilis impedit explicabo, at dolor cumque illum culpa dicta perferendis sit assumenda quos nulla quisquam, fugit nesciunt!')
+		+button-control
+			+button('Saiba mais','/','link').primary
+			+button('Saiba mais','/','link').secondary
+			+button('Saiba mais','/','link')
+
+	+section#home-id-1
+		+heading(
+			'Título da Seção',
+			'frase descritiva da seção'
+		)
+		+topics
+			+topic('Título 1', '_assets/img/placeholder.png')
+				+list(
+					"Pelo menos 10% dos lotes enviados para análise",
+					"Todas as amostras analisadas com dose dentro da faixa correta",
+					"Garantia de controle, sem excessos que possam prejudicar a semente"
+				)
+			+topic('Título 1', '_assets/img/placeholder.png')
+				+list(
+					"Pelo menos 10% dos lotes enviados para análise",
+					"Todas as amostras analisadas com dose dentro da faixa correta",
+					"Garantia de controle, sem excessos que possam prejudicar a semente"
+				)
+			+topic('Título 1', '_assets/img/placeholder.png')
+				+list(
+					"Pelo menos 10% dos lotes enviados para análise",
+					"Todas as amostras analisadas com dose dentro da faixa correta",
+					"Garantia de controle, sem excessos que possam prejudicar a semente"
+				)
+
+	+hero('hero-id-2','left', '_assets/img/placeholder.png').full
+		+typography('title', 'Hero Section Title')
+		+typography('text', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum provident, maiores sint porro facilis impedit explicabo, at dolor cumque illum culpa dicta perferendis sit assumenda quos nulla quisquam, fugit nesciunt!')
+		+button-control
+			+button('Saiba mais','/','link')
+
+	+hero('hero-id-3','center', '_assets/img/placeholder.png').full
+		+typography('title', 'Hero Section Title')
+		+typography('text', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum provident, maiores sint porro facilis impedit explicabo, at dolor cumque illum culpa dicta perferendis sit assumenda quos nulla quisquam, fugit nesciunt!')
+		+button-control
+			+button('Saiba mais','/','link')
+
+	+hero('hero-id-4','right', '_assets/img/placeholder-dog.png')
+		+typography('title', 'Hero Section Title')
+		+typography('text', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum provident, maiores sint porro facilis impedit explicabo, at dolor cumque illum culpa dicta perferendis sit assumenda quos nulla quisquam, fugit nesciunt!')
+		+button-control
+			+button('Saiba mais','/','link')
+
+	+hero('hero-id-5','left', '_assets/img/placeholder.png')
+		+typography('title', 'Hero Section Title')
+		+typography('text', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum provident, maiores sint porro facilis impedit explicabo, at dolor cumque illum culpa dicta perferendis sit assumenda quos nulla quisquam, fugit nesciunt!')
+		+button-control
+			+button('Saiba mais','/','link')

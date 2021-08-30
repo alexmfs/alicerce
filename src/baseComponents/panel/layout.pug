@@ -1,0 +1,8 @@
+mixin panel(title, description, img, actionLabel, actionUrl)
+    .panel
+        img(src="assets/img/" + `${img}`, alt="")
+        div
+            +typography('subtitle',title)
+            p.panel-description=description
+            +button(`${actionLabel}`, 'primary')
+        //- a(href=actionUrl)=actionLabel

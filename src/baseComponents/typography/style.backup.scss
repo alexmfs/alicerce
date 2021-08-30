@@ -1,0 +1,71 @@
+.display{
+    font-family: var(--display-font-family, var(--font-family-highlight));
+    font-size: var(--display-font-size, var(--font-size-lg));
+    font-style: var(--display-font-style, normal);
+    font-weight: var(--display-font-weight, 500);
+    color: var(--display-color, var(--base-color-title));
+    text-align: var(--display-align, var(--base-align));
+    text-transform: var(--display-text-transform, initial);
+    line-height: var(--display-line-height, var(--base-line-height));
+    margin-bottom: var(--display-margin-bottom);
+}
+
+.titlepage{
+    font-family: var(--titlepage-font-family, var(--font-family-highlight));
+    font-size: var(--titlepage-font-size, var(--font-size-xxl));
+    font-style: var(--titlepage-font-style, normal);
+    font-weight: var(--titlepage-font-weight, bold);
+    color: var(--titlepage-color, var(--base-color-title));
+    text-align: var(--titlepage-align, center);
+    text-transform: var(--titlepage-text-transform, initial);
+    line-height: var(--titlepage-line-height, var(--base-line-height));
+    margin-bottom: var(--titlepage-margin-bottom);
+}
+
+.title{
+    font-family: var(--title-font-family, var(--font-family-base));
+    font-size: var(--title-font-size, var(--font-size-md));
+    font-style: var(--title-font-style, normal);
+    font-weight: var(--title-font-weight, bold);
+    color: var(--title-color, var(--base-color-title));
+    text-align: var(--title-align, var(--base-align));
+    text-transform: var(--title-text-transform, initial);
+    line-height: var(--title-line-height, var(--base-line-height));
+    margin-bottom: var(--title-margin-bottom);
+}
+
+.pretitle{
+    font-family: var(--pretitle-font-family, var(--font-family-base));
+    font-size: var(--pretitle-font-size, var(--font-size-lg));
+    font-style: var(--pretitle-font-style, normal);
+    font-weight: var(--pretitle-font-weight, 500);
+    color: var(--pretitle-color, var(--base-color-text));
+    text-align: var(--pretitle-align, var(--base-align));
+    text-transform: var(--pretitle-text-transform, initial);
+    line-height: var(--pretitle-line-height, var(--base-line-height));
+    margin-bottom: var(--pretitle-margin-bottom);
+}
+
+.subtitle{
+    font-family: var(--subtitle-font-family, var(--font-family-base));
+    font-size: var(--subtitle-font-size, var(--font-size-lg));
+    font-style: var(--subtitle-font-style, normal);
+    font-weight: var(--subtitle-font-weight, 500);
+    color: var(--subtitle-color, var(--base-color-title));
+    text-align: var(--subtitle-align, var(--base-align));
+    text-transform: var(--subtitle-text-transform, initial);
+    line-height: var(--subtitle-line-height, var(--base-line-height));
+    margin-bottom: var(--subtitle-margin-bottom);
+}
+
+.text{
+    font-family: var(--text-font-family, var(--font-family-base));
+    font-size: var(--text-font-size, var(--font-size-sm));
+    font-style: var(--text-font-style, normal);
+    font-weight: var(--text-font-weight, 400);
+    color: var(--text-color, var(--base-color-text));
+    text-align: var(--text-align, var(--base-align));    
+    text-transform: var(--text-text-transform, initial);    
+    line-height: var(--text-line-height, var(--base-line-height));
+    margin-bottom: var(--text-margin-bottom);
+}

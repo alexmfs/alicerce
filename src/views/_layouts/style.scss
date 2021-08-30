@@ -1,0 +1,92 @@
+:root {
+    font-size: 62.5%;
+
+    --wrap-base: 1200px;
+    --wrap-max-width: var(--wrap-base);
+    --wrap-max-width-half: calc(var(--wrap-base) / 2);
+
+    --wrap-columns-half: [start] minmax(20px, 1fr) [wrap-start] var(--wrap-max-width-half) [wrap-middle] var(--wrap-max-width-half) [wrap-end] minmax(20px, 1fr) [end]
+    
+}
+
+body {
+    color: var(--body-color, var(--color-text));
+    background: var(--body-bg, var(--body-bgcolor));
+    font-family: var(--body-font-family, var(--font-family-base));
+    font-size: var(--body-fz, var(--font-size-sm));
+    line-height: var(--body-line-height, 1.5);
+
+    padding: 0;
+    margin: 0;
+
+    text-rendering: optimizeLegibility;    
+
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+
+    animation: fadein 1s;
+}
+
+main{
+    padding-top: var(--main-padding-height, 0);
+    padding-bottom: var(--main-padding-height, 0);
+    min-height: var(--main-min-height, 500px);
+
+    > section {
+        padding-top: var(--section-padding-top, var(--section-padding-height, var(--section-padding, var(--space-xxl))));
+        padding-bottom: var(--section-padding-bottom, var(--section-padding-height, var(--section-padding, var(--space-xxl))));
+        padding-left: var(--section-padding-left, var(--section-padding-width, var(--section-padding, 0)));
+        padding-right: var(--section-padding-right, var(--section-padding-width, var(--section-padding, 0)));
+        background: var(--section-bg, none);
+        position: relative;
+        z-index: var(--section-z-index, initial);
+
+        @include media-max(lg){
+            --section-padding-width: var(--space-xs);
+        }
+    }
+}
+
+
+.wrap{
+    width: 100%;
+    max-width: var(--wrap-max-width);
+    margin: 0 auto;
+    display: var(--wrap-display, grid);
+    grid-template-columns: var(--wrap-grid-columns, 1fr);
+    grid-gap: var(--wrap-grid-gap, var(--space-xs));
+    align-items: var(--wrap-align-items, start);
+    padding-top: var(--wrap-padding-top, var(--wrap-padding-height, var(--wrap-padding, 0)));
+    padding-bottom: var(--wrap-padding-bottom, var(--wrap-padding-height, var(--wrap-padding, 0)));
+    padding-left: var(--wrap-padding-left, var(--wrap-padding-width, var(--wrap-padding, 0)));
+    padding-right: var(--wrap-padding-right, var(--wrap-padding-width, var(--wrap-padding, 0)));
+    background: var(--wrap-bg, none);
+    position: relative;
+
+    &.no-grid{
+        --wrap-display: block;
+    }
+}
+
+img {
+    display: var(--img-display, block);
+    width: var(--img-width, auto);
+    max-width: var(--img-max-width, 100%);
+    height: var(--hero-img-height, auto);
+    object-fit: var(--hero-img-object-fit);
+    margin: var(--img-margin, 0);
+}
+
+// ::-webkit-scrollbar {
+//     width: 12px;
+// }
+
+// ::-webkit-scrollbar-track {
+//     background-color: #E5EAFD; 
+//     border-radius: 8px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     border-radius: 8px;
+//     background-color: #CCD4F8;
+// }

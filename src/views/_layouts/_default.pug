@@ -1,0 +1,25 @@
+doctype html
+include ../../config
+include ../../baseComponents/index
+include ../../components/index
+include ../../projectComponents/index
+html(lang="pt-BR")
+	block config
+	head 
+		base(href="/")
+		link(rel="stylesheet", href="./_assets/style.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.css")
+		link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+		script(src="https://unpkg.com/swiper/swiper-bundle.js")
+		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/chart.js")
+		script(src="./_assets/main.js")
+		title #{pageTitle} - #{siteName}
+	body(id="page-" + pageId)
+		+splashscreen
+		+header-site
+			+nav-global
+		main.main-site
+			block content
+		+footer-site
