@@ -1,2 +1,8 @@
 node_modules/
-dist/
+_assets/main.js
+_assets/style.css
+_assets/style.css.map
+dist/404/
+dist/blog/
+dist/contato/
+dist/sobre/
