@@ -1,11 +1,14 @@
-@mixin hero-content-align($align){
+@mixin hero-content-align($align: ''){
     @if $align == right {
         --base-align: right;
         --button-align: flex-end;
     }
-    @if $align == center {
+    @else if $align == center {
         --base-align: center;
         --button-align: center
+    } @else {
+        --base-align: left;
+        --button-align: flex-start;
     }
 }
 

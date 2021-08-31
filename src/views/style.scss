@@ -1,15 +1,16 @@
 #hero-id-0{
     // @include button-size(xs); 
     // @include hero-content-align('center');
+    @include button-size(sm);
 }
 #hero-id-2{
     @include hero-content-align('right');
+    @include button-shape(ghost);
 }
 
 #hero-id-3{
     --hero-bg-position: bottom center;
     @include hero-content-align('center');
-    // @include button-size(lg);
 }
 
 :root{
