@@ -3,6 +3,7 @@
 - É uma API de design ou um Design System customizável a partir de tokens de design e modificações via contexto. 
 - Seu objetivo é a utilização de um código base padrão para projetos permitindo liberdade de customização de layouts
 - As modificações via contexto visam um código mais enxuto, sem necessidade de modificar o html ([Zen Garden](http://www.csszengarden.com/)).
+- Em breve mais detalhes de uso
 
 ## Dependências
 - Npm
@@ -10,6 +11,9 @@
 
 ## Instalação
 Após baixar o projeto, rodar os comandos ```npm i``` e  ```gulp```
+
+## Como usar
+Em breve
 
 ## Tecnologias
 - Sass
