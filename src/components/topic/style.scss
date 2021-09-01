@@ -1,16 +1,3 @@
-.topics {
-    margin: 50px auto;
-    width: 100%;
-    max-width: var(--wrap-max-width);
-    display: grid;
-    grid-template-columns: var(--topics-per-line);
-    gap: var(--space-xl);
-
-    @include media-min(lg){
-        --topics-per-line: repeat(3, 1fr);
-    }
-}
-
 .topic {
     --title-align: center;
     --title-font-size: var(--topic-title-font-size, var(--font-size-lg));

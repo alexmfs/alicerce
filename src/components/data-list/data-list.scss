@@ -1,0 +1,14 @@
+.data-list{
+    
+    display: var(--data-list-display, grid);
+    grid-template-columns: var(--data-items-per-line);
+    gap: var(--data-list-gap, var(--space-xl));
+
+    margin-top: var(--data-list-margin-top, var(--data-list-height, 0));
+    margin-bottom: var(--data-list-margin-bottom, var(--data-list-height, 0));
+
+    @include media-min(lg){
+        --data-items-per-line: repeat(3, 1fr);
+    }
+
+}
