@@ -19,6 +19,8 @@ mixin header-site()
 			.wrap 
 				if block
 					block
-		if(pageTitle !== "Inicial")
-			section.header-site-inner(style="background-image: url("+pageBanner+")")
-				+heading(pageTitle, pageSubTitle)
+
+mixin header-inner
+	header.header-inner&attributes(attributes)
+		.header-wrap
+			block

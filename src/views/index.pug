@@ -16,10 +16,9 @@ block content
 			+button('Saiba mais','/','link')
 
 	+section#home-id-1
-		+heading(
-			'Título da Seção',
-			'frase descritiva da seção'
-		)
+		+heading
+			+typography('title', 'Título da Seção')
+			+typography('subtitle', 'frase descritiva da seção')
 		+data-list('ul')
 			+topic('Título 1', '_assets/img/placeholder.png')
 				+list(

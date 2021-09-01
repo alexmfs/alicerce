@@ -50,17 +50,6 @@
         background: var(--color-primary-medium);       
     }
 }
-
-.header-site-inner{
-    --title-align: center;
-    --title-font-weight: bold;
-    --title-text-transform: uppercase;
-    --title-font-size: var(--font-size-xxl);
-    --title-color: var(--color-neutral-lightest);
-
-   background: var(--header-site-inner-bgcolor, var(--color-neutral-dark)) no-repeat center center;
-   background-size: cover;
-}
 .search-box{
     position: relative;
     width: 100%;
@@ -89,4 +78,34 @@
             color: var(--color-primary-medium);
         }
     }
+}
+
+.header-inner {
+    --heading-column: wrap-start/wrap-end;
+    
+    display: grid;
+    grid-template-columns: var(--wrap-columns-half);
+
+    // padding-top: var(--header-inner-padding-top, var(--header-inner-padding-height, var(--header-inner-padding, var(--space-lg))));
+    // padding-right: var(--header-inner-padding-right, var(--header-inner-padding-width, var(--header-inner-padding, 0)));
+    // padding-bottom: var(--header-inner-padding-bottom, var(--header-inner-padding-height, var(--header-inner-padding, var(--space-lg))));
+    // padding-left: var(--header-inner-padding-left, var(--header-inner-padding-width, var(--header-inner-padding, 0)));
+
+    background-color: var(--header-inner-bg, var(--color-neutral-light));
+    background-image: var(--header-inner-bg-image);
+    background-repeat: var(--header-inner-repeat, no-repeat);
+    background-position: var(--header-inner-position, top center);
+    background-size: var(--header-inner-size, cover);
+
+    border-bottom: var(--header-inner-border-bottom);    
+}
+
+.header-wrap{
+    padding-top: var(--header-wrap-padding-top, var(--header-wrap-padding-height, var(--header-wrap-padding, var(--space-lg))));
+    padding-right: var(--header-wrap-padding-right, var(--header-wrap-padding-width, var(--header-wrap-padding, 0)));
+    padding-bottom: var(--header-wrap-padding-bottom, var(--header-wrap-padding-height, var(--header-wrap-padding, var(--space-lg))));
+    padding-left: var(--header-wrap-padding-left, var(--header-wrap-padding-width, var(--header-wrap-padding, 0)));
+    display: grid;
+    grid-template-columns: var(--wrap-columns-half);
+    grid-column: 1 / -1;
 }

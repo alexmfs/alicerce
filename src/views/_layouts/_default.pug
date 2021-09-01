@@ -21,5 +21,12 @@ html(lang="pt-BR")
 		+header-site
 			+nav-global
 		main.main-site
+			if(pageTitle !== "Inicial")
+				+header-inner(style='--header-inner-bg-image: url(../_data/banners/contato.png)')
+					+heading
+						+typography('title', pageTitle)
+						+typography('subtitle', pageSubTitle)
+					+breadcrumb
+						//- (style="background-image: url("+pageBanner+")")
 			block content
 		+footer-site

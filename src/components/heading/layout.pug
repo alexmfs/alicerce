@@ -1,13 +1,17 @@
-mixin heading(title, description, header)
-    if header === "true"
-        header.title-section&attributes(attributes)
-            .wrap
-                +typography('titlepage', title)
-                if description
-                    +typography('text', description)
-    else
-        .title-section&attributes(attributes)
-            .wrap
-                +typography('title', title)
-                if description
-                    +typography('text', description)
+//- mixin heading(title, description, header)
+//-     if header === "true"
+//-         header.title-section&attributes(attributes)
+//-             .wrap
+//-                 +typography('titlepage', title)
+//-                 if description
+//-                     +typography('text', description)
+//-     else
+//-         .title-section&attributes(attributes)
+//-             .wrap
+//-                 +typography('title', title)
+//-                 if description
+//-                     +typography('text', description)
+
+mixin heading
+    .heading
+        block

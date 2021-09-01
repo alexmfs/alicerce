@@ -1,0 +1,5 @@
+.breadcrumb {
+    grid-column: var(--breadcrumb-column, 2/-2);
+    display: flex;
+    gap: 20px;
+}
