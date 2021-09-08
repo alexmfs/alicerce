@@ -23,7 +23,7 @@
     width: 100%;
     min-height: 100%;
     background-color: rgba(var(--color-primary-darkest), .8);
-    z-index: 42;
+    @include z-index(overlay);
 
     opacity: 0; /* Fade in/out animation. */
     transition: opacity 0.2s ease-in;

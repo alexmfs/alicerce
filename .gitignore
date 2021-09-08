@@ -1,4 +1,5 @@
 node_modules/
+.vscode/
 dist/_assets/main.js
 dist/_assets/style.css
 dist/_assets/style.css.map

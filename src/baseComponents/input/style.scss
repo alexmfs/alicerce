@@ -21,13 +21,13 @@
 
 	&.error {
 		color: var(--color-neutral-darkest);
-		border: 1px var(--color-error-medium) solid;
+		border: 1px solid var(--color-error-medium) ;
 		background-color: var(--color-error-medium);
 	}
 	
 	&.valid {
 		color: var(--color-neutral-darkest);
-		border: 1px var(--color-success-medium) solid;
+		border: 1px solid var(--color-success-medium) ;
 		background-color: #e9f5ea;
 	}
 
